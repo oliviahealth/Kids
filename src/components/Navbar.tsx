@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
                         <img
                             className="h-[3rem]"
                             alt="Olivia Health Plan of Safecare logo"
-                            src="/images/logo.svg"
+                            src="/images/logo+Company.svg"
                         />
                     </Link>
                 </div>
