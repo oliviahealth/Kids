@@ -7,17 +7,17 @@ const Footer: React.FC = () => {
       <div style={{ paddingTop: "4.25rem", paddingLeft: "3.25rem" }}>
         <img src="/images/olivia-health-logo.png" alt="Olivia Health Logo"/>
         <div style={{ marginTop: "1rem" }}>
-          <Link href={"/about"} style={{ color: "#A155B9" }} className="hover:text-purple-500 hover:underline transition duration-300">
+          <Link href={"/about"} style={{ color: "#A155B9" }} className="text-xl hover:text-purple-500 hover:underline transition duration-300">
             About
           </Link>
         </div>
         <div style={{ marginTop: "1rem" }}>
-          <Link href={"/resources"} style={{ color: "#A155B9" }} className="hover:text-purple-500 hover:underline transition duration-300">
+          <Link href={"/resources"} style={{ color: "#A155B9" }} className="text-xl hover:text-purple-500 hover:underline transition duration-300">
             Resources
           </Link>
         </div>
         <div style={{ marginTop: "1rem" }}>
-          <Link href={"/contact-us"} style={{ color: "#A155B9" }} className="hover:text-purple-500 hover:underline transition duration-300">
+          <Link href={"/contact-us"} style={{ color: "#A155B9" }} className="text-xl hover:text-purple-500 hover:underline transition duration-300">
             Contact Us
           </Link>
         </div>
