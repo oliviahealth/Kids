@@ -6,12 +6,12 @@ const Mission = () => {
     <div className="relative min-h-screen flex justify-center items-center">
       <Image
         src="/images/Green-background.png"
-        alt="Image"
+        alt="Background"
         layout="fill"
         objectFit="cover"
         objectPosition="bottom"
       />
-      <div className="overflow-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-12 w-3/4 h-3/4 rounded-lg text-center flex flex-col">
+      <div className="overflow-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-12 w-3/4 h-3/4 rounded-lg text-center flex flex-col z-40">
         <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
         <p className="text-gray-800 mb-8">
           We believe in fostering an engaging learning environment where
