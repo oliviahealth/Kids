@@ -1,3 +1,4 @@
+import Mission from "@/components/Mission";
 import React from "react";
 
 const LandingPage: React.FC = () => {
@@ -12,16 +13,8 @@ const LandingPage: React.FC = () => {
         }
         }
       >
-
       </div>
-      <div className="gradient-container" 
-          style={{
-          height: '500px',
-          flex: 1,
-          background: 'linear-gradient(to bottom, #49DE95, #277850)',
-          
-        }}>
-        </div>
+      <Mission />
     </div>
   );
 }
