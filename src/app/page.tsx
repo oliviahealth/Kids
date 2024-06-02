@@ -2,19 +2,29 @@ import React from "react";
 
 const LandingPage: React.FC = () => {
   return (
-    <div
-      className="flex flex-grow w-full h-full overflow-hidden bg-[url('/images/background.png')] bg-cover justify-center items-center"
-      role="img"
-      aria-label="A background image of a mother and her baby"
-    >
-      <img
-        className="w-[50rem]"
-        src="/images/oliviahealth.svg"
-        alt="Olivia Health logo"
-        style={{ filter: 'brightness(0) invert(1)' }}
-      ></img>
+    <div className="landing-page">
+      <div className="image-container">
+        <img src='/images/background.png' alt="Landing Page Image" />
+      </div>
+      <div className="empty-container"
+        style={{
+          height: '500px'
+        }
+        }
+      >
+
+      </div>
+      <div className="gradient-container" 
+          style={{
+          height: '500px',
+          flex: 1,
+          background: 'linear-gradient(to bottom, #49DE95, #277850)',
+          
+        }}>
+        </div>
     </div>
-  )
+  );
 }
 
 export default LandingPage;
+
