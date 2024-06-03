@@ -3,15 +3,52 @@ import Image from "next/image";
 
 const Mission = () => {
   return (
-    <div className="relative min-h-screen flex justify-center items-center">
+    <div className="relative min-h-screen flex justify-center items-center pt-16">
       <Image
         src="/images/Green-background.png"
-        alt="Background"
+        alt="Green Background"
         layout="fill"
         objectFit="cover"
+        className="z-10"
         objectPosition="bottom"
       />
-      <div className="overflow-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-12 w-3/4 h-3/4 rounded-3xl text-center flex flex-col z-40">
+     <div className="absolute w-full h-full top-[-70%] left-0 z-20">
+        <Image
+          src="/images/Foliage.png"
+          alt="Foliage"
+          layout="fill"
+          objectFit="cover"
+          className="z-20"
+          objectPosition="bottom"
+        />
+      </div>
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-4/5 h-3/5 bg-transparent flex justify-center items-center">
+        <div className="relative w-full h-full" style={{ top: '-60%' }}>
+          <Image
+            src="/images/Badge Board.png"
+            alt="Badge Board"
+            layout="fill"
+            objectFit="cover"
+            className="absolute rounded-2xl"
+            objectPosition="top"
+          />
+          <div className="relative w-full h-full flex justify-center items-center">
+            <Image
+              src="/images/Badges.png"
+              alt="Badges"
+              layout="intrinsic"
+              width={1000}
+              height={180}
+              className="relative"
+              style={{ maxWidth: '80%', maxHeight: '80%' }}
+            />
+          </div>
+        </div>
+      </div>
+      <button className="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3 z-40 bg-red-500 text-white py-2 px-4 rounded-lg text-lg">
+        Start your journey
+      </button>
+      <div className="overflow-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-12 w-3/4 h-3/4 rounded-3xl text-center flex flex-col z-50">
         <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
         <p className="text-gray-800 mb-8">
           We believe in fostering an engaging learning environment where

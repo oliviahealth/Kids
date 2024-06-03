@@ -1,4 +1,3 @@
-import Journey from "@/components/Journey";
 import Mission from "@/components/Mission";
 import React from "react";
 
@@ -10,12 +9,9 @@ const LandingPage: React.FC = () => {
       </div>
       <div className="empty-container"
         style={{
-          height: '500px'
+          height: '800px'
         }}
       ></div>
-      <div className="relative z-10" style={{ top: '100px' }}>
-        <Journey />
-      </div>
       <Mission />
     </div>
   );
