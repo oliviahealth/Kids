@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import Dropdown from "./Dropdown"; // Adjust the import path as necessary
+import Dropdown from "./Dropdown";
 
 const SideNav = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("");
