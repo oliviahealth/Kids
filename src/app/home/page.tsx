@@ -3,7 +3,7 @@ import React from "react";
 
 const Home: React.FC = () => {
     return (
-        <div className="h-screen">
+        <div className="w-full h-full flex">
             <SideNav />
             <div>
                 <h1 className="font-semibold">Home</h1>
