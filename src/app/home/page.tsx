@@ -1,8 +1,10 @@
+import SideNav from "@/components/SideNav";
 import React from "react";
 
 const Home: React.FC = () => {
     return (
-        <div className="w-full h-full flex justify-center items-center">
+        <div className="h-screen">
+            <SideNav />
             <div>
                 <h1 className="font-semibold">Home</h1>
             </div>
