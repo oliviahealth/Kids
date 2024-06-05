@@ -20,7 +20,7 @@ const SideNav = () => {
   };
 
   return (
-    <div className="h-screen w-1/5 flex flex-col justify-start">
+    <div className="min-h-screen w-1/5 flex flex-col justify-start">
       <div className="flex flex-col items-center">
         <Image
           src="images/Logo+Company.svg"
