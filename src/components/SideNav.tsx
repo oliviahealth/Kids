@@ -1,10 +1,26 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, {useState} from "react";
 
 const SideNav = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState<any>("");
+  const [selectedYearLevel, setSelectedYearLevel] = useState<any>("");
+
+  // Define your language and year level options here
+  const languages = ["English", "Spanish", "French"];
+  const yearLevels = ["1", "2", "3", "4", "5"];
+
+  const handleLanguageChange = (event: any) => {
+    setSelectedLanguage(event.target.value);
+  };
+
+  const handleYearLevelChange = (event: any) => {
+    setSelectedYearLevel(event.target.value);
+  };
+
   return (
-    <div className="h-screen w-1/5 border border-dashed flex flex-col justify-start">
+    <div className="h-screen w-1/5 flex flex-col justify-start">
       <div className="flex flex-col items-center">
         <Image
           src="images/Logo+Company.svg"
@@ -61,37 +77,65 @@ const SideNav = () => {
             </div>
           </div>
 
-          <div>Language</div>
+            <div className="grid grid-cols-1 gap-2 mt-4">
+              <span className="font-bold">Language</span>
+              <select
+                className="border-2 border-black rounded-full shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                value={selectedLanguage}
+                onChange={handleLanguageChange}
+              >
+                <option value="">Select Language</option>
+                {languages.map((language) => (
+                  <option key={language} value={language}>
+                    {language}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-          <div>Year Level</div>
+          <div className="grid grid-cols-1 gap-2 mt-4">
+            <span className="font-bold">Year Level</span>
+            <select
+              className="border-2 border-black rounded-full shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+              value={selectedYearLevel}
+              onChange={handleYearLevelChange}
+            >
+              <option value="" >Select Year Level</option>
+              {yearLevels.map((yearLevel) => (
+                <option key={yearLevel} value={yearLevel}>
+                  {yearLevel}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <div className="col-start-7">
           <div className="grid grid-cols-1 gap-3">
-          <Image
-            src="/images/Ellipse 44.png"
-            alt="Ellipse"
-            width={40}
-            height={35}
-          />
-          <Image
-            src="/images/Ellipse 44.png"
-            alt="Ellipse"
-            width={40}
-            height={35}
-          />
-          <Image
-            src="/images/Ellipse 44.png"
-            alt="Ellipse"
-            width={40}
-            height={35}
-          />
-          <Image
-            src="/images/Ellipse 44.png"
-            alt="Ellipse"
-            width={40}
-            height={35}
-          />
+            <Image
+              src="/images/Ellipse 44.png"
+              alt="Ellipse"
+              width={40}
+              height={35}
+            />
+            <Image
+              src="/images/Ellipse 44.png"
+              alt="Ellipse"
+              width={40}
+              height={35}
+            />
+            <Image
+              src="/images/Ellipse 44.png"
+              alt="Ellipse"
+              width={40}
+              height={35}
+            />
+            <Image
+              src="/images/Ellipse 44.png"
+              alt="Ellipse"
+              width={40}
+              height={35}
+            />
           </div>
         </div>
       </div>
