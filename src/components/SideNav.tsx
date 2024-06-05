@@ -1,21 +1,21 @@
-"use client"
+"use client";
 import Image from "next/image";
-import Link from "next/link";
-import React, {useState} from "react";
+import React, { useState } from "react";
+import Dropdown from "./Dropdown"; // Adjust the import path as necessary
 
 const SideNav = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<any>("");
-  const [selectedYearLevel, setSelectedYearLevel] = useState<any>("");
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("");
+  const [selectedYearLevel, setSelectedYearLevel] = useState<string>("");
 
-  // Define your language and year level options here
   const languages = ["English", "Spanish", "French"];
   const yearLevels = ["1", "2", "3", "4", "5"];
+  const ellipseImages = Array(4).fill("/images/Ellipse 44.png");
 
-  const handleLanguageChange = (event: any) => {
+  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedLanguage(event.target.value);
   };
 
-  const handleYearLevelChange = (event: any) => {
+  const handleYearLevelChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedYearLevel(event.target.value);
   };
 
@@ -77,65 +77,32 @@ const SideNav = () => {
             </div>
           </div>
 
-            <div className="grid grid-cols-1 gap-2 mt-4">
-              <span className="font-bold">Language</span>
-              <select
-                className="border-2 border-black rounded-full shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-                value={selectedLanguage}
-                onChange={handleLanguageChange}
-              >
-                <option value="">Select Language</option>
-                {languages.map((language) => (
-                  <option key={language} value={language}>
-                    {language}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <Dropdown
+            label="Language"
+            options={languages}
+            selectedValue={selectedLanguage}
+            handleChange={handleLanguageChange}
+          />
 
-          <div className="grid grid-cols-1 gap-2 mt-4">
-            <span className="font-bold">Year Level</span>
-            <select
-              className="border-2 border-black rounded-full shadow-sm p-2 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-              value={selectedYearLevel}
-              onChange={handleYearLevelChange}
-            >
-              <option value="" >Select Year Level</option>
-              {yearLevels.map((yearLevel) => (
-                <option key={yearLevel} value={yearLevel}>
-                  {yearLevel}
-                </option>
-              ))}
-            </select>
-          </div>
+          <Dropdown
+            label="Year Level"
+            options={yearLevels}
+            selectedValue={selectedYearLevel}
+            handleChange={handleYearLevelChange}
+          />
         </div>
 
         <div className="col-start-7">
           <div className="grid grid-cols-1 gap-3">
-            <Image
-              src="/images/Ellipse 44.png"
-              alt="Ellipse"
-              width={40}
-              height={35}
-            />
-            <Image
-              src="/images/Ellipse 44.png"
-              alt="Ellipse"
-              width={40}
-              height={35}
-            />
-            <Image
-              src="/images/Ellipse 44.png"
-              alt="Ellipse"
-              width={40}
-              height={35}
-            />
-            <Image
-              src="/images/Ellipse 44.png"
-              alt="Ellipse"
-              width={40}
-              height={35}
-            />
+            {ellipseImages.map((src, index) => (
+              <Image
+                key={index}
+                src={src}
+                alt="Ellipse"
+                width={40}
+                height={35}
+              />
+            ))}
           </div>
         </div>
       </div>
