@@ -62,7 +62,7 @@ const SideNav = () => {
             />
           </div>
 
-          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-2">
+          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-2 mt-5">
             <div className="p-6 bg-orange-300 rounded-lg shadow-md h-full w-full flex items-center justify-center">
               {/* Card content */}1
             </div>
@@ -77,6 +77,7 @@ const SideNav = () => {
             </div>
           </div>
 
+          <div>
           <Dropdown
             label="Language"
             options={languages}
@@ -90,6 +91,7 @@ const SideNav = () => {
             selectedValue={selectedYearLevel}
             handleChange={handleYearLevelChange}
           />
+          </div>
         </div>
 
         <div className="col-start-7">
