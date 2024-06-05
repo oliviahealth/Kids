@@ -1,13 +1,13 @@
 import React from "react";
 
-const Dashboard: React.FC = () => {
+const Home: React.FC = () => {
     return (
         <div className="w-full h-full flex justify-center items-center">
             <div>
-                <h1 className="font-semibold">Page</h1>
+                <h1 className="font-semibold">Home</h1>
             </div>
         </div>
     )
 }
 
-export default Dashboard;
+export default Home;
