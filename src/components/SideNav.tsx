@@ -16,7 +16,7 @@ const SideNav: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-1/5 flex flex-col justify-start ">
+    <div className="h-screen w-1/5 flex flex-col justify-start ">
       <LogoSection />
       <UserSection />
       <MainContent
