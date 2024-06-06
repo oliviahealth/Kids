@@ -33,7 +33,7 @@ const SideNav: React.FC = () => {
         handleLanguageChange={handleLanguageChange}
         ellipseImages={ellipseImages}
       />
-      {/* <StickerBoardSection /> */}
+      <StickerBoardSection />
     </div>
   );
 };
@@ -75,20 +75,20 @@ const MainContent: React.FC<MainContentProps> = ({
       <Image src={sally} alt="Saly"/>
       <PioneerPrincessSection />
       <NavigationLinks />
-      {/* <Dropdown
+      <Dropdown
         label="Language"
         options={languages}
         selectedValue={selectedLanguage}
         handleChange={handleLanguageChange}
       />
-      <LatestProgress /> */}
+      <LatestProgress />
     </div>
     <EllipsesColumn ellipseImages={ellipseImages} />
   </div>
 );
 
 const NavigationLinks: React.FC = () => (
-  <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-2 mt-5 text-white font-bold">
+  <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 mt-5 text-white font-bold">
     {[
       {
         href: "/home",
@@ -151,7 +151,7 @@ const LatestProgress: React.FC = () => (
 );
 
 const StickerBoardSection: React.FC = () => (
-  <div className="mt-10">
+  <div className="mt-10 mb-10 mr-6">
     <div className="flex flex-row gap-2 items-center ml-6 mb-2">
       <span className="font-bold text-xl">Sticker Board</span>
     </div>
