@@ -1,15 +1,15 @@
 import SideNav from "@/components/SideNav";
 import React from "react";
 
-const Home: React.FC = () => {
+const Dashboard: React.FC = () => {
     return (
-        <div className="w-full h-full flex">
+        <div className="w-full h-full flex flex-col">
             <SideNav />
-            <div>
-                <h1 className="font-semibold">Home</h1>
+            <div className="w-full flex justify-center items-center">
+                <h1 className="font-semibold">Page</h1>
             </div>
         </div>
-    )
+    );
 }
 
-export default Home;
+export default Dashboard;
