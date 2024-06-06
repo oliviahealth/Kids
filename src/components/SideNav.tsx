@@ -3,15 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import logoCompany from "../../public//images/Logo+Company.svg";
+import sally from "../../public//images/Saly-17.png";
+import pioneerPrincess from "../../public//images/Pioneer Princess.png";
+import polygon from "../../public//images/Polygon 11.png";
+import ellipse from "../../public//images/Ellipse 44.png";
+
 import Dropdown from "./Dropdown";
 
 const SideNav: React.FC = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("");
 
   const languages = ["English", "Spanish", "French"];
-  const ellipseImages = Array(4).fill("/images/Ellipse 44.png");
+  const ellipseImages = Array(4).fill(ellipse);
 
-  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleLanguageChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
     setSelectedLanguage(event.target.value);
   };
 
@@ -32,26 +40,20 @@ const SideNav: React.FC = () => {
 
 const LogoSection: React.FC = () => (
   <div className="flex flex-col items-center">
-    <Image src="images/Logo+Company.svg" alt="Logo" width={250} height={200} priority />
+    <Image src={logoCompany} alt="Logo" priority />
   </div>
 );
 
 const UserSection: React.FC = () => (
   <div className="flex flex-row gap-2 items-center ml-6">
     <span className="font-bold text-xl">Sally</span>
-    <Image src="/images/Polygon 11.png" alt="Sally" width={12} height={10} priority/>
+    <Image src={polygon} alt="Sally" />
   </div>
 );
 
 const PioneerPrincessSection: React.FC = () => (
   <div className="flex justify-center my-2">
-    <Image
-      src="/images/Pioneer Princess.png"
-      alt="Saly"
-      width={200}
-      height={400}
-      priority
-    />
+    <Image src={pioneerPrincess} alt="Saly" />
   </div>
 );
 
@@ -70,7 +72,7 @@ const MainContent: React.FC<MainContentProps> = ({
 }) => (
   <div className="grid grid-cols-7 mt-10">
     <div className="col-start-1 col-span-6 px-6">
-      <Image src="/images/Saly-17.png" alt="Saly" width={400} height={400} priority/>
+      <Image src={sally} alt="Saly"/>
       <PioneerPrincessSection />
       <NavigationLinks />
       {/* <Dropdown
@@ -88,10 +90,30 @@ const MainContent: React.FC<MainContentProps> = ({
 const NavigationLinks: React.FC = () => (
   <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-2 mt-5 text-white font-bold">
     {[
-      { href: "/home", bgColor: "#ec9bfc", borderColor: "#e466fc", text: "Home" },
-      { href: "/lessons", bgColor: "#8be9b0", borderColor: "#4ce49c", text: "Lessons" },
-      { href: "/activities", bgColor: "#94ece2", borderColor: "#51e5d5", text: "Activities" },
-      { href: "/worlds", bgColor: "#fbb355", borderColor: "#f4946c", text: "Worlds" },
+      {
+        href: "/home",
+        bgColor: "#ec9bfc",
+        borderColor: "#e466fc",
+        text: "Home",
+      },
+      {
+        href: "/lessons",
+        bgColor: "#8be9b0",
+        borderColor: "#4ce49c",
+        text: "Lessons",
+      },
+      {
+        href: "/activities",
+        bgColor: "#94ece2",
+        borderColor: "#51e5d5",
+        text: "Activities",
+      },
+      {
+        href: "/worlds",
+        bgColor: "#fbb355",
+        borderColor: "#f4946c",
+        text: "Worlds",
+      },
     ].map(({ href, bgColor, borderColor, text }) => (
       <Link
         key={href}
@@ -105,11 +127,13 @@ const NavigationLinks: React.FC = () => (
   </div>
 );
 
-const EllipsesColumn: React.FC<{ ellipseImages: string[] }> = ({ ellipseImages }) => (
+const EllipsesColumn: React.FC<{ ellipseImages: string[] }> = ({
+  ellipseImages,
+}) => (
   <div className="col-start-7">
     <div className="grid grid-cols-1 gap-3">
       {ellipseImages.map((src, index) => (
-        <Image key={index} src={src} alt="Ellipse" width={40} height={35} />
+        <Image key={index} src={src} alt="Ellipse" />
       ))}
     </div>
   </div>
