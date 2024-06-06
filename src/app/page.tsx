@@ -43,14 +43,13 @@ const ExploreFrame: React.FC = () => {
 }
 import Navbar from '@/components/Navbar';
 
-
 const LandingPage: React.FC = () => {
   return (
-    
     <div className="landing-page relative">
       <Navbar />
-      <div className="image-container">
-        <img src='/images/background.png' alt="Landing Page Image" />
+      <div className="relative image-container">
+        <img className="object-fit w-full" src='/images/background.png' alt="Landing Page Image" />
+        <ExploreFrame />
       </div>
       <div className="empty-container"
         style={{
@@ -63,3 +62,4 @@ const LandingPage: React.FC = () => {
 }
 
 export default LandingPage;
+
