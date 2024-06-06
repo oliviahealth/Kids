@@ -32,14 +32,14 @@ const SideNav: React.FC = () => {
 
 const LogoSection: React.FC = () => (
   <div className="flex flex-col items-center">
-    <Image src="images/Logo+Company.svg" alt="Logo" width={250} height={200} />
+    <Image src="images/Logo+Company.svg" alt="Logo" width={250} height={200} priority />
   </div>
 );
 
 const UserSection: React.FC = () => (
   <div className="flex flex-row gap-2 items-center ml-6">
     <span className="font-bold text-xl">Sally</span>
-    <Image src="/images/Polygon 11.png" alt="Sally" width={12} height={10} />
+    <Image src="/images/Polygon 11.png" alt="Sally" width={12} height={10} priority/>
   </div>
 );
 
@@ -58,13 +58,14 @@ const MainContent: React.FC<MainContentProps> = ({
 }) => (
   <div className="grid grid-cols-7 mt-10">
     <div className="col-start-1 col-span-6 px-6">
-      <Image src="/images/Saly-17.png" alt="Saly" width={400} height={400} />
+      <Image src="/images/Saly-17.png" alt="Saly" width={400} height={400} priority/>
       <div className="flex justify-center my-2">
         <Image
           src="/images/Pioneer Princess.png"
           alt="Saly"
           width={200}
           height={400}
+          priority
         />
       </div>
       <NavigationLinks />
