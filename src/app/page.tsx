@@ -41,13 +41,16 @@ const ExploreFrame: React.FC = () => {
     </div >
   </Link>
 }
+import Navbar from '@/components/Navbar';
+
 
 const LandingPage: React.FC = () => {
   return (
+    
     <div className="landing-page relative">
-      <div className="relative image-container">
-        <img className="object-fit w-full" src='/images/background.png' alt="Landing Page Image" />
-        <ExploreFrame />
+      <Navbar />
+      <div className="image-container">
+        <img src='/images/background.png' alt="Landing Page Image" />
       </div>
       <div className="empty-container"
         style={{
