@@ -24,7 +24,7 @@ const SideNav: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-1/5 flex flex-col justify-start overflow-auto">
+    <div className="h-screen w-1/4 flex flex-col justify-start overflow-auto">
       <LogoSection />
       <UserSection />
       <MainContent
@@ -40,7 +40,11 @@ const SideNav: React.FC = () => {
 
 const LogoSection: React.FC = () => (
   <div className="flex flex-col items-center">
-    <Image src="/images/Logo+Company.svg"alt="Logo" width={250} height={100} priority />
+    <Image
+      src={logoCompany}
+      alt="Logo"
+      priority
+    />
   </div>
 );
 
@@ -48,12 +52,6 @@ const UserSection: React.FC = () => (
   <div className="flex flex-row gap-2 items-center ml-6">
     <span className="font-bold text-xl">Sally</span>
     <Image src={polygon} alt="Sally" />
-  </div>
-);
-
-const PioneerPrincessSection: React.FC = () => (
-  <div className="flex justify-center my-2">
-    <Image src={pioneerPrincess} alt="Saly" />
   </div>
 );
 
@@ -72,8 +70,13 @@ const MainContent: React.FC<MainContentProps> = ({
 }) => (
   <div className="grid grid-cols-7 mt-10">
     <div className="col-start-1 col-span-6 px-6">
-      <Image src={sally} alt="Saly"/>
-      <PioneerPrincessSection />
+      <div className="flex justify-center">
+        <Image src={sally} alt="Saly" className="w-full" />
+      </div>
+
+      <div className="flex justify-center my-2">
+        <Image src={pioneerPrincess} alt="Saly" />
+      </div>
       <NavigationLinks />
       <Dropdown
         label="Language"
@@ -130,7 +133,7 @@ const NavigationLinks: React.FC = () => (
 const EllipsesColumn: React.FC<{ ellipseImages: string[] }> = ({
   ellipseImages,
 }) => (
-  <div className="col-start-7">
+  <div className="col-start-7 flex items-start justify-center">
     <div className="grid grid-cols-1 gap-3">
       {ellipseImages.map((src, index) => (
         <Image key={index} src={src} alt="Ellipse" />
@@ -157,7 +160,10 @@ const StickerBoardSection: React.FC = () => (
     </div>
     <div className="grid grid-cols-7">
       <div className="col-start-1 col-span-6 px-6">
-        <div className="p-6 rounded-3xl shadow-md w-full h-full flex flex-col" style={{border: "2px solid #FF8C8C", backgroundColor: "#FFB9B9"}}>
+        <div
+          className="p-6 rounded-3xl shadow-md w-full h-full flex flex-col"
+          style={{ border: "2px solid #FF8C8C", backgroundColor: "#FFB9B9" }}
+        >
           <div className="text-center font-bold text-white">Misty Plain</div>
           <div className="flex items-center justify-center mt-4">Stars</div>
         </div>
@@ -168,16 +174,18 @@ const StickerBoardSection: React.FC = () => (
 );
 
 const StickerCardsColumn: React.FC = () => (
-  <div className="col-start-7">
+  <div className="col-start-7 flex items-start justify-center">
     <div className="grid grid-cols-1 gap-3">
-      {["orange-300", "blue-300", "green-300", "purple-300"].map((bgColor, index) => (
-        <div
-          key={index}
-          className={`p-6 bg-${bgColor} rounded-lg shadow-md h-full w-full flex items-center justify-center`}
-        >
-          {index + 1}
-        </div>
-      ))}
+      {["orange-300", "blue-300", "green-300", "purple-300"].map(
+        (bgColor, index) => (
+          <div
+            key={index}
+            className={`p-6 bg-${bgColor} rounded-lg shadow-md h-full w-full flex items-center justify-center`}
+          >
+            {index + 1}
+          </div>
+        )
+      )}
     </div>
   </div>
 );
