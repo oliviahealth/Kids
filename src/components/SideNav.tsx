@@ -139,4 +139,47 @@ const EllipsesColumn: React.FC<{ ellipseImages: string[] }> = ({
   </div>
 );
 
+const LatestProgress: React.FC = () => (
+  <div className="grid grid-cols-1 gap-2 mt-5">
+    <span className="font-bold text-xl">Latest Progress</span>
+    <span style={{ color: "#FF8C8C" }}>Math Mansion - Misty Plain</span>
+    <div className="grid grid-cols-2">
+      <Image src="/images/Group 42.png" alt="Medal" width={150} height={50} />
+      <div className="grid items-center justify-center">Stars</div>
+    </div>
+  </div>
+);
+
+const StickerBoardSection: React.FC = () => (
+  <div className="mt-10">
+    <div className="flex flex-row gap-2 items-center ml-6 mb-2">
+      <span className="font-bold text-xl">Sticker Board</span>
+    </div>
+    <div className="grid grid-cols-7">
+      <div className="col-start-1 col-span-6 px-6">
+        <div className="p-6 rounded-3xl shadow-md w-full h-full flex flex-col" style={{border: "2px solid #FF8C8C", backgroundColor: "#FFB9B9"}}>
+          <div className="text-center font-bold text-white">Misty Plain</div>
+          <div className="flex items-center justify-center mt-4">Stars</div>
+        </div>
+      </div>
+      <StickerCardsColumn />
+    </div>
+  </div>
+);
+
+const StickerCardsColumn: React.FC = () => (
+  <div className="col-start-7">
+    <div className="grid grid-cols-1 gap-3">
+      {["orange-300", "blue-300", "green-300", "purple-300"].map((bgColor, index) => (
+        <div
+          key={index}
+          className={`p-6 bg-${bgColor} rounded-lg shadow-md h-full w-full flex items-center justify-center`}
+        >
+          {index + 1}
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 export default SideNav;
