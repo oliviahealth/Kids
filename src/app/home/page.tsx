@@ -9,7 +9,6 @@ const Dashboard: React.FC = () => {
                 <HomeNav />
             </div>
             <div className="flex flex-grow">
-                {/* This div is reserved for the side panel */}
                 <div className="w-1/5" />
                 <Map />
             </div>

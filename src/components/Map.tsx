@@ -1,5 +1,3 @@
-// components/Map.tsx
-
 "use client";
 
 import Image from 'next/image';
@@ -8,41 +6,31 @@ import Link from 'next/link';
 
 const Map = () => {
   const [markers, setMarkers] = useState([
-    { id: 1, top: '40%', left: '30%', link: '/home/marker1' },
-    { id: 2, top: '60%', left: '50%', link: '/home/marker2' },
-    { id: 3, top: '70%', left: '80%', link: '/home/marker3' },
+    { id: 1, top: '50%', left: '20%', link: '/home/marker1' },
+    { id: 2, top: '50%', left: '40%', link: '/home/marker2' },
+    { id: 3, top: '50%', left: '60%', link: '/home/marker3' },
   ]);
 
   return (
-    <div style={{ position: 'relative', width: '80%', height: '100%', float: 'right' }}>
+    <div className="relative w-4/5 h-full float-right">
       <Image
         src="/images/map.svg"
         alt="Map"
         fill
         quality={100}
-        style={{ objectFit: 'cover' }}
+        className="object-cover"
       />
       {markers.map((marker) => (
-        <Link key={marker.id} href={marker.link} legacyBehavior>
-          <a
+        <Link key={marker.id} href={marker.link} passHref>
+          <div
+            className="absolute flex items-center justify-center text-white font-bold rounded-xl bg-[#ec9bfc] border-[5px] border-[#e466fc] transform -translate-x-1/2 -translate-y-1/2 w-10 h-10"
             style={{
-              position: 'absolute',
               top: marker.top,
               left: marker.left,
-              transform: 'translate(-50%, -50%)',
-              background: 'red',
-              borderRadius: '50%',
-              width: '20px',
-              height: '20px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'white',
-              textDecoration: 'none',
             }}
           >
             {marker.id}
-          </a>
+          </div>
         </Link>
       ))}
     </div>
