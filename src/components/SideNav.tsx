@@ -16,7 +16,7 @@ const SideNav: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-1/5 flex flex-col justify-start overflow-y-auto">
+    <div className="h-screen w-1/5 flex flex-col justify-start overflow-y-auto">
       <LogoSection />
       <UserSection />
       <MainContent
