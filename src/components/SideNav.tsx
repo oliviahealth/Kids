@@ -40,7 +40,7 @@ const SideNav: React.FC = () => {
 
 const LogoSection: React.FC = () => (
   <div className="flex flex-col items-center">
-    <Image src="/images/Logo+Company.svg"alt="Logo" width={250} height={200} priority />
+    <Image src="/images/Logo+Company.svg"alt="Logo" width={250} height={100} priority />
   </div>
 );
 
