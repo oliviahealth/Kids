@@ -16,7 +16,7 @@ const SideNav: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-1/5 flex flex-col justify-start overflow-y-auto">
+    <div className="min-h-screen w-1/5 flex flex-col justify-start ">
       <LogoSection />
       <UserSection />
       <MainContent
@@ -25,7 +25,7 @@ const SideNav: React.FC = () => {
         handleLanguageChange={handleLanguageChange}
         ellipseImages={ellipseImages}
       />
-      <StickerBoardSection />
+      {/* <StickerBoardSection /> */}
     </div>
   );
 };
@@ -68,13 +68,13 @@ const MainContent: React.FC<MainContentProps> = ({
         />
       </div>
       <NavigationLinks />
-      <Dropdown
+      {/* <Dropdown
         label="Language"
         options={languages}
         selectedValue={selectedLanguage}
         handleChange={handleLanguageChange}
       />
-      <LatestProgress />
+      <LatestProgress /> */}
     </div>
     <EllipsesColumn ellipseImages={ellipseImages} />
   </div>
