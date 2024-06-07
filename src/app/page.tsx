@@ -9,7 +9,7 @@ const LandingPage: React.FC = () => {
       </div>
       <div className="empty-container"
         style={{
-          height: '800px'
+          height: '100px'
         }}
       ></div>
       <Mission />
