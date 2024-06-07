@@ -1,5 +1,6 @@
 import SideNav from "@/components/SideNav";
 import React from "react";
+import HomeNav from '@/components/HomeNav';
 
 const Dashboard: React.FC = () => {
     return (
