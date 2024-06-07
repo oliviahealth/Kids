@@ -20,7 +20,7 @@ const Fold: React.FC = () => {
     </svg>
   );
 };
-
+ 
 const Explore: React.FC = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 91" fill="none">
