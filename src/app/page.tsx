@@ -72,7 +72,9 @@ const ExploreFrame: React.FC = () => {
         </div>
 
         <div className="w-[120%]">
-          <Explore />
+          <Link href="/home">
+            <Explore />
+          </Link>
         </div>
       </div>
     </div>
