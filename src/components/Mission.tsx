@@ -66,7 +66,7 @@ const Mission = () => {
           </div>
         </div>
         <div className=" col-start-3 col-end-11 row-start-5 row-end-13 1s-sm:row-start-6 1sm-sm:row-end-13 sm:h-auto md:row-end-12 lg:row-start-7 lg:row-end-12">
-          <div className="overflow-auto h-[22rem] md:h-full bg-white rounded-3xl text-center flex flex-col">
+          <div className="overflow-auto h-[22rem] md:h-full bg-white rounded-3xl text-center flex flex-col p-8">
             <h3 className="text-3xl font-bold mb-6">Our Ambition</h3>
             <p className="text-gray-800 mb-8">
               We believe in fostering an engaging learning environment where
