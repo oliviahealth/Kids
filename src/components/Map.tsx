@@ -72,9 +72,9 @@ const Map: React.FC = () => {
   // Initial positioning when component mounts
   useEffect(() => {
     positionMarkers();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+
   // Update positioning when window resizes
   useEffect(() => {
     const handleResize = () => {
@@ -92,14 +92,14 @@ const Map: React.FC = () => {
   return (
     <div className="relative w-4/5 h-full overflow-hidden" ref={containerRef}>
       <Image
-          src="/images/map.svg"
-          alt="Map"
-          layout="fill"
-          objectFit="cover"
-          ref={imageRef}
-          onLoadingComplete={positionMarkers}
-          priority={true}
-        />
+        src="/images/map.svg"
+        alt="Map"
+        layout="fill"
+        objectFit="cover"
+        ref={imageRef}
+        onLoadingComplete={positionMarkers}
+        priority={true}
+      />
       {markers.map(marker => (
         <MemorizedMarker key={marker.id} marker={marker} />
       ))}

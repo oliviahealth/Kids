@@ -8,10 +8,10 @@ const Dashboard: React.FC = () => {
         <div className="w-full h-screen flex flex-col">
             <div className="w-full">
                 <HomeNav />
-                
-                
+
+
             </div>
-            <div className="flex flex-grow">
+            <div className="flex flex-grow h-[calc(100%-6rem)]">
                 <SideNav />
                 <Map />
             </div>
