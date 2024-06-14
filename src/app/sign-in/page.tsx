@@ -38,7 +38,7 @@ const SignInForm: React.FC = () => {
                         Log in
                     </button>
                 </form>
-                <p className="text-center mt-4">Don't have an Olivia Kids account? <a href="#" className="text-blue-500">Create an account</a></p>
+                <p className="text-center mt-4">Don't have an Olivia Kids account? <a href="/sign-up" className="text-blue-500">Create an account</a></p>
             </div>
         </AuthPageLayout>
     );
