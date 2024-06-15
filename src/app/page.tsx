@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import island from "../../public/images/landingPage/island.jpeg";
 import map1 from "../../public/images/landingPage/map1.jpeg";
 import pinkBackground from "../../public/images/landingPage/pregnancy bg.png";
@@ -10,6 +10,246 @@ import pinkBg2 from "../../public/images/landingPage/pinkBg2.png";
 import pregNews1 from "../../public/images/landingPage/pregnNews1.png";
 import authorImage1 from "../../public/images/landingPage/authorImage1.png";
 
+interface AccordionModel {
+  summaryHeader: string;
+  detailText: string;
+}
+interface MapCardModel {
+  mapImageSrc: StaticImageData;
+  ageCategory: string;
+  mapName: string;
+}
+interface CarouselCardModel {
+  bgImage: StaticImageData;
+  articleImage: StaticImageData;
+  articleCategory: string;
+  articleHeader: string;
+  authorImage: StaticImageData;
+  authorName: string;
+}
+const accordionLeftSideData: AccordionModel[] = [
+  {
+    summaryHeader: "Caregiver Wellness",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+  {
+    summaryHeader: "Emotional, Behavioral and Social",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+  {
+    summaryHeader: "Math and Science",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+  {
+    summaryHeader: "Physical Activity",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+  {
+    summaryHeader: "Sound and Music",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+];
+
+const accordionRightSideData: AccordionModel[] = [
+  {
+    summaryHeader: "Creative Arts",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+  {
+    summaryHeader: "Language, Literacy, and Speech",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+  {
+    summaryHeader: "Nutrition",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+  {
+    summaryHeader: "Safety",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+  {
+    summaryHeader: "Touch",
+    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Explicabo, est corrupti voluptas,
+                 reprehenderit maiores sint quidem sit nostrum
+                 molestiae distinctio incidunt temporibus beatae,
+                 alias dicta soluta tenetur velit itaque placeat.`,
+  },
+];
+
+const mapCardData: MapCardModel[] = [
+  {
+    mapImageSrc: map1,
+    ageCategory: "Ages 0-1",
+    mapName: "Map 1",
+  },
+  {
+    mapImageSrc: map1,
+    ageCategory: "Ages 0-1",
+    mapName: "Map 1",
+  },
+  {
+    mapImageSrc: map1,
+    ageCategory: "Ages 0-1",
+    mapName: "Map 1",
+  },
+  {
+    mapImageSrc: map1,
+    ageCategory: "Ages 0-1",
+    mapName: "Map 1",
+  },
+  {
+    mapImageSrc: map1,
+    ageCategory: "Ages 0-1",
+    mapName: "Map 1",
+  },
+  {
+    mapImageSrc: map1,
+    ageCategory: "Ages 0-1",
+    mapName: "Map 1",
+  },
+];
+
+const carouselCardData: CarouselCardModel[] = [
+  {
+    bgImage: pinkBg2,
+    articleImage: pregNews1,
+    articleCategory: "First Trimester (1 - 12 weeks)",
+    articleHeader: "How Does Diet Affect Embryo Development?",
+    authorImage: authorImage1,
+    authorName: "Marie Buecker",
+  },
+  {
+    bgImage: pinkBg2,
+    articleImage: pregNews1,
+    articleCategory: "Third Trimester (24 - 36 weeks)",
+    articleHeader: "What are the signs of healthy fetal movement?",
+    authorImage: authorImage1,
+    authorName: "Anika Puri",
+  },
+  {
+    bgImage: pinkBg2,
+    articleImage: pregNews1,
+    articleCategory: "Full Duration",
+    articleHeader: "What prenatal vitamins and supplements should I take?",
+    authorImage: authorImage1,
+    authorName: "Andrew Evanson",
+  },
+];
+
+function Accordion({ summaryHeader, detailText }: AccordionModel) {
+  return (
+    <div className="">
+      <details className="group py-1 text-lg">
+        <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
+          {summaryHeader}
+          <svg
+            className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            ></path>
+          </svg>
+        </summary>
+        <p className="text-gray-500">{detailText}</p>
+      </details>
+    </div>
+  );
+}
+
+function MapCard({ mapImageSrc, ageCategory, mapName }: MapCardModel) {
+  return (
+    <div className="">
+      <div className="flex-column justify-end shadow-xl rounded-xl">
+        <Image
+          className="mx-auto w-auto  rounded-t-2xl"
+          src={mapImageSrc}
+          alt="Olivia Kids"
+        ></Image>
+        <div className="text-center bg-white shadow-xl rounded-b-xl">
+          <p>{ageCategory}</p>
+          <h4 className="text-lg font-bold ">{mapName}</h4>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CarouselCard({
+  bgImage,
+  articleImage,
+  articleCategory,
+  articleHeader,
+  authorImage,
+  authorName,
+}: CarouselCardModel) {
+  return (
+    <div className="grid grid-cols-12 mx-auto mb-auto">
+      <div className="col-start-1 col-end-13 row-start-1 row-end-13">
+        <Image src={bgImage} alt="Olivia Kids"></Image>
+      </div>
+      <div className="col-start-2 col-end-12 row-start-7 row-end-13">
+        <Image src={articleImage} alt="Olivia Kids"></Image>
+      </div>
+      <div className="col-start-1 col-end-13">
+        <p>{articleCategory}</p>
+        <h4 className="text-xl font-bold">{articleHeader}</h4>
+        <div className="grid grid-cols-12">
+          <div>
+            <Image src={authorImage} alt="Olivia Kids"></Image>
+          </div>
+          <div className="col-span-9 my-auto">
+            <p> {authorName}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const LandingPage: React.FC = () => {
   return (
@@ -77,286 +317,30 @@ const LandingPage: React.FC = () => {
                     <h3 className="text-2xl font-bold mb-4">Learn by domain</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 ">
                       <div className="divide-y px-5">
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Caregiver Wellness
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
-
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Emotional, Behavioral and Social
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
-
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Math and Science
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
-
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Physical Activity
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
-
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Sound and Music
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
+                        {accordionLeftSideData.map(
+                          ({ summaryHeader, detailText }, index) => {
+                            return (
+                              <Accordion
+                                key={"accordionLeftSideData_" + index}
+                                summaryHeader={summaryHeader}
+                                detailText={detailText}
+                              />
+                            );
+                          }
+                        )}
                       </div>
                       <div className="divide-y px-5">
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Creative Arts
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
-
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Language, Literacy, and Speech
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
-
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Nutrition
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
-
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Safety
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
-
-                        <details className="group py-1 text-lg">
-                          <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-                            Touch
-                            <svg
-                              className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
-                              ></path>
-                            </svg>
-                          </summary>
-                          <p className="text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Explicabo, est corrupti voluptas,
-                            reprehenderit maiores sint quidem sit nostrum
-                            molestiae distinctio incidunt temporibus beatae,
-                            alias dicta soluta tenetur velit itaque placeat.
-                          </p>
-                        </details>
+                        {accordionRightSideData.map(
+                          ({ summaryHeader, detailText }, index) => {
+                            return (
+                              <Accordion
+                                key={"accordionLeftSideData_" + index}
+                                summaryHeader={summaryHeader}
+                                detailText={detailText}
+                              />
+                            );
+                          }
+                        )}
                       </div>
                     </div>
                     <div className="grid text-right mt-5">
@@ -377,84 +361,18 @@ const LandingPage: React.FC = () => {
                       Voyage to the world that suits you by clicking the icon!
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                      <div className="">
-                        <div className="flex-column justify-end shadow-xl rounded-xl">
-                          <Image
-                            className="mx-auto w-auto  rounded-t-2xl"
-                            src={map1}
-                            alt="Olivia Kids"
-                          ></Image>
-                          <div className="text-center bg-white shadow-xl rounded-b-xl">
-                            <p>Ages 0-1</p>
-                            <h4 className="text-lg font-bold ">Map 1</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="">
-                        <div className="flex-column justify-end shadow-xl rounded-xl">
-                          <Image
-                            className="mx-auto w-auto  rounded-t-2xl"
-                            src={map1}
-                            alt="Olivia Kids"
-                          ></Image>
-                          <div className="text-center bg-white shadow-xl rounded-b-xl">
-                            <p>Ages 0-1</p>
-                            <h4 className="text-lg font-bold ">Map 1</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="">
-                        <div className="flex-column justify-end shadow-xl rounded-xl">
-                          <Image
-                            className="mx-auto w-auto  rounded-t-2xl"
-                            src={map1}
-                            alt="Olivia Kids"
-                          ></Image>
-                          <div className="text-center bg-white shadow-xl rounded-b-xl">
-                            <p>Ages 0-1</p>
-                            <h4 className="text-lg font-bold ">Map 1</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="">
-                        <div className="flex-column justify-end shadow-xl rounded-xl">
-                          <Image
-                            className="mx-auto w-auto  rounded-t-2xl"
-                            src={map1}
-                            alt="Olivia Kids"
-                          ></Image>
-                          <div className="text-center bg-white shadow-xl rounded-b-xl">
-                            <p>Ages 0-1</p>
-                            <h4 className="text-lg font-bold ">Map 1</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="">
-                        <div className="flex-column justify-end shadow-xl rounded-xl">
-                          <Image
-                            className="mx-auto w-auto  rounded-t-2xl"
-                            src={map1}
-                            alt="Olivia Kids"
-                          ></Image>
-                          <div className="text-center bg-white shadow-xl rounded-b-xl">
-                            <p>Ages 0-1</p>
-                            <h4 className="text-lg font-bold ">Map 1</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="">
-                        <div className="flex-column justify-end shadow-xl rounded-xl">
-                          <Image
-                            className="mx-auto w-auto  rounded-t-2xl"
-                            src={map1}
-                            alt="Olivia Kids"
-                          ></Image>
-                          <div className="text-center bg-white shadow-xl rounded-b-xl">
-                            <p>Ages 0-1</p>
-                            <h4 className="text-lg font-bold ">Map 1</h4>
-                          </div>
-                        </div>
-                      </div>
+                      {mapCardData.map(
+                        ({ mapImageSrc, ageCategory, mapName }, index) => {
+                          return (
+                            <MapCard
+                              key={"mapCardData_" + index}
+                              mapImageSrc={mapImageSrc}
+                              ageCategory={ageCategory}
+                              mapName={mapName}
+                            ></MapCard>
+                          );
+                        }
+                      )}
                     </div>
                   </section>
                 </div>
@@ -471,11 +389,11 @@ const LandingPage: React.FC = () => {
                   <p>Build your collection while building skills</p>
                   <h3 className="text-2xl font-bold">Collect as you go!</h3>
                   <p className="py-5">
-                    As you and your child gain useful tools and essential
+                    {`As you and your child gain useful tools and essential
                     knowledge, you'll also collect a series of well-earned
                     badges. Earn stickers through activities tailored to your
                     child's developmental stage, progressively uncovering badges
-                    as you go! Click on each to learn more!
+                    as you go! Click on each to learn more!`}
                   </p>
                   <div className="my-5">
                     <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
@@ -535,81 +453,40 @@ const LandingPage: React.FC = () => {
             <div className="col-start-1 col-end-13 row-start-1 md:row-start-3 row-end-13  ">
               <h3 className="text-2xl font-bold text-center">Pregnancy</h3>
               <p className="text-center">
-                Wanting the best for your child can be stressful, so we've
+                {`Wanting the best for your child can be stressful, so we've
                 compiled a list of resources to make your journey easier and
                 more informed. Dive into our catalog of research-based articles
-                by clicking the "Explore Pregnancy" button below.
+                by clicking the "Explore Pregnancy" button below.`}
               </p>
             </div>
           </div>
           <div className="container px-10 m-auto">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 m-4">
-              <div className="grid grid-cols-12 mx-auto mb-auto">
-                <div className="col-start-1 col-end-13 row-start-1 row-end-13">
-                  <Image src={pinkBg2} alt="Olivia Kids"></Image>
-                </div>
-                <div className="col-start-2 col-end-12 row-start-7 row-end-13">
-                  <Image src={pregNews1} alt="Olivia Kids"></Image>
-                </div>
-                <div className="col-start-1 col-end-13">
-                  <p>First Trimester (1 - 12 weeks)</p>
-                  <h4 className="text-xl font-bold">
-                    How Does Diet Affect Embryo Development?
-                  </h4>
-                  <div className="grid grid-cols-12">
-                    <div>
-                      <Image src={authorImage1} alt="Olivia Kids"></Image>
-                    </div>
-                    <div className="col-span-9 my-auto">
-                      <p> Marie Buecker</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-12 mx-auto mb-auto">
-                <div className="col-start-1 col-end-13 row-start-1 row-end-13">
-                  <Image src={pinkBg2} alt="Olivia Kids"></Image>
-                </div>
-                <div className="col-start-2 col-end-12 row-start-7 row-end-13">
-                  <Image src={pregNews1} alt="Olivia Kids"></Image>
-                </div>
-                <div className="col-start-1 col-end-13">
-                  <p>Third Trimester (24 - 36 weeks)</p>
-                  <h4 className="text-xl font-bold">
-                    What are the signs of healthy fetal movement?
-                  </h4>
-                  <div className="grid grid-cols-12">
-                    <div>
-                      <Image src={authorImage1} alt="Olivia Kids"></Image>
-                    </div>
-                    <div className="col-span-9 my-auto">
-                      <p>Anika Puri</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-12 mx-auto mb-auto">
-                <div className="col-start-1 col-end-13 row-start-1 row-end-13">
-                  <Image src={pinkBg2} alt="Olivia Kids"></Image>
-                </div>
-                <div className="col-start-2 col-end-12 row-start-7 row-end-13">
-                  <Image src={pregNews1} alt="Olivia Kids"></Image>
-                </div>
-                <div className="col-start-1 col-end-13">
-                  <p>Full Duration</p>
-                  <h4 className="text-xl font-bold">
-                    What prenatal vitamins and supplements should I take?
-                  </h4>
-                  <div className="grid grid-cols-12">
-                    <div>
-                      <Image src={authorImage1} alt="Olivia Kids"></Image>
-                    </div>
-                    <div className="col-span-9 my-auto">
-                      <p>Andrew Evanson</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {carouselCardData.map(
+                (
+                  {
+                    bgImage,
+                    articleImage,
+                    articleCategory,
+                    articleHeader,
+                    authorImage,
+                    authorName,
+                  },
+                  index
+                ) => {
+                  return (
+                    <CarouselCard
+                      key={"carouselCardData_" + index}
+                      bgImage={bgImage}
+                      articleImage={articleImage}
+                      articleCategory={articleCategory}
+                      articleHeader={articleHeader}
+                      authorImage={authorImage}
+                      authorName={authorName}
+                    ></CarouselCard>
+                  );
+                }
+              )}
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-12">
               <div className="col-start-1 sm:col-start-6 col-end-9 m-auto">
