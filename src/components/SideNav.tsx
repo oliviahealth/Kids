@@ -25,7 +25,6 @@ const SideNav: React.FC = () => {
 
   return (
     <div className="h-full w-1/4 flex flex-col justify-start overflow-auto">
-      <LogoSection />
       <UserSection />
       <MainContent
         languages={languages}
