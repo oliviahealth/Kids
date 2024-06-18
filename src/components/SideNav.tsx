@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import logoCompany from "../../public//images/Logo+Company.svg";
+import editLogo from "../../public//images/solar_pen-bold.png";
 import sally from "../../public//images/Saly-17.png";
 import pioneerPrincess from "../../public//images/Pioneer Princess.png";
 import polygon from "../../public//images/Polygon 11.png";
@@ -25,7 +25,6 @@ const SideNav: React.FC = () => {
 
   return (
     <div className="h-full w-1/4 flex flex-col justify-start overflow-auto">
-      <UserSection />
       <MainContent
         languages={languages}
         selectedLanguage={selectedLanguage}
@@ -37,20 +36,21 @@ const SideNav: React.FC = () => {
   );
 };
 
-const LogoSection: React.FC = () => (
-  <div className="flex flex-col items-center">
-    <Image
-      src={logoCompany}
-      alt="Logo"
-      priority
-    />
-  </div>
-);
+interface UserSectionProps {
+  userName: string;
+}
 
-const UserSection: React.FC = () => (
-  <div className="flex flex-row gap-2 items-center ml-6">
-    <span className="font-bold text-xl">Sally</span>
-    <Image src={polygon} alt="Sally" />
+const UserSection: React.FC<UserSectionProps> = ({ userName }) => (
+  <div className="flex flex-row gap-2 items-center justify-between">
+    <div className="flex flex-row items-center gap-2">
+      <span className="font-bold text-xl">{userName}</span>
+      <div className="flex items-center justify-center bg-gray-200 rounded-full p-2">
+        <Image src={polygon} alt="Sally" className="rounded-full" />
+      </div>
+    </div>
+    <div className="flex items-center justify-center bg-gray-200 rounded-full p-2">
+      <Image src={editLogo} alt="Edit" className="rounded-full" />
+    </div>
   </div>
 );
 
@@ -67,8 +67,10 @@ const MainContent: React.FC<MainContentProps> = ({
   handleLanguageChange,
   ellipseImages,
 }) => (
-  <div className="grid grid-cols-7 mt-10">
+  <div className="grid grid-cols-7 mt-5">
     <div className="col-start-1 col-span-6 px-6">
+      <UserSection userName="Sally" />
+
       <div className="flex justify-center">
         <Image src={sally} alt="Saly" className="w-full" />
       </div>
@@ -76,13 +78,16 @@ const MainContent: React.FC<MainContentProps> = ({
       <div className="flex justify-center my-2">
         <Image src={pioneerPrincess} alt="Saly" />
       </div>
+
       <NavigationLinks />
-      <Dropdown
+
+      {/* <Dropdown
         label="Language"
         options={languages}
         selectedValue={selectedLanguage}
         handleChange={handleLanguageChange}
-      />
+      /> */}
+
       <LatestProgress />
     </div>
     <EllipsesColumn ellipseImages={ellipseImages} />
@@ -90,7 +95,7 @@ const MainContent: React.FC<MainContentProps> = ({
 );
 
 const NavigationLinks: React.FC = () => (
-  <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 mt-5 text-white font-bold">
+  <div className="grid lg:grid-cols-4 md:grid-cols-1 sm:grid-cols-1 gap-2 mt-5 text-white font-bold">
     {[
       {
         href: "/home",
@@ -120,10 +125,10 @@ const NavigationLinks: React.FC = () => (
       <Link
         key={href}
         href={href}
-        className="flex items-center justify-center text-white font-bold rounded-xl px-6 py-6"
+        className="flex items-center justify-center text-white font-bold rounded-3xl px-6 py-6"
         style={{ backgroundColor: bgColor, border: `5px solid ${borderColor}` }}
       >
-        {text}
+        {}
       </Link>
     ))}
   </div>
@@ -163,7 +168,7 @@ const StickerBoardSection: React.FC = () => (
           className="p-6 rounded-3xl shadow-md w-full h-full flex flex-col"
           style={{ border: "2px solid #FF8C8C", backgroundColor: "#FFB9B9" }}
         >
-          <div className="text-center font-bold text-white">Misty Plain</div>
+          <div className="text-center font-bold text-white text-3xl">Misty Plain</div>
           <div className="flex items-center justify-center mt-4">Stars</div>
         </div>
       </div>
@@ -175,16 +180,20 @@ const StickerBoardSection: React.FC = () => (
 const StickerCardsColumn: React.FC = () => (
   <div className="col-start-7 flex items-start justify-center">
     <div className="grid grid-cols-1 gap-3">
-      {["orange-300", "blue-300", "green-300", "purple-300"].map(
-        (bgColor, index) => (
-          <div
-            key={index}
-            className={`p-6 bg-${bgColor} rounded-lg shadow-md h-full w-full flex items-center justify-center`}
-          >
-            {index + 1}
-          </div>
-        )
-      )}
+      {[
+        { color: "#FFA500", label: "1" }, // Orange
+        { color: "#ADD8E6", label: "2" }, // Blue
+        { color: "#90EE90", label: "3" }, // Green
+        { color: "#D8BFD8", label: "4" }, // Purple
+      ].map(({ color, label }, index) => (
+        <div
+          key={index}
+          className="px-6 rounded-lg shadow-md h-full w-full flex items-center justify-center"
+          style={{ backgroundColor: color }}
+        >
+          {label}
+        </div>
+      ))}
     </div>
   </div>
 );
