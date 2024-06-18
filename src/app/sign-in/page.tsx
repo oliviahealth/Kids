@@ -9,13 +9,13 @@ const SignInForm: React.FC = () => {
         <AuthPageLayout>
             <div className="max-w-md">
                 <div className="text-sm flex flex-col space-y-4 font-bold">
-                    <button className="flex items-center justify-center px-4 py-4 border-2 border-[#23176D] rounded-lg shadow">
+                    <button className="flex items-center justify-center px-4 py-4 border border-[#23176D] rounded-lg shadow">
                         Continue with Google
                     </button>
-                    <button className="flex items-center justify-center px-4 py-4 border-2 border-[#23176D] rounded-lg shadow">
+                    <button className="flex items-center justify-center px-4 py-4 border border-[#23176D] rounded-lg shadow">
                         Continue with Facebook
                     </button>
-                    <button className="flex items-center justify-center px-4 py-4 border-2 border-[#23176D] rounded-lg shadow">
+                    <button className="flex items-center justify-center px-4 py-4 border border-[#23176D] rounded-lg shadow">
                         Continue with Apple
                     </button>
                 </div>
