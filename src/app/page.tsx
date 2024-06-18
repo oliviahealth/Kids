@@ -198,7 +198,7 @@ function Accordion({ summaryHeader, detailText }: AccordionModel) {
                 ></path>
               </svg>
             </summary>
-            <p className="text-gray-500">{detailText}</p>
+            <p className="text-gray-500 text-sm">{detailText}</p>
           </details>
         </div>
       </div>
@@ -211,18 +211,7 @@ function Accordion({ summaryHeader, detailText }: AccordionModel) {
 
 function MapCard({ mapImageSrc, ageCategory, mapName }: MapCardModel) {
   return (
-    <div className="">
-      {/* <div className="flex-column justify-end shadow-xl">
-        <Image
-          className="mx-auto w-auto  rounded-t-2xl"
-          src={mapImageSrc}
-          alt="Olivia Kids"
-        ></Image>
-        <div className="text-center bg-white rounded-b-xl">
-          <p>{ageCategory}</p>
-          <h4 className="text-lg font-bold ">{mapName}</h4>
-        </div>
-      </div> */}
+    <div>
       <div className="grid grid-cols-12 grid-rows-12">
         <div className="col-start-1 col-end-13 row-start-1 row-end-13">
           <Image
@@ -258,10 +247,10 @@ function CarouselCard({
       <div className="col-start-2 col-end-12 row-start-7 row-end-13">
         <Image src={articleImage} alt="Olivia Kids"></Image>
       </div>
-      <div className="col-start-2 col-end-13 mt-3">
+      <div className="col-start-2 col-end-13 mt-3 space-y-2">
         <p>{articleCategory}</p>
         <h4 className="text-xl font-bold">{articleHeader}</h4>
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 space-x-2">
           <div>
             <Image src={authorImage} alt="Olivia Kids"></Image>
           </div>
@@ -287,8 +276,8 @@ const LandingPage: React.FC = () => {
                 <div className="container mx-auto p-4">
                   <Image
                     src="/images/landingPage/rocket.png"
-                    height={400}
-                    width={300}
+                    height={500}
+                    width={500}
                     alt="Olivia Kids"
                     className="mx-auto"
                   ></Image>
@@ -305,13 +294,13 @@ const LandingPage: React.FC = () => {
                     guidance empowers children to succeed.
                   </p>
                   <div className="flex justify-between my-5">
-                    <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
+                    <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
                       Explore for free
                     </button>
-                    <button className="text-rose-600 hover:bg-rose-600 hover:text-white font-bold py-2 px-4 rounded">
+                    <button className="text-rose-600 font-bold py-2 px-4 rounded">
                       Learn More
                     </button>
-                    <button className="text-rose-600 hover:bg-rose-600 hover:text-white font-bold py-2 px-4 rounded">
+                    <button className="text-rose-600 font-bold py-2 px-4 rounded">
                       OliviaHealth
                     </button>
                   </div>
@@ -331,7 +320,7 @@ const LandingPage: React.FC = () => {
                   alt="Olivia Kids"
                 ></Image>
               </div>
-              <div className="col-start-2 col-end-12 sm:col-start-2 sm:col-end-12 row-start-3 row-end-11 z-10 overflow-auto h-[40rem] xl:h-auto">
+              <div className="col-start-2 col-end-12 sm:col-start-2 sm:col-end-12 row-start-2 row-end-12 z-10 overflow-auto h-[40rem] xl:h-auto">
                 <div className="bg-white py-10 rounded-3xl shadow-md px-[8%]">
                   <section>
                     <h3 className="text-2xl font-bold mb-4">Learn by domain</h3>
@@ -370,9 +359,7 @@ const LandingPage: React.FC = () => {
                         </span>
                       </Link>
                     </div>
-                    <div className="grid">
-                      <hr className="border-gray-300 mx-3 mt-5" />
-                    </div>
+
                   </section>
 
                   <section>
@@ -412,7 +399,7 @@ const LandingPage: React.FC = () => {
           <div className="my-3">
             <div className="container mx-auto">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 m-auto text-center sm:text-left max-w-md">
+                <div className="p-4 m-auto text-center sm:text-left max-w-md space-y-2">
                   <p>Build your collection while building skills</p>
                   <h3 className="text-2xl font-bold">Collect as you go!</h3>
                   <p className="py-5">
@@ -423,7 +410,7 @@ const LandingPage: React.FC = () => {
                     as you go! Click on each to learn more!`}
                   </p>
                   <div className="my-5">
-                    <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
+                    <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
                       Start your journey
                     </button>
                   </div>
@@ -448,7 +435,7 @@ const LandingPage: React.FC = () => {
                     alt="Olivia Kids"
                   ></Image>
                 </div>
-                <div className="p-4 m-auto text-center sm:text-right max-w-md">
+                <div className="p-4 m-auto text-center sm:text-right max-w-md space-y-2">
                   <p>Entering new areas and new opportunities</p>
                   <h3 className="text-2xl font-bold">Adapt to new locations</h3>
                   <p className="py-5">
@@ -458,7 +445,7 @@ const LandingPage: React.FC = () => {
                     welcome brave explorers!
                   </p>
                   <div className="my-5">
-                    <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
+                    <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
                       View world map
                     </button>
                   </div>
@@ -477,7 +464,7 @@ const LandingPage: React.FC = () => {
                 alt="Olivia Kids"
               ></Image>
             </div>
-            <div className="col-start-1 col-end-13 row-start-1 row-end-13 p-10 sm:p-6 max-w-3xl m-auto ">
+            <div className="col-start-1 col-end-13 row-start-1 row-end-13 p-10 sm:p-6 max-w-3xl m-auto space-y-2">
               <h3 className="text-2xl font-bold text-center">Pregnancy</h3>
               <p className="text-center">
                 {`Wanting the best for your child can be stressful, so we've
@@ -515,20 +502,13 @@ const LandingPage: React.FC = () => {
                 }
               )}
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-12">
-              <div className="col-start-1 sm:col-start-6 col-end-9 m-auto">
-                <button className="text-rose-600 hover:bg-rose-600 hover:text-white font-bold py-2 px-4 rounded">
-                  Our Authors
-                </button>
-              </div>
-              <div className="col-start-1 sm:col-start-10 col-end-13 m-auto">
-                <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
-                  Explore Prenancy
-                </button>
-              </div>
+            <div className="w-full flex justify-end">
+              <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
+                Explore Pregnancy
+              </button>
             </div>
           </div>
-          <hr className="border-gray-300 m-10" />
+          <hr className="border-gray-300 my-6" />
         </section>
 
         <section>
@@ -572,25 +552,21 @@ const LandingPage: React.FC = () => {
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-10">
-                <button className="bg-violet-400 text-white hover:bg-white hover:text-violet-400 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
+                <button className="bg-violet-400 text-white hover:bg-violet-600 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
                   Champions
                 </button>
-                <button className="bg-violet-400 text-white hover:bg-white hover:text-violet-400 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
+                <button className="bg-violet-400 text-white hover:bg-violet-600 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
                   GC Moms
                 </button>
-                <button className="bg-violet-400 text-white hover:bg-white hover:text-violet-400 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
+                <button className="bg-violet-400 text-white hover:bg-violet-600 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
                   HIPPY at Texas A&M
                 </button>
-                <button className="bg-violet-400 text-white hover:bg-white hover:text-violet-400 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
+                <button className="bg-violet-400 text-white hover:bg-violet-600 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
                   Nurse Family Partnership at Texas A&M
                 </button>
               </div>
             </div>
           </div>
-        </section>
-
-        <section>
-          <div className="h-[300px]"></div>
         </section>
 
         <Footer />

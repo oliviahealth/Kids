@@ -25,10 +25,6 @@ const Footer: React.FC = () => {
           </span>
         </Link>
       </div>
-      {/* Hiding the sponsor images until we get update from Walter/Nydia */}
-      {/* <div className="flex justify-center items-center">
-        <Image src={Sponsors} alt="Sponsors" />
-      </div> */}
     </div>
   );
 };
