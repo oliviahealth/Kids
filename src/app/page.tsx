@@ -281,7 +281,7 @@ const LandingPage: React.FC = () => {
         <Navbar />
 
         <section>
-          <div className="my-3">
+          <div className="my-10">
             <div className="container mx-auto">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="container mx-auto p-4">
@@ -290,6 +290,7 @@ const LandingPage: React.FC = () => {
                     height={400}
                     width={300}
                     alt="Olivia Kids"
+                    className="mx-auto"
                   ></Image>
                 </div>
                 <div className="container m-auto p-4 max-w-md">
