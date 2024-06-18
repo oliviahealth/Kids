@@ -176,27 +176,35 @@ const carouselCardData: CarouselCardModel[] = [
 function Accordion({ summaryHeader, detailText }: AccordionModel) {
   return (
     <div className="">
-      <details className="group py-1 text-lg">
-        <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
-          {summaryHeader}
-          <svg
-            className="h-6 w-6 rotate-0 transform text-gray-400 group-open:rotate-180"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </summary>
-        <p className="text-gray-500">{detailText}</p>
-      </details>
+      <div className="grid grid-cols-12">
+        <div className="col-span-2 h-6 w-6 mx-auto mt-3 rounded-full bg-gray-400"></div>
+        <div className="col-span-10">
+          <details className="group py-1 text-lg">
+            <summary className="flex cursor-pointer flex-row items-center justify-between py-1 font-semibold text-gray-800 marker:[font-size:0px]">
+              {summaryHeader}
+              <svg
+                className="h-6 w-6 rotate-0 transform text-black group-open:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <p className="text-gray-500">{detailText}</p>
+          </details>
+        </div>
+      </div>
+      <div className="grid">
+        <hr className="border-gray-300 my-2" />
+      </div>
     </div>
   );
 }
@@ -204,15 +212,30 @@ function Accordion({ summaryHeader, detailText }: AccordionModel) {
 function MapCard({ mapImageSrc, ageCategory, mapName }: MapCardModel) {
   return (
     <div className="">
-      <div className="flex-column justify-end shadow-xl rounded-xl">
+      {/* <div className="flex-column justify-end shadow-xl">
         <Image
           className="mx-auto w-auto  rounded-t-2xl"
           src={mapImageSrc}
           alt="Olivia Kids"
         ></Image>
-        <div className="text-center bg-white shadow-xl rounded-b-xl">
+        <div className="text-center bg-white rounded-b-xl">
           <p>{ageCategory}</p>
           <h4 className="text-lg font-bold ">{mapName}</h4>
+        </div>
+      </div> */}
+      <div className="grid grid-cols-12 grid-rows-12">
+        <div className="col-start-1 col-end-13 row-start-1 row-end-13">
+          <Image
+            className="mx-auto w-auto rounded-2xl"
+            src={mapImageSrc}
+            alt="Olivia Kids"
+          ></Image>
+        </div>
+        <div className="col-start-1 col-end-13 row-start-9 row-end-13 text-center bg-white rounded-xl bg-opacity-60">
+          <div className="">
+            <p>{ageCategory}</p>
+            <h4 className="text-lg font-bold ">{mapName}</h4>
+          </div>
         </div>
       </div>
     </div>
@@ -235,7 +258,7 @@ function CarouselCard({
       <div className="col-start-2 col-end-12 row-start-7 row-end-13">
         <Image src={articleImage} alt="Olivia Kids"></Image>
       </div>
-      <div className="col-start-1 col-end-13">
+      <div className="col-start-2 col-end-13 mt-3">
         <p>{articleCategory}</p>
         <h4 className="text-xl font-bold">{articleHeader}</h4>
         <div className="grid grid-cols-12">
@@ -261,39 +284,35 @@ const LandingPage: React.FC = () => {
           <div className="my-3">
             <div className="container mx-auto">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4">
-                  <div className="container mx-auto">
-                    <Image
-                      src="/images/landingPage/rocket.png"
-                      height={400}
-                      width={300}
-                      alt="Olivia Kids"
-                    ></Image>
-                  </div>
+                <div className="container mx-auto p-4">
+                  <Image
+                    src="/images/landingPage/rocket.png"
+                    height={400}
+                    width={300}
+                    alt="Olivia Kids"
+                  ></Image>
                 </div>
-                <div className="p-4 my-auto">
-                  <div className="container mx-auto">
-                    <h3 className="text-2xl font-bold">
-                      Explore a world of education made for kids, and driven by
-                      you.
-                    </h3>
-                    <p className="py-5">
-                      We believe in facilitating education that puts the
-                      relationship between the child and the guardian at the
-                      forefront, because a strong support system and intimate
-                      guidance empowers children to succeed.
-                    </p>
-                    <div className="flex justify-between my-5">
-                      <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
-                        Explore for free
-                      </button>
-                      <button className="text-rose-600 hover:bg-rose-600 hover:text-white font-bold py-2 px-4 rounded">
-                        Learn More
-                      </button>
-                      <button className="text-rose-600 hover:bg-rose-600 hover:text-white font-bold py-2 px-4 rounded">
-                        OliviaHealth
-                      </button>
-                    </div>
+                <div className="container m-auto p-4 max-w-md">
+                  <h3 className="text-2xl font-bold">
+                    Explore a world of education made for kids, and driven by
+                    you.
+                  </h3>
+                  <p className="py-5">
+                    We believe in facilitating education that puts the
+                    relationship between the child and the guardian at the
+                    forefront, because a strong support system and intimate
+                    guidance empowers children to succeed.
+                  </p>
+                  <div className="flex justify-between my-5">
+                    <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
+                      Explore for free
+                    </button>
+                    <button className="text-rose-600 hover:bg-rose-600 hover:text-white font-bold py-2 px-4 rounded">
+                      Learn More
+                    </button>
+                    <button className="text-rose-600 hover:bg-rose-600 hover:text-white font-bold py-2 px-4 rounded">
+                      OliviaHealth
+                    </button>
                   </div>
                 </div>
               </div>
@@ -306,17 +325,17 @@ const LandingPage: React.FC = () => {
             <div className="grid grid-rows-12 grid-cols-12">
               <div className="col-start-1 col-end-13 row-start-1 row-end-13">
                 <Image
-                  className="h-full w-full opacity-30 rounded-[100px]"
+                  className="h-full w-full opacity-30 rounded-t-[100px]"
                   src={island}
                   alt="Olivia Kids"
                 ></Image>
               </div>
-              <div className="col-start-2 col-end-12 sm:col-start-3 sm:col-end-11 row-start-3 row-end-11 z-10 overflow-auto h-[40rem] xl:h-auto">
-                <div className="bg-white p-6 rounded-3xl shadow-md">
+              <div className="col-start-2 col-end-12 sm:col-start-2 sm:col-end-12 row-start-3 row-end-11 z-10 overflow-auto h-[40rem] xl:h-auto">
+                <div className="bg-white py-10 rounded-3xl shadow-md px-[8%]">
                   <section>
                     <h3 className="text-2xl font-bold mb-4">Learn by domain</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 ">
-                      <div className="divide-y px-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+                      <div className="">
                         {accordionLeftSideData.map(
                           ({ summaryHeader, detailText }, index) => {
                             return (
@@ -329,7 +348,7 @@ const LandingPage: React.FC = () => {
                           }
                         )}
                       </div>
-                      <div className="divide-y px-5">
+                      <div className="">
                         {accordionRightSideData.map(
                           ({ summaryHeader, detailText }, index) => {
                             return (
@@ -345,7 +364,7 @@ const LandingPage: React.FC = () => {
                     </div>
                     <div className="grid text-right mt-5">
                       <Link href={""}>
-                        <span className="text-indigo-600">
+                        <span className="text-rose-600 font-semibold">
                           Why these topics?
                         </span>
                       </Link>
@@ -360,7 +379,7 @@ const LandingPage: React.FC = () => {
                     <p>
                       Voyage to the world that suits you by clicking the icon!
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-7">
                       {mapCardData.map(
                         ({ mapImageSrc, ageCategory, mapName }, index) => {
                           return (
@@ -374,6 +393,13 @@ const LandingPage: React.FC = () => {
                         }
                       )}
                     </div>
+                    <div className="grid text-right mt-10 mb-2">
+                      <Link href={""}>
+                        <span className="text-rose-600 font-semibold">
+                          Explore entire map
+                        </span>
+                      </Link>
+                    </div>
                   </section>
                 </div>
               </div>
@@ -385,7 +411,7 @@ const LandingPage: React.FC = () => {
           <div className="my-3">
             <div className="container mx-auto">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 m-auto text-center sm:text-left">
+                <div className="p-4 m-auto text-center sm:text-left max-w-md">
                   <p>Build your collection while building skills</p>
                   <h3 className="text-2xl font-bold">Collect as you go!</h3>
                   <p className="py-5">
@@ -421,7 +447,7 @@ const LandingPage: React.FC = () => {
                     alt="Olivia Kids"
                   ></Image>
                 </div>
-                <div className="p-4 m-auto text-center sm:text-right">
+                <div className="p-4 m-auto text-center sm:text-right max-w-md">
                   <p>Entering new areas and new opportunities</p>
                   <h3 className="text-2xl font-bold">Adapt to new locations</h3>
                   <p className="py-5">
@@ -443,14 +469,14 @@ const LandingPage: React.FC = () => {
 
         <section>
           <div className="grid grid-cols-12 grid-rows-12">
-            <div className="col-start-1 col-end-13  row-start-1 row-end-13">
+            <div className="col-start-1 col-end-13 row-start-1 row-end-13">
               <Image
-                className="h-[200px] md:h-40"
+                className="h-full sm:max-h-44"
                 src={pinkBackground}
                 alt="Olivia Kids"
               ></Image>
             </div>
-            <div className="col-start-1 col-end-13 row-start-1 md:row-start-3 row-end-13  ">
+            <div className="col-start-1 col-end-13 row-start-1 row-end-13 p-10 sm:p-6 max-w-3xl m-auto ">
               <h3 className="text-2xl font-bold text-center">Pregnancy</h3>
               <p className="text-center">
                 {`Wanting the best for your child can be stressful, so we've
@@ -508,50 +534,53 @@ const LandingPage: React.FC = () => {
           <div className="container m-auto px-20">
             <div className="grid grid-cols-1">
               <div className="grid grid-cols-1">
-                <h3 className="text-2xl font-bold">About Us</h3>
-                <p>
-                  The{" "}
-                  <span className="font-bold">
-                    {" "}
-                    Program of Excellence for Mothers, Children and Families
-                    (POEMCF){" "}
-                  </span>{" "}
-                  at the Texas A&M School of Nursing develops and manages
-                  projects that improve the health and well-being of families
-                  and communities across Texas. The POEMCF was created to help
-                  mothers, birthing people, infants, children, youth and
-                  families thrive by providing educational health promotion,
-                  preventative health care and community services.
-                </p>
-                <br />
-                <p>
-                  The <span className="font-bold"> vision </span> of the POEMCF
-                  is to be a leading program, founded in evidence, to implement
-                  promising approaches for facilitating a culture of healthy
-                  mothers, children and families. Its{" "}
-                  <span className="font-bold"> mission </span> is to improve the
-                  well-being and health outcomes of pregnant mothers, infants,
-                  children, youth and their families across Texas communities.
-                </p>
-                <br />
-                <p>
-                  The POEMCF is distinctive for Texas A&M in its focus on
-                  delivery of multiple evidence-based programs to improve
-                  outcomes for vulnerable mothers, children and families.
-                  Current programming is listed below.
-                </p>
+                <h3 className="text-2xl font-bold text-violet-400">About Us</h3>
+                <div className="mt-5">
+                  <p>
+                    The{" "}
+                    <span className="font-bold">
+                      {" "}
+                      Program of Excellence for Mothers, Children and Families
+                      (POEMCF){" "}
+                    </span>{" "}
+                    at the Texas A&M School of Nursing develops and manages
+                    projects that improve the health and well-being of families
+                    and communities across Texas. The POEMCF was created to help
+                    mothers, birthing people, infants, children, youth and
+                    families thrive by providing educational health promotion,
+                    preventative health care and community services.
+                  </p>
+                  <br />
+                  <p>
+                    The <span className="font-bold"> vision </span> of the
+                    POEMCF is to be a leading program, founded in evidence, to
+                    implement promising approaches for facilitating a culture of
+                    healthy mothers, children and families. Its{" "}
+                    <span className="font-bold"> mission </span> is to improve
+                    the well-being and health outcomes of pregnant mothers,
+                    infants, children, youth and their families across Texas
+                    communities.
+                  </p>
+                  <br />
+                  <p>
+                    The POEMCF is distinctive for Texas A&M in its focus on
+                    delivery of multiple evidence-based programs to improve
+                    outcomes for vulnerable mothers, children and families.
+                    Current programming is listed below.
+                  </p>
+                </div>
               </div>
-              <div className="grid grid-cols-2 gap-6 my-10">
-                <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-10">
+                <button className="bg-violet-400 text-white hover:bg-white hover:text-violet-400 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
                   Champions
                 </button>
-                <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
+                <button className="bg-violet-400 text-white hover:bg-white hover:text-violet-400 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
                   GC Moms
                 </button>
-                <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
+                <button className="bg-violet-400 text-white hover:bg-white hover:text-violet-400 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
                   HIPPY at Texas A&M
                 </button>
-                <button className="bg-rose-600 text-white hover:bg-white hover:text-rose-600  font-bold py-2 px-4 rounded">
+                <button className="bg-violet-400 text-white hover:bg-white hover:text-violet-400 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
                   Nurse Family Partnership at Texas A&M
                 </button>
               </div>
