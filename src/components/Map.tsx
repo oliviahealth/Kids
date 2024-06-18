@@ -90,7 +90,7 @@ const Map: React.FC = () => {
 
 
   return (
-    <div className="relative w-4/5 h-full overflow-hidden" ref={containerRef}>
+    <div className="relative w-3/4 h-full overflow-hidden" ref={containerRef}>
       <Image
         src="/images/map.svg"
         alt="Map"
