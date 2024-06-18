@@ -126,7 +126,7 @@ const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onSignUp }) => {
                 <div className="mb-4">
                     <label className="font-bold block mb-2">What is your child's birth date?</label>
                     <input
-                        className="p-2"
+                        className="rounded-md border border-[#23176D] p-2"
                         type="date"
                         id="birthDate"
                         name="birthDate"
@@ -141,7 +141,7 @@ const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onSignUp }) => {
                         name="heardAboutUs"
                         value={formData.heardAboutUs}
                         onChange={handleInputChange}
-                        className="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        className="block text-md appearance-none w-full bg-white border border-[#23176D] text-gray-700 py-3 px-3 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     >
                         <option value="">Select</option>
                         <option value="social_media">Social Media</option>
@@ -229,7 +229,7 @@ const SignUpFormPageTwo: React.FC<SignUpFormPageTwoProps> = ({ onBack, onSignUp 
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline mb-2"
+                            className="shadow appearance-none rounded-md border border-[#23176D] w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline mb-2"
                             placeholder="example@email.com"
                         />
                         {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -256,7 +256,7 @@ const SignUpFormPageTwo: React.FC<SignUpFormPageTwoProps> = ({ onBack, onSignUp 
                             name="username"
                             value={formData.username}
                             onChange={handleInputChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none rounded-md border border-[#23176D] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="Your username"
                         />
                         {errors.username && <p className="text-red-500 text-xs mt-1">{errors.username}</p>}
@@ -273,7 +273,7 @@ const SignUpFormPageTwo: React.FC<SignUpFormPageTwoProps> = ({ onBack, onSignUp 
                             name="password"
                             value={formData.password}
                             onChange={handleInputChange}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none rounded-md border border-[#23176D] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="Your password"
                         />
                         {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
