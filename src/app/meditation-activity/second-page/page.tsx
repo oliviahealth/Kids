@@ -25,13 +25,18 @@ const Dashboard: React.FC = () => {
                 <Image
                     src="/images/ellipse 115.png"
                     alt="Ellipse"
-                    width={100} // adjust the width as needed
-                    height={100} // adjust the height as needed
+                    width={175} // adjust the width as needed
+                    height={175} // adjust the height as needed
                 />
+                <div className="absolute inset-0 flex justify-center items-center">
+                    <span className="text-4xl font-bold text-black">2</span>
+                </div>
             </div>
-            <div className="absolute top-0 right-0 m-4 w-10 h-10 bg-[#FFC700] rounded-full flex justify-center items-center">
-                <span className="text-black font-bold">X</span>
-            </div>
+            <Link href="/home">
+                <div className="absolute top-0 right-0 m-4 w-20 h-20 bg-[#FFC700] rounded-full flex justify-center items-center hover-grow-x">
+                    <span className="text-black font-bold">X</span>
+                </div>
+            </Link>
             <div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] bg-[#2787CC] rounded-full flex justify-center items-center">
                 <div className="relative w-full h-full flex justify-center items-center">
                     <div className="absolute top-[65%] left-[25%]">
@@ -70,15 +75,15 @@ const Dashboard: React.FC = () => {
                     </Link>
                 )}
             </div>
-            <div className="absolute bottom-4 left-4">
+            <div className="absolute bottom-5 left-5">
                 <Link href="/meditation-activity" legacyBehavior>
-                    <a className="text-4xl font-bold" style={{ color: '#FF5B5B' }}>Back</a>
+                    <a className="text-4xl font-bold back-effect">Back</a>
                 </Link>
             </div>
-            <div className="text-center mt-20">
-                <h1 className="text-5xl font-bold mb-4">Take a few deep breaths</h1>
-                <p className="text-xl mb-8">Breathe in through your nose and exhale through your mouth</p>
-                <p className="text-xl mb-8">Slowly take these breaths and feel your mind, muscle, and body start to relax</p>
+            <div className="text-center mt-20 fade-in">
+                <h1 className="text-5xl font-extrabold mb-8">Take a few deep breaths</h1>
+                <p className="text-xl font-semibold mb-2">Breathe in through your nose and out through your mouth</p>
+                <p className="text-xl font-semibold mb-2">Slowly take these breaths and feel your mind, muscle, and body start to relax.</p>
             </div>
         </div>
     );

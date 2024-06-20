@@ -24,23 +24,27 @@ const Dashboard: React.FC = () => {
                 <Image
                     src="/images/ellipse 122.png"
                     alt="Ellipse"
-                    width={100} // adjust the width as needed
-                    height={100} // adjust the height as needed
+                    width={175} // adjust the width as needed
+                    height={175} // adjust the height as needed
                 />
+                <div className="absolute inset-0 flex justify-center items-center">
+                    <span className="text-4xl font-bold text-black">1</span>
+                </div>
             </div>
-            <div className="absolute top-0 right-0 m-4 w-10 h-10 bg-[#FF7613] rounded-full flex justify-center items-center">
-                <span className="text-black font-bold">X</span>
-            </div>
+            <Link href="/home">
+                <div className="absolute top-0 right-0 m-4 w-20 h-20 bg-[#FF7613] rounded-full flex justify-center items-center cursor-pointer hover-grow-x">
+                    <span className="text-black font-bold">X</span>
+                </div>
+            </Link>
             <div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] bg-[#FFDF38] rounded-full flex justify-center items-center">
                 <div className="relative w-full h-full flex justify-center items-center">
-                    <div className="absolute top-[6%] left-[40%] w-20 h-20 bg-black rounded-full"></div>
-                    <div className="absolute top-[20%] right-[15%] w-20 h-20 bg-black rounded-full"></div>
-                    <div className="absolute bottom-[70%] left-[58%] transform -translate-x-1/2 rotate-11">
+                    <div className="eye absolute top-[6%] left-[40%]"></div>
+                    <div className="eye absolute top-[20%] right-[15%]"></div>
+                    <div className="absolute bottom-[73%] left-[60%] transform -translate-x-1/2 rotate-11">
                         <Image
                             src={SmileLine}
                             alt="Smile Line"
                             width={200} // adjust the width as needed
-                            height={50} // adjust the height as needed
                         />
                     </div>
                 </div>
@@ -49,11 +53,11 @@ const Dashboard: React.FC = () => {
                 <div className="relative w-full h-full flex justify-center items-center">
                     <div className="absolute top-[6%] left-[40%] w-10 h-10 bg-black rounded-full"></div>
                     <div className="absolute top-[13%] right-[20%] w-10 h-10 bg-black rounded-full"></div>
-                    <div className="absolute bottom-[70%] left-[58%] transform -translate-x-1/2 rotate--1">
+                    <div className="absolute bottom-[78%] left-[48%] transform -translate-x-1/2" style={{ transform: 'rotate(-7deg)' }}>
                         <Image
                             src={SmileLine}
                             alt="Smile Line"
-                            width={130} // adjust the width as needed
+                            width={120} // adjust the width as needed
                             height={50} // adjust the height as needed
                         />
                     </div>
@@ -68,9 +72,9 @@ const Dashboard: React.FC = () => {
                     </Link>
                 )}
             </div>
-            <div className="text-center mt-20">
-                <h1 className="text-5xl font-bold mb-4">Stop</h1>
-                <p className="text-xl mb-8">Pause what you are doing and find a comfortable place to sit down</p>
+            <div className="text-center mt-20 fade-in">
+                <h1 className="text-5xl font-extrabold mb-8">Stop</h1>
+                <p className="text-xl font-semibold mb-2">Pause what you are doing, and find a comfortable place to sit down</p>
             </div>
         </div>
     )

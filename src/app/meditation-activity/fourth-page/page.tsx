@@ -25,18 +25,23 @@ const Dashboard: React.FC = () => {
                 <Image
                     src="/images/Group 59.png"
                     alt="Ellipse"
-                    width={100} // adjust the width as needed
-                    height={100} // adjust the height as needed
+                    width={175} // adjust the width as needed
+                    height={175} // adjust the height as needed
                 />
+                <div className="absolute inset-0 flex justify-center items-center">
+                    <span className="text-4xl font-bold text-black">4</span>
+                </div>
             </div>
-            <div className="absolute top-0 right-0 m-4 w-10 h-10 bg-[#F5DD00] rounded-full flex justify-center items-center">
-                <span className="text-black font-bold">X</span>
-            </div>
+            <Link href="/home">
+                <div className="absolute top-0 right-0 m-4 w-20 h-20 bg-[#F5DD00] rounded-full flex justify-center items-center hover-grow-x">
+                    <span className="text-black font-bold">X</span>
+                </div>
+            </Link>
             <div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] bg-[#FF8C39] rounded-full flex justify-center items-center">
                 <div className="relative w-full h-full flex justify-center items-center">
-                    <div className="absolute top-[6%] left-[40%] w-20 h-20 bg-black rounded-full"></div>
-                    <div className="absolute top-[20%] right-[15%] w-20 h-20 bg-black rounded-full"></div>
-                    <div className="absolute bottom-[70%] left-[58%] transform -translate-x-1/2 rotate-11">
+                    <div className="eye absolute top-[24%] left-[27%]"></div>
+                    <div className="eye absolute top-[24%] right-[27%]"></div>
+                    <div className="absolute bottom-[65%] left-[40%] transform -translate-x-1/2" style={{ transform: 'rotate(-19deg)' }}>
                         <Image
                             src={SmileLine}
                             alt="Smile Line"
@@ -55,14 +60,15 @@ const Dashboard: React.FC = () => {
                     </Link>
                 )}
             </div>
-            <div className="absolute bottom-4 left-4">
+            <div className="absolute bottom-5 left-5">
                 <Link href="/meditation-activity/third-page" legacyBehavior>
-                    <a className="text-4xl font-bold" style={{ color: '#FF5B5B' }}>Back</a>
+                    <a className="text-4xl font-bold back-effect">Back</a>
                 </Link>
             </div>
-            <div className="text-center mt-20">
-                <h1 className="text-5xl font-bold mb-4">Stop</h1>
-                <p className="text-xl mb-8">Pause what you are doing and find a comfortable place to sit down</p>
+            <div className="text-center mt-20 fade-in">
+                <h1 className="text-5xl font-extrabold mb-8">Stop</h1>
+                <p className="text-xl font-semibold mb-2">Return back to what you were doing. Now that you know what caused your stress and were able</p>
+                <p className="text-xl font-semibold mb-2">to relax for a few seconds to minutes, you have a clear mind and can respond to the situation.</p>
             </div>
         </div>
     );
