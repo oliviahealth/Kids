@@ -432,3 +432,19 @@
 .fade-in {
   animation: fadeIn 2s ease-in-out;
 }
+
+@keyframes bop {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.bop-animation {
+  animation: bop 2s infinite;
+}

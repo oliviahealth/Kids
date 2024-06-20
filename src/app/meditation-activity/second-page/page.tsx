@@ -37,7 +37,7 @@ const Dashboard: React.FC = () => {
                     <span className="text-black font-bold">X</span>
                 </div>
             </Link>
-            <div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] bg-[#2787CC] rounded-full flex justify-center items-center">
+            <div className="absolute bottom-[-200px] transform -translate-x-1/2 w-[1000px] h-[1000px] bg-[#2787CC] rounded-full flex justify-center items-center bop-animation">
                 <div className="relative w-full h-full flex justify-center items-center">
                     <div className="absolute top-[65%] left-[25%]">
                         <Image
@@ -63,7 +63,6 @@ const Dashboard: React.FC = () => {
                             height={50} // adjust the height as needed
                         />
                     </div>
-
                 </div>
             </div>
             <div className="absolute bottom-4 right-4 w-24 h-24 bg-[#FFC700] rounded-full flex justify-center items-center">
