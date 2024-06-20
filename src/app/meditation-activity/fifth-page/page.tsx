@@ -27,13 +27,13 @@ const Dashboard: React.FC = () => {
         const frame = () => {
             // Launch confetti from random points on the screen
             confetti({
-                particleCount: 3,
+                particleCount: 2,
                 angle: 60,
                 spread: 55,
                 origin: { x: Math.random(), y: Math.random() }
             });
             confetti({
-                particleCount: 3,
+                particleCount: 2,
                 angle: 120,
                 spread: 55,
                 origin: { x: Math.random(), y: Math.random() }
