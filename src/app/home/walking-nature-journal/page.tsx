@@ -1,8 +1,17 @@
+"use client"; // This marks the component as a client component
+
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/navigation'; // Correct import
 import styles from './WalkingNatureJournal.module.css';
 
 const WalkingNatureJournal = () => {
+  const router = useRouter();
+
+  const handleExit = () => {
+    router.push('/home'); // Correct navigation to /home
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,7 +19,7 @@ const WalkingNatureJournal = () => {
       </Head>
       <main className={styles.main}>
         <div className={styles.card}>
-          <div className={styles.leftSide}>
+          <div className={styles.headerWrapper}>
             <div className={styles.header}>
               <img src="/images/flower.svg" alt="Flower Icon" className={styles.icon} />
               <div>
@@ -18,6 +27,11 @@ const WalkingNatureJournal = () => {
                 <h2 className={styles.subtitle}>Caregiver Wellness - Blossom Haven</h2>
               </div>
             </div>
+            <button className={styles.exitButton} onClick={handleExit}>
+              <img src="/images/exit.svg" alt="Exit" className={styles.exitIcon} />
+            </button>
+          </div>
+          <div className={styles.contentWrapper}>
             <div className={styles.content}>
               <h3 className={styles.heading}><b>Take a walk.</b></h3>
               <p className={styles.text}>
@@ -29,8 +43,16 @@ const WalkingNatureJournal = () => {
               <p className={styles.text}>
                 A great exercise that caregivers can do to improve their mental health is journaling. For this activity, we are going to focus on creating a walking nature journal for the caregiver to use no matter where they may be located. We recommend that caregivers have a physical journal as this helps with engagement, but having an electronic version is okay too.
               </p>
-              <button className={styles.button}>Learn more</button>
             </div>
+            <div className={styles.imageWrapper}>
+              <img src="/images/walking.svg" alt="Walking Illustration" className={styles.illustration} />
+            </div>
+          </div>
+          <div className={styles.buttonWrapper}>
+            <button className={styles.button}>Learn more</button>
+            <button className={styles.continueButton}>
+              <img src="/images/continue.svg" alt="Continue" />
+            </button>
           </div>
         </div>
       </main>
