@@ -1,17 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Inter:wght@400;700&display=swap');
+
 .container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('/images/map.svg') no-repeat center center fixed;
-    background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/images/map.svg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 1rem;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.main {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  width: 100%;
+  min-height: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.leftSide {
+  width: 50%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  width: 73px;
+  height: 73px;
+  margin-right: 1rem;
+}
+
+.content {
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0;
+  font-size: 25px;
+  color: #333;
+  font-family: 'Candal', sans-serif;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 20px;
+  color: #f59e0b;
+  font-family: 'Inter', sans-serif;
+}
+
+.heading, .text, .button {
+  font-family: 'Inter', sans-serif;
+}
+
+.heading {
+  margin-top: 1rem;
+  font-size: 18px;
+  color: #333;
+}
+
+.text {
+  margin: 1rem 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.button {
+  background: transparent;
+  color: #ef4444;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
   }
   
-  .main {
-    padding: 5rem 0;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .leftSide {
+    width: 100%;
   }
   
+  .title {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 18px;
+  }
+}
+
+
+
+
+
