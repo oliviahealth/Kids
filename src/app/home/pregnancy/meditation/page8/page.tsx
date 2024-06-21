@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import confetti from "canvas-confetti";
-import Star from "../../../../public/images/Star 26.svg";
-import ContinueIcon from "../../../../public/images/openmoji_return.png";
-import '../../globals.css';
+import Star from "../../../../../../public/images/Star 26.svg";
+import ContinueIcon from "../../../../../../public/images/openmoji_return.png";
+import '../../../../globals.css';
 
 const Dashboard: React.FC = () => {
     const [countdown, setCountdown] = useState(10);
@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
             </Link>
             
             <div className="absolute bottom-5 left-5">
-                <Link href="/meditation-activity/fourth-page" legacyBehavior>
+                <Link href="./page7" legacyBehavior>
                     <div className="text-4xl font-bold back-effect cursor-pointer">Back</div>
                 </Link>
             </div>
@@ -74,7 +74,7 @@ const Dashboard: React.FC = () => {
                 </div>
             </div>
            <div className="absolute bottom-9 right-9">
-                <Link href="/home">
+                <Link href="./page9">
                     <div className="flex items-center px-4 py-2 bg-[#FF5B5B] rounded-full text-white font-bold cursor-pointer hover-grow-x">
                         Continue
                         <Image

@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import SmileLine from "../../../public/images/Line 16.png";
-import '../globals.css';
+import SmileLine from "../../../../../../public/images/Line 16.png";
+import '../../../../globals.css';
 
 const Dashboard: React.FC = () => {
     const [countdown, setCountdown] = useState(10);
@@ -67,7 +67,7 @@ const Dashboard: React.FC = () => {
                 {countdown > 0 ? (
                     <span className="text-white text-4xl font-bold">{countdown}</span>
                 ) : (
-                    <Link href="/meditation-activity/second-page" legacyBehavior>
+                    <Link href="./page5" legacyBehavior>
                         <a className="text-white text-4xl font-bold">→</a>
                     </Link>
                 )}

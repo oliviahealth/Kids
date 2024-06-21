@@ -1,8 +1,9 @@
 import Image from "next/image";
-import meditationImage from "../../../../../../../public/images/dashboard/meditation/mediatationImage.png";
-import meditationImage9 from "../../../../../../../public/images/dashboard/meditation/mediatationImage9.png";
-import meditationImage10 from "../../../../../../../public/images/dashboard/meditation/meditationImage10.png";
-import meditationImage11 from "../../../../../../../public/images/dashboard/meditation/meditationImage11.jpeg";
+import meditationImage from "../../../../../../public/images/dashboard/meditation/mediatationImage.png";
+import meditationImage9 from "../../../../../../public/images/dashboard/meditation/mediatationImage9.png";
+import meditationImage10 from "../../../../../../public/images/dashboard/meditation/meditationImage10.png";
+import meditationImage11 from "../../../../../../public/images/dashboard/meditation/meditationImage11.jpeg";
+import Link from "next/link";
 const MeditationActivity: React.FC = () => {
   return (
     <section>
@@ -23,9 +24,11 @@ const MeditationActivity: React.FC = () => {
           </div>
 
           <div className="float-right">
-            <div className="h-24 w-24 mx-auto mt-3 rounded-full bg-gray-300 flex items-center justify-center">
-              <p className="text-2xl">X</p>
-            </div>
+            <Link href="/home">
+              <button className="h-24 w-24 mx-auto mt-3 rounded-full bg-gray-300 flex items-center justify-center text-2xl">
+                X
+              </button>
+            </Link>
           </div>
         </div>
         <div className="grid grid-cols-12">
@@ -94,9 +97,11 @@ const MeditationActivity: React.FC = () => {
             </button>
           </div>
           <div className="float-right">
-            <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl">
-              Continue &gt;
-            </button>
+            <Link href="/home">
+              <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl">
+                Continue &gt;
+              </button>
+            </Link>
           </div>
         </div>
       </div>
