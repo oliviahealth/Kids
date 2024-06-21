@@ -8,6 +8,8 @@ import sally from "../../public//images/Saly-17.png";
 import pioneerPrincess from "../../public//images/Pioneer Princess.png";
 import polygon from "../../public//images/Polygon 11.png";
 import ellipse from "../../public//images/Ellipse 44.png";
+import expandArrow from "../../public/images/expand_arrow.png";
+import collapseArrow from "../../public/images/collapse_arrow.png";
 
 import Dropdown from "./Dropdown";
 
@@ -157,28 +159,62 @@ const LatestProgress: React.FC = () => (
   </div>
 );
 
-const StickerBoardSection: React.FC = () => (
-  <div className="mt-10 mb-10 mr-6">
-    <div className="flex flex-row gap-2 items-center ml-6 mb-2">
-      <span className="font-bold text-xl">Sticker Board</span>
-    </div>
-    <div className="grid grid-cols-7">
-      <div className="col-start-1 col-span-6 px-6">
-        <div
-          className="p-6 rounded-3xl shadow-md w-full h-full flex flex-col"
-          style={{ border: "2px solid #FF8C8C", backgroundColor: "#FFB9B9" }}
-        >
-          <div className="text-center font-bold text-white text-3xl">Misty Plain</div>
-          <div className="flex items-center justify-center mt-4">Stars</div>
-        </div>
-      </div>
-      <StickerCardsColumn />
-    </div>
-  </div>
-);
+const StickerBoardSection: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
 
-const StickerCardsColumn: React.FC = () => (
-  <div className="col-start-7 flex items-start justify-center">
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  return (
+    <div className="mt-10 mb-10 mr-6">
+      <div className="flex flex-row gap-2 items-center ml-6 mb-2">
+        <span className="font-bold text-xl">Sticker Board</span>
+      </div>
+      <div className="grid grid-cols-7">
+        <div className="col-start-1 col-span-6 px-6">
+          <div
+            className="p-6 rounded-3xl shadow-md w-full h-full flex flex-col"
+            style={{ border: "5px solid #FF8C8C", backgroundColor: "#FFB9B9" }}
+          >
+            <div className="text-center font-bold text-white text-3xl">
+              Misty Plain
+            </div>
+            {isExpanded && (
+              <div className="mt-4 text-center text-white">
+                <div className="text-center font-bold text-white text-2xl">
+                  Stars
+                </div>
+              </div>
+            )}
+            <div
+              className="flex items-center justify-center mt-4 cursor-pointer"
+              onClick={toggleExpand}
+            >
+              <div className="ml-2">
+                {isExpanded ? (
+                  <Image src={collapseArrow} alt="Collapse" />
+                ) : (
+                  <Image src={expandArrow} alt="Expand" />
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+        <StickerCardsColumn isExpanded={isExpanded} />
+      </div>
+    </div>
+  );
+};
+
+interface StickerCardsColumnProps {
+  isExpanded: boolean;
+}
+
+const StickerCardsColumn: React.FC<StickerCardsColumnProps> = ({
+  isExpanded,
+}) => (
+  <div className={`col-start-7 flex items-between justify-center h-full`}>
     <div className="grid grid-cols-1 gap-3">
       {[
         { color: "#FFA500", label: "1" }, // Orange
@@ -188,7 +224,9 @@ const StickerCardsColumn: React.FC = () => (
       ].map(({ color, label }, index) => (
         <div
           key={index}
-          className="px-6 rounded-lg shadow-md h-full w-full flex items-center justify-center"
+          className={`px-6 py-2 rounded-lg shadow-md w-full flex items-center justify-center ${
+            isExpanded ? "h-full" : "h-2"
+          }`}
           style={{ backgroundColor: color }}
         >
           {label}

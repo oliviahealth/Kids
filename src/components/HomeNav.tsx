@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
                         >
                         </Link>
                         <Link
-                            href={'/lessons'}
+                            href={'/meditation-activity'}
                             className="age-one-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-one"
                         >
                         </Link>

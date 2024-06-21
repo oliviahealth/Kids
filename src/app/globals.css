@@ -79,6 +79,24 @@
     transform: scale(1.1, 1.55) translateY(-18%);
   }
 
+  .back-effect {
+    color: #FF5B5B;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .back-effect:hover {
+    color: black;
+  }
+
+
+  .hover-grow-x {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .hover-grow-x:hover {
+    transform: scale(1.1);
+  }
+
   .pregnancy-button {
     @apply bg-[#E0E0E0] relative px-4;
   }
@@ -371,5 +389,62 @@
     /* Lighter red color */
   }
 
+  .meditation-activity-one-bg {
+    background-color: #FF8C38;
+  }
 
+
+  .meditation-activity-two-bg {
+    background-color: #FFED4D;
+  }
+
+  .meditation-activity-three-bg {
+    background-color: #61C5FE;
+  }
+
+  .meditation-activity-four-bg {
+    background-color: #FEEE61;
+  }
+
+  .meditation-activity-five-bg {
+    background-color: #FFA43A;
+  }
+
+
+  .eye {
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border-radius: 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes bop {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.bop-animation {
+  animation: bop 2s infinite;
 }
