@@ -89,7 +89,7 @@ const WalkingNatureJournal = () => {
           </div>
         </>
       ),
-      content: null, 
+      content: null,
       buttons: (
         <>
           <button className={styles.button} onClick={goBack}>Back</button>
