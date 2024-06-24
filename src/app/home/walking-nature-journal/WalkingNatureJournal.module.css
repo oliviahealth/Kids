@@ -92,6 +92,12 @@
   box-sizing: border-box;
 }
 
+.contentFullWidth {
+  width: 100%;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
 .imageWrapper {
   width: 45%;
   display: flex;
@@ -103,7 +109,7 @@
   width: 100%;
   height: auto;
   max-height: 100%;
-  object-fit: contain; /* Ensure the image scales properly */
+  object-fit: contain;
 }
 
 .journalingSection {
@@ -210,14 +216,14 @@
 
 .activityList {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 1rem; 
 }
 
 .activityItem {
   display: flex;
-  align-items: flex-start;
-  width: calc(50% - 1rem);
+  align-items: center; 
   margin-bottom: 1rem;
 }
 
@@ -231,6 +237,10 @@
   font-size: 18px;
   color: #333;
   line-height: 1.6;
+}
+
+.activityHeading {
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {

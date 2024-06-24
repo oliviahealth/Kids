@@ -171,35 +171,37 @@ const WalkingNatureJournal = () => {
       ),
       content: (
         <>
-          <div className={styles.activityList}>
-          <h3 className={styles.heading}><b>Activity</b></h3>
-            <div className={styles.activityItem}>
-              <img src="/images/1.svg" alt="1" className={styles.activityIcon} />
-              <p className={styles.activityText}>Find a safe, local walking path in your community.</p>
-            </div>
-            <div className={styles.activityItem}>
-              <img src="/images/2.svg" alt="2" className={styles.activityIcon} />
-              <p className={styles.activityText}>If there are no walking paths in your living community, search for other options like nature trails, shopping malls, parks, and/or school running tracks where you have the option to be outside and walk around away from the stress at home.</p>
-            </div>
-            <div className={styles.activityItem}>
-              <img src="/images/3.svg" alt="3" className={styles.activityIcon} />
-              <p className={styles.activityText}>This is your decision but you can go by yourself, take your child along to observe, or even other household caregivers.</p>
-            </div>
-            <div className={styles.activityItem}>
-              <img src="/images/4.svg" alt="4" className={styles.activityIcon} />
-              <p className={styles.activityText}>While you're walking along the path, take notes (in your journal while walking or wait until you're home) of your surroundings such as trees, plants, flowers, bugs, birds, animals, people, and anything else that brings you comfort and happiness.</p>
-            </div>
-            <div className={styles.activityItem}>
-              <img src="/images/5.svg" alt="5" className={styles.activityIcon} />
-              <p className={styles.activityText}>Schedule these walks when you have the time to yourself or away from the stress at home.</p>
-            </div>
-            <div className={styles.activityItem}>
-              <img src="/images/6.svg" alt="6" className={styles.activityIcon} />
-              <p className={styles.activityText}>Once you open your journal, begin writing down the different things you saw/took note of. Draw some sketches or explain how each thing you saw made you feel.</p>
-            </div>
-            <div className={styles.activityItem}>
-              <img src="/images/7.svg" alt="7" className={styles.activityIcon} />
-              <p className={styles.activityText}>Update your journal each time you go on a walk or see something new that brings you good emotions.</p>
+          <div className={styles.contentFullWidth}>
+          <h3 className={`${styles.heading} ${styles.activityHeading}`}><b>Activity</b></h3>
+            <div className={styles.activityList}>
+              <div className={styles.activityItem}>
+                <img src="/images/1.svg" alt="1" className={styles.activityIcon} />
+                <p className={styles.activityText}>Find a safe, local walking path in your community.</p>
+              </div>
+              <div className={styles.activityItem}>
+                <img src="/images/2.svg" alt="2" className={styles.activityIcon} />
+                <p className={styles.activityText}>If there are no walking paths in your living community, search for other options like nature trails, shopping malls, parks, and/or school running tracks where you have the option to be outside and walk around away from the stress at home.</p>
+              </div>
+              <div className={styles.activityItem}>
+                <img src="/images/3.svg" alt="3" className={styles.activityIcon} />
+                <p className={styles.activityText}>This is your decision but you can go by yourself, take your child along to observe, or even other household caregivers.</p>
+              </div>
+              <div className={styles.activityItem}>
+                <img src="/images/4.svg" alt="4" className={styles.activityIcon} />
+                <p className={styles.activityText}>While you're walking along the path, take notes (in your journal while walking or wait until you're home) of your surroundings such as trees, plants, flowers, bugs, birds, animals, people, and anything else that brings you comfort and happiness.</p>
+              </div>
+              <div className={styles.activityItem}>
+                <img src="/images/5.svg" alt="5" className={styles.activityIcon} />
+                <p className={styles.activityText}>Schedule these walks when you have the time to yourself or away from the stress at home.</p>
+              </div>
+              <div className={styles.activityItem}>
+                <img src="/images/6.svg" alt="6" className={styles.activityIcon} />
+                <p className={styles.activityText}>Once you open your journal, begin writing down the different things you saw/took note of. Draw some sketches or explain how each thing you saw made you feel.</p>
+              </div>
+              <div className={styles.activityItem}>
+                <img src="/images/7.svg" alt="7" className={styles.activityIcon} />
+                <p className={styles.activityText}>Update your journal each time you go on a walk or see something new that brings you good emotions.</p>
+              </div>
             </div>
           </div>
         </>
