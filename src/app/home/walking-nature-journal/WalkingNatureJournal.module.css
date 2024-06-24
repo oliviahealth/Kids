@@ -94,8 +94,6 @@
 
 .contentFullWidth {
   width: 100%;
-  padding-right: 1rem;
-  box-sizing: border-box;
 }
 
 .imageWrapper {
@@ -109,7 +107,7 @@
   width: 100%;
   height: auto;
   max-height: 100%;
-  object-fit: contain;
+  object-fit: contain; /* Ensure the image scales properly */
 }
 
 .journalingSection {
@@ -175,6 +173,10 @@
   color: #333;
 }
 
+.activityHeading {
+  margin-bottom: 1rem; /* Increase spacing below the "Activity" heading */
+}
+
 .text {
   margin: 1rem 0;
   font-size: 18px;
@@ -216,14 +218,19 @@
 
 .activityList {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.activityColumn {
+  display: flex;
   flex-direction: column;
-  width: 100%;
-  padding-left: 1rem; 
+  width: 48%;
 }
 
 .activityItem {
   display: flex;
-  align-items: center; 
+  align-items: flex-start;
   margin-bottom: 1rem;
 }
 
@@ -237,10 +244,6 @@
   font-size: 18px;
   color: #333;
   line-height: 1.6;
-}
-
-.activityHeading {
-  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -304,6 +307,10 @@
   }
 
   .activityList {
+    width: 100%;
+  }
+
+  .activityColumn {
     width: 100%;
   }
 
