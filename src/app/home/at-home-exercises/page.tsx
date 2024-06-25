@@ -2,8 +2,8 @@
 
 import React, { ReactNode, act, useState } from 'react';
 
-import { WPHeader, WPDescription, WPContainer, WPNeedsContent, WPNeedsContainer, WPActivityPreview } from '@/components/Activity/AtHomeExercisesWhitePage';
-import { APContainer, APHeader, APInstruction } from '@/components/Activity/AtHomeExercisesActivityPage';
+import { WPHeader, WPDescription, WPContainer, WPNeedsContent, WPNeedsContainer, WPActivityPreview } from './AtHomeExercisesWhitePage';
+import { APContainer, APHeader, APInstruction } from './AtHomeExercisesActivityPage';
 
 const activityData = [
     [
@@ -11,6 +11,7 @@ const activityData = [
             buttonColor: "#FF7613",
             pageNumColor: "#FDDE6F",
             bgColor: "#FF8C38",
+            pageNum: 1,
 
             title: "Diaphragmatic breathing - An Easy, Warm Up Breathing Exercise",
             subtitle: "This exercise is tailored to everyone, and can be done just a few days after a caregiver has given birth.",
@@ -26,6 +27,7 @@ const activityData = [
             buttonColor: "#FFC700",
             pageNumColor: "#FBEBCC",
             bgColor: "#FFED4D",
+            pageNum: 2,
 
             title: "Pelvic Tilt Kegel Exercise",
             subtitle: "Strengthen your lower back and abdominal muscles.",
@@ -40,6 +42,7 @@ const activityData = [
             buttonColor: "#8BD5FF",
             pageNumColor: "#FFC553",
             bgColor: "#61C5FE",
+            pageNum: 3,
 
             title: "Cat-Cow Yoga Exercise",
             subtitle: "Increase the flexibility of your shoulders, neck, and spine.",
@@ -65,7 +68,7 @@ const activityPages: React.FC<Page>[] = activityData.flatMap((activityGroup, gro
             pageNumColor={activity.pageNumColor}
 
             time={10}
-            page={page}
+            page={activity.pageNum}
 
             onBack={onBack}
             onContinue={onContinue}
