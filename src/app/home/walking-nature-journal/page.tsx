@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/navigation';
 import styles from './WalkingNatureJournal.module.css';
+import WalkingNatureJournalWrapUp from '../components/_page';
 
 const WalkingNatureJournal = () => {
   const router = useRouter();
@@ -15,7 +16,7 @@ const WalkingNatureJournal = () => {
   const [currentStep, setCurrentStep] = useState(0);
 
   const goForward = () => {
-    if (currentStep < steps.length - 1) {
+    if (currentStep <= steps.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
       handleExit();
@@ -269,25 +270,30 @@ const WalkingNatureJournal = () => {
   ];
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Candal&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-      </Head>
-      <main className={styles.main}>
-        <div className={styles.card}>
-          {steps[currentStep].header}
-          {steps[currentStep].content && (
-            <div className={styles.contentWrapper}>
-              {steps[currentStep].content}
+    currentStep === steps.length - 1 ? (
+      <WalkingNatureJournalWrapUp />
+    ) : (
+      <div className={styles.container}>
+        <Head>
+          <link href="https://fonts.googleapis.com/css2?family=Candal&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+        </Head>
+        <main className={styles.main}>
+          <div className={styles.card}>
+            {steps[currentStep].header}
+            {steps[currentStep].content && (
+              <div className={styles.contentWrapper}>
+                {steps[currentStep].content}
+              </div>
+            )}
+            <div className={styles.buttonWrapper}>
+              {steps[currentStep].buttons}
             </div>
-          )}
-          <div className={styles.buttonWrapper}>
-            {steps[currentStep].buttons}
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    )
   );
+  
 };
 
 export default WalkingNatureJournal;
