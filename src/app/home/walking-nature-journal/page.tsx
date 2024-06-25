@@ -18,6 +18,9 @@ const WalkingNatureJournal = () => {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
     }
+    else{
+      router.push('/home/walking-nature-journal-components');
+    }
   };
 
   const goBack = () => {

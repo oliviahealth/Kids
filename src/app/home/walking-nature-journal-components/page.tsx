@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import confetti from "canvas-confetti";
 
 
 const WalkingNatureJournalWrapUp: React.FC = () => {
@@ -28,7 +29,35 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
       textareaRef.current.focus();
     }
   }, [walkingPage]); // Dependency on walkingPage
+  useEffect(() => {
+    if (walkingPage === 2) {
+      const duration = 3 * 1000; // 3 seconds
+      const end = Date.now() + duration;
 
+      const frame = () => {
+        // Launch confetti from random points on the screen
+        confetti({
+          particleCount: 2,
+          angle: 60,
+          spread: 55,
+          origin: { x: Math.random(), y: Math.random() }
+        });
+        confetti({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          origin: { x: Math.random(), y: Math.random() }
+        });
+
+        // Continue the animation until time runs out
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      };
+
+      frame();
+    }
+  }, [walkingPage]);
   
 
   useEffect(() => {
@@ -61,7 +90,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
       case 0:
         return (
           <div className="bg-gray-500 h-screen flex justify-center items-center">
-            <div className="bg-[#79CBF1] w-[90%] h-[90%] flex md:flex-row flex-col overflow-auto justify-between items-center rounded-3xl shadow-lg p-6">
+            <div className="bg-[#79CBF1] w-[100%] h-[100%] flex md:flex-row flex-col overflow-auto justify-between items-center shadow-lg p-6">
               <div className="w-1/2 p-4 h-full flex flex-col justify-between">
                 <div className="flex flex-col justify-center items-center flex-grow">
                   <div className="pl-12 font-Candal">
@@ -118,8 +147,8 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
       case 1:
         return (
           <div className="bg-gray-500 h-screen flex justify-center items-center">
-            <div className="bg-[#79CBF1] w-[90%] h-[90%] flex md:flex-row flex-col overflow-auto justify-between rounded-3xl shadow-lg p-6">
-              <div className="flex flex-col w-full">
+            <div className="bg-[#79CBF1] w-[100%] h-[100%] flex md:flex-row flex-col overflow-auto justify-between items-center shadow-lg p-6">
+              <div className="flex flex-col w-full h-full">
                 <div className="flex flex-row p-4 pl-8 justify-between">
                   <div className="font-Candal">
                     {/* containing time for some reflection text */}
@@ -148,7 +177,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
                   value={journalEntry}
                   onChange={handleJournalChange}
                   placeholder="Type your journal entry..."
-                  className="w-11/12 h-3/5 mx-auto rounded-lg border border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 pt-4 pb-4 px-4"
+                  className="w-11/12 h-4/5 mx-auto rounded-lg border border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 pt-4 pb-4 px-4"
                   style={{ resize: "none" }} // Ensures the textarea is not resizable
                 />
                 <div className="flex flex-row pt-8">
@@ -173,7 +202,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
       case 2:
         return (
           <div className="bg-gray-500 h-screen flex justify-center items-center">
-            <div className="bg-[#79CBF1] w-[90%] h-[90%] flex md:flex-col flex-row overflow-auto rounded-3xl shadow-lg p-6">
+            <div className="bg-[#79CBF1] w-[100%] h-[100%] flex md:flex-col flex-col overflow-auto justify-between items-center shadow-lg p-6">
               <div className="w-full h-1/6 flex justify-end items-center">
                 <Image
                   height={73}
@@ -184,7 +213,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
                   onClick={handleExit}
                 />
               </div>
-              <div className="flex flex-row p-4 pl-8 h-2/3">
+              <div className="flex flex-row p-4 pl-8 h-2/3 w-full">
                   <div className="font-Candal w-6/12 flex flex-col justify-center">
                     {/* containing time for some reflection text */}
                     <h1 className="text-2xl font-bold mb-2">
@@ -200,14 +229,14 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
                   <div className="flex items-center justify-center h-full w-6/12" style={{ marginTop: "-25px" }}>
                     <Image
                       height={73}
-                      width={200}
+                      width={300}
                       priority
                       src="/images/Star.svg"
                       alt="Image of a star"
                     />
                   </div>
                 </div>
-                <div className="flex flex-row pt-8">
+                <div className="flex flex-row pt-8 w-full">
                   <div className="w-full flex justify-start font-Inter">
                     <button onClick={handleExit} className="text-red-500">
                       End Walk
