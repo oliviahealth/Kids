@@ -107,7 +107,14 @@
   width: 100%;
   height: auto;
   max-height: 100%;
-  object-fit: contain; /* Ensure the image scales properly */
+  object-fit: contain; 
+}
+
+.illustrationSmall {
+  width: 80%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain; 
 }
 
 .journalingSection {
@@ -174,7 +181,7 @@
 }
 
 .activityHeading {
-  margin-bottom: 1rem; /* Increase spacing below the "Activity" heading */
+  margin-bottom: 1rem;
 }
 
 .text {
