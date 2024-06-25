@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
+
 const WalkingNatureJournalWrapUp: React.FC = () => {
   const router = useRouter();
   // const [walkingPage, setWalkingPage] = useState(0);
@@ -28,6 +29,8 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
     }
   }, [walkingPage]); // Dependency on walkingPage
 
+  
+
   useEffect(() => {
     // Save journal entry to localStorage when it changes
     localStorage.setItem("journalEntry", journalEntry);
@@ -35,12 +38,16 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
 
   const handleExit = () => {
     router.push("/home");
-    // setWalkingPage(0);
+    setWalkingPage(0);
   };
 
   const handleContinue = () => {
-    // Example action for continue, increment the walkingPage state
-    setWalkingPage(walkingPage + 1);
+    if(walkingPage == 2){
+      router.push("/home");
+    }
+    else{
+      setWalkingPage(walkingPage + 1);
+    }
   };
 
   const handleJournalChange = (
@@ -166,8 +173,8 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
       case 2:
         return (
           <div className="bg-gray-500 h-screen flex justify-center items-center">
-            <div className="bg-[#79CBF1] w-[90%] h-[90%] flex md:flex-row flex-col overflow-auto justify-between rounded-3xl shadow-lg p-6">
-              <div className="w-full h-1/6">
+            <div className="bg-[#79CBF1] w-[90%] h-[90%] flex md:flex-col flex-row overflow-auto rounded-3xl shadow-lg p-6">
+              <div className="w-full h-1/6 flex justify-end items-center">
                 <Image
                   height={73}
                   width={73}
@@ -177,7 +184,44 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
                   onClick={handleExit}
                 />
               </div>
-              <div></div>
+              <div className="flex flex-row p-4 pl-8 h-2/3">
+                  <div className="font-Candal w-6/12 flex flex-col justify-center">
+                    {/* containing time for some reflection text */}
+                    <h1 className="text-2xl font-bold mb-2">
+                      Amazing!
+                    </h1>
+                    <p className="mb-4 font-thin">
+                      Here is a star.
+                    </p>
+                    <p className="mb-6 font-thin">
+                      Remember to continue to take walks and reflect on them too.
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-center h-full w-6/12" style={{ marginTop: "-25px" }}>
+                    <Image
+                      height={73}
+                      width={200}
+                      priority
+                      src="/images/Star.svg"
+                      alt="Image of a star"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-row pt-8">
+                  <div className="w-full flex justify-start font-Inter">
+                    <button onClick={handleExit} className="text-red-500">
+                      End Walk
+                    </button>
+                  </div>
+                  <Image
+                    height={80}
+                    width={200}
+                    priority
+                    src="/images/continue_walking.svg"
+                    alt="Continue button"
+                    onClick={handleContinue}
+                  />
+                </div>
             </div>
           </div>
         );
