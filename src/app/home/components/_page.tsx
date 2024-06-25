@@ -7,14 +7,13 @@ import confetti from "canvas-confetti";
 
 const WalkingNatureJournalWrapUp: React.FC = () => {
   const router = useRouter();
-  // const [walkingPage, setWalkingPage] = useState(0);
   const [walkingPage, setWalkingPage] = useState(() => {
-    // Get the saved walkingPage from localStorage or default to 0
+    // Here, I'm getting the saved walkingPage from localStorage or default to 0
     const savedPage = sessionStorage.getItem("walkingPage");
     return savedPage ? parseInt(savedPage, 10) : 0;
   });
   const [journalEntry, setJournalEntry] = useState(() => {
-    // Get the saved journal entry from localStorage or default to an empty string
+    // Getting the saved journal entry from localStorage or default to an empty string
     return localStorage.getItem("journalEntry") || "";
   });
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -25,11 +24,10 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
     localStorage.setItem("journalEntry", journalEntry);
   }, [walkingPage, journalEntry]);
   useEffect(() => {
-    // Focus the textarea when walkingPage is 1
     if (walkingPage === 1 && textareaRef.current) {
       textareaRef.current.focus();
     }
-  }, [walkingPage]); // Dependency on walkingPage
+  }, [walkingPage]);
   useEffect(() => {
     if (walkingPage === 2) {
       const duration = 3 * 1000; // 3 seconds
@@ -62,7 +60,6 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
   
 
   useEffect(() => {
-    // Save journal entry to localStorage when it changes
     localStorage.setItem("journalEntry", journalEntry);
   }, [journalEntry]);
 
@@ -256,13 +253,13 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
           </div>
         );
 
-      // Add cases for walkingPage 1 and 2 if needed
+      
       default:
         return <p>No content available.</p>;
     }
   };
 
-  return renderWalkingPage(); // Correct the placement of this return statement
+  return renderWalkingPage(); 
 };
 
 export default WalkingNatureJournalWrapUp;

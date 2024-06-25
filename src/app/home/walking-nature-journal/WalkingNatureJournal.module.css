@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Candal&family=Inter:wght@400;700&display=swap');
 
-.containerWithoutBefore::before {
-  content: none; /* This will disable the before pseudo-element */
-}
-
-.containerWithoutBefore::before {
-  pointer-events: none; /* Allow clicks to pass through */
-}
-
 .container {
   position: relative;
   min-height: 100vh;
