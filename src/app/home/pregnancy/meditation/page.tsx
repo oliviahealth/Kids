@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import MeditationActivityPage1 from "./components/Page1";
 import MeditationActivityPage2 from "./components/Page2";
 import MeditationActivityPage3 from "./components/Page3";
@@ -23,20 +23,34 @@ const MeditationActivity: React.FC = () => {
     if (currentPage < pagesData.length - 1) setCurrentPage(currentPage + 1);
   };
 
+  const MapContainer: React.FC<{ children: ReactNode }> = ({ children }) => (
+    <div className="map-container grid grid-cols-12 grid-rows-12 h-full">
+      <div className="row-start-2 row-end-12 col-start-2 col-end-12 ">
+        <div className="bg-white shadow-2xl rounded-2xl">{children}</div>
+      </div>
+    </div>
+  );
+
   const pagesData = [
     {
       content: (
-        <MeditationActivityPage1 onNext={handleNext} onBack={handleBack} />
+        <MapContainer>
+          <MeditationActivityPage1 onNext={handleNext} onBack={handleBack} />
+        </MapContainer>
       ),
     },
     {
       content: (
-        <MeditationActivityPage2 onNext={handleNext} onBack={handleBack} />
+        <MapContainer>
+          <MeditationActivityPage2 onNext={handleNext} onBack={handleBack} />
+        </MapContainer>
       ),
     },
     {
       content: (
-        <MeditationActivityPage3 onNext={handleNext} onBack={handleBack} />
+        <MapContainer>
+          <MeditationActivityPage3 onNext={handleNext} onBack={handleBack} />
+        </MapContainer>
       ),
     },
     {
@@ -66,35 +80,13 @@ const MeditationActivity: React.FC = () => {
     },
     {
       content: (
-        <MeditationActivityPage9 onNext={handleNext} onBack={handleBack} />
+        <MapContainer>
+          <MeditationActivityPage9 onNext={handleNext} onBack={handleBack} />
+        </MapContainer>
       ),
     },
   ];
-  return (
-    <div className="map-container grid grid-cols-12 grid-rows-12 h-full">
-      <div className="row-start-2 row-end-12 col-start-2 col-end-12 ">
-        <div className="bg-white shadow-2xl rounded-2xl">
-          {pagesData[currentPage].content}
-        </div>
-      </div>
-    </div>
-  );
+  return <>{pagesData[currentPage].content}</>;
 };
-
-//Layout.tsx
-// import "./meditationModule.css";
-// export default function RootLayout({
-//   children,
-// }: Readonly<{
-//   children: React.ReactNode;
-// }>) {
-//   return (
-//     <div className="map-container grid grid-cols-12 grid-rows-12">
-//       <div className="row-start-2 row-end-12 col-start-2 col-end-12 overflow-auto">
-//         <div className="bg-white shadow-2xl rounded-2xl">{children}</div>
-//       </div>
-//     </div>
-//   );
-// }
 
 export default MeditationActivity;
