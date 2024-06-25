@@ -42,7 +42,7 @@ const ThirdPage: React.FC<ThirdPageProps> = ({ handleNavigation, handleBackNavig
                     <span className="text-black font-bold">X</span>
                 </div>
             </Link>
-            <div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] bg-[#FF792D] rounded-full flex justify-center items-center">
+                <div className="absolute bottom-[-25vh] left-1/2 transform -translate-x-1/2 w-[100vh] h-[100vh] bg-[#FF792D] rounded-full flex justify-center items-center">
                 <div className="relative w-full h-full flex justify-center items-center">
                     <div className="eye absolute top-[26%] left-[18%]"></div>
                     <div className="eye absolute top-[17%] right-[39%]"></div>
@@ -56,7 +56,9 @@ const ThirdPage: React.FC<ThirdPageProps> = ({ handleNavigation, handleBackNavig
                     </div>
                 </div>
             </div>
-            <div className="absolute bottom-[-180px] left-[8%] w-[600px] h-[600px] bg-[#FFAA86] rounded-full flex justify-center items-center">
+                <div className="absolute bottom-[-17vh] left-[8%] w-[57vh] h-[57vh] bg-[#FFAA86] rounded-full flex justify-center items-center">
+
+
                 <div className="relative w-full h-full flex justify-center items-center">
                     <div className="absolute top-[38%] left-[20%] w-25 h-25" style={{ transform: 'rotate(187deg)' }}>
                         <Image

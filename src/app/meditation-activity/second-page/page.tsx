@@ -42,7 +42,8 @@ const SecondPage: React.FC<SecondPageProps> = ({ handleNavigation, handleBackNav
                     <span className="text-black font-bold">X</span>
                 </div>
             </Link>
-            <div className="absolute bottom-[-200px] transform -translate-x-1/2 w-[1000px] h-[1000px] bg-[#2787CC] rounded-full flex justify-center items-center bop-animation">
+                <div className="absolute bottom-[-25vh] transform w-[100vh] h-[100vh] bg-[#2787CC] rounded-full flex justify-center items-center">
+
                 <div className="relative w-full h-full flex justify-center items-center">
                     <div className="absolute top-[65%] left-[25%]">
                         <Image

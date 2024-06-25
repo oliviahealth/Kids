@@ -42,7 +42,7 @@ const FourthPage: React.FC<FourthPageProps> = ({ handleNavigation, handleBackNav
                     <span className="text-black font-bold">X</span>
                 </div>
             </Link>
-            <div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] bg-[#FF8C39] rounded-full flex justify-center items-center">
+                <div className="absolute bottom-[-24vh] left-1/2 transform -translate-x-1/2 w-[98vh] h-[98vh] bg-[#FF8C39] rounded-full flex justify-center items-center">
                 <div className="relative w-full h-full flex justify-center items-center">
                     <div className="eye absolute top-[24%] left-[27%]"></div>
                     <div className="eye absolute top-[24%] right-[27%]"></div>
