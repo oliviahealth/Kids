@@ -10,7 +10,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
   // const [walkingPage, setWalkingPage] = useState(0);
   const [walkingPage, setWalkingPage] = useState(() => {
     // Get the saved walkingPage from localStorage or default to 0
-    const savedPage = localStorage.getItem("walkingPage");
+    const savedPage = sessionStorage.getItem("walkingPage");
     return savedPage ? parseInt(savedPage, 10) : 0;
   });
   const [journalEntry, setJournalEntry] = useState(() => {
@@ -18,18 +18,10 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
     return localStorage.getItem("journalEntry") || "";
   });
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-
-  useEffect(() => {
-    // Verify legitimate access
-    const allowedAccess = sessionStorage.getItem("allowAccessToWalkingNatureJournalActivity");
-    if (!allowedAccess) {
-      router.push('/home/walking-nature-journal'); 
-    } 
-  }, []);
   
 
   useEffect(() => {
-    localStorage.setItem("walkingPage", walkingPage.toString());
+    sessionStorage.setItem("walkingPage", walkingPage.toString());
     localStorage.setItem("journalEntry", journalEntry);
   }, [walkingPage, journalEntry]);
   useEffect(() => {
@@ -75,8 +67,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
   }, [journalEntry]);
 
   const handleExit = () => {
-    localStorage.removeItem("allowAccessToWalkingNatureJournalActivity");
-    router.push("/home");
+    router.push("/home/walking-nature-journal");
     setWalkingPage(0);
   };
 
@@ -99,7 +90,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
     switch (walkingPage) {
       case 0:
         return (
-          <div className="bg-gray-500 h-screen flex justify-center items-center">
+          <div className="bg-gray-500 h-screen w-full flex justify-center items-center">
             <div className="bg-[#79CBF1] w-[100%] h-[100%] flex md:flex-row flex-col overflow-auto justify-between items-center shadow-lg p-6">
               <div className="w-1/2 p-4 h-full flex flex-col justify-between">
                 <div className="flex flex-col justify-center items-center flex-grow">
@@ -172,7 +163,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
                       Once you finish, submit the journal entry.
                     </p>
                   </div>
-                  <div style={{ marginTop: "-25px" }}>
+                  <div style={{ marginTop: "-15px" }}>
                     <Image
                       height={73}
                       width={73}
