@@ -11,6 +11,8 @@ const config: Config = {
       fontFamily: {
         OpenSans: ['OpenSans'],
         Oswald: ['Oswald'],
+        Candal: ['Candal', 'sans-serif'],
+        Inter: ['Inter', 'sans-serif'],
       },
       screens: {
         '1s-sm': '420px',
