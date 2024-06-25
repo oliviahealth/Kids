@@ -8,15 +8,19 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
   // const [walkingPage, setWalkingPage] = useState(0);
   const [walkingPage, setWalkingPage] = useState(() => {
     // Get the saved walkingPage from localStorage or default to 0
-    const savedPage = localStorage.getItem('walkingPage');
+    const savedPage = localStorage.getItem("walkingPage");
     return savedPage ? parseInt(savedPage, 10) : 0;
   });
   const [journalEntry, setJournalEntry] = useState(() => {
     // Get the saved journal entry from localStorage or default to an empty string
-    return localStorage.getItem('journalEntry') || '';
+    return localStorage.getItem("journalEntry") || "";
   });
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
+  useEffect(() => {
+    localStorage.setItem("walkingPage", walkingPage.toString());
+    localStorage.setItem("journalEntry", journalEntry);
+  }, [walkingPage, journalEntry]);
   useEffect(() => {
     // Focus the textarea when walkingPage is 1
     if (walkingPage === 1 && textareaRef.current) {
@@ -26,11 +30,12 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
 
   useEffect(() => {
     // Save journal entry to localStorage when it changes
-    localStorage.setItem('journalEntry', journalEntry);
+    localStorage.setItem("journalEntry", journalEntry);
   }, [journalEntry]);
 
   const handleExit = () => {
     router.push("/home");
+    // setWalkingPage(0);
   };
 
   const handleContinue = () => {
@@ -38,10 +43,12 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
     setWalkingPage(walkingPage + 1);
   };
 
-  const handleJournalChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleJournalChange = (
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     setJournalEntry(event.target.value);
   };
-
+  
   const renderWalkingPage = () => {
     switch (walkingPage) {
       case 0:
@@ -153,6 +160,24 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        );
+      case 2:
+        return (
+          <div className="bg-gray-500 h-screen flex justify-center items-center">
+            <div className="bg-[#79CBF1] w-[90%] h-[90%] flex md:flex-row flex-col overflow-auto justify-between rounded-3xl shadow-lg p-6">
+              <div className="w-full h-1/6">
+                <Image
+                  height={73}
+                  width={73}
+                  priority
+                  src="/images/exit.svg"
+                  alt="Exit button"
+                  onClick={handleExit}
+                />
+              </div>
+              <div></div>
             </div>
           </div>
         );
