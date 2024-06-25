@@ -436,12 +436,20 @@
 @keyframes bop {
 
   0%,
-  100% {
+  40% {
     transform: translateY(0);
   }
 
-  50% {
+  60% {
     transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 

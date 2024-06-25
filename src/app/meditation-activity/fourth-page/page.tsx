@@ -4,10 +4,15 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SmileLine from "../../../../public/images/Line 16.png";
-import EyeClosed from "../../../../public/images/Line 17.png"
+import EyeClosed from "../../../../public/images/Line 17.png";
 import '../../globals.css';
 
-const Dashboard: React.FC = () => {
+interface FourthPageProps {
+    handleNavigation: () => void;
+    handleBackNavigation: () => void;
+}
+
+const FourthPage: React.FC<FourthPageProps> = ({ handleNavigation, handleBackNavigation }) => {
     const [countdown, setCountdown] = useState(10);
 
     useEffect(() => {
@@ -55,15 +60,11 @@ const Dashboard: React.FC = () => {
                 {countdown > 0 ? (
                     <span className="text-white text-4xl font-bold">{countdown}</span>
                 ) : (
-                    <Link href="/meditation-activity/fifth-page" legacyBehavior>
-                        <a className="text-white text-4xl font-bold">→</a>
-                    </Link>
+                    <button onClick={handleNavigation} className="text-white text-4xl font-bold">→</button>
                 )}
             </div>
             <div className="absolute bottom-5 left-5">
-                <Link href="/meditation-activity/third-page" legacyBehavior>
-                    <a className="text-4xl font-bold back-effect">Back</a>
-                </Link>
+                <button onClick={handleBackNavigation} className="text-4xl font-bold back-effect">Back</button>
             </div>
             <div className="text-center mt-20 fade-in">
                 <h1 className="text-5xl font-extrabold mb-8">Stop</h1>
@@ -74,4 +75,4 @@ const Dashboard: React.FC = () => {
     );
 }
 
-export default Dashboard;
+export default FourthPage;

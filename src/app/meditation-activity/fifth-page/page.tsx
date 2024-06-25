@@ -8,7 +8,11 @@ import Star from "../../../../public/images/Star 26.svg";
 import ContinueIcon from "../../../../public/images/openmoji_return.png";
 import '../../globals.css';
 
-const Dashboard: React.FC = () => {
+interface FifthPageProps {
+    handleBackNavigation: () => void;
+}
+
+const FifthPage: React.FC<FifthPageProps> = ({ handleBackNavigation }) => {
     const [countdown, setCountdown] = useState(10);
 
     useEffect(() => {
@@ -57,9 +61,7 @@ const Dashboard: React.FC = () => {
             </Link>
             
             <div className="absolute bottom-5 left-5">
-                <Link href="/meditation-activity/fourth-page" legacyBehavior>
-                    <div className="text-4xl font-bold back-effect cursor-pointer">Back</div>
-                </Link>
+                <button onClick={handleBackNavigation} className="text-4xl font-bold back-effect cursor-pointer">Back</button>
             </div>
             <div className="text-center mt-20">
                 <h1 className="text-5xl font-extrabold mb-8">Well Done!</h1>
@@ -92,4 +94,4 @@ const Dashboard: React.FC = () => {
     );
 }
 
-export default Dashboard;
+export default FifthPage;

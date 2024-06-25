@@ -1,4 +1,4 @@
-"use client"; // Add this directive at the top
+"use client";
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
@@ -7,7 +7,12 @@ import SmileLine from "../../../../public/images/Line 16.png";
 import EyeClosed from "../../../../public/images/Line 17.png";
 import '../../globals.css';
 
-const Dashboard: React.FC = () => {
+interface ThirdPageProps {
+    handleNavigation: () => void;
+    handleBackNavigation: () => void;
+}
+
+const ThirdPage: React.FC<ThirdPageProps> = ({ handleNavigation, handleBackNavigation }) => {
     const [countdown, setCountdown] = useState(10);
 
     useEffect(() => {
@@ -32,7 +37,6 @@ const Dashboard: React.FC = () => {
                     <span className="text-4xl font-bold text-black">3</span>
                 </div>
             </div>
-
             <Link href="/home">
                 <div className="absolute top-0 right-0 m-4 w-20 h-20 bg-[#8BD5FF] rounded-full flex justify-center items-center hover-grow-x">
                     <span className="text-black font-bold">X</span>
@@ -64,7 +68,6 @@ const Dashboard: React.FC = () => {
                         <Image
                             src={EyeClosed}
                             alt="Eye Closed"
-                            
                         />
                     </div>
                     <div className="absolute bottom-[41%] left-[35%] transform -translate-x-1/2" style={{ transform: 'rotate(-20deg)' }}>
@@ -81,16 +84,11 @@ const Dashboard: React.FC = () => {
                 {countdown > 0 ? (
                     <span className="text-white text-4xl font-bold">{countdown}</span>
                 ) : (
-                    <Link href="/meditation-activity/fourth-page" legacyBehavior>
-                        <a className="text-white text-4xl font-bold">→</a>
-                    </Link>
+                    <button onClick={handleNavigation} className="text-white text-4xl font-bold">→</button>
                 )}
             </div>
-
             <div className="absolute bottom-5 left-5">
-                <Link href="/meditation-activity/second-page" legacyBehavior>
-                    <a className="text-4xl font-bold back-effect">Back</a>
-                </Link>
+                <button onClick={handleBackNavigation} className="text-4xl font-bold back-effect">Back</button>
             </div>
             <div className="text-center mt-20 fade-in">
                 <h1 className="text-5xl font-extrabold mb-8">Observe</h1>
@@ -101,4 +99,4 @@ const Dashboard: React.FC = () => {
     )
 }
 
-export default Dashboard;
+export default ThirdPage;

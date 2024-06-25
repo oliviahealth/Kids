@@ -1,13 +1,18 @@
 "use client"; // Add this directive at the top
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import SmileLine from "../../../public/images/Line 16.png";
+import SecondPage from './second-page/page';
+import ThirdPage from './third-page/page';
+import FourthPage from './fourth-page/page';
+import FifthPage from './fifth-page/page';
+import Link from "next/link";
 import '../globals.css';
 
 const Dashboard: React.FC = () => {
     const [countdown, setCountdown] = useState(10);
+    const [page, setPage] = useState(1);
 
     useEffect(() => {
         if (countdown > 0) {
@@ -17,6 +22,30 @@ const Dashboard: React.FC = () => {
             return () => clearInterval(timer);
         }
     }, [countdown]);
+
+    const handleForwardNavigation = () => {
+        setPage(prevPage => prevPage + 1);
+    };
+
+    const handleBackwardNavigation = () => {
+        setPage(prevPage => prevPage - 1);
+    };
+
+    if (page === 2) {
+        return <SecondPage handleNavigation={handleForwardNavigation} handleBackNavigation={handleBackwardNavigation} />;
+    }
+
+    if (page === 3) {
+        return <ThirdPage handleNavigation={handleForwardNavigation} handleBackNavigation={handleBackwardNavigation} />;
+    }
+
+    if (page === 4) {
+        return <FourthPage handleNavigation={handleForwardNavigation} handleBackNavigation={handleBackwardNavigation} />;
+    }
+
+    if (page === 5) {
+        return <FifthPage handleBackNavigation={handleBackwardNavigation} />;
+    }
 
     return (
         <div style={{ overflow: 'hidden', height: '100vh' }} className="relative w-full h-full flex justify-center items-start meditation-activity-one-bg">
@@ -67,9 +96,7 @@ const Dashboard: React.FC = () => {
                 {countdown > 0 ? (
                     <span className="text-white text-4xl font-bold">{countdown}</span>
                 ) : (
-                    <Link href="/meditation-activity/second-page" legacyBehavior>
-                        <a className="text-white text-4xl font-bold">→</a>
-                    </Link>
+                    <button onClick={handleForwardNavigation} className="text-white text-4xl font-bold">→</button>
                 )}
             </div>
             <div className="text-center mt-20 fade-in">
@@ -77,7 +104,7 @@ const Dashboard: React.FC = () => {
                 <p className="text-xl font-semibold mb-2">Pause what you are doing, and find a comfortable place to sit down</p>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Dashboard;
