@@ -31,7 +31,7 @@ const Map: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const imageRef = useRef<HTMLImageElement | null>(null);
   const [markers, setMarkers] = useState<Marker[]>([
-    { id: 1, top: '30%', left: '20%', x: 0, y: 0, link: '/home/marker1' },
+    { id: 1, top: '30%', left: '20%', x: 0, y: 0, link: '/home/pregnancy/meditation' },
     { id: 2, top: '50%', left: '40%', x: 0, y: 0, link: '/home/marker2' },
     { id: 3, top: '50%', left: '60%', x: 0, y: 0, link: '/home/marker3' },
   ]);
