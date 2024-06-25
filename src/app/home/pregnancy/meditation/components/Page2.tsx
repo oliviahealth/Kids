@@ -7,7 +7,11 @@ import meditationImage5 from "../../../../../../public/images/dashboard/meditati
 import meditationImage6 from "../../../../../../public/images/dashboard/meditation/mediatationImage6.png";
 import meditationImage7 from "../../../../../../public/images/dashboard/meditation/mediatationImage7.png";
 import Link from "next/link";
-const MeditationActivity: React.FC = () => {
+
+const MeditationActivityPage2: React.FC<{
+  onNext: () => void;
+  onBack: () => void;
+}> = ({ onNext, onBack }) => {
   return (
     <section>
       <div className=" p-10 space-y-5">
@@ -48,8 +52,8 @@ const MeditationActivity: React.FC = () => {
             </p>
             <p>
               Just remember, anytime you start to feel overwhelmned at work,
-              home, or anywhere else just follow the STOP steps, and you{"'"}ll be
-              on your way to achieving mindfulness and better mental/physical
+              home, or anywhere else just follow the STOP steps, and you{"'"}ll
+              be on your way to achieving mindfulness and better mental/physical
               health as a caregiver.
             </p>
             <p className="font-bold">What will you need?</p>
@@ -78,7 +82,7 @@ const MeditationActivity: React.FC = () => {
           </div>
           <div className="col-span-4 mt-5 sm:m-auto order-1 sm:order-2">
             <Image
-              className="m-auto"
+              className="m-auto w-full lg:w-[60%]"
               src={meditationImage7}
               alt="Olivia Kids"
             ></Image>
@@ -91,11 +95,12 @@ const MeditationActivity: React.FC = () => {
             </button>
           </div>
           <div className="justify-self-center sm:justify-self-end">
-            <Link href="./page3">
-              <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl">
-                Continue &gt;
-              </button>
-            </Link>
+            <button
+              onClick={onNext}
+              className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
+            >
+              Continue &gt;
+            </button>
           </div>
         </div>
       </div>
@@ -103,4 +108,4 @@ const MeditationActivity: React.FC = () => {
   );
 };
 
-export default MeditationActivity;
+export default MeditationActivityPage2;

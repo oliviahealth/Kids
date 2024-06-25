@@ -2,7 +2,10 @@ import Image from "next/image";
 import meditationImage from "../../../../../../public/images/dashboard/meditation/mediatationImage.png";
 import meditationImage1 from "../../../../../../public/images/dashboard/meditation/mediatationImage1.png";
 import Link from "next/link";
-const MeditationActivity: React.FC = () => {
+const MeditationActivityPage1: React.FC<{
+  onNext: () => void;
+  onBack: () => void;
+}> = ({ onNext, onBack }) => {
   return (
     <section>
       <div className=" p-10 space-y-5">
@@ -69,7 +72,11 @@ const MeditationActivity: React.FC = () => {
             </div>
           </div>
           <div className="col-span-4 mt-5 sm:m-auto order-1 sm:order-2">
-            <Image src={meditationImage1} alt="Olivia Kids"></Image>
+            <Image
+              className="m-auto w-full lg:w-[60%]"
+              src={meditationImage1}
+              alt="Olivia Kids"
+            ></Image>
           </div>
         </div>
         <div className="py-10 grid grid-cols-1 sm:grid-cols-2 space-y-5 sm:space-y-0">
@@ -79,11 +86,12 @@ const MeditationActivity: React.FC = () => {
             </button>
           </div>
           <div className="justify-self-center sm:justify-self-end">
-            <Link href="./page2">
-              <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl">
-                Continue &gt;
-              </button>
-            </Link>
+            <button
+              onClick={onNext}
+              className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
+            >
+              Continue &gt;
+            </button>
           </div>
         </div>
       </div>
@@ -91,4 +99,4 @@ const MeditationActivity: React.FC = () => {
   );
 };
 
-export default MeditationActivity;
+export default MeditationActivityPage1;

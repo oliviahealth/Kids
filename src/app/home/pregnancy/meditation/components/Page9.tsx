@@ -4,7 +4,10 @@ import meditationImage9 from "../../../../../../public/images/dashboard/meditati
 import meditationImage10 from "../../../../../../public/images/dashboard/meditation/meditationImage10.png";
 import meditationImage11 from "../../../../../../public/images/dashboard/meditation/meditationImage11.jpeg";
 import Link from "next/link";
-const MeditationActivity: React.FC = () => {
+const MeditationActivityPage9: React.FC<{
+  onNext: () => void;
+  onBack: () => void;
+}> = ({ onNext, onBack }) => {
   return (
     <section>
       <div className=" p-10 space-y-5">
@@ -83,7 +86,7 @@ const MeditationActivity: React.FC = () => {
           <div className="col-span-4 mt-5 sm:m-auto order-1 sm:order-2">
             <div className="">
               <Image
-                className="m-auto w-[80%]"
+                className="m-auto w-full lg:w-[60%]"
                 src={meditationImage9}
                 alt="Olivia Kids"
               ></Image>
@@ -109,4 +112,4 @@ const MeditationActivity: React.FC = () => {
   );
 };
 
-export default MeditationActivity;
+export default MeditationActivityPage9;
