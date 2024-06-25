@@ -3,12 +3,12 @@ import { ReactNode, useState } from "react";
 import MeditationActivityPage1 from "./components/Page1";
 import MeditationActivityPage2 from "./components/Page2";
 import MeditationActivityPage3 from "./components/Page3";
-import MeditationActivityPage9 from "./components/Page9";
 import MeditationActivityPage4 from "./components/page4";
 import MeditationActivityPage5 from "./components/page5";
 import MeditationActivityPage6 from "./components/page6";
 import MeditationActivityPage7 from "./components/page7";
 import MeditationActivityPage8 from "./components/page8";
+import MeditationActivityPage9 from "./components/Page9";
 import "./meditationModule.css";
 
 const MeditationActivity: React.FC = () => {
