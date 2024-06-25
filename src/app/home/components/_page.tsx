@@ -4,8 +4,12 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import confetti from "canvas-confetti";
 
+interface WalkingNatureJournalWrapUpProps {
+  currentStep: number;
+  setCurrentStep: (step: number) => void;
+}
 
-const WalkingNatureJournalWrapUp: React.FC = () => {
+const WalkingNatureJournalWrapUp: React.FC<WalkingNatureJournalWrapUpProps> = ({ currentStep, setCurrentStep }) => {
   const router = useRouter();
   const [walkingPage, setWalkingPage] = useState(() => {
     // Here, I'm getting the saved walkingPage from localStorage or default to 0
@@ -70,7 +74,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
 
   const handleContinue = () => {
     if(walkingPage == 2){
-      router.push("/home");
+      setCurrentStep(4)
     }
     else{
       setWalkingPage(walkingPage + 1);
