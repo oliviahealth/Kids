@@ -1,195 +1,174 @@
 "use client";
 
-import React, { ReactNode, useState } from 'react';
-import Head from 'next/head';
+import React, { ReactNode, act, useState } from 'react';
 
-const Header: React.FC<{ title: string, subtitle: string }> = ({ title, subtitle }) => (
-    <div className="flex items-center mb-8">
-        <div className="flex-shrink-0">
-            <img src="/images/flower.svg" alt="Logo" className="h-16 w-16" />
-        </div>
-        <div className="ml-4">
-            <h1 className="text-2xl font-bold text-gray-800">{title}</h1>
-            <h2 className="text-xl text-[#f59e0b]">{subtitle}</h2>
-        </div>
-    </div>
-);
+import { WPHeader, WPDescription, WPContainer, WPNeedsContent, WPNeedsContainer, WPActivityPreview } from '@/components/Activity/AtHomeExercisesWhitePage';
+import { APContainer, APHeader, APInstruction } from '@/components/Activity/AtHomeExercisesActivityPage';
 
-const Description: React.FC<{ title: string, paragraphs: string[] }> = ({ title, paragraphs }) => (
-    <div className="mb-8">
-        <h1 className="text-2xl font-bold mb-4">{title}</h1>
-        {paragraphs.map((paragraph, index) => <p key={index} className="text-base ml-4 mb-4">{paragraph}</p>)}
-    </div>
-);
+const activityData = [
+    [
+        {
+            buttonColor: "#FF7613",
+            pageNumColor: "#FDDE6F",
+            bgColor: "#FF8C38",
 
-const Container: React.FC<{ children: ReactNode, onLeft: () => void, leftText: string, onContinue: () => void, image?: string }> = ({ image, children, leftText, onLeft, onContinue }) => (
-    <div className="relative min-h-[100vh] w-[100vw] bg-cover bg-center bg-[url('/images/map.svg')]">
-        <div className="bg-black bg-opacity-50 w-[100vw] h-[100vh] flex justify-center items-center">
+            title: "Diaphragmatic breathing - An Easy, Warm Up Breathing Exercise",
+            subtitle: "This exercise is tailored to everyone, and can be done just a few days after a caregiver has given birth.",
+            instructions: [
+                "Find a comfortable place and lie on your back.",
+                "Place one hand on your stomach, above your belly button, and the other hand on your chest.",
+                "Breathe in slowly through your nose.",
+                "Breathe out slowly through your mouth.",
+                "As you inhale, imagine filling a balloon in your stomach, and as you exhale, imagine shrinking the balloon. Continue breathing in and out for the remaining time.",
+            ]
+        },
+        {
+            buttonColor: "#FFC700",
+            pageNumColor: "#FBEBCC",
+            bgColor: "#FFED4D",
 
-            <div className="bg-white rounded-3xl overflow-y-auto max-w-7xl max-h-[80vh] p-16 m-8 relative">
-                <button className="absolute right-16 top-16">
-                    <img src="/images/exit.svg" alt="Exit" className="size-16" />
-                </button>
+            title: "Pelvic Tilt Kegel Exercise",
+            subtitle: "Strengthen your lower back and abdominal muscles.",
+            instructions: [
+                "Lie on your back with your knees bent and feet flat on the floor.",
+                "Tighten your abdominal muscles and press your lower back into the floor.",
+                "Hold for a few seconds, then release.",
+                "Repeat this movement 10-15 times, gradually increasing as your muscles become stronger.",
+            ]
+        },
+        {
+            buttonColor: "#8BD5FF",
+            pageNumColor: "#FFC553",
+            bgColor: "#61C5FE",
 
-                <div className="md:flex space-x-16">
-                    <div className="w-full xl:w-auto">
-                        {children}
-                    </div>
-                    <img src={image && image} className="hidden max-w-[40%] xl:block w-auto h-auto max-h-[40vh]" />
-                </div>
-
-                <div className="flex justify-between w-full mt-4">
-                    <button onClick={onLeft} className="bg-transparent text-red-500 p-0 border-none cursor-pointer text-lg no-underline hover:underline">{leftText}</button>
-                    <button onClick={onContinue} className="bg-transparent border-none cursor-pointer text-lg no-underline">
-                        <img src="/images/continue.svg" alt="Continue" />
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div >
-);
-
-const NeedsContent: React.FC<{ title?: string, items: { name: string, image: string }[] }> = ({ title, items }) => <div>
-    {title && <h2 className="text-lg font-semibold mb-4">{title}</h2>}
-    <div className="ml-4 sm:flex space-x-8">
-        {items.map((item) => (
-            <div key={item.name} className="flex flex-col items-center">
-                <img src={item.image} alt={item.name} className="h-16 w-16 mb-4 object-cover" />
-                <span className="text-xl">{item.name}</span>
-            </div>
-        ))}
-    </div>
-</div>
-
-const NeedsContainer: React.FC<{ title?: string, children: ReactNode }> = ({ title, children }) => <div className="mb-8">
-    {title && <h1 className="text-2xl font-bold mb-8">{title}</h1>}
-    {children}
-</div>
-
-const ActivityPreview: React.FC<{ activities: { id: number, title: string, description: string }[] }> = ({ activities }) => <div className="mb-8">
-    <h2 className="text-2xl font-bold mb-8">Activity</h2>
-    <ul className="ml-4 space-y-8">
-        {activities.map((activity) => (
-            <li key={activity.id} className="flex items-start">
-                <div className="size-12 flex items-center justify-center bg-[#FBEBCC] rounded-full text-lg mr-4">
-                    {activity.id}
-                </div>
-                <div>
-                    <h3 className="font-bold mb-1">
-                        {activity.title}
-
-                    </h3>
-                    <p className="text-sm">{activity.description}</p>
-                </div>
-            </li>
-        ))}
-    </ul>
-</div>
-
-const pages = [
-    {
-        leftText: "Learn More",
-        image: "/images/saly-at-home-exercises.svg",
-        content: <>
-            <Header title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
-            <Description title={"Mindful Movement"} paragraphs={[
-                "Sometimes as a caregiver of an infant (0-1 year old), the last thing on your mind is to exercise because you are constantly busy with other tasks. However, exercising has numerous benefits that any caregiver can easily do at home! Today we're going to learn how any caregiver can do exercises at home that improve physical and mental health.",
-                "First we're going to discuss what the benefits of exercise for caregivers of infants. No matter how long or how difficult one is exercising, the benefits include improved energy, improved sleep, reduced feelings of stress, and reduced risk of heart and related diseases (https://www.acog.org/womens-health/faqs/exercise-after-pregnancy).",
-                "Please note, for postpartum caregivers, talk to your doctor make sure you're able to do these exercises at home. Those who went through a difficult pregnancy and/or had a c-section may need time to recover before starting to exercise (https://www.mayoclinic.org/healthy-lifestyle/labor-and-delivery/in-depth/exercise-after-pregnancy/art-20044596)."
-            ]} />
-        </>
-    },
-    {
-        leftText: "Back",
-        image: "/images/at-home-exercises-bg.svg",
-        content: <>
-            <Header title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
-            <Description title={"Multifaceted Benefits"} paragraphs={[
-                "Caregivers who have recently given birth can greatly benefit from exercise as it has decreased the risk of postpartum depression, increased abdominal muscle strength, and helps to keep a healthy body weight after pregnancy (https://www.acog.org/womens-health/faqs/exercise-after-pregnancy). The exercises that this activity includes are designed for caregivers of infants to do at home, giving the same benefits as someone going to a gym.",
-            ]} />
-            <NeedsContainer title={"What will you need?"}>
-                <NeedsContent items={[
-                    {
-                        name: "Yoga Mat",
-                        image: "/images/yogamat.svg",
-                    },
-                    {
-                        name: "Timer",
-                        image: "/images/timer.svg",
-                    },
-                    {
-                        name: "Water",
-                        image: "/images/water.svg",
-                    },
-                    {
-                        name: "Gym Clothes",
-                        image: "/images/gymclothes.svg",
-                    }
-                ]} />
-            </NeedsContainer>
-        </>
-    },
-    {
-        leftText: "Back",
-        content: <>
-            <Header title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
-            <ActivityPreview activities={[
-                {
-                    id: 1,
-                    title: 'Diaphragmatic breathing- An Easy, Warm Up Breathing Exercise',
-                    description: 'This exercise is tailored to everyone, and can be done just a few days after a caregiver has given birth.',
-                },
-                {
-                    id: 2,
-                    title: 'Pelvic Tilt Kegel Exercise',
-                    description: 'Strengthen your lower back and abdominal muscles.',
-                },
-                {
-                    id: 3,
-                    title: 'Cat-Cow Yoga Exercise',
-                    description: 'Increase the flexibility of your shoulders, neck, and spine.',
-                },
-                {
-                    id: 4,
-                    title: 'Postpartum Plank Exercise',
-                    description: 'An isometric exercise that can help strengthen your core.',
-                },
-            ]} />
-        </>
-    },
-    {
-        leftText: "Back",
-        image: "/images/at-home-exercises-bg.svg",
-        content: <>
-            <Header title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
-            <Description title={"Key Takeaways"} paragraphs={[
-                "These four exercises have been proven to significantly help caregivers of infants, especially those who have recently given birth, have better physical health and therefore improve their mental health. Other than the exercises that are listed above there a few other simple exercises that are much easier to complete. These activities include walking around the house, doing body weight squats, and lunges across the house. You can even include your infant in these exercises such as standing and holding your infant and raising them up and down to help with upper body strength, squats with the infant, and even bench press your infant.",
-                "There are many different exercises that any caregiver can do at home either with their baby or just by themselves, but by taking part in any of these exercises you have a great opportunity to improve your physical and mental health. Please make sure to check with your doctor before beginning any exercises, and make sure that you can safely begin these exercises that will greatly help you out in the long run.",
-            ]} />
-        </>
-    }
+            title: "Cat-Cow Yoga Exercise",
+            subtitle: "Increase the flexibility of your shoulders, neck, and spine.",
+            instructions: [
+                "Kneel on the floor and put your hands on the floor in front of you.",
+                "Keep your hands shoulder-width apart and your knees directly below your hips. ",
+                "Inhale deeply while curving your lower back and bringing your head up, tilting your pelvis up like a \"cow.\"",
+                "Exhale deeply and bring your abdomen in, arching your spine and bringing your head and pelvis down like a \"cat\". Repeat several times.",
+            ]
+        }
+    ]
 ]
 
+interface Page { page: number, onBack: () => void; onContinue: () => void, onExit: () => void }
+
+const activityPages: React.FC<Page>[] = activityData.flatMap((activityGroup, groupIndex) =>
+    activityGroup.flatMap((activity, activityIndex) =>
+        activity.instructions.map((instruction, instructionIndex) => ({ onBack, onContinue, onExit, page }) => <APContainer
+            key={`activity-${groupIndex}-${activityIndex}-${instructionIndex}`}
+
+            bgColor={activity.bgColor}
+            buttonColor={activity.buttonColor}
+            pageNumColor={activity.pageNumColor}
+
+            time={10}
+            page={page}
+
+            onBack={onBack}
+            onContinue={onContinue}
+            onExit={onExit}
+        >
+            <APHeader title={activity.title} subtitle={activity.subtitle} />
+            <APInstruction instruction={instruction} />
+        </APContainer>)
+    )
+);
+
+const whitePages: React.FC<Page>[] = [
+
+    ({ onBack, onContinue, onExit }) => <WPContainer backText="Learn More" image="/images/saly-at-home-exercises.svg" onBack={onBack} onContinue={onContinue} onExit={onExit}>
+        <WPHeader title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
+        <WPDescription title={"Mindful Movement"} paragraphs={[
+            "Sometimes as a caregiver of an infant (0-1 year old), the last thing on your mind is to exercise because you are constantly busy with other tasks. However, exercising has numerous benefits that any caregiver can easily do at home! Today we're going to learn how any caregiver can do exercises at home that improve physical and mental health.",
+            "First we're going to discuss what the benefits of exercise for caregivers of infants. No matter how long or how difficult one is exercising, the benefits include improved energy, improved sleep, reduced feelings of stress, and reduced risk of heart and related diseases (https://www.acog.org/womens-health/faqs/exercise-after-pregnancy).",
+            "Please note, for postpartum caregivers, talk to your doctor make sure you're able to do these exercises at home. Those who went through a difficult pregnancy and/or had a c-section may need time to recover before starting to exercise (https://www.mayoclinic.org/healthy-lifestyle/labor-and-delivery/in-depth/exercise-after-pregnancy/art-20044596)."
+        ]} />
+    </WPContainer >,
+
+    ({ onBack, onContinue, onExit, page }) => <WPContainer backText="Back" image="/images/at-home-exercises-bg.svg" onBack={onBack} onContinue={onContinue} onExit={onExit}>
+        <WPHeader title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
+        <WPDescription title={"Multifaceted Benefits"} paragraphs={[
+            "Caregivers who have recently given birth can greatly benefit from exercise as it has decreased the risk of postpartum depression, increased abdominal muscle strength, and helps to keep a healthy body weight after pregnancy (https://www.acog.org/womens-health/faqs/exercise-after-pregnancy). The exercises that this activity includes are designed for caregivers of infants to do at home, giving the same benefits as someone going to a gym.",
+        ]} />
+        <WPNeedsContainer title={"What will you need?"}>
+            <WPNeedsContent items={[
+                {
+                    name: "Yoga Mat",
+                    image: "/images/yogamat.svg",
+                },
+                {
+                    name: "Timer",
+                    image: "/images/timer.svg",
+                },
+                {
+                    name: "Water",
+                    image: "/images/water.svg",
+                },
+                {
+                    name: "Gym Clothes",
+                    image: "/images/gymclothes.svg",
+                }
+            ]} />
+        </WPNeedsContainer>
+    </WPContainer>,
+
+    ({ onBack, onContinue, onExit, page }) => <WPContainer backText="Back" onBack={onBack} onContinue={onContinue} onExit={onExit}>
+        <WPHeader title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
+        <WPActivityPreview activities={[
+            {
+                id: 1,
+                title: 'Diaphragmatic breathing- An Easy, Warm Up Breathing Exercise',
+                description: 'This exercise is tailored to everyone, and can be done just a few days after a caregiver has given birth.',
+            },
+            {
+                id: 2,
+                title: 'Pelvic Tilt Kegel Exercise',
+                description: 'Strengthen your lower back and abdominal muscles.',
+            },
+            {
+                id: 3,
+                title: 'Cat-Cow Yoga Exercise',
+                description: 'Increase the flexibility of your shoulders, neck, and spine.',
+            },
+            {
+                id: 4,
+                title: 'Postpartum Plank Exercise',
+                description: 'An isometric exercise that can help strengthen your core.',
+            },
+        ]} />
+    </WPContainer>,
+
+    ({ onBack, onContinue, onExit, page }) => <WPContainer backText="Back" onBack={onBack} onContinue={onContinue} onExit={onExit}>
+        <WPHeader title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
+        <WPDescription title={"Key Takeaways"} paragraphs={[
+            "These four exercises have been proven to significantly help caregivers of infants, especially those who have recently given birth, have better physical health and therefore improve their mental health. Other than the exercises that are listed above there a few other simple exercises that are much easier to complete. These activities include walking around the house, doing body weight squats, and lunges across the house. You can even include your infant in these exercises such as standing and holding your infant and raising them up and down to help with upper body strength, squats with the infant, and even bench press your infant.",
+            "There are many different exercises that any caregiver can do at home either with their baby or just by themselves, but by taking part in any of these exercises you have a great opportunity to improve your physical and mental health. Please make sure to check with your doctor before beginning any exercises, and make sure that you can safely begin these exercises that will greatly help you out in the long run.",
+        ]} />
+    </WPContainer>
+]
+
+const pages = [...whitePages]
+pages.splice(3, 0, ...activityPages)
 
 const AtHomeExercisesPage = () => {
     const [page, setPage] = useState(0);
 
-    const handleLeft = () => {
+    const handleBack = () => {
         if (page > 0) setPage(page - 1);
-    };
+    }
 
     const handleContinue = () => {
         if (page < pages.length - 1) setPage(page + 1);
-    };
+    }
 
-    return (
-        <Container leftText={pages[page].leftText} onLeft={handleLeft} onContinue={handleContinue} image={pages[page].image}>
-            <Head>
-                <link href="https://fonts.googleapis.com/css2?family=Candal&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-            </Head>
-            {pages[page].content}
-        </Container>
-    );
+    const handleExit = () => {
+        setPage(0)
+    }
+
+    return pages[page]({ onBack: handleBack, onContinue: handleContinue, onExit: handleExit, page: page + 1 });
 }
 
 export default AtHomeExercisesPage;
