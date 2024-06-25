@@ -20,6 +20,15 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
+    // Verify legitimate access
+    const allowedAccess = sessionStorage.getItem("allowAccessToWalkingNatureJournalActivity");
+    if (!allowedAccess) {
+      router.push('/home/walking-nature-journal'); 
+    } 
+  }, []);
+  
+
+  useEffect(() => {
     localStorage.setItem("walkingPage", walkingPage.toString());
     localStorage.setItem("journalEntry", journalEntry);
   }, [walkingPage, journalEntry]);
@@ -66,6 +75,7 @@ const WalkingNatureJournalWrapUp: React.FC = () => {
   }, [journalEntry]);
 
   const handleExit = () => {
+    localStorage.removeItem("allowAccessToWalkingNatureJournalActivity");
     router.push("/home");
     setWalkingPage(0);
   };

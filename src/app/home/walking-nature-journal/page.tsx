@@ -19,6 +19,7 @@ const WalkingNatureJournal = () => {
       setCurrentStep(currentStep + 1);
     }
     else{
+      sessionStorage.setItem('allowAccessToWalkingNatureJournalActivity', 'true');
       router.push('/home/walking-nature-journal-components');
     }
   };
