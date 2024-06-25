@@ -4,9 +4,15 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SmileLine from "../../../../../../public/images/Line 16.png";
+import EyeClosed from "../../../../public/images/Line 17.png";
 import '../../../../globals.css';
 
-const Dashboard: React.FC = () => {
+interface SeventhPageProps {
+    onNext: () => void;
+    onBack: () => void;
+}
+
+const SeventhPage: React.FC<SeventhPageProps> = ({ onNext, onBack }) => {
     const [countdown, setCountdown] = useState(10);
 
     useEffect(() => {
@@ -36,7 +42,7 @@ const Dashboard: React.FC = () => {
                     <span className="text-black font-bold">X</span>
                 </div>
             </Link>
-            <div className="absolute bottom-[-200px] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] bg-[#FF8C39] rounded-full flex justify-center items-center">
+            <div className="absolute bottom-[-24vh] left-1/2 transform -translate-x-1/2 w-[98vh] h-[98vh] bg-[#FF8C39] rounded-full flex justify-center items-center">
                 <div className="relative w-full h-full flex justify-center items-center">
                     <div className="eye absolute top-[24%] left-[27%]"></div>
                     <div className="eye absolute top-[24%] right-[27%]"></div>
@@ -54,15 +60,11 @@ const Dashboard: React.FC = () => {
                 {countdown > 0 ? (
                     <span className="text-white text-4xl font-bold">{countdown}</span>
                 ) : (
-                    <Link href="./page8" legacyBehavior>
-                        <a className="text-white text-4xl font-bold">→</a>
-                    </Link>
+                    <button onClick={onNext} className="text-white text-4xl font-bold">→</button>
                 )}
             </div>
             <div className="absolute bottom-5 left-5">
-                <Link href="./page6" legacyBehavior>
-                    <a className="text-4xl font-bold back-effect">Back</a>
-                </Link>
+                <button onClick={onBack} className="text-4xl font-bold back-effect">Back</button>
             </div>
             <div className="text-center mt-20 fade-in">
                 <h1 className="text-5xl font-extrabold mb-8">Stop</h1>
@@ -73,4 +75,4 @@ const Dashboard: React.FC = () => {
     );
 }
 
-export default Dashboard;
+export default SeventhPage;

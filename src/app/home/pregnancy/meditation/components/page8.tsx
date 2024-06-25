@@ -8,7 +8,12 @@ import Star from "../../../../../../public/images/Star 26.svg";
 import ContinueIcon from "../../../../../../public/images/openmoji_return.png";
 import '../../../../globals.css';
 
-const Dashboard: React.FC = () => {
+interface EighthPageProps {
+    onNext: () => void;
+    onBack: () => void;
+}
+
+const EighthPage: React.FC<EighthPageProps> = ({ onNext, onBack }) => {
     const [countdown, setCountdown] = useState(10);
 
     useEffect(() => {
@@ -25,7 +30,6 @@ const Dashboard: React.FC = () => {
         const end = Date.now() + duration;
 
         const frame = () => {
-            // Launch confetti from random points on the screen
             confetti({
                 particleCount: 2,
                 angle: 60,
@@ -39,7 +43,6 @@ const Dashboard: React.FC = () => {
                 origin: { x: Math.random(), y: Math.random() }
             });
 
-            // Keep going until we are out of time
             if (Date.now() < end) {
                 requestAnimationFrame(frame);
             }
@@ -57,9 +60,7 @@ const Dashboard: React.FC = () => {
             </Link>
             
             <div className="absolute bottom-5 left-5">
-                <Link href="./page7" legacyBehavior>
-                    <div className="text-4xl font-bold back-effect cursor-pointer">Back</div>
-                </Link>
+                <button onClick={onBack} className="text-4xl font-bold back-effect cursor-pointer">Back</button>
             </div>
             <div className="text-center mt-20">
                 <h1 className="text-5xl font-extrabold mb-8">Well Done!</h1>
@@ -73,23 +74,20 @@ const Dashboard: React.FC = () => {
                     />
                 </div>
             </div>
-           <div className="absolute bottom-9 right-9">
-                <Link href="./page9">
-                    <div className="flex items-center px-4 py-2 bg-[#FF5B5B] rounded-full text-white font-bold cursor-pointer hover-grow-x">
-                        Continue
-                        <Image
-                            src={ContinueIcon}
-                            alt="Continue Icon"
-                            width={24} // adjust the width as needed
-                            height={24} // adjust the height as needed
-                            className="ml-2"
-                        />
-                    </div>
-                </Link>
+            <div className="absolute bottom-9 right-9">
+                <button onClick={onNext} className="flex items-center px-4 py-2 bg-[#FF5B5B] rounded-full text-white font-bold cursor-pointer hover-grow-x">
+                    Continue
+                    <Image
+                        src={ContinueIcon}
+                        alt="Continue Icon"
+                        width={24} // adjust the width as needed
+                        height={24} // adjust the height as needed
+                        className="ml-2"
+                    />
+                </button>
             </div>
-
         </div>
     );
 }
 
-export default Dashboard;
+export default EighthPage;
