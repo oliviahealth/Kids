@@ -1,8 +1,7 @@
-"use client"; // Add this directive at the top
+"use client";
 
 import React, { useEffect, useState, useRef, MutableRefObject, ReactNode } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { Page } from "./Types";
 
 const useCountdown = (initialSeconds: number) => {
     const [seconds, setSeconds] = useState(initialSeconds);
@@ -20,31 +19,27 @@ const useCountdown = (initialSeconds: number) => {
     return [seconds];
 };
 
-export const APContainer: React.FC<{
+interface APContainerProps {
     time: number,
-    page: number,
+    num: number,
 
     buttonColor: string,
-    pageNumColor: string,
+    numColor: string,
     bgColor: string,
+}
 
-    onBack: () => void,
-    onContinue: () => void,
-    onExit: () => void,
-    children: ReactNode
-
-}> = ({ buttonColor, pageNumColor, bgColor, time, page, onBack, onContinue, onExit, children }) => {
+export const APContainer: React.FC<APContainerProps & Page & { children: ReactNode }> = ({ buttonColor, numColor, bgColor, time, num, onBack, onContinue, onExit, children }) => {
     const [countdown] = useCountdown(time);
 
     return <div>
         <div style={{ backgroundColor: bgColor }} className={`p-32 relative w-full h-[100vh] flex flex-col justify-between items-center`}>
             <div className="absolute top-10 left-10">
                 <svg width="120" height="114" viewBox="0 0 120 114" xmlns="http://www.w3.org/2000/svg">
-                    <path fill={pageNumColor} d="M120 76.8467C120 107.578 85.4973 113.514 54.8148 113.514C24.1323 113.514 0 88.6009 0 57.8696C0 27.1384 45.6138 0 76.2963 0C106.979 0 120 46.1154 120 76.8467Z" />
+                    <path fill={numColor} d="M120 76.8467C120 107.578 85.4973 113.514 54.8148 113.514C24.1323 113.514 0 88.6009 0 57.8696C0 27.1384 45.6138 0 76.2963 0C106.979 0 120 46.1154 120 76.8467Z" />
                 </svg>
 
                 <div className="absolute inset-0 flex justify-center items-center">
-                    <span className="text-4xl font-bold text-black">{page}</span>
+                    <span className="text-4xl font-bold text-black">{num}</span>
                 </div>
             </div>
             <button onClick={onExit} style={{ backgroundColor: buttonColor }} className={`absolute top-0 right-0 m-4 w-20 h-20 rounded-full flex justify-center items-center cursor-pointer hover-grow-x`}>
@@ -82,3 +77,34 @@ export const APInstruction: React.FC<{ instruction: string }> = ({ instruction }
         <div className="text-5xl font-bold">{instruction}</div>
     </div>
 </div>
+
+type ActivityPageProps = Page & APContainerProps & {
+    title: string,
+    subtitle: string,
+    instruction: string
+}
+
+export const ActivityPage: React.FC<ActivityPageProps> = ({ onBack, onContinue, onExit, bgColor, buttonColor, numColor, num, title, subtitle, instruction }) => <APContainer
+    bgColor={bgColor}
+    buttonColor={buttonColor}
+    numColor={numColor}
+
+    time={10}
+    num={num}
+
+    onBack={onBack}
+    onContinue={onContinue}
+    onExit={onExit}
+>
+    <APHeader title={title} subtitle={subtitle} />
+    <APInstruction instruction={instruction} />
+</APContainer>
+
+
+// type ActivityPageCarouselProps = {
+
+// }
+// }
+// export const ActivityPageCarousel: React.FC<ActivityPageCarouselProps> = () => {
+
+// }
