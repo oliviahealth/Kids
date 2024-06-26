@@ -115,7 +115,7 @@ export default function Page() {
             className="text-rose-600 font-bold py-2 px-4"
             onClick={handlePrev}
           >
-            Previous
+            {currentIndex == 0 ? 'Learn more' : 'Back'}
           </button>
         </div>
         <div className="justify-self-center sm:justify-self-end">
