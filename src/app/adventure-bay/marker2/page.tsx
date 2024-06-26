@@ -76,9 +76,9 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="grid items-start md:grid-cols-12 gap-8 grid-cols-1">
-        <div className="grid gap-8 col-span-7">
-          <div className="grid gap-2">
+      <div className="grid items-start md:grid-cols-12 gap-8 grid-cols-1 flex-grow">
+        <div className="grid gap-8 col-span-7 py-5">
+          <div className="grid gap-4">
             <h1 className="text-xl font-bold">{content.mainContent.title}</h1>
             <p>{content.mainContent.content.part1}</p>
           </div>
