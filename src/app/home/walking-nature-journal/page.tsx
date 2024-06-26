@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/navigation";
 import styles from "./WalkingNatureJournal.module.css";
-import WalkingNatureJournalWrapUp from "../components/_page";
+import WalkingNatureJournalWrapUp from "./components/_page";
 
 const WalkingNatureJournal = () => {
   const router = useRouter();
