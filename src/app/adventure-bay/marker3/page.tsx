@@ -129,48 +129,48 @@ export default function Page() {
           )}
           {currentIndex === 2 && (
             <div className="flex flex-col gap-10">
-              <div className="grid grid-cols-10 gap-2">
+              <div className="grid grid-cols-10 gap-2 py-4">
                 <div className="col-span-1 flex justify-center items-center">
                   <Image className="absolute" src={ellipse} />
                   <span className="relative font-bold z-30 ">1</span>
                 </div>
-                <div className="col-span-9 justify-center">
+                <div className="col-span-9 justify-center px-8 sm:px-4">
                   <h1 className="font-bold text-xl">
                     {content.mainContent.content.part1?.title}
                   </h1>
                   <p>{content.mainContent.content.part1?.desc}</p>
                 </div>
               </div>
-              <div className="grid grid-cols-10 gap-2">
+              <div className="grid grid-cols-10 gap-2 py-4">
                 <div className="col-span-1 flex justify-center items-center">
                   <Image className="absolute" src={ellipse} />
                   <span className="relative font-bold z-30 ">2</span>
                 </div>
-                <div className="col-span-9 justify-center">
+                <div className="col-span-9 justify-center px-8 sm:px-4">
                   <h1 className="font-bold text-xl">
                     {content.mainContent.content.part2?.title}
                   </h1>
                   <p>{content.mainContent.content.part2?.desc}</p>
                 </div>
               </div>
-              <div className="grid grid-cols-10 gap-2">
+              <div className="grid grid-cols-10 gap-2 py-4">
                 <div className="col-span-1 flex justify-center items-center">
                   <Image className="absolute" src={ellipse} />
                   <span className="relative font-bold z-30 ">3</span>
                 </div>
-                <div className="col-span-9 justify-center">
+                <div className="col-span-9 justify-center px-8 sm:px-4">
                   <h1 className="font-bold text-xl">
                     {content.mainContent.content.part3?.title}
                   </h1>
                   <p>{content.mainContent.content.part3?.desc}</p>
                 </div>
               </div>
-              <div className="grid grid-cols-10 gap-2">
+              <div className="grid grid-cols-10 gap-2 py-4">
                 <div className="col-span-1 flex justify-center items-center">
                   <Image className="absolute" src={ellipse} />
                   <span className="relative font-bold z-30 ">4</span>
                 </div>
-                <div className="col-span-9 justify-center">
+                <div className="col-span-9 justify-center px-8 sm:px-4">
                   <h1 className="font-bold text-xl">
                     {content.mainContent.content.part4?.title}
                   </h1>
