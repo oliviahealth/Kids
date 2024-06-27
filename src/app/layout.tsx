@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
+
 import localFont from 'next/font/local';
+import { Candal } from 'next/font/google'
+
 import "./globals.css";
 
 import Footer from "@/components/Footer";
+
+const candal = Candal({
+  weight: "400",
+  variable: '--font-candal',
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "OliviaHealth - Kids",

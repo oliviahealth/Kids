@@ -9,8 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        candal: ['Candal', 'sans-serif'],
         OpenSans: ['OpenSans'],
         Oswald: ['Oswald'],
+        Candal: ['Candal', 'sans-serif'],
+        Inter: ['Inter', 'sans-serif'],
       },
       screens: {
         '1s-sm': '420px',

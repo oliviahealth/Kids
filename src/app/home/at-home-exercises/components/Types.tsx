@@ -1,0 +1,1 @@
+export interface Page { page?: number, setCurrentPage?: (page: number) => void, onBack: () => void; onContinue: () => void, onExit: () => void }
