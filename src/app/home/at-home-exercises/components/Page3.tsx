@@ -1,10 +1,10 @@
 import React from 'react';
-import { WPHeader, WPContainer, WPActivityPreview } from './WhitePage';
-import { Page } from './Types';
+import { WPHeader, WPContainer, WPActivityPreview } from '@/components/WhitePage';
+import { Page } from "@/components/Pagination";
 
 export default ({ onBack, onContinue, onExit, page }: Page) => <WPContainer backText="Back" onBack={onBack} onContinue={onContinue} onExit={onExit}>
-    <WPHeader title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
-    <WPActivityPreview activities={[
+    <WPHeader image={"/images/flower.svg"} title={"At-Home Exercises"} subtitleColor={"#F1A533"} subtitle={"Caregiver Wellness - Blossom Haven"} />
+    <WPActivityPreview color={"#FBEBCC"} activities={[
         {
             id: 1,
             title: 'Diaphragmatic breathing- An Easy, Warm Up Breathing Exercise',

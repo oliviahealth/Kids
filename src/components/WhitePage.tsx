@@ -2,14 +2,14 @@
 
 import React, { ReactNode, useState } from 'react';
 
-export const WPHeader: React.FC<{ title: string, subtitle: string }> = ({ title, subtitle }) => (
+export const WPHeader: React.FC<{ image: string, title: string, subtitleColor: string, subtitle: string }> = ({ image, title, subtitleColor, subtitle }) => (
     <div className="flex items-center mb-8">
         <div className="flex-shrink-0">
-            <img src="/images/flower.svg" alt="Logo" className="h-16 w-16" />
+            <img src={image} alt="Logo" className="h-16 w-16" />
         </div>
         <div className="ml-4">
             <h1 className="text-2xl font-bold text-gray-800">{title}</h1>
-            <h2 className="text-xl text-[#f59e0b]">{subtitle}</h2>
+            <h2 style={{ color: subtitleColor }} className="text-xl text-[#f59e0b]">{subtitle}</h2>
         </div>
     </div>
 );
@@ -65,12 +65,12 @@ export const WPNeedsContent: React.FC<{ title?: string, items: { name: string, i
     </div>
 </div>
 
-export const WPActivityPreview: React.FC<{ activities: { id: number, title: string, description: string }[] }> = ({ activities }) => <div className="mb-8">
+export const WPActivityPreview: React.FC<{ color: string, activities: { id: number, title: string, description: string }[] }> = ({ color, activities }) => <div className="mb-8">
     <h2 className="text-2xl font-bold mb-8">Activity</h2>
     <ul className="ml-4 space-y-8">
         {activities.map((activity) => (
             <li key={activity.id} className="flex items-start">
-                <div className="size-12 flex items-center justify-center bg-[#FBEBCC] rounded-full text-lg mr-4">
+                <div style={{ backgroundColor: color }} className="size-12 flex items-center justify-center rounded-full text-lg mr-4">
                     {activity.id}
                 </div>
                 <div>

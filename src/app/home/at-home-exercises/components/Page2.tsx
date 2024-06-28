@@ -1,9 +1,9 @@
 import React from 'react';
-import { WPHeader, WPDescription, WPContainer, WPNeedsContainer, WPNeedsContent } from './WhitePage';
-import { Page } from './Types';
+import { WPHeader, WPDescription, WPContainer, WPNeedsContainer, WPNeedsContent } from '@/components/WhitePage';
+import { Page } from "@/components/Pagination";
 
 export default ({ onBack, onContinue, onExit, page }: Page) => <WPContainer backText="Back" image="/images/at-home-exercises-bg.svg" onBack={onBack} onContinue={onContinue} onExit={onExit}>
-    <WPHeader title={"At-Home Exercises"} subtitle={"Caregiver Wellness - Blossom Haven"} />
+    <WPHeader image={"/images/flower.svg"} title={"At-Home Exercises"} subtitleColor={"#F1A533"} subtitle={"Caregiver Wellness - Blossom Haven"} />
     <WPDescription title={"Multifaceted Benefits"} paragraphs={[
         "Caregivers who have recently given birth can greatly benefit from exercise as it has decreased the risk of postpartum depression, increased abdominal muscle strength, and helps to keep a healthy body weight after pregnancy (https://www.acog.org/womens-health/faqs/exercise-after-pregnancy). The exercises that this activity includes are designed for caregivers of infants to do at home, giving the same benefits as someone going to a gym.",
     ]} />

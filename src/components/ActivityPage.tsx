@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef, MutableRefObject, ReactNode } from "react";
-import { Page } from "./Types";
+import { Page } from "@/components/Pagination";
 
 const useCountdown = (initialSeconds: number) => {
     const [seconds, setSeconds] = useState(initialSeconds);
