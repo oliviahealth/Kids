@@ -44,9 +44,15 @@ const RainbowValleyActivity7Page1: React.FC<{
                 take care of yourself to ensure that you are giving the children
                 an uplifting environment to grow up in. The National Institute
                 of Mental Health (NIH) wrote an article about the importance of
-                mental health and how it can affect your entire well-being
-                (https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health).
-                They also provide advice on when to seek help for your mental
+                mental health and how it can affect your entire well-being{" "}
+                <a className="underline text-blue-600"
+                  href="https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health)
+                </a>{" "}
+                . They also provide advice on when to seek help for your mental
                 health.
               </p>
             </div>

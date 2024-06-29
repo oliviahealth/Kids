@@ -43,11 +43,18 @@ const RainbowValleyActivity3Page1: React.FC<{
                 objects they have around them. This creativity is important for
                 your child because it allows for self expression, problem
                 solving, the expression of feelings, and improves their fine
-                motor skills
-                (https://www.pbs.org/wholechild/providers/play.html). Just as it
-                is important for toddlers to be creative, it is also just
-                important for adults to foster their own creativity. This is why
-                we created a Vision Board for Self Care.
+                motor skills{" "}
+                <a
+                  className="underline text-blue-600"
+                  href="https://www.pbs.org/wholechild/providers/play.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (https://www.pbs.org/wholechild/providers/play.html)
+                </a>{" "}
+                . Just as it is important for toddlers to be creative, it is
+                also just important for adults to foster their own creativity.
+                This is why we created a Vision Board for Self Care.
               </p>
               <p>
                 A vision board is a collection of pictures that represents your
@@ -57,8 +64,15 @@ const RainbowValleyActivity3Page1: React.FC<{
                 goals, or maybe even your five year plan! It is easy to get
                 caught up in the stress of life, this vision board provides a
                 concrete and observable visual for you to focus on and feel
-                positive
-                about.(https://www.tandfonline.com/doi/full/10.1080/15401383.2015.1092901?casa_token=qUWifU0ggYAAAAAA%3A2rKg9IVhIXUo_t4pvzMosanTh5WcwUEEzcNjOMTFwx4leqCnVuBKsaAh-dOSHyti-jGp9CGp24J1LA)
+                positive about.{" "}
+                <a
+                  className="underline text-blue-600"
+                  href="https://www.tandfonline.com/doi/full/10.1080/15401383.2015.1092901?casa_token=qUWifU0ggYAAAAAA%3A2rKg9IVhIXUo_t4pvzMosanTh5WcwUEEzcNjOMTFwx4leqCnVuBKsaAh-dOSHyti-jGp9CGp24J1LA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  (https://www.tandfonline.com/doi/full/10.1080/15401383.2015.1092901?casa_token=qUWifU0ggYAAAAAA%3A2rKg9IVhIXUo_t4pvzMosanTh5WcwUEEzcNjOMTFwx4leqCnVuBKsaAh-dOSHyti-jGp9CGp24J1LA)
+                </a>
               </p>
             </div>
           </div>

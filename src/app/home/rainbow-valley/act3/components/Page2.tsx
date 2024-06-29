@@ -43,18 +43,18 @@ const RainbowValleyActivity3Page2: React.FC<{
             <p>
               For this activity, first start by taking time away from
               distraction to figure out what it is that inspires you. Once you
-              have this goal, you'll need to decide how you want to make your
-              vision board. Do you want to make it online on a platform such as
-              PowerPoint or would you like to use a piece of paper? If you are
-              using an online platform begin searching the internet for pictures
-              or drawings that relate to your goal. You can even use your own
-              pictures! If you are wanting to make your vision board on a piece
-              of paper, you can print pictures, draw your own, or cut out images
-              from magazines! Once you have gathered your pictures create a
-              collage on your paper! Some people like to hang their vision board
-              in a place that they can see it everyday - such as by the bedroom
-              mirror. This allows people to remember their vision and to go back
-              to that positive mindset!
+              have this goal, you{"'"}ll need to decide how you want to make
+              your vision board. Do you want to make it online on a platform
+              such as PowerPoint or would you like to use a piece of paper? If
+              you are using an online platform begin searching the internet for
+              pictures or drawings that relate to your goal. You can even use
+              your own pictures! If you are wanting to make your vision board on
+              a piece of paper, you can print pictures, draw your own, or cut
+              out images from magazines! Once you have gathered your pictures
+              create a collage on your paper! Some people like to hang their
+              vision board in a place that they can see it everyday - such as by
+              the bedroom mirror. This allows people to remember their vision
+              and to go back to that positive mindset!
             </p>
             <p className="font-bold">What will you need?</p>
             <div className="grid grid-cols-1 sm:grid-cols-5 space-y-5 sm:space-y-0">
