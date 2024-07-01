@@ -7,7 +7,7 @@ const WalkingActivityPage7: React.FC<{
 }> = ({ onNext, onBack }) => {
   return (
     <h1>
-      Third Screen
+      Last Screen
     </h1>
   );
 }

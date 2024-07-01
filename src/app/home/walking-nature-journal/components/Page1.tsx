@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../WalkingNatureJournal.module.css";  // Import the CSS
+import styles from "../WalkingNatureJournal.module.css";
 
 const WalkingActivityPage1: React.FC<{
   onNext: () => void;
