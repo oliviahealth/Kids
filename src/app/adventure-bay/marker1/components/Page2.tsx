@@ -53,7 +53,12 @@ export default function Page2({
               your brain into a mindset that is supportive and encouraging. This
               will aid in your resilience as a caregiver (Citing this
               information from:{" "}
-              <a href="https://www.thebump.com/a/positive-parenting-affirmations">
+              <a
+                href="https://www.thebump.com/a/positive-parenting-affirmations"
+                style={{
+                  color: "blue",
+                }}
+              >
                 https://www.thebump.com/a/positive-parenting-affirmations
               </a>
               ).

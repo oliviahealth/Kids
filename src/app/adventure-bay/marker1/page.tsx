@@ -5,7 +5,7 @@ import backgroundMap from "../../../../public/images/background.png";
 import ActivityPage1 from "@/app/adventure-bay/marker1/components/Page1";
 import ActivityPage2 from "@/app/adventure-bay/marker1/components/Page2";
 import ActivityPage3 from "@/app/adventure-bay/marker1/components/Page3";
-
+import ActivityPage4 from "@/app/adventure-bay/marker1/components/Page4";
 
 const AdventureBayActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -60,7 +60,14 @@ const AdventureBayActivity: React.FC = () => {
           <ActivityPage3 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
-    }
+    },
+    {
+      content: (
+        <MapContainer>
+          <ActivityPage4 onNext={handleNext} onBack={handleBack} />
+        </MapContainer>
+      ),
+    },
   ];
   return <>{pagesData[currentPage].content}</>;
 };

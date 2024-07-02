@@ -49,10 +49,18 @@ export default function Page1({
               can result in feelings of stress and discomfort. Calm.com
               describes emotions as the language of your body, providing
               feedback on how your body feels about what is happening around it
-              (https://www.calm.com/blog/how-to-feel-your-feeling.) Emotions
-              send important messages to your mind and body -- messages that
-              shouldn't be ignored! Listen to your emotions to help recognize
-              what your needs are.
+              (
+              <a
+                href="https://www.calm.com/blog/how-to-feel-your-feeling"
+                style={{
+                  color: "blue",
+                }}
+              >
+                https://www.calm.com/blog/how-to-feel-your-feeling
+              </a>
+              ). Emotions send important messages to your mind and body --
+              messages that shouldn't be ignored! Listen to your emotions to
+              help recognize what your needs are.
             </p>
           </div>
         </div>
