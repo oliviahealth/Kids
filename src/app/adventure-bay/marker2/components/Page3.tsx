@@ -38,12 +38,12 @@ export default function Page2({
           </Link>
         </div>
       </div>
-      <div className="grid gap-4">
+      <div className="grid gap-4 py-4">
         <h1 className="text-xl font-bold">Guidelines</h1>
       </div>
 
       <div className="grid items-start md:grid-cols-12 gap-8 grid-cols-2 flex-grow">
-        <div className="grid gap-8 col-span-6 py-5">
+        <div className="grid gap-8 col-span-6">
           <div className="flex flex-col gap-10">
             <div className="grid grid-cols-10 gap-2 py-2">
               <div className="col-span-1 flex justify-center items-center">
@@ -98,8 +98,8 @@ export default function Page2({
             </div>
           </div>
         </div>
-        <div className="grid gap-8 col-span-6 py-5">
-          <div className="grid grid-cols-10 gap-2 py-4">
+        <div className="grid gap-8 col-span-6">
+          <div className="grid grid-cols-10 gap-2 py-2">
             <div className="col-span-1 flex justify-center items-center">
               <Image className="absolute" src={ellipse} />
               <span className="relative font-bold z-30 ">5</span>

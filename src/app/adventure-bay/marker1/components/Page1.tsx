@@ -4,7 +4,7 @@ import Image from "next/image";
 import logo from "../../../../../public/images/dashboard/adventure-bay/title-image.png";
 import Link from "next/link";
 import group82 from "../../../../../public/images/dashboard/adventure-bay/group-82.png";
-import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png"
+import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
 
 export default function Page1({
   onNext,
@@ -48,17 +48,24 @@ export default function Page1({
               are learning, growing, and exploring every day. They require a lot
               of attention from their caregiver, which can be physically and
               mentally taxing for that caregiver. As wonderful as it is for you
-              to give so much of your attention to your child's health and
+              to give so much of your attention to your child&apos;s health and
               development, it may cause burnout and negative thoughts over time.
               One way to combat these negative thoughts is by practicing daily
               affirmations. A positive affirmation is a phrase that one says to
               oneself to combat negative thoughts ( Citing this information
-              from:
-              https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations/.)
-              Many different affirmations can be used each day. We have included
-              a list of examples for you to use, but feel free to create your
-              own as well! The most beneficial affirmations are the ones you can
-              relate to best.
+              from:{" "}
+              <a
+                href="https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations/"
+                style={{
+                  color: "blue",
+                }}
+              >
+                https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations/
+              </a>
+              .) Many different affirmations can be used each day. We have
+              included a list of examples for you to use, but feel free to
+              create your own as well! The most beneficial affirmations are the
+              ones you can relate to best.
             </p>
             <p>
               Studies have shown that positive affirmations have many benefits,
@@ -68,8 +75,16 @@ export default function Page1({
               that they provide opens up the opportunity for you to realize any
               changes that need to be made in your life. Affirmations can also
               aid in improved sleep and fewer feelings of anxiety and depression
-              (Citing this information from:
-              https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations.)
+              (Citing this information from:{" "}
+              <a
+                href="https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations/"
+                style={{
+                  color: "blue",
+                }}
+              >
+                https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations/
+              </a>
+              .)
             </p>
           </div>
         </div>
@@ -81,7 +96,8 @@ export default function Page1({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 justify-between">
         <div className="justify-self-center sm:justify-self-start">
-          <Link href='/home'
+          <Link
+            href="/home"
             className="text-red-600 py-2 px-4"
             onClick={onBack}
           >
