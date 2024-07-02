@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import logo from "../../../../../public/images/dashboard/adventure-bay/title-image.png";
 import Link from "next/link";
+import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
 import group82 from "../../../../../public/images/dashboard/adventure-bay/group-82.png";
 
 export default function Page1({
@@ -20,9 +21,7 @@ export default function Page1({
         </div>
 
         <div className="flex flex-col justify-center items-start">
-          <span className="text-xl font-bold">
-            My Gratitude Jars
-          </span>
+          <span className="text-xl font-bold">My Gratitude Jars</span>
           <span className="text-xl" style={{ color: "#52C5C0" }}>
             Caregiver Wellness - Adventure Bay
           </span>
@@ -61,19 +60,17 @@ export default function Page1({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 justify-between">
         <div className="justify-self-center sm:justify-self-start">
-          <button
-            className="text-rose-600 font-bold py-2 px-4"
-            onClick={onBack}
-          >
-            Learn More
-          </button>
+          <Link href="/home" className="text-red-600 py-2 px-4">
+            Learn more
+          </Link>
         </div>
         <div className="justify-self-center sm:justify-self-end">
           <button
-            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
+            className="bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center"
             onClick={onNext}
           >
-            Continue &gt;
+            Continue
+            <Image src={arrow} alt="arrow" width={30} height={30} />
           </button>
         </div>
       </div>
