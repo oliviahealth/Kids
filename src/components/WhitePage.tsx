@@ -69,7 +69,7 @@ export const WPNeedsContent: React.FC<{ title?: string, items: { name: string, i
 
 export const WPTitle: React.FC<{ title: string }> = ({ title }) => <h2 className="text-2xl font-bold mb-8">{title}</h2>
 
-export const WPActivityPreview: React.FC<{ hideTitle: boolean, color: string, activities: { id: number, title: string, description: string }[] }> = ({ hideTitle, color, activities }) => <div className="mb-8">
+export const WPActivityPreview: React.FC<{ hideTitle?: boolean, color: string, activities: { id: number, title: string, description: string }[] }> = ({ hideTitle, color, activities }) => <div className="mb-8">
     {!hideTitle && <WPTitle title="Activity" />}
     <ul className="ml-4 space-y-8">
         {activities.map((activity) => (
