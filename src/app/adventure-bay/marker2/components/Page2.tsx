@@ -6,6 +6,7 @@ import Link from "next/link";
 import group82 from "../../../../../public/images/dashboard/adventure-bay/group-82.png";
 import coloringPage from "../../../../../public/images/dashboard/adventure-bay/Group 74.png";
 import pencil from "../../../../../public/images/dashboard/adventure-bay/fluent-emoji-high-contrast_crayon.png";
+import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
 import marker from "../../../../../public/images/dashboard/adventure-bay/material-symbols_ink-marker-sharp.png";
 
 export default function Page1({
@@ -61,7 +62,7 @@ export default function Page1({
           </div>
           <div className="grid gap-8 ">
             <h1 className="text-xl font-bold">What will you need?</h1>
-            
+
             <div className="flex gap-20">
               <div className="flex flex-col items-center justify-between">
                 <Image src={coloringPage} alt="Coloring Pages" />
@@ -86,19 +87,17 @@ export default function Page1({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 justify-between">
         <div className="justify-self-center sm:justify-self-start">
-          <button
-            className="text-rose-600 font-bold py-2 px-4"
-            onClick={onBack}
-          >
+          <button className="text-red-600 py-2 px-4" onClick={onBack}>
             Back
           </button>
         </div>
         <div className="justify-self-center sm:justify-self-end">
           <button
-            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
+            className="bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center"
             onClick={onNext}
           >
-            Continue &gt;
+            Continue
+            <Image src={arrow} alt="arrow" width={30} height={30} />
           </button>
         </div>
       </div>

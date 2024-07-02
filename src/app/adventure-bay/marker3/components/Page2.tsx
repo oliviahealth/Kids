@@ -7,6 +7,7 @@ import group82 from "../../../../../public/images/dashboard/adventure-bay/group-
 import coloringPage from "../../../../../public/images/dashboard/adventure-bay/Group 74.png";
 import pencil from "../../../../../public/images/dashboard/adventure-bay/fluent-emoji-high-contrast_crayon.png";
 import marker from "../../../../../public/images/dashboard/adventure-bay/material-symbols_ink-marker-sharp.png";
+import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
 
 export default function Page1({
   onNext,
@@ -81,19 +82,17 @@ export default function Page1({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 justify-between">
         <div className="justify-self-center sm:justify-self-start">
-          <button
-            className="text-rose-600 font-bold py-2 px-4"
-            onClick={onBack}
-          >
+          <button className="text-red-600 py-2 px-4" onClick={onBack}>
             Back
           </button>
         </div>
         <div className="justify-self-center sm:justify-self-end">
           <button
-            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
+            className="bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center"
             onClick={onNext}
           >
-            Continue &gt;
+            Continue
+            <Image src={arrow} alt="arrow" width={30} height={30} />
           </button>
         </div>
       </div>
