@@ -2,15 +2,14 @@
 
 import React, { useState } from "react";
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // Import usePathname from next/navigation
 import '../app/globals.css';
-import logoCompany from "../../public//images/Logo+Company.svg";
+import logoCompany from "../../public/images/Logo+Company.svg";
 import Image from 'next/image';  // Import the Image component from next/image
-
-
-
 
 const Navbar: React.FC = () => {
     const [isOpen, setOpen] = useState(false);
+    const pathname = usePathname(); // Initialize usePathname
 
     const menuToggle = () => {
         setOpen(!isOpen);
@@ -40,8 +39,8 @@ const Navbar: React.FC = () => {
                         >
                         </Link>
                         <Link
-                            href={'/activities'}
-                            className="age-two-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-two"
+                            href={'/Starlight-Meadows'}
+                            className={`age-two-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-two ${pathname === '/Starlight-Meadows' ? 'active' : ''}`}
                         >
                         </Link>
                         <Link
@@ -63,10 +62,7 @@ const Navbar: React.FC = () => {
                 </div>
             </div>
         </div>
-
     );
 }
-
-
 
 export default Navbar;

@@ -1,0 +1,34 @@
+.iconsWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    margin: 0 3rem 3rem 0;
+    /* Adjusted margin to provide space between icons */
+    text-align: center;
+}
+
+.iconImage {
+    width: 80px;
+    /* Adjust the width as needed */
+    height: 80px;
+    /* Adjust the height as needed */
+}
+
+.iconText {
+    margin-top: 0.5rem;
+    font-size: 16px;
+    color: #555;
+}
+
+.iconBook {
+    margin-left: 3rem;
+    /* Adjust margin to the left of the book icon */
+}

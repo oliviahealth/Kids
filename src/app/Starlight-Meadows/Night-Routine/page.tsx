@@ -3,13 +3,17 @@ import { ReactNode, useState } from "react";
 import MeditationActivityPage1 from "./components/Page1";
 import MeditationActivityPage2 from "./components/Page2";
 import MeditationActivityPage3 from "./components/Page3";
-import MeditationActivityPage4 from "./components/page4";
-import MeditationActivityPage5 from "./components/page5";
-import MeditationActivityPage6 from "./components/page6";
-import MeditationActivityPage7 from "./components/page7";
-import MeditationActivityPage8 from "./components/page8";
+import MeditationActivityPage4 from "./components/Page4";
+import MeditationActivityPage5 from "./components/Page5";
+import MeditationActivityPage6 from "./components/Page6";
+import MeditationActivityPage7 from "./components/Page7";
+import MeditationActivityPage8 from "./components/Page8";
 import MeditationActivityPage9 from "./components/Page9";
-import "./meditationModule.css";
+import MeditationActivityPage10 from "./components/Page10";
+
+import MeditationActivityPage11 from "./components/Page11";
+
+import "./NightRoutineModule.css";
 
 const MeditationActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -23,13 +27,19 @@ const MeditationActivity: React.FC = () => {
     if (currentPage < pagesData.length - 1) setCurrentPage(currentPage + 1);
   };
 
+  
+
   const MapContainer: React.FC<{ children: ReactNode }> = ({ children }) => (
-    <div className="map-container grid grid-cols-12 grid-rows-12 h-full">
-      <div className="row-start-2 row-end-12 col-start-2 col-end-12 ">
-        <div className="bg-white shadow-2xl rounded-2xl">{children}</div>
+  <div className="map-container grid grid-cols-12 grid-rows-12 h-full">
+    <div className="row-start-1 row-end-13 col-start-1 col-end-13 py-16 px-16">
+      <div className="bg-white shadow-2xl rounded-2xl h-full flex flex-col">
+        {children}
       </div>
     </div>
-  );
+  </div>
+);
+
+
 
   const pagesData = [
     {
@@ -80,8 +90,18 @@ const MeditationActivity: React.FC = () => {
     },
     {
       content: (
+        <MeditationActivityPage9 onNext={handleNext} onBack={handleBack} />
+      ),
+    },
+    {
+      content: (
+        <MeditationActivityPage10 onNext={handleNext} onBack={handleBack} />
+      ),
+    },
+    {
+      content: (
         <MapContainer>
-          <MeditationActivityPage9 onNext={handleNext} onBack={handleBack} />
+          <MeditationActivityPage11 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
