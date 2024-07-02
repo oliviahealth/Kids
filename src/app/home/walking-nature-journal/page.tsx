@@ -3,6 +3,9 @@ import { ReactNode, useState } from "react";
 import WalkingActivityPage1 from "./components/Page1";
 import WalkingActivityPage2 from "./components/Page2";
 import WalkingActivityPage3 from "./components/Page3";
+import WalkingActivityPage4 from "./components/Page4";
+import WalkingActivityPage5 from "./components/Page5";
+import WalkingActivityPage6 from "./components/Page6";
 import WalkingActivityPage7 from "./components/Page7";
 import styles from "./WalkingNatureJournal.module.css";
 import WalkingNatureJournalWrapUp from "./components/_page";
@@ -48,6 +51,21 @@ const WalkingNatureJournal: React.FC = () => {
         <MapContainer>
           <WalkingActivityPage3 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
+      ),
+    },
+    {
+      content: (
+          <WalkingActivityPage4 onNext={handleNext} onBack={handleBack} />
+      ),
+    },
+    {
+      content: (
+          <WalkingActivityPage5 onNext={handleNext} onBack={handleBack} />
+      ),
+    },
+    {
+      content: (
+          <WalkingActivityPage6 onNext={handleNext} onBack={handleBack} />
       ),
     },
     {
