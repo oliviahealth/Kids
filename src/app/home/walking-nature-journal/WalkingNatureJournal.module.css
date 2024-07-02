@@ -241,9 +241,10 @@
   margin-bottom: 1rem;
 }
 
-.activityIcon {
-  width: 50px;
-  height: auto;
+.activityNumber {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
   margin-right: 1rem;
 }
 
@@ -328,7 +329,7 @@
     width: 100%;
   }
 
-  .activityIcon {
+  .activityNumber {
     margin-bottom: 0.5rem;
   }
 
