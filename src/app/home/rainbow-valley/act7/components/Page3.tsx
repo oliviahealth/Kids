@@ -44,8 +44,11 @@ const RainbowValleyActivity7Page3: React.FC<{
                 </div>
               </div>
               <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">?</h1>
-                <p>?</p>
+                <h1 className="text-lg font-bold ">Get your BINGO card</h1>
+                <p>
+                  You can print out our BINGO card template or transfer the
+                  activities over to a paper of your own.
+                </p>
               </div>
             </div>
             <div className="flex">
@@ -55,8 +58,12 @@ const RainbowValleyActivity7Page3: React.FC<{
                 </div>
               </div>
               <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">?</h1>
-                <p>?</p>
+                <h1 className="text-lg font-bold ">Work towards BINGO</h1>
+                <p>
+                  In order to receive a BINGO you will perform 5 of the 25
+                  activities in a row. This can be vertically, horizontally, or
+                  diagonally.
+                </p>
               </div>
             </div>
             <div className="flex">
@@ -66,19 +73,12 @@ const RainbowValleyActivity7Page3: React.FC<{
                 </div>
               </div>
               <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">?</h1>
-                <p>?</p>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="my-auto">
-                <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
-                  <p>4</p>
-                </div>
-              </div>
-              <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">?</h1>
-                <p>?</p>
+                <h1 className="text-lg font-bold ">Take it further!</h1>
+                <p>
+                  If you would like an extra challenge, you are more than
+                  welcome to complete all of the activities for an extra badge
+                  at the end of this activity.
+                </p>
               </div>
             </div>
           </div>

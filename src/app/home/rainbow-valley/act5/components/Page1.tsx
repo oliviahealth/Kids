@@ -37,12 +37,15 @@ const RainbowValleyActivity5Page1: React.FC<{
           <div className="col-span-8 space-y-5 mt-5 sm:m-auto order-2 sm:order-1">
             <div className="space-y-5">
               <p className="font-bold">Spin the wheel!</p>
-              <p>waiting on content</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                sapiente quaerat vel reiciendis fugit placeat, veniam, quisquam
-                recusandae odio aliquid earum nostrum dolore at accusamus enim
-                iure molestiae mollitia accusantium.
+                Caring for a child between the ages of 2-3 can be challenging.
+                They may be full of energy and ready to move on from one
+                activity to the next within a matter of minutes. It is important
+                to be able to take a deep breath and ensure that you can fill
+                yourself with energy in order to properly look after your child.
+                We created an activity for you that allows you to write down
+                self care ideas and come back to them when you are stressed.
+                This activity is called the Self Care Wheel.
               </p>
             </div>
           </div>
