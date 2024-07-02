@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import confetti from "canvas-confetti";
 
 interface WalkingActivityPage6Props {
   onNext: () => void;
@@ -16,6 +17,33 @@ const WalkingActivityPage6: React.FC<WalkingActivityPage6Props> = ({
   const handleExit = () => {
     router.push("/home");
   };
+
+  useEffect(() => {
+    const duration = 3 * 1000; // playing the confetti for 3 seconds
+    const end = Date.now() + duration;
+
+    const frame = () => {
+      confetti({
+        particleCount: 2,
+        angle: 60,
+        spread: 55,
+        origin: { x: Math.random(), y: Math.random() }
+      });
+      confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        origin: { x: Math.random(), y: Math.random() }
+      });
+
+      
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    };
+
+    frame();
+  }, []); 
 
   return (
     <div className="bg-[#79CBF1] w-[100%] h-[100%] flex md:flex-col flex-col overflow-auto justify-between items-center shadow-lg p-6">

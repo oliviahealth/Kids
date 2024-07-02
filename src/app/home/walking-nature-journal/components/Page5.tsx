@@ -54,7 +54,7 @@ const WalkingActivityPage5: React.FC<WalkingActivityPage5Props> = ({
                   onChange={handleJournalChange}
                   placeholder="Type your journal entry..."
                   className="w-11/12 h-4/5 mx-auto rounded-lg border border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 pt-4 pb-4 px-4"
-                  style={{ resize: "none" }} // Ensures the textarea is not resizable
+                  style={{ resize: "none" }} 
                 />
                 <div className="flex flex-row pt-8">
                   <div className="w-full flex justify-start font-Inter">
