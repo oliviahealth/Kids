@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import rainbowValleyIconImage from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
 
-const RainbowValleyActivity6Page3: React.FC<{
+const RainbowValleyActivity4Page3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -18,7 +18,7 @@ const RainbowValleyActivity6Page3: React.FC<{
             ></Image>
           </div>
           <div className=" pl-5 w-full my-auto float-left">
-            <h1 className="text-xl font-bold ">Cleaning Schedule</h1>
+            <h1 className="text-xl font-bold ">Mindful Driving</h1>
             <p className="text-lg text-rose-300">
               Caregiver Wellness - Rainbow Valley
             </p>
@@ -40,43 +40,59 @@ const RainbowValleyActivity6Page3: React.FC<{
             <div className="flex">
               <div className="my-auto">
                 <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
-                  <p>1</p>
+                  <p>9</p>
                 </div>
               </div>
               <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">Get your schedule</h1>
+                <h1 className="text-lg font-bold ">Let the wind flow</h1>
                 <p>
-                  You can choose to print out our pre-made schedule or the blank
-                  schedule if you would like to create your own routine.
+                  Feel free to roll the windows down and listen to the world
+                  around you. Focus on the sounds of birds chirping or the cars
+                  whizzing by. These noises can bring peace, help you stay calm,
+                  and might also entertain your child.
                 </p>
               </div>
             </div>
             <div className="flex">
               <div className="my-auto">
                 <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
-                  <p>2</p>
+                  <p>10</p>
                 </div>
               </div>
               <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">Check ‘em off</h1>
+                <h1 className="text-lg font-bold ">Let the tunes flow</h1>
                 <p>
-                  Follow along each day completing the tasks and marking them
-                  off on the list.
+                  If you do not like the sound of cars, try putting the radio on
+                  and focusing on singing along to the music that makes you
+                  smile.
                 </p>
               </div>
             </div>
             <div className="flex">
               <div className="my-auto">
                 <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
-                  <p>3</p>
+                  <p>11</p>
                 </div>
               </div>
               <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">Become accomplished</h1>
+                <h1 className="text-lg font-bold ">Park</h1>
                 <p>
-                  By the end of the week you will have cleaned your whole house
-                  while most importantly ensuring your children are well cared
-                  for.
+                  Finally, you will reach your destination and can put your car
+                  in park.
+                </p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="my-auto">
+                <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
+                  <p>12</p>
+                </div>
+              </div>
+              <div className=" pl-5 w-full my-auto float-left">
+                <h1 className="text-lg font-bold ">Recall and register</h1>
+                <p>
+                  Before getting out think back to what you saw, heard, smelt,
+                  felt, and possibly tasted and how you were able to be safe.
                 </p>
               </div>
             </div>
@@ -106,4 +122,4 @@ const RainbowValleyActivity6Page3: React.FC<{
   );
 };
 
-export default RainbowValleyActivity6Page3;
+export default RainbowValleyActivity4Page3;

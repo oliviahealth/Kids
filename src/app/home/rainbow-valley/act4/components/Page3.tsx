@@ -104,8 +104,13 @@ const RainbowValleyActivity4Page3: React.FC<{
                 </div>
               </div>
               <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">?</h1>
-                <p>?</p>
+                <h1 className="text-lg font-bold ">Hit the road</h1>
+                <p>
+                  Once on the road you can continue taking deep breaths while
+                  you look at the cars ahead of you. Relax your shoulders and
+                  briefly look down to see how fast you are going. Are you
+                  within the limit?
+                </p>
               </div>
             </div>
             <div className="flex">
@@ -115,8 +120,44 @@ const RainbowValleyActivity4Page3: React.FC<{
                 </div>
               </div>
               <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">?</h1>
-                <p>?</p>
+                <h1 className="text-lg font-bold ">Be patient</h1>
+                <p>
+                  If you start to feel in a hurry be sure to take extra breaths
+                  and remind yourself that you will get to your destination. If
+                  you are reckless and try to weave in between other vehicles
+                  that might cause an accident.
+                </p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="my-auto">
+                <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
+                  <p>7</p>
+                </div>
+              </div>
+              <div className=" pl-5 w-full my-auto float-left">
+                <h1 className="text-lg font-bold ">Look out for others</h1>
+                <p>
+                  If you have a child in the backseat who is fussy why might
+                  they be overwhelmed? Are they tired? Is it hot in the car? Did
+                  they drop their toy on the floor? Whatever the situation may
+                  be offer compassion and encourage them to take deep breaths as
+                  well.
+                </p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="my-auto">
+                <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
+                  <p>8</p>
+                </div>
+              </div>
+              <div className=" pl-5 w-full my-auto float-left">
+                <h1 className="text-lg font-bold ">Monitor hand placement</h1>
+                <p>
+                  Now focus on your hand placement on the steering wheel and how
+                  your hands holding the wheel are keeping you inside the lines.
+                </p>
               </div>
             </div>
           </div>
