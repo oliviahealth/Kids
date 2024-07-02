@@ -25,16 +25,18 @@ export const WPContainer: React.FC<{ children: ReactNode, onBack: () => void, ba
     <div className="relative min-h-[100vh] w-[100vw] bg-cover bg-center bg-[url('/images/map.svg')]">
         <div className="bg-black bg-opacity-50 w-[100vw] h-[100vh] flex justify-center items-center">
 
-            <div className="bg-white rounded-3xl overflow-y-auto max-w-7xl max-h-[80vh] p-16 m-8 relative">
+            <div className="bg-white rounded-3xl max-w-7xl max-h-[80vh] p-16 m-8 relative"> {/*"bg-white rounded-3xl overflow-y-auto max-w-7xl max-h-[80vh] p-16 m-8 relative"*/}
                 <button onClick={onExit} className="absolute right-16 top-16">
                     <img src="/images/exit.svg" alt="Exit" className="size-16" />
                 </button>
 
                 <div className="md:flex space-x-16">
-                    <div className="w-full xl:w-auto">
+                    <div className="w-full xl:w-auto flex flex-col justify-between">
                         {children}
                     </div>
-                    <img src={image && image} className="hidden max-w-[40%] xl:block w-auto h-auto max-h-[40vh]" />
+                    {
+                        image && <img src={image} className="hidden max-w-[40%] xl:block w-auto h-auto max-h-[40vh]" />
+                    }
                 </div>
 
                 <div className="flex justify-between w-full mt-4">
@@ -65,8 +67,10 @@ export const WPNeedsContent: React.FC<{ title?: string, items: { name: string, i
     </div>
 </div>
 
-export const WPActivityPreview: React.FC<{ color: string, activities: { id: number, title: string, description: string }[] }> = ({ color, activities }) => <div className="mb-8">
-    <h2 className="text-2xl font-bold mb-8">Activity</h2>
+export const WPTitle: React.FC<{ title: string }> = ({ title }) => <h2 className="text-2xl font-bold mb-8">{title}</h2>
+
+export const WPActivityPreview: React.FC<{ hideTitle: boolean, color: string, activities: { id: number, title: string, description: string }[] }> = ({ hideTitle, color, activities }) => <div className="mb-8">
+    {!hideTitle && <WPTitle title="Activity" />}
     <ul className="ml-4 space-y-8">
         {activities.map((activity) => (
             <li key={activity.id} className="flex items-start">
@@ -84,3 +88,16 @@ export const WPActivityPreview: React.FC<{ color: string, activities: { id: numb
         ))}
     </ul>
 </div>
+
+export const WPAddPhotoButton: React.FC<{ color: string, icon: string, onClick: () => void }> = ({ color, icon, onClick }) => (
+    <div
+        style={{ backgroundColor: color }}
+        className="flex items-center justify-center w-80 h-48 bg-green-100 rounded-lg cursor-pointer"
+        onClick={onClick}
+    >
+        <div className="flex flex-col items-center">
+            <img src={icon} alt="Add a photo" className="w-12 h-12 mb-2" />
+            <span className="text-black text-opacity-40">Add a photo</span>
+        </div>
+    </div>
+);
