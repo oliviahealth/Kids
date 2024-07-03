@@ -25,13 +25,13 @@ export const WPContainer: React.FC<{ children: ReactNode, onBack: () => void, ba
     <div className="relative min-h-[100vh] w-[100vw] bg-cover bg-center bg-[url('/images/map.svg')]">
         <div className="bg-black bg-opacity-50 w-[100vw] h-[100vh] flex justify-center items-center">
 
-            <div className="bg-white rounded-3xl max-w-7xl max-h-[90vh] p-8 m-8 relative"> {/*"bg-white rounded-3xl overflow-y-auto max-w-7xl max-h-[80vh] p-16 m-8 relative"*/}
+            <div className="bg-white rounded-3xl w-[80vw] min-h-[70vh] max-h-[90vh] p-8 m-8 relative flex flex-col justify-between"> {/*"overflow-y-auto bg-white rounded-3xl max-w-7xl max-h-[90vh] p-8 m-8 relative"*/}
                 <button onClick={onExit} className="absolute right-8 top-8">
                     <img src="/images/exit.svg" alt="Exit" className="size-16" />
                 </button>
 
                 <div className="md:flex justify-between space-x-16">
-                    <div className="w-full xl:w-auto flex flex-col justify-between">
+                    <div className="w-full xl:w-auto xl:max-w-[60%] flex flex-col">
                         {children}
                     </div>
                     {
