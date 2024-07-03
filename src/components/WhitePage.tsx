@@ -17,7 +17,7 @@ export const WPHeader: React.FC<{ image: string, title: string, subtitleColor: s
 export const WPDescription: React.FC<{ title: string, paragraphs: string[] }> = ({ title, paragraphs }) => (
     <div className="mb-8">
         <h1 className="text-2xl font-bold mb-4">{title}</h1>
-        {paragraphs.map((paragraph, index) => <p key={index} className="text-base ml-4 mb-4">{paragraph}</p>)}
+        {paragraphs.map((paragraph, index) => <p key={index} className="text-sm ml-4 mb-4">{paragraph}</p>)}
     </div>
 );
 
@@ -25,17 +25,17 @@ export const WPContainer: React.FC<{ children: ReactNode, onBack: () => void, ba
     <div className="relative min-h-[100vh] w-[100vw] bg-cover bg-center bg-[url('/images/map.svg')]">
         <div className="bg-black bg-opacity-50 w-[100vw] h-[100vh] flex justify-center items-center">
 
-            <div className="bg-white rounded-3xl max-w-7xl max-h-[80vh] p-16 m-8 relative"> {/*"bg-white rounded-3xl overflow-y-auto max-w-7xl max-h-[80vh] p-16 m-8 relative"*/}
-                <button onClick={onExit} className="absolute right-16 top-16">
+            <div className="bg-white rounded-3xl max-w-7xl max-h-[80vh] p-8 m-8 relative"> {/*"bg-white rounded-3xl overflow-y-auto max-w-7xl max-h-[80vh] p-16 m-8 relative"*/}
+                <button onClick={onExit} className="absolute right-8 top-8">
                     <img src="/images/exit.svg" alt="Exit" className="size-16" />
                 </button>
 
-                <div className="md:flex space-x-16">
+                <div className="md:flex justify-between space-x-16">
                     <div className="w-full xl:w-auto flex flex-col justify-between">
                         {children}
                     </div>
                     {
-                        image && <img src={image} className="hidden max-w-[40%] xl:block w-auto h-auto max-h-[40vh]" />
+                        image && <img src={image} className="hidden max-w-[30%] xl:block w-auto h-auto max-h-[40vh]" />
                     }
                 </div>
 
@@ -68,6 +68,8 @@ export const WPNeedsContent: React.FC<{ title?: string, items: { name: string, i
 </div>
 
 export const WPTitle: React.FC<{ title: string }> = ({ title }) => <h2 className="text-2xl font-bold mb-8">{title}</h2>
+
+export const WPSubtitle: React.FC<{ title: string }> = ({ title }) => <h2 className="text-2xl font-bold mb-4">{title}</h2>
 
 export const WPActivityPreview: React.FC<{ hideTitle?: boolean, color: string, activities: { id: number, title: string, description: string }[] }> = ({ hideTitle, color, activities }) => <div className="mb-8">
     {!hideTitle && <WPTitle title="Activity" />}
