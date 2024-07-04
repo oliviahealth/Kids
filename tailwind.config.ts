@@ -21,6 +21,11 @@ const config: Config = {
         '1s-lg': '900px',
         '1l-lg': '1200px'
       },
+      colors: {
+        'red': {
+          600: "#FF5B5B"
+        }
+      }
     },
   },
   daisyui: {
