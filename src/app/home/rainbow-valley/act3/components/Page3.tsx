@@ -109,7 +109,7 @@ const RainbowValleyActivity3Page3: React.FC<{
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 py-10">
         <div className="justify-self-center sm:justify-self-start">
           <button
             onClick={onBack}

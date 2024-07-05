@@ -65,7 +65,7 @@ const RainbowValleyActivity7Page1: React.FC<{
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 py-10">
         <div className="justify-self-center sm:justify-self-start">
           <button className="text-rose-600 font-bold py-2 px-4">
             Learn More

@@ -95,7 +95,7 @@ const RainbowValleyActivity5Page3: React.FC<{
           <div className="col-span-12 sm:col-span-6 space-y-5 mt-2"></div>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 py-10">
         <div className="justify-self-center sm:justify-self-start">
           <button
             onClick={onBack}
