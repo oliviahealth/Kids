@@ -7,8 +7,8 @@ const RainbowValleyActivity4Page3: React.FC<{
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
   return (
-    <section>
-      <div className="p-10 space-y-5">
+    <div className="flex flex-col h-full justify-between p-10">
+      <div className="space-y-10">
         <div className="flex">
           <div className="my-auto">
             <Image
@@ -99,26 +99,26 @@ const RainbowValleyActivity4Page3: React.FC<{
           </div>
           <div className="col-span-12 sm:col-span-6 space-y-5 mt-2"></div>
         </div>
-        <div className="py-10 grid grid-cols-1 sm:grid-cols-2 space-y-5 sm:space-y-0">
-          <div className="justify-self-center sm:justify-self-start">
-            <button
-              onClick={onBack}
-              className="text-rose-600 font-bold py-2 px-4"
-            >
-              Back
-            </button>
-          </div>
-          <div className="justify-self-center sm:justify-self-end">
-            <button
-              onClick={onNext}
-              className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
-            >
-              Continue to activity &gt;
-            </button>
-          </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="justify-self-center sm:justify-self-start">
+          <button
+            onClick={onBack}
+            className="text-rose-600 font-bold py-2 px-4"
+          >
+            Back
+          </button>
+        </div>
+        <div className="justify-self-center sm:justify-self-end">
+          <button
+            onClick={onNext}
+            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
+          >
+            Continue to activity &gt;
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

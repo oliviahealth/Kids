@@ -8,8 +8,8 @@ const RainbowValleyActivity4Page1: React.FC<{
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
   return (
-    <section>
-      <div className=" p-10 space-y-5">
+    <div className="flex flex-col h-full justify-between p-10">
+      <div className="space-y-10">
         <div className="flex">
           <div className="my-auto">
             <Image
@@ -34,47 +34,45 @@ const RainbowValleyActivity4Page1: React.FC<{
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-12">
-          <div className="col-span-8 space-y-5 mt-5 sm:m-auto order-2 sm:order-1">
-            <div className="space-y-5">
-              <p className="font-bold">Highway towards responsibility</p>
-              <p>
-                Driving a car can be stressful especially as a caregiver of a
-                child or multiple children between the ages of 2-3. If the child
-                is emotional this can distract you as a driver and increase
-                feelings of stress or can make you want to get to the
-                destination sooner. This sense of hurry can decrease how aware
-                you are of your surroundings and can put the passengers in your
-                car more at risk. We have created an activity for you to focus
-                on your five senses as you drive to increase safety in addition
-                to your mental well-being.
-              </p>
-            </div>
+          <div className="col-span-8 space-y-5 order-2 sm:order-1">
+            <p className="font-bold">Highway towards responsibility</p>
+            <p>
+              Driving a car can be stressful especially as a caregiver of a
+              child or multiple children between the ages of 2-3. If the child
+              is emotional this can distract you as a driver and increase
+              feelings of stress or can make you want to get to the destination
+              sooner. This sense of hurry can decrease how aware you are of your
+              surroundings and can put the passengers in your car more at risk.
+              We have created an activity for you to focus on your five senses
+              as you drive to increase safety in addition to your mental
+              well-being.
+            </p>
           </div>
-          <div className="col-span-4 mt-5 sm:m-auto order-1 sm:order-2">
+          <div className="col-span-4 order-1 sm:order-2">
             <Image
-              className="m-auto w-full lg:w-[60%]"
+              className="w-full"
               src={rainbowValleyActivity4Page1SideImage}
               alt="Olivia Kids"
             ></Image>
           </div>
         </div>
-        <div className="py-10 grid grid-cols-1 sm:grid-cols-2 space-y-5 sm:space-y-0">
-          <div className="justify-self-center sm:justify-self-start">
-            <button className="text-rose-600 font-bold py-2 px-4">
-              Learn More
-            </button>
-          </div>
-          <div className="justify-self-center sm:justify-self-end">
-            <button
-              onClick={onNext}
-              className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
-            >
-              Continue &gt;
-            </button>
-          </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="justify-self-center sm:justify-self-start">
+          <button className="text-rose-600 font-bold py-2 px-4">
+            Learn More
+          </button>
+        </div>
+        <div className="justify-self-center sm:justify-self-end">
+          <button
+            onClick={onNext}
+            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
+          >
+            Continue &gt;
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

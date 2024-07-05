@@ -11,8 +11,8 @@ const RainbowValleyActivity6Page9: React.FC<{
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
   return (
-    <section>
-      <div className=" p-10 space-y-5">
+    <div className="flex flex-col h-full justify-between p-10">
+      <div className="space-y-10">
         <div className="flex">
           <div className="my-auto">
             <Image
@@ -37,9 +37,9 @@ const RainbowValleyActivity6Page9: React.FC<{
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-12">
-          <div className="col-span-8 space-y-5 mt-5 sm:m-auto order-2 sm:order-1">
+          <div className="col-span-8 space-y-5 order-2 sm:order-1">
             <div className="grid grid-cols-12">
-              <div className="col-span-12 space-y-5">
+              <div className="col-span-12">
                 <div className="space-y-5">
                   <p className="font-bold">Key Takeaways</p>
                   <p>
@@ -80,35 +80,33 @@ const RainbowValleyActivity6Page9: React.FC<{
               </div>
             </div>
           </div>
-          <div className="col-span-4 mt-5 sm:m-auto order-1 sm:order-2">
-            <div className="">
-              <Image
-                className="m-auto w-full lg:w-[60%]"
-                src={rainbowValleyActivity6Page9SideImage}
-                alt="Olivia Kids"
-              ></Image>
-            </div>
-          </div>
-        </div>
-        <div className="py-10 grid grid-cols-1 sm:grid-cols-2 space-y-5 sm:space-y-0">
-          <div className="justify-self-center sm:justify-self-start">
-            <button
-              onClick={onBack}
-              className="text-rose-600 font-bold py-2 px-4"
-            >
-              Back
-            </button>
-          </div>
-          <div className="justify-self-center sm:justify-self-end">
-            <Link href="/home">
-              <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl">
-                Continue &gt;
-              </button>
-            </Link>
+          <div className="col-span-4 order-1 sm:order-2">
+            <Image
+              className="w-full"
+              src={rainbowValleyActivity6Page9SideImage}
+              alt="Olivia Kids"
+            ></Image>
           </div>
         </div>
       </div>
-    </section>
+      <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="justify-self-center sm:justify-self-start">
+          <button
+            onClick={onBack}
+            className="text-rose-600 font-bold py-2 px-4"
+          >
+            Back
+          </button>
+        </div>
+        <div className="justify-self-center sm:justify-self-end">
+          <Link href="/home">
+            <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl">
+              Continue &gt;
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };
 
