@@ -72,13 +72,13 @@ export default function Page2({
           </button>
         </div>
         <div className="justify-self-center sm:justify-self-end">
-          <button
+          <Link
             className="bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center"
-            onClick={onNext}
+            href="/home"
           >
             Continue
             <Image src={arrow} alt="arrow" width={30} height={30} />
-          </button>
+          </Link>
         </div>
       </div>
     </div>
