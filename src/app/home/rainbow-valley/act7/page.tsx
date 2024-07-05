@@ -14,7 +14,6 @@ const MeditationActivity: React.FC = () => {
   };
 
   const handleNext = () => {
-    console.log("handleNext", currentPage);
     if (currentPage < pagesData.length - 1) setCurrentPage(currentPage + 1);
   };
 
