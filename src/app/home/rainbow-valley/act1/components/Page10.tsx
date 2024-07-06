@@ -1,11 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
 import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_SideImage.png";
 import image1 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image4.png";
 import image2 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image4.png";
 import image3 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image4.png";
 
-import Link from "next/link";
 const ActivityPage10: React.FC<{
   onNext: () => void;
   onBack: () => void;

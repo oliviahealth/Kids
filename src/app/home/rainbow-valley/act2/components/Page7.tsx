@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import star from "../../../../../../public/images/dashboard/rainbowValley/shared/star.svg";
 import confetti from "canvas-confetti";
 import { useEffect } from "react";
+import star from "../../../../../../public/images/dashboard/rainbowValley/shared/star.svg";
 
 const ActivityPage7: React.FC<{
   onNext: () => void;
