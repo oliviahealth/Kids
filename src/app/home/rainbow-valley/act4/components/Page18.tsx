@@ -1,12 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
 import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_SideImage.png";
 import image1 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image4.png";
 import image2 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image4.png";
 import image3 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image4.png";
 
-import Link from "next/link";
-const ActivityPage9: React.FC<{
+const ActivityPage18: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -22,7 +22,7 @@ const ActivityPage9: React.FC<{
             ></Image>
           </div>
           <div className=" pl-5 w-full my-auto float-left">
-            <h1 className="text-xl font-bold ">Cleaning Schedule</h1>
+            <h1 className="text-xl font-bold ">Mindful Driving</h1>
             <p className="text-lg text-rose-300">
               Caregiver Wellness - Rainbow Valley
             </p>
@@ -43,15 +43,12 @@ const ActivityPage9: React.FC<{
                 <div className="space-y-5">
                   <p className="font-bold">Key Takeaways</p>
                   <p>
-                    We hope that being able to split up the cleaning throughout
-                    the week helped reduce some of the stress that came with
-                    looking at all that needed to be completed. Additionally we
-                    hope that after completing this schedule you will feel
-                    accomplished for getting a significant amount of work done
-                    around the living space. With a cleaner environment and
-                    being able to focus on a small section each day, we hope
-                    this activity improved your mental health and helps you
-                    better care for your children.
+                    You have successfully finished this activity and reached
+                    your destination safely. Hopefully you are calmer than
+                    before by focusing on your senses rather than consuming
+                    yourself with the stressors of driving. The next time you
+                    feel overwhelmed when inside the car you can think back to
+                    these steps to ensure safety and improve your mental health.
                   </p>
                 </div>
               </div>
@@ -106,4 +103,4 @@ const ActivityPage9: React.FC<{
   );
 };
 
-export default ActivityPage9;
+export default ActivityPage18;

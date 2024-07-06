@@ -6,7 +6,7 @@ import image1 from "../../../../../../public/images/dashboard/rainbowValley/act1
 import image2 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image4.png";
 import image3 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image4.png";
 
-const ActivityPage9: React.FC<{
+const ActivityPage8: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -22,7 +22,7 @@ const ActivityPage9: React.FC<{
             ></Image>
           </div>
           <div className=" pl-5 w-full my-auto float-left">
-            <h1 className="text-xl font-bold ">Self-Care Wheel</h1>
+            <h1 className="text-xl font-bold ">Cleaning Schedule</h1>
             <p className="text-lg text-rose-300">
               Caregiver Wellness - Rainbow Valley
             </p>
@@ -43,13 +43,15 @@ const ActivityPage9: React.FC<{
                 <div className="space-y-5">
                   <p className="font-bold">Key Takeaways</p>
                   <p>
-                    Your Self Care Wheel was a success and hopefully you enjoyed
-                    getting to complete the self care tasks. We hope that this
-                    activity alleviated stress by spinning the wheel to
-                    determine what to do for for your self care. Ultimately we
-                    also hope that you were able to improve your mental health
-                    by performing the activities on the wheel so that you can
-                    better focus on your children.
+                    We hope that being able to split up the cleaning throughout
+                    the week helped reduce some of the stress that came with
+                    looking at all that needed to be completed. Additionally we
+                    hope that after completing this schedule you will feel
+                    accomplished for getting a significant amount of work done
+                    around the living space. With a cleaner environment and
+                    being able to focus on a small section each day, we hope
+                    this activity improved your mental health and helps you
+                    better care for your children.
                   </p>
                 </div>
               </div>
@@ -104,4 +106,4 @@ const ActivityPage9: React.FC<{
   );
 };
 
-export default ActivityPage9;
+export default ActivityPage8;

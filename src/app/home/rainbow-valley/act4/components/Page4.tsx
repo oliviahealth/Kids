@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
 
-const ActivityPage3: React.FC<{
+const ActivityPage4: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -122,4 +122,4 @@ const ActivityPage3: React.FC<{
   );
 };
 
-export default ActivityPage3;
+export default ActivityPage4;

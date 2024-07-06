@@ -4,6 +4,11 @@ import ActivityPage1 from "./components/Page1";
 import ActivityPage2 from "./components/Page2";
 import ActivityPage3 from "./components/Page3";
 import ActivityPage9 from "./components/Page9";
+import ActivityPage4 from "./components/Page4";
+import ActivityPage5 from "./components/Page5";
+import ActivityPage6 from "./components/Page6";
+import ActivityPage7 from "./components/Page7";
+import ActivityPage8 from "./components/Page8";
 import "./../rainbowValleyModule.css";
 
 const MeditationActivity: React.FC = () => {
@@ -46,6 +51,21 @@ const MeditationActivity: React.FC = () => {
           <ActivityPage3 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
+    },
+    {
+      content: <ActivityPage4 onNext={handleNext} onBack={handleBack} />,
+    },
+    {
+      content: <ActivityPage5 onNext={handleNext} onBack={handleBack} />,
+    },
+    {
+      content: <ActivityPage6 onNext={handleNext} onBack={handleBack} />,
+    },
+    {
+      content: <ActivityPage7 onNext={handleNext} onBack={handleBack} />,
+    },
+    {
+      content: <ActivityPage8 onNext={handleNext} onBack={handleBack} />,
     },
     {
       content: (
