@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage9: React.FC<{
+const ActivityPage5: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -10,15 +10,14 @@ const ActivityPage9: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              5
+              1
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Hit the road</h1>
+            <h1 className="text-2xl font-black ">Enter Your Vehicle</h1>
             <p className="text-lg font-semibold">
-              Once on the road you can continue taking deep breaths while you
-              look at the cars ahead of you. Relax your shoulders and briefly
-              look down to see how fast you are going. Are you within the limit?
+              To start, begin by getting inside the vehicle and taking a deep
+              breath.
             </p>
           </div>
 
@@ -53,4 +52,4 @@ const ActivityPage9: React.FC<{
   );
 };
 
-export default ActivityPage9;
+export default ActivityPage5;

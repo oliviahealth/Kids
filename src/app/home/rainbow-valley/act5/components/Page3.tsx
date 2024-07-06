@@ -58,7 +58,7 @@ const ActivityPage3: React.FC<{
                 <h1 className="text-lg font-bold ">Divide into 8 sections</h1>
                 <p>
                   You will draw a circle and 4 lines inside of it (1 horizontal,
-                  1 vertical, and 2 diagonal) to create 8 sections
+                  1 vertical, and 2 diagonal) to create 8 sections.
                 </p>
               </div>
             </div>
@@ -74,7 +74,7 @@ const ActivityPage3: React.FC<{
                 </h1>
                 <p>
                   These can be those you found online, or some you came up with
-                  yourself
+                  yourself.
                 </p>
               </div>
             </div>
@@ -88,7 +88,7 @@ const ActivityPage3: React.FC<{
                 <h1 className="text-lg font-bold ">
                   Spin the wheel and have fun!
                 </h1>
-                <p>Complete whatever activities the wheel lands</p>
+                <p>Complete whatever activities the wheel lands.</p>
               </div>
             </div>
           </div>
