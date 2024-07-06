@@ -1,11 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
-import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act6/act6_SideImage.png";
-import image1 from "../../../../../../public/images/dashboard/rainbowValley/act6/act6_image1.png";
-import image2 from "../../../../../../public/images/dashboard/rainbowValley/act6/act6_image2.png";
+import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act2/act2_SideImage.png";
+import image1 from "../../../../../../public/images/dashboard/rainbowValley/act2/act2_image4.png";
+import image2 from "../../../../../../public/images/dashboard/rainbowValley/act2/act2_image4.png";
+import image3 from "../../../../../../public/images/dashboard/rainbowValley/act2/act2_image4.png";
 
-const ActivityPage2: React.FC<{
+import Link from "next/link";
+const ActivityPage8: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -21,7 +22,7 @@ const ActivityPage2: React.FC<{
             ></Image>
           </div>
           <div className=" pl-5 w-full my-auto float-left">
-            <h1 className="text-xl font-bold ">Cleaning Schedule</h1>
+            <h1 className="text-xl font-bold ">Journaling</h1>
             <p className="text-lg text-rose-300">
               Caregiver Wellness - Rainbow Valley
             </p>
@@ -37,31 +38,43 @@ const ActivityPage2: React.FC<{
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-12">
           <div className="col-span-8 space-y-5 order-2 sm:order-1">
-            <p className="font-bold">Scheduled scrubbing</p>
-            <p>
-              We hope that being able to split up the cleaning throughout the
-              week helps reduce some of the stress that comes with looking at
-              all that needs to be completed. Additionally we hope that after
-              completing this schedule you will feel accomplished for getting a
-              significant amount of work done around the living space.
-            </p>
-            <p className="font-bold">What will you need?</p>
-            <div className="grid grid-cols-1 sm:grid-cols-5 space-y-5 sm:space-y-0">
-              <div className="mx-auto">
+            <div className="grid grid-cols-12">
+              <div className="col-span-12">
+                <div className="space-y-5">
+                  <p className="font-bold">Key Takeaways</p>
+                  <p>
+                    This activity should allow you to take a deep breath and
+                    focus on caring for yourself. You will get to reflect on
+                    your day and the things that went well compared that those
+                    that did not. Then you get to express your feelings about
+                    those events and prepare for the upcoming day. Ultimately
+                    through this journal reflection you can grow in your self
+                    care to better provide for your children.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-10 space-y-5 sm:space-y-0 ">
+              <div>
                 <Image
-                  className="m-auto h-full object-contain"
+                  className="rounded-2xl h-full w-full"
                   src={image1}
                   alt="Olivia Kids"
                 ></Image>
-                <p className="text-center">Pen</p>
               </div>
-              <div className="mx-auto">
+              <div>
                 <Image
-                  className="m-auto h-full object-contain"
+                  className="rounded-2xl h-full w-full"
                   src={image2}
                   alt="Olivia Kids"
                 ></Image>
-                <p className="text-center">Cleaning Supplies</p>
+              </div>
+              <div>
+                <Image
+                  className="rounded-2xl h-full w-full"
+                  src={image3}
+                  alt="Olivia Kids"
+                ></Image>
               </div>
             </div>
           </div>
@@ -80,16 +93,15 @@ const ActivityPage2: React.FC<{
           </button>
         </div>
         <div className="justify-self-center sm:justify-self-end">
-          <button
-            onClick={onNext}
-            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
-          >
-            Continue &gt;
-          </button>
+          <Link href="/home">
+            <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl">
+              Continue &gt;
+            </button>
+          </Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default ActivityPage2;
+export default ActivityPage8;

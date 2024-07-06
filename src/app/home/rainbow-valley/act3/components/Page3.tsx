@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import rainbowValleyIconImage from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
+import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
 
-const RainbowValleyActivity3Page3: React.FC<{
+const ActivityPage3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -13,7 +13,7 @@ const RainbowValleyActivity3Page3: React.FC<{
           <div className="my-auto">
             <Image
               className="max-w-full max-h-full"
-              src={rainbowValleyIconImage}
+              src={icon}
               alt="Olivia Kids"
             ></Image>
           </div>
@@ -131,4 +131,4 @@ const RainbowValleyActivity3Page3: React.FC<{
   );
 };
 
-export default RainbowValleyActivity3Page3;
+export default ActivityPage3;

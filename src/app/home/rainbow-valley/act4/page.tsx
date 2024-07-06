@@ -1,10 +1,10 @@
 "use client";
 import { ReactNode, useState } from "react";
-import RainbowValleyActivity4Page1 from "./components/Page1";
-import RainbowValleyActivity4Page2 from "./components/Page2";
-import RainbowValleyActivity4Page3 from "./components/Page3";
-import RainbowValleyActivity4Page4 from "./components/Page4";
-import RainbowValleyActivity4Page9 from "./components/Page9";
+import ActivityPage1 from "./components/Page1";
+import ActivityPage2 from "./components/Page2";
+import ActivityPage3 from "./components/Page3";
+import ActivityPage4 from "./components/Page4";
+import ActivityPage9 from "./components/Page9";
 import "./../rainbowValleyModule.css";
 
 const MeditationActivity: React.FC = () => {
@@ -30,50 +30,35 @@ const MeditationActivity: React.FC = () => {
     {
       content: (
         <MapContainer>
-          <RainbowValleyActivity4Page1
-            onNext={handleNext}
-            onBack={handleBack}
-          />
+          <ActivityPage1 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <RainbowValleyActivity4Page2
-            onNext={handleNext}
-            onBack={handleBack}
-          />
+          <ActivityPage2 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <RainbowValleyActivity4Page3
-            onNext={handleNext}
-            onBack={handleBack}
-          />
+          <ActivityPage3 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <RainbowValleyActivity4Page4
-            onNext={handleNext}
-            onBack={handleBack}
-          />
+          <ActivityPage4 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <RainbowValleyActivity4Page9
-            onNext={handleNext}
-            onBack={handleBack}
-          />
+          <ActivityPage9 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },

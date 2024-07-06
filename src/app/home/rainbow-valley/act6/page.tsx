@@ -1,9 +1,9 @@
 "use client";
 import { ReactNode, useState } from "react";
-import RainbowValleyActivity6Page1 from "./components/Page1";
-import RainbowValleyActivity6Page2 from "./components/Page2";
-import RainbowValleyActivity6Page3 from "./components/Page3";
-import RainbowValleyActivity6Page9 from "./components/Page9";
+import ActivityPage1 from "./components/Page1";
+import ActivityPage2 from "./components/Page2";
+import ActivityPage3 from "./components/Page3";
+import ActivityPage9 from "./components/Page9";
 import "./../rainbowValleyModule.css";
 
 const MeditationActivity: React.FC = () => {
@@ -29,40 +29,28 @@ const MeditationActivity: React.FC = () => {
     {
       content: (
         <MapContainer>
-          <RainbowValleyActivity6Page1
-            onNext={handleNext}
-            onBack={handleBack}
-          />
+          <ActivityPage1 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <RainbowValleyActivity6Page2
-            onNext={handleNext}
-            onBack={handleBack}
-          />
+          <ActivityPage2 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <RainbowValleyActivity6Page3
-            onNext={handleNext}
-            onBack={handleBack}
-          />
+          <ActivityPage3 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <RainbowValleyActivity6Page9
-            onNext={handleNext}
-            onBack={handleBack}
-          />
+          <ActivityPage9 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },

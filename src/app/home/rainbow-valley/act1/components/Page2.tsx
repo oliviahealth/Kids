@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import rainbowValleyIconImage from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
-import rainbowValleyActivity1Page2SideImage from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_SideImage.png";
-import rainbowValleyActivity1Page2Image1 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image1.png";
-import rainbowValleyActivity1Page2Image2 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image2.png";
-import rainbowValleyActivity1Page2Image3 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image3.png";
+import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
+import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_SideImage.png";
+import image1 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image1.png";
+import image2 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image2.png";
+import image3 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image3.png";
 
-const RainbowValleyActivity1Page2: React.FC<{
+const ActivityPage2: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -17,7 +17,7 @@ const RainbowValleyActivity1Page2: React.FC<{
           <div className="my-auto">
             <Image
               className="max-w-full max-h-full"
-              src={rainbowValleyIconImage}
+              src={icon}
               alt="Olivia Kids"
             ></Image>
           </div>
@@ -59,7 +59,7 @@ const RainbowValleyActivity1Page2: React.FC<{
               <div className="mx-auto">
                 <Image
                   className="m-auto h-full object-contain"
-                  src={rainbowValleyActivity1Page2Image1}
+                  src={image1}
                   alt="Olivia Kids"
                 ></Image>
                 <p className="text-center">Headphones</p>
@@ -67,7 +67,7 @@ const RainbowValleyActivity1Page2: React.FC<{
               <div className="mx-auto">
                 <Image
                   className="m-auto h-full object-contain"
-                  src={rainbowValleyActivity1Page2Image2}
+                  src={image2}
                   alt="Olivia Kids"
                 ></Image>
                 <p className="text-center">Favorite App</p>
@@ -75,7 +75,7 @@ const RainbowValleyActivity1Page2: React.FC<{
               <div className="mx-auto">
                 <Image
                   className="m-auto h-full object-contain"
-                  src={rainbowValleyActivity1Page2Image3}
+                  src={image3}
                   alt="Olivia Kids"
                 ></Image>
                 <p className="text-center">Music</p>
@@ -83,11 +83,7 @@ const RainbowValleyActivity1Page2: React.FC<{
             </div>
           </div>
           <div className="col-span-4 order-1 sm:order-2">
-            <Image
-              className="w-full"
-              src={rainbowValleyActivity1Page2SideImage}
-              alt="Olivia Kids"
-            ></Image>
+            <Image className="w-full" src={sideImage} alt="Olivia Kids"></Image>
           </div>
         </div>
       </div>
@@ -113,4 +109,4 @@ const RainbowValleyActivity1Page2: React.FC<{
   );
 };
 
-export default RainbowValleyActivity1Page2;
+export default ActivityPage2;
