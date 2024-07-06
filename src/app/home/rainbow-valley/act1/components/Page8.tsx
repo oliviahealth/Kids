@@ -14,7 +14,7 @@ const ActivityPage8: React.FC<{
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Let it play</h1>
+            <h1 className="text-2xl font-black ">Make it a party</h1>
             <p className="text-lg font-semibold">
               Include your children and start a dance party!
             </p>
