@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import rainbowValleyIconImage from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
-import rainbowValleyActivity7Page2SideImage from "../../../../../../public/images/dashboard/rainbowValley/act7/act7_SideImage.png";
-import rainbowValleyActivity7Page2Image1 from "../../../../../../public/images/dashboard/rainbowValley/act7/act7_image1.png";
-import rainbowValleyActivity7Page2Image2 from "../../../../../../public/images/dashboard/rainbowValley/act7/act7_image2.png";
+import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
+import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act7/act7_SideImage.png";
+import image1 from "../../../../../../public/images/dashboard/rainbowValley/act7/act7_image1.png";
+import image2 from "../../../../../../public/images/dashboard/rainbowValley/act7/act7_image2.png";
 
-const RainbowValleyActivity7Page2: React.FC<{
+const ActivityPage2: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -16,7 +16,7 @@ const RainbowValleyActivity7Page2: React.FC<{
           <div className="my-auto">
             <Image
               className="max-w-full max-h-full"
-              src={rainbowValleyIconImage}
+              src={icon}
               alt="Olivia Kids"
             ></Image>
           </div>
@@ -55,7 +55,7 @@ const RainbowValleyActivity7Page2: React.FC<{
               <div className="mx-auto">
                 <Image
                   className="m-auto h-full object-contain"
-                  src={rainbowValleyActivity7Page2Image1}
+                  src={image1}
                   alt="Olivia Kids"
                 ></Image>
                 <p className="text-center">Marker</p>
@@ -63,7 +63,7 @@ const RainbowValleyActivity7Page2: React.FC<{
               <div className="mx-auto">
                 <Image
                   className="m-auto h-full object-contain"
-                  src={rainbowValleyActivity7Page2Image2}
+                  src={image2}
                   alt="Olivia Kids"
                 ></Image>
                 <p className="text-center">Bingo Card</p>
@@ -71,11 +71,7 @@ const RainbowValleyActivity7Page2: React.FC<{
             </div>
           </div>
           <div className="col-span-4 order-1 sm:order-2">
-            <Image
-              className="w-full"
-              src={rainbowValleyActivity7Page2SideImage}
-              alt="Olivia Kids"
-            ></Image>
+            <Image className="w-full" src={sideImage} alt="Olivia Kids"></Image>
           </div>
         </div>
       </div>
@@ -101,4 +97,4 @@ const RainbowValleyActivity7Page2: React.FC<{
   );
 };
 
-export default RainbowValleyActivity7Page2;
+export default ActivityPage2;
