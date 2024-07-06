@@ -3,12 +3,12 @@ import { ReactNode, useState } from "react";
 import ActivityPage1 from "./components/Page1";
 import ActivityPage2 from "./components/Page2";
 import ActivityPage3 from "./components/Page3";
-import ActivityPage9 from "./components/Page9";
 import ActivityPage4 from "./components/Page4";
 import ActivityPage5 from "./components/Page5";
 import ActivityPage6 from "./components/Page6";
 import ActivityPage7 from "./components/Page7";
 import ActivityPage8 from "./components/Page8";
+import ActivityPage9 from "./components/Page9";
 import "./../rainbowValleyModule.css";
 
 const MeditationActivity: React.FC = () => {
