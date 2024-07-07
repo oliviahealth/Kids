@@ -7,5 +7,5 @@ export default ({ onBack, onContinue, onExit, page }: Page) => <WPContainer back
     <WPDescription title={"Key Takeaways"} paragraphs={[
         "Walking is a great way to reduce stress and increase physical activity. This activity specifically allows for more exploration of your senses and a greater understanding of your surroundings. Earn the sticker for this activity by going on one walk, but don't just stop there! Enjoy the fresh air!",
     ]} />
-    <WPAddPhotoButton onClick={() => { }} />
+    <WPAddPhotoButton color="#C1F5D6" icon="/images/FantasyForest/Camera.svg" onClick={() => { }} />
 </WPContainer>
