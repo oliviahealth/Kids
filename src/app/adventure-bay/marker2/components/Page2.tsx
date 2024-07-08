@@ -47,7 +47,7 @@ export default function Page2({
                   1
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xl">
+                  <p className="text-sm lg:text-xl">
                     Print out the coloring pages provided below, or use any
                     paper available to you
                   </p>
@@ -59,7 +59,7 @@ export default function Page2({
                   2
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xl">
+                  <p className="text-sm lg:text-xl">
                     Gather markers, crayons, or any other writing utensils
                   </p>
                 </div>
@@ -70,7 +70,7 @@ export default function Page2({
                   3
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xl">
+                  <p className="text-sm lg:text-xl">
                     Take some time to color the Caregiver's Coloring pages
                     provided or paper from home
                   </p>
@@ -82,7 +82,7 @@ export default function Page2({
                   4
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xl">
+                  <p className="text-sm lg:text-xl">
                     As you are coloring, try to focus on the page in front of
                     you, the colors you are using, the lines you are following,
                     and the message you are coloring
@@ -96,7 +96,7 @@ export default function Page2({
                   5
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xl">
+                  <p className="text-sm lg:text-xl">
                     Feel free to have your child join you with the KIDS Coloring
                     Pages as well
                   </p>

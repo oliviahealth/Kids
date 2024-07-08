@@ -73,7 +73,7 @@ export default function Page1({
       <div className="h-4/6 w-full flex gap-4">
         <div className="w-1/2 flex flex-col gap-4">
           <h1 className="text-xl font-bold">Introduction</h1>
-          <p className="text-sm 2xl:text-lg">
+          <p className="text-xs 2xl:text-lg">
             When caring for a young child, you may begin to believe that they
             deserve one hundered percent of your attention all of the time. This
             can lead to you putting your own feelings on the backburner.
@@ -108,7 +108,7 @@ export default function Page1({
                   isChecked.list ? "border-[#52C5C0]" : "border-[#52C5C0]"
                 }`}
               >
-                <Image src={pages} alt="List" />
+                <Image src={pages} alt="List" width={60} height={60} />
                 <h1
                   className="text-md font-bold text-center"
                   style={{ color: "#52C5C0" }}
@@ -127,7 +127,7 @@ export default function Page1({
                   isChecked.pen ? "border-[#52C5C0]" : "border-[#52C5C0]"
                 }`}
               >
-                <Image src={pen} alt="Pen" />
+                <Image src={pen} alt="Pen" width={60} height={60} />
                 <h1
                   className="text-md font-bold text-center"
                   style={{ color: "#52C5C0" }}
@@ -146,7 +146,7 @@ export default function Page1({
                   isChecked.paper ? "border-[#52C5C0]" : "border-[#52C5C0]"
                 }`}
               >
-                <Image src={paper} alt="Paper" />
+                <Image src={paper} alt="Paper" width={60} height={60} />
                 <h1
                   className="text-md font-bold text-center"
                   style={{ color: "#52C5C0" }}
