@@ -70,11 +70,11 @@ export default function Page1({
               </div>
               <div className="flex flex-col items-center justify-between">
                 <Image src={pencil} alt="pencil" />
-                <span>Paper</span>
+                <span>Coloring Pencils</span>
               </div>
               <div className="flex flex-col items-center justify-between">
                 <Image src={marker} alt="Marker" />
-                <div>Pen</div>
+                <div>Markers</div>
               </div>
             </div>
           </div>
