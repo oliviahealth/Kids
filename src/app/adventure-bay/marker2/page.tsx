@@ -6,7 +6,6 @@ import backgroundMap from "../../../../public/images/background.png";
 import Page1 from "@/app/adventure-bay/marker2/components/Page1";
 import Page2 from "@/app/adventure-bay/marker2/components/Page2";
 import Page3 from "@/app/adventure-bay/marker2/components/Page3";
-import Page4 from "@/app/adventure-bay/marker1/components/Page4";
 import ActivityPage1 from "./components/ActivityPage1";
 import ActivityPage2 from "./components/ActivityPage2";
 import ActivityPage3 from "./components/ActivityPage3";
@@ -80,13 +79,6 @@ const AdventureBayActivity: React.FC = () => {
     },
     {
       content: (
-        <MapContainer>
-          <Page3 onNext={handleNext} onBack={handleBack} />
-        </MapContainer>
-      ),
-    },
-    {
-      content: (
         <ActivityContainer>
           <ActivityPage1 onNext={handleNext} onBack={handleBack} />
         </ActivityContainer>
@@ -130,7 +122,7 @@ const AdventureBayActivity: React.FC = () => {
     {
       content: (
         <MapContainer>
-          <Page4 onNext={handleNext} onBack={handleBack} />
+          <Page3 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },

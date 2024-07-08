@@ -1,10 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../../../../public/images/dashboard/adventure-bay/title-image.png";
 import Link from "next/link";
-import group82 from "../../../../../public/images/dashboard/adventure-bay/group-82.png";
+import list from "../../../../../public/images/dashboard/adventure-bay/Vector.png";
+import pen from "../../../../../public/images/dashboard/adventure-bay/fluent_pen-20-filled.png";
+import paper from "../../../../../public/images/dashboard/adventure-bay/mdi_paper.png";
 import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
+
+type CheckboxState = {
+  list: boolean;
+  pen: boolean;
+  paper: boolean;
+};
 
 export default function Page1({
   onNext,
@@ -13,101 +21,171 @@ export default function Page1({
   onNext: () => void;
   onBack: () => void;
 }) {
+  const [isChecked, setIsChecked] = useState({
+    list: false,
+    pen: false,
+    paper: false,
+  });
+
+  useEffect(() => {
+    // Check if all checkboxes are selected
+    if (isChecked.list && isChecked.pen && isChecked.paper) {
+      setButtonDisabled(false); // Enable the button
+    } else {
+      setButtonDisabled(true); // Disable the button
+    }
+  }, [isChecked]);
+
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+
+  const handleCheckboxChange = (type: keyof CheckboxState) => {
+    setIsChecked((prevState) => ({
+      ...prevState,
+      [type]: !prevState[type],
+    }));
+  };
+
   return (
-    <div className="flex flex-col h-full justify-between gap-4">
-      <div className="flex gap-4">
-        <div>
+    <div className="flex flex-col h-full w-full gap-4">
+      <div className="h-1/6 flex justify-between items-center">
+        <div className="flex gap-4">
           <Image src={logo} alt="logo" />
+          <div className="flex flex-col justify-center items-start">
+            <span className="text-sm md:text-xl font-bold">
+              Affirmations for Children and Caregivers
+            </span>
+            <span className="text-sm md:text-lg" style={{ color: "#52C5C0" }}>
+              Caregiver Wellness - Adventure Bay
+            </span>
+          </div>
         </div>
 
-        <div className="flex flex-col justify-center items-start">
-          <span className="text-xl font-bold">
-            Affirmations for Children and Caregivers
-          </span>
-          <span className="text-xl" style={{ color: "#52C5C0" }}>
-            Caregiver Wellness - Adventure Bay
-          </span>
-        </div>
-
-        <div className="float-right pl-20">
+        <div className="">
           <Link
             href="/home"
-            className="rounded-full z-30 bg-gray-300 flex items-center justify-center w-20 h-20 absolute top-10 right-10"
+            className="rounded-full z-30 bg-gray-300 flex items-center justify-center w-20 h-20"
           >
             X
           </Link>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-12 gap-8 grid-cols-1 flex-grow">
-        <div className="grid gap-8 col-span-7 py-5">
-          <div className="grid gap-2">
-            <h1 className="text-xl font-bold">Stay Positive!</h1>
-            <p>
-              At 3-4 years of age, children are little bundles of energy that
-              are learning, growing, and exploring every day. They require a lot
-              of attention from their caregiver, which can be physically and
-              mentally taxing for that caregiver. As wonderful as it is for you
-              to give so much of your attention to your child&apos;s health and
-              development, it may cause burnout and negative thoughts over time.
-              One way to combat these negative thoughts is by practicing daily
-              affirmations. A positive affirmation is a phrase that one says to
-              oneself to combat negative thoughts ( Citing this information
-              from:{" "}
-              <a
-                href="https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations/"
-                style={{
-                  color: "blue",
-                }}
+      <div className="h-4/6 w-full flex gap-4">
+        <div className="w-1/2 flex flex-col gap-4">
+          <h1 className="text-xl font-bold">Introduction</h1>
+          <p className="text-sm 2xl:text-lg">
+            At 3-4 years of age, children are little bundles of energy that are
+            learning, growing, and exploring every day. They require a lot of
+            attention from their caregiver, which can be physically and mentally
+            taxing for that caregiver. As wonderful as it is for you to give so
+            much of your attention to your child's health and development, it
+            may cause burnout and negative thoughts over time. One way to combat
+            these negative thoughts is by practicing daily affirmations. These
+            short statements can help retrain your brain into a mindset that is
+            supportive and encouraging, aiding in in your resilience as a
+            caregiver. Your child could practice positive affirmations as well!
+            Not only could it help boost their confidence and self-image, but it
+            could also help them make advancements in their speech and language
+            skills. The affirmations can be short and simple while still making
+            a powerful impact on their positive thinking. This is an activity
+            that you and your child can practice together each day. You can
+            recite them together, brainstorm unique ones for each of you, and
+            even use a pencil and paper to write them out and practice letters
+            at the same time!
+          </p>
+        </div>
+        <div
+          className="w-1/2 rounded-3xl flex flex-col h-full p-5 gap-2"
+          style={{
+            border: "2px solid white",
+            backgroundColor: "#C5FFFC",
+          }}
+        >
+          <h1 className="text-xl font-bold flex">Materials Needed</h1>
+          <div className="flex flex-col gap-2 h-full w-full">
+            <div className="h-full flex flex-col md:flex-row gap-2 w-full">
+              <div
+                className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center ${
+                  isChecked.list ? "border-[#52C5C0]" : "border-[#52C5C0]"
+                }`}
               >
-                https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations/
-              </a>
-              .) Many different affirmations can be used each day. We have
-              included a list of examples for you to use, but feel free to
-              create your own as well! The most beneficial affirmations are the
-              ones you can relate to best.
-            </p>
-            <p>
-              Studies have shown that positive affirmations have many benefits,
-              such as reduced stress and improved mood. They give you the
-              opportunity to recognize your thought patterns and reduce any
-              negative feelings that you may be experiencing. The self-awareness
-              that they provide opens up the opportunity for you to realize any
-              changes that need to be made in your life. Affirmations can also
-              aid in improved sleep and fewer feelings of anxiety and depression
-              (Citing this information from:{" "}
-              <a
-                href="https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations/"
-                style={{
-                  color: "blue",
-                }}
+                <Image src={list} alt="List" />
+                <h1
+                  className="text-md font-bold text-center"
+                  style={{ color: "#52C5C0" }}
+                >
+                  OliviaKids Affirmation List
+                </h1>
+                <input
+                  type="checkbox"
+                  checked={isChecked.list}
+                  onChange={() => handleCheckboxChange("list")}
+                  className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
+                />
+              </div>
+              <div
+                className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center ${
+                  isChecked.pen ? "border-[#52C5C0]" : "border-[#52C5C0]"
+                }`}
               >
-                https://wellspringprevention.org/blog/the-benefits-of-positive-affirmations/
-              </a>
-              .)
-            </p>
+                <Image src={pen} alt="Pen" />
+                <h1
+                  className="text-md font-bold text-center"
+                  style={{ color: "#52C5C0" }}
+                >
+                  Pencil
+                </h1>
+                <input
+                  type="checkbox"
+                  checked={isChecked.pen}
+                  onChange={() => handleCheckboxChange("pen")}
+                  className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
+                />
+              </div>
+              <div
+                className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center ${
+                  isChecked.paper ? "border-[#52C5C0]" : "border-[#52C5C0]"
+                }`}
+              >
+                <Image src={paper} alt="Paper" />
+                <h1
+                  className="text-md font-bold text-center"
+                  style={{ color: "#52C5C0" }}
+                >
+                  Paper
+                </h1>
+                <input
+                  type="checkbox"
+                  checked={isChecked.paper}
+                  onChange={() => handleCheckboxChange("paper")}
+                  className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
+                />
+              </div>
+              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white hidden md:flex"></div>
+            </div>
+            <div className="h-full hidden md:flex gap-2 w-full">
+              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
+              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
+              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
+              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
+            </div>
           </div>
         </div>
-
-        <div className="col-span-5">
-          <Image src={group82} alt="image" />
-        </div>
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 justify-between">
-        <div className="justify-self-center sm:justify-self-start">
-          <Link
-            href="/home"
-            className="text-red-600 py-2 px-4"
-            onClick={onBack}
-          >
-            Learn more
-          </Link>
+      <div className="h-1/6 flex justify-between items-end">
+        <div className="">
+          <button className="text-red-600 border-2 border-red-300 rounded-3xl py-2 px-4">
+            Learn More
+          </button>
         </div>
-        <div className="justify-self-center sm:justify-self-end">
+
+        <div className="">
           <button
-            className="bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center"
+            className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center ${
+              buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
+            }`}
             onClick={onNext}
+            disabled={buttonDisabled}
           >
             Continue
             <Image src={arrow} alt="arrow" width={30} height={30} />
