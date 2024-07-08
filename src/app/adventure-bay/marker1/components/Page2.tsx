@@ -1,11 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../../../../public/images/dashboard/adventure-bay/title-image.png";
 import Link from "next/link";
-import group82 from "../../../../../public/images/dashboard/adventure-bay/group-82.png";
-import pen from "../../../../../public/images/dashboard/adventure-bay/fluent_pen-20-filled.png";
-import paper from "../../../../../public/images/dashboard/adventure-bay/mdi_paper.png";
 import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
 
 export default function Page2({
@@ -16,88 +13,109 @@ export default function Page2({
   onBack: () => void;
 }) {
   return (
-    <div className="flex flex-col h-full justify-between gap-4">
-      <div className="flex gap-4">
-        <div>
+    <div className="flex flex-col h-full w-full gap-4">
+      <div className="h-1/6 flex justify-between items-center">
+        <div className="flex gap-4">
           <Image src={logo} alt="logo" />
+          <div className="flex flex-col justify-center items-start">
+            <span className="text-sm md:text-xl font-bold">
+              Affirmations for Children and Caregivers
+            </span>
+            <span className="text-sm md:text-lg" style={{ color: "#52C5C0" }}>
+              Caregiver Wellness - Adventure Bay
+            </span>
+          </div>
         </div>
 
-        <div className="flex flex-col justify-center items-start">
-          <span className="text-xl font-bold">
-            Affirmations for Children and Caregivers
-          </span>
-          <span className="text-xl" style={{ color: "#52C5C0" }}>
-            Caregiver Wellness - Adventure Bay
-          </span>
-        </div>
-
-        <div className="float-right pl-20">
+        <div className="">
           <Link
             href="/home"
-            className="rounded-full z-30 bg-gray-300 flex items-center justify-center w-20 h-20 absolute top-10 right-10"
+            className="rounded-full z-30 bg-gray-300 flex items-center justify-center w-20 h-20"
           >
             X
           </Link>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-12 gap-8 grid-cols-1 flex-grow">
-        <div className="grid gap-8 col-span-7 py-5">
-          <div className="grid gap-2">
-            <h1 className="text-xl font-bold">A Simple Integration</h1>
-            <p>
-              Integrating positive affirmations into your daily routine is
-              simple! You can choose to recite them at a scheduled time each day
-              or just say them to yourself at any time during the day when you
-              feel like you need them. These short statements can help retrain
-              your brain into a mindset that is supportive and encouraging. This
-              will aid in your resilience as a caregiver (Citing this
-              information from:{" "}
-              <a
-                href="https://www.thebump.com/a/positive-parenting-affirmations"
-                style={{
-                  color: "blue",
-                }}
-              >
-                https://www.thebump.com/a/positive-parenting-affirmations
-              </a>
-              ).
-            </p>
-            <p>
-              Utilize our list of affirmations to practice this exercise with
-              your child today!
-            </p>
-          </div>
-
-          <div className="grid gap-8">
-            <h1 className="text-xl font-bold">What will you need?</h1>
-            <div className="flex gap-8">
-              <div className="flex flex-col items-center">
-                <Image src={pen} alt="Pen" />
-                <div>Pen</div>
+      <div className="h-4/6 w-full flex gap-4">
+        <div className="w-full flex flex-col gap-4">
+          <h1 className="text-xl font-bold">Activity</h1>
+          <div className="w-full h-full flex gap-4">
+            <div className="w-1/2 flex flex-col justify-between">
+              <div className="h-1/4 flex items-center gap-2">
+                <span className="rounded-2xl bg-[#C5FFFC] flex justify-center items-center p-5 text-xl font-bold">
+                  1
+                </span>
+                <div className="flex flex-col">
+                  <p className="text-xl">
+                    You may download and use the OlivaKIDS affirmation lists
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col items-center">
-                <Image src={paper} alt="Paper" />
-                <span>Paper</span>
+
+              <div className="h-1/4 flex items-center gap-2">
+                <span className="rounded-2xl bg-[#C5FFFC] flex justify-center items-center p-5 text-xl font-bold">
+                  2
+                </span>
+                <div className="flex flex-col">
+                  <p className="text-xl">
+                    Find the affirmations that you relate to best. These will be
+                    the most effective
+                  </p>
+                </div>
+              </div>
+
+              <div className="h-1/4 flex items-center gap-2">
+                <span className="rounded-2xl bg-[#C5FFFC] flex justify-center items-center p-5 text-xl font-bold">
+                  3
+                </span>
+                <div className="flex flex-col">
+                  <p className="text-xl">
+                    Recite these affirmations to yourself or your child at least
+                    once a day
+                  </p>
+                </div>
+              </div>
+
+              <div className="h-1/4 flex items-center gap-2">
+                <span className="rounded-2xl bg-[#C5FFFC] flex justify-center items-center p-5 text-xl font-bold">
+                  4
+                </span>
+                <div className="flex flex-col">
+                  <p className="text-xl">
+                    Have faith in the words you are saying
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-1/2 flex flex-col justify-between">
+              <div className="h-1/4 flex items-center gap-2">
+                <span className="rounded-2xl bg-[#C5FFFC] flex justify-center items-center p-5 text-xl font-bold">
+                  5
+                </span>
+                <div className="flex flex-col">
+                  <p className="text-xl">
+                    Repeat this process at least once a day for an entire week
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="col-span-5">
-          <Image src={group82} alt="image" />
-        </div>
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 justify-between">
-        <div className="justify-self-center sm:justify-self-start">
-          <button className="text-red-600 py-2 px-4" onClick={onBack}>
+      <div className="h-1/6 flex justify-between items-end">
+        <div className="">
+          <button
+            className="text-red-600 border-2 border-red-300 rounded-3xl py-2 px-4"
+            onClick={onBack}
+          >
             Back
           </button>
         </div>
-        <div className="justify-self-center sm:justify-self-end">
+
+        <div className="">
           <button
-            className="bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center"
+            className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center`}
             onClick={onNext}
           >
             Continue
