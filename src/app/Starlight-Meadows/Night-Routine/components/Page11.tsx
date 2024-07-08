@@ -56,6 +56,7 @@ const MeditationActivityPage1: React.FC<{
         <Image
           src={addPhotoIcon}
           alt="Add Photo Icon"
+          className="h-50 w-50" // Adjust the size as needed
         />
       </div>
       <div className="pt-5 flex justify-between p-10">

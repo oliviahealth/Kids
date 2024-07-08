@@ -1,4 +1,6 @@
 "use client";
+
+
 import { ReactNode, useState } from "react";
 import MeditationActivityPage1 from "./components/Page1";
 import MeditationActivityPage2 from "./components/Page2";
@@ -10,9 +12,7 @@ import MeditationActivityPage7 from "./components/Page7";
 import MeditationActivityPage8 from "./components/Page8";
 import MeditationActivityPage9 from "./components/Page9";
 import MeditationActivityPage10 from "./components/Page10";
-
 import MeditationActivityPage11 from "./components/Page11";
-
 import "./NightRoutineModule.css";
 
 const MeditationActivity: React.FC = () => {
@@ -23,23 +23,18 @@ const MeditationActivity: React.FC = () => {
   };
 
   const handleNext = () => {
-    console.log("handleNext", currentPage);
     if (currentPage < pagesData.length - 1) setCurrentPage(currentPage + 1);
   };
 
-  
-
   const MapContainer: React.FC<{ children: ReactNode }> = ({ children }) => (
-  <div className="map-container grid grid-cols-12 grid-rows-12 h-full">
-    <div className="row-start-1 row-end-13 col-start-1 col-end-13 py-16 px-16">
-      <div className="bg-white shadow-2xl rounded-2xl h-full flex flex-col">
-        {children}
+    <div className="map-container grid grid-cols-12 grid-rows-12 h-full">
+      <div className="row-start-1 row-end-13 col-start-1 col-end-13 py-16 px-16">
+        <div className="bg-white shadow-2xl rounded-2xl h-full flex flex-col">
+          {children}
+        </div>
       </div>
     </div>
-  </div>
-);
-
-
+  );
 
   const pagesData = [
     {
@@ -65,37 +60,38 @@ const MeditationActivity: React.FC = () => {
     },
     {
       content: (
-        <MeditationActivityPage4 onNext={handleNext} onBack={handleBack} />
+        
+          <MeditationActivityPage4 onNext={handleNext} onBack={handleBack} />
       ),
     },
     {
       content: (
-        <MeditationActivityPage5 onNext={handleNext} onBack={handleBack} />
+          <MeditationActivityPage5 onNext={handleNext} onBack={handleBack} />
       ),
     },
     {
       content: (
-        <MeditationActivityPage6 onNext={handleNext} onBack={handleBack} />
+          <MeditationActivityPage6 onNext={handleNext} onBack={handleBack} />
       ),
     },
     {
       content: (
-        <MeditationActivityPage7 onNext={handleNext} onBack={handleBack} />
+          <MeditationActivityPage7 onNext={handleNext} onBack={handleBack} />
       ),
     },
     {
       content: (
-        <MeditationActivityPage8 onNext={handleNext} onBack={handleBack} />
+          <MeditationActivityPage8 onNext={handleNext} onBack={handleBack} />
       ),
     },
     {
       content: (
-        <MeditationActivityPage9 onNext={handleNext} onBack={handleBack} />
+          <MeditationActivityPage9 onNext={handleNext} onBack={handleBack} />
       ),
     },
     {
       content: (
-        <MeditationActivityPage10 onNext={handleNext} onBack={handleBack} />
+          <MeditationActivityPage10 onNext={handleNext} onBack={handleBack} />
       ),
     },
     {
@@ -106,7 +102,12 @@ const MeditationActivity: React.FC = () => {
       ),
     },
   ];
-  return <>{pagesData[currentPage].content}</>;
+
+  return (
+    <div className="full-height">
+      {pagesData[currentPage].content}
+    </div>
+  );
 };
 
 export default MeditationActivity;
