@@ -30,8 +30,9 @@ const MeditationActivityPage1: React.FC<{
             </p>
           </div>
           <div className="ml-auto">
-            <Link href="/home">
-              <button className="h-6 w-6 sm:h-12 sm:w-12 rounded-full bg-gray-300 flex items-center justify-center text-sm">
+            <Link href="/Starlight-Meadows" passHref>
+              <button
+                className="h-6 w-6 sm:h-12 sm:w-12 rounded-full bg-gray-300 flex items-center justify-center text-sm">
                 X
               </button>
             </Link>

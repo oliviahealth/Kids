@@ -4,9 +4,12 @@ import meditationImage1 from "../../../../../public/images/Group 91.png";
 import continueButton from "../../../../../public/images/Group 109.svg";
 import Link from "next/link";
 
+
 const MeditationActivityPage1: React.FC<{
   onNext: () => void;
   onBack: () => void;
+
+  
 }> = ({ onNext, onBack }) => {
   return (
     <section className="h-full flex flex-col justify-between">
@@ -26,11 +29,12 @@ const MeditationActivityPage1: React.FC<{
             </p>
           </div>
           <div className="ml-auto">
-            <Link href="/home">
-              <button className="h-6 w-6 sm:h-12 sm:w-12 rounded-full bg-gray-300 flex items-center justify-center text-sm">
-                X
-              </button>
-            </Link>
+            <Link href="/Starlight-Meadows" passHref>
+            <button
+              className="h-6 w-6 sm:h-12 sm:w-12 rounded-full bg-gray-300 flex items-center justify-center text-sm">
+              X
+            </button>
+          </Link>
           </div>
         </div>
         <div className="flex mt-5">
