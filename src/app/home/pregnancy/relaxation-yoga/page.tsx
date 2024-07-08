@@ -3,10 +3,6 @@ import { ReactNode, useState } from "react";
 import RelaxationYogaPage1 from "./components/Page1";
 import RelaxationYogaPage2 from "./components/Page2";
 import RelaxationYogaPage3 from "./components/Page3";
-// import RelaxationYogaPage4 from "./components/Page4";
-// import RelaxationYogaPage5 from "./components/Page5";
-// import RelaxationYogaPage6 from "./components/Page6";
-import RelaxationYogaPage7 from "./components/Page7";
 import styles from "./RelaxationYoga.module.css";
 
 const RelaxationYoga: React.FC = () => {
@@ -52,28 +48,6 @@ const RelaxationYoga: React.FC = () => {
         </MapContainer>
       ),
     },
-    // {
-    //   content: (
-    //       <RelaxationYogaPage4 onNext={handleNext} onBack={handleBack} />
-    //   ),
-    // },
-    // {
-    //   content: (
-    //       <RelaxationYogaPage5 onNext={handleNext} onBack={handleBack} />
-    //   ),
-    // },
-    // {
-    //   content: (
-    //       <RelaxationYogaPage6 onNext={handleNext} onBack={handleBack} />
-    //   ),
-    // },
-    {
-      content: (
-        <MapContainer>
-          <RelaxationYogaPage7 onNext={handleNext} onBack={handleBack} />
-        </MapContainer>
-      ),
-    }
   ];
 
   return <>{pagesData[currentPage].content}</>;

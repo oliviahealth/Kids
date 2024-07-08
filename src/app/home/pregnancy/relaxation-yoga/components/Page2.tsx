@@ -12,7 +12,7 @@ const RelaxationYogaPage2: React.FC<{
         <div className={styles.header}>
           <img src="/images/flower.svg" alt="Flower Icon" className={styles.icon} />
           <div>
-            <h1 className={styles.title}>Walking Nature Journal</h1>
+            <h1 className={styles.title}>Relaxation Yoga</h1>
             <h2 className={styles.subtitle}>Caregiver Wellness - Blossom Haven</h2>
           </div>
         </div>
@@ -23,59 +23,49 @@ const RelaxationYogaPage2: React.FC<{
         </Link>
       </div>
       <div className={styles.contentWrapper}>
-        <div className={styles.content}>
-          <h3 className={styles.heading}><b>What will you need?</b></h3>
-          <div className={styles.journalingSection}>
-            <h4 className={styles.journalingHeading}>For physical journaling</h4>
-            <div className={styles.iconsWrapper}>
-              <div className={styles.iconItem}>
-                <img src="/images/journal.svg" alt="Journal" />
-                <div className={styles.iconText}>Journal</div>
+        <div className={styles.contentFullWidth}>
+          <h3 className={`${styles.heading} ${styles.activityHeading}`}><b>Activity</b></h3>
+          <div className={styles.activityList}>
+            <div className={styles.activityColumn}>
+              <div className={styles.activityItem}>
+                {/* TODO: Fill these points (I couldn't find the info for them and maybe add the circles (I was having issues. Sorry) */}
+                <div className={styles.activityNumber}>1.</div>
+                <p className={styles.activityText}>Add something here.</p>
               </div>
-              <div className={styles.iconItem}>
-                <img src="/images/pen.svg" alt="Pen" />
-                <div className={styles.iconText}>Pen</div>
+              <div className={styles.activityItem}>
+                <div className={styles.activityNumber}>2.</div>
+                <p className={styles.activityText}>Add something here.</p>
               </div>
-              <div className={styles.iconItem}>
-                <img src="/images/marker.svg" alt="Marker" />
-                <div className={styles.iconText}>Marker</div>
+              <div className={styles.activityItem}>
+                <div className={styles.activityNumber}>3.</div>
+                <p className={styles.activityText}>Add something here.</p>
               </div>
-              <div className={styles.iconItem}>
-                <img src="/images/sticker.svg" alt="Stickers" />
-                <div className={styles.iconText}>Stickers</div>
-              </div>
-              <div className={styles.iconItem}>
-                <img src="/images/post-it.svg" alt="Post-Its" />
-                <div className={styles.iconText}>Post-Its</div>
-              </div>
-              <div className={styles.iconItem}>
-                <img src="/images/camera.svg" alt="Phone Camera" />
-                <div className={styles.iconText}>Phone Camera</div>
+              <div className={styles.activityItem}>
+                <div className={styles.activityNumber}>4.</div>
+                <p className={styles.activityText}>Add something here.</p>
               </div>
             </div>
-            <h4 className={styles.journalingHeading}>For digital journaling</h4>
-            <div className={styles.iconsWrapper}>
-              <div className={styles.iconItem}>
-                <img src="/images/phone.svg" alt="Phone" />
-                <div className={styles.iconText}>Phone</div>
+            <div className={styles.activityColumn}>
+              <div className={styles.activityItem}>
+                <div className={styles.activityNumber}>5.</div>
+                <p className={styles.activityText}>Add something here.</p>
               </div>
-              <div className={styles.iconItem}>
-                <img src="/images/camera.svg" alt="Phone Camera" />
-                <div className={styles.iconText}>Phone Camera</div>
+              <div className={styles.activityItem}>
+                <div className={styles.activityNumber}>6.</div>
+                <p className={styles.activityText}>Add something here.</p>
               </div>
-              <div className={styles.iconItem}>
-                <img src="/images/notes.svg" alt="Notes App" />
-                <div className={styles.iconText}>Notes App</div>
+              <div className={styles.activityItem}>
+                <div className={styles.activityNumber}>7.</div>
+                <p className={styles.activityText}>Add something here.</p>
               </div>
             </div>
           </div>
         </div>
-        <div className={styles.imageWrapper}>
-          <img src="/images/hand.svg" alt="Hand Illustration" className={styles.illustration} />
-        </div>
       </div>
       <div className={styles.buttonWrapper}>
-        <button className={styles.button} onClick={onBack}>Back</button>
+      <button className={styles.Button} onClick={onBack}>
+          <img src="/images/backbuttonnew.svg" alt="Continue" />
+        </button>
         <button className={styles.continueButton} onClick={onNext}>
           <img src="/images/continue.svg" alt="Continue" />
         </button>

@@ -213,6 +213,14 @@
   text-decoration: none;
 }
 
+.learnButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+}
+
 .continueButton img {
   width: 150px;
   height: auto;
