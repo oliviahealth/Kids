@@ -10,8 +10,8 @@ const MeditationActivityPage1: React.FC<{
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
   return (
-    <section className="h-full flex flex-col justify-between">
-      <div className="p-10 space-y-5 flex-grow">
+    <section className="h-full flex flex-col" style ={{overflow:"hidden"}}>
+      <div className="p-10 space-y-5 flex-grow" style ={{overflow:"hidden"}}>
         <div className="flex">
           <div className="my-auto">
             <Image
@@ -56,6 +56,7 @@ const MeditationActivityPage1: React.FC<{
         <Image
           src={addPhotoIcon}
           alt="Add Photo Icon"
+          className="h-50 w-50"
         />
       </div>
       <div className="pt-5 flex justify-between p-10">

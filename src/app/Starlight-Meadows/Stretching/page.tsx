@@ -88,7 +88,11 @@ const MeditationActivity: React.FC = () => {
       ),
     },
   ];
-  return <>{pagesData[currentPage].content}</>;
+  return (
+    <div className="full-height">
+      {pagesData[currentPage].content}
+    </div>
+  )
 };
 
 export default MeditationActivity;
