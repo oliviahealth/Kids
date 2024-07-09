@@ -47,7 +47,7 @@ export default function Page2({
                   1
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Get some drawing utensils, and print out the jars!
                   </p>
                 </div>
@@ -58,7 +58,7 @@ export default function Page2({
                   2
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Take a moment to think about what makes you happy
                   </p>
                 </div>
@@ -69,7 +69,7 @@ export default function Page2({
                   3
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Write down or draw out what you are grateful for in each jar
                     on the page
                   </p>
@@ -81,7 +81,7 @@ export default function Page2({
                   4
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Feel free to have your kids join you in a reflective state
                     of gratitude!
                   </p>
@@ -94,7 +94,7 @@ export default function Page2({
                   5
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Feel free to have your child join you with the KIDS Coloring
                     Pages as well
                   </p>

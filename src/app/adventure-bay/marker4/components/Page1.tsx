@@ -70,10 +70,10 @@ export default function Page1({
         </div>
       </div>
 
-      <div className="h-4/6 w-full flex gap-4">
+      <div className="h-4/6 w-full flex gap-8">
         <div className="w-1/2 flex flex-col gap-4">
           <h1 className="text-xl font-bold">Introduction</h1>
-          <p className="text-xs 2xl:text-lg text-justify">
+          <p className="text-xs lg:text-sm 2xl:text-lg text-justify">
             When caring for a young child, you may begin to believe that they
             deserve one hundered percent of your attention all of the time. This
             can lead to you putting your own feelings on the backburner.
@@ -83,7 +83,7 @@ export default function Page1({
             what your needs are. This activity can help you recognize what
             feelings you are experiencing.
           </p>
-          <p className="text-sm 2xl:text-lg text-justify">
+          <p className="text-xs lg:text-sm 2xl:text-lg text-justify">
             At the age of 3-4, children experience many different emotions that
             they don't know the names of. This activity will not only help them
             identify their feelings, but it will also teach them the names of

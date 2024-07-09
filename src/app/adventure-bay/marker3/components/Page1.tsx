@@ -70,10 +70,10 @@ export default function Page1({
         </div>
       </div>
 
-      <div className="h-4/6 w-full flex gap-4">
+      <div className="h-4/6 w-full flex gap-8">
         <div className="w-1/2 flex flex-col gap-4">
           <h1 className="text-xl font-bold">Introduction</h1>
-          <p className="text-xs 2xl:text-lg text-justify">
+          <p className="text-xs lg:text-sm 2xl:text-lg text-justify">
             When things do not seem to be going our way, taking the time to
             embrace and apply the art of gratitude allows us to shift our
             perspective away from hardship and focus on the gifts of life. In
@@ -82,7 +82,7 @@ export default function Page1({
             example, studies have proven that a grateful mind aids in the
             regulation of blood pressure, mood, and sleep.
           </p>
-          <p className="text-sm 2xl:text-lg">
+          <p className="text-xs lg:text-sm 2xl:text-lg text-justify">
             When we take a moment and reflect in a state of gratitude, this
             gives us a chance to be appreciative of little things, big things,
             and everything else in between. The benefits of demonstrating
