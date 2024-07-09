@@ -261,7 +261,7 @@
   line-height: 1.6;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .headerWrapper {
     flex-direction: row;
     justify-content: space-between;
