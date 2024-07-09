@@ -47,7 +47,7 @@ export default function Page2({
                   1
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Gather Supplies like Pencil, paper, Feeling Wheel/List
                   </p>
                 </div>
@@ -58,7 +58,7 @@ export default function Page2({
                   2
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Decide on a time of day to refelct on your feelings. This
                     can be at the end of each day or at multiple times
                     trhoughout the day
@@ -71,7 +71,7 @@ export default function Page2({
                   3
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Utilize the feeling wheel/list to pinpoint the feeling you
                     are having
                   </p>
@@ -83,7 +83,7 @@ export default function Page2({
                   4
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Reflect on the factors that are making you feel this way
                   </p>
                 </div>
@@ -95,7 +95,7 @@ export default function Page2({
                   5
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-sm lg:text-xl">
+                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
                     Think about what your body needs from it and act on it. For
                     example, If you feel fatigued, consider asking someone to
                     watch your child while you take a nap

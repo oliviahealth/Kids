@@ -70,10 +70,10 @@ export default function Page1({
         </div>
       </div>
 
-      <div className="h-4/6 w-full flex gap-4">
+      <div className="h-4/6 w-full flex gap-8">
         <div className="w-1/2 flex flex-col gap-4">
           <h1 className="text-xl font-bold">Introduction</h1>
-          <p className="text-xs 2xl:text-lg text-justify">
+          <p className="text-xs lg:text-sm 2xl:text-lg text-justify">
             At 3-4 years of age, children are little bundles of energy that are
             learning, growing, and exploring every day. They require a lot of
             attention from their caregiver, which can be physically and mentally
