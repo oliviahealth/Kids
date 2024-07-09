@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode } from 'react';
 
 export const WPHeader: React.FC<{ image: string, title: string, subtitleColor: string, subtitle: string }> = ({ image, title, subtitleColor, subtitle }) => (
     <div className="flex items-center mb-8">
@@ -25,7 +25,7 @@ export const WPContainer: React.FC<{ children: ReactNode, onBack: () => void, ba
     <div className="relative min-h-[100vh] w-[100vw] bg-cover bg-center bg-[url('/images/map.svg')]">
         <div className="bg-black bg-opacity-50 w-[100vw] h-[100vh] flex justify-center items-center">
 
-            <div className="bg-white rounded-3xl w-[80vw] min-h-[70vh] max-h-[90vh] p-8 m-8 relative flex flex-col justify-between"> {/*"overflow-y-auto bg-white rounded-3xl max-w-7xl max-h-[90vh] p-8 m-8 relative"*/}
+            <div className="bg-white rounded-3xl w-[80vw] min-h-[70vh] max-h-[70vh] p-8 m-8 relative flex flex-col justify-between"> {/*"overflow-y-auto bg-white rounded-3xl max-w-7xl max-h-[90vh] p-8 m-8 relative"*/}
                 <button onClick={onExit} className="absolute right-8 top-8">
                     <img src="/images/exit.svg" alt="Exit" className="size-16" />
                 </button>
@@ -39,7 +39,7 @@ export const WPContainer: React.FC<{ children: ReactNode, onBack: () => void, ba
                     }
                 </div>
 
-                <div className="flex justify-between w-full mt-4">
+                <div className="absolute bottom-5 left-0 right-0 bg-transparent p-6 flex justify-between w-full">
                     <button onClick={onBack} className="bg-transparent text-red-500 p-0 border-none cursor-pointer text-lg no-underline hover:underline">{backText}</button>
                     <button onClick={onContinue} className="bg-transparent border-none cursor-pointer text-lg no-underline">
                         <img src="/images/continue.svg" alt="Continue" />
@@ -71,25 +71,43 @@ export const WPTitle: React.FC<{ title: string }> = ({ title }) => <h2 className
 
 export const WPSubtitle: React.FC<{ title: string }> = ({ title }) => <h2 className="text-2xl font-bold mb-4">{title}</h2>
 
-export const WPActivityPreview: React.FC<{ hideTitle?: boolean, color: string, activities: { id: number, title: string, description: string }[] }> = ({ hideTitle, color, activities }) => <div className="mb-8">
-    {!hideTitle && <WPTitle title="Activity" />}
-    <ul className="ml-4 space-y-8">
-        {activities.map((activity) => (
-            <li key={activity.id} className="flex items-start">
-                <div style={{ backgroundColor: color }} className="size-12 flex items-center justify-center rounded-full text-lg mr-4">
-                    {activity.id}
-                </div>
-                <div>
-                    <h3 className="font-bold mb-1">
-                        {activity.title}
-
-                    </h3>
-                    <p className="text-sm">{activity.description}</p>
-                </div>
-            </li>
-        ))}
-    </ul>
-</div>
+export const WPActivityPreview: React.FC<{ hideTitle?: boolean, color: string, activities: { id: number, title: string, description: string }[] }> = ({ hideTitle, color, activities }) => (
+    <div className="mb-8 overflow-y-auto max-h-[calc(100vh-30rem)]">
+        {!hideTitle && <WPTitle title="Activity" />}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="space-y-8">
+                {activities.slice(0, 4).map((activity) => (
+                    <div key={activity.id} className="flex items-start">
+                        <div style={{ backgroundColor: color }} className="w-12 h-12 flex items-center justify-center rounded-full text-lg mr-4">
+                            {activity.id}
+                        </div>
+                        <div className="flex-1">
+                            <h3 className="font-bold mb-1">
+                                {activity.title}
+                            </h3>
+                            <p className="text-sm break-words">{activity.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <div className="space-y-8">
+                {activities.slice(4).map((activity) => (
+                    <div key={activity.id} className="flex items-start">
+                        <div style={{ backgroundColor: color }} className="w-12 h-12 flex items-center justify-center rounded-full text-lg mr-4">
+                            {activity.id}
+                        </div>
+                        <div className="flex-1">
+                            <h3 className="font-bold mb-1">
+                                {activity.title}
+                            </h3>
+                            <p className="text-sm break-words">{activity.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+);
 
 export const WPAddPhotoButton: React.FC<{ color: string, icon: string, onClick: () => void }> = ({ color, icon, onClick }) => (
     <div
