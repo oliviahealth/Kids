@@ -14,21 +14,24 @@ export default function ActivityPage5({
 }) {
   return (
     <div className="flex flex-col h-full w-full">
-      <div className="h-1/6 flex justify-center items-center relative">
-        <div className="absolute top-2 left-2 md:top-5 md:left-5">
-          <Image src={ellipse} alt="Ellipse" />
-          <div className="absolute inset-0 flex justify-center items-center">
-            <span className="text-xl font-bold text-black">5</span>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center">
+      <div className="h-1/6 flex justify-between items-center gap-8">
+        <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
+          5
+        </span>
+
+        <div className="text-center">
           <h1 className="text-2xl font-bold">Heading</h1>
-          <p> Feel free to have your child join you with the KIDS Coloring Pages as well!</p>
+          <p>
+            {" "}
+            Feel free to have your child join you with the KIDS Coloring Pages
+            as well!
+          </p>
         </div>
-        <div className="absolute top-2 right-2 md:top-5 md:right-5">
+
+        <div className="">
           <Link
             href="/home"
-            className="rounded-full z-30 flex items-center justify-center w-12 h-12 md:w-20 md:h-20 bg-[#BFDF64] font-bold"
+            className="rounded-full z-30 bg-[#BFDF64] flex items-center justify-center w-20 h-20"
           >
             X
           </Link>
