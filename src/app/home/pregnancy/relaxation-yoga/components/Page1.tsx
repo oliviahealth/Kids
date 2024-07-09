@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../RelaxationYoga.module.css";
 
-// TODO: Ensure the sizes of the cards are consistent
-
 const RelaxationYogaPage1: React.FC<{
   onNext: () => void;
   onBack: () => void;
@@ -31,16 +29,18 @@ const RelaxationYogaPage1: React.FC<{
             With the many life changes and busy schedule that comes with planning your baby’s arrival, pregnancy can be an overwhelming time in your life. This is completely normal, but it's important you are working to manage this stress, so it does not affect you and your baby’s health. Different relaxation methods can be very useful tools to cope with stress during pregnancy. One of these methods is yoga. Yoga can be a great way to boost your mental and physical health. It can be used to take a needed break from your busy schedule. Preparing for your baby is important but staying happy and healthy is too! As a bonus, yoga builds skills in strength, flexibility, and mindful breathing to better prepare you for giving birth!  Now that we know a little bit about the benefits of yoga during pregnancy, let's get started!
           </p>
         </div>
-        {/* TODO: THE "MATERIALS NEEDED" NEEDS TO BE HERE */}
+        <div className={styles.imageWrapper}>
+          <img src="/images/materialsNeeded.png" alt="Materials Needed" className={styles.illustration} />
+        </div>
       </div>
       <div className={styles.buttonWrapper}>
-        <button className={styles.learnButton} >
+        <button className={styles.learnButton}>
           <img src="/images/learnmorebutton.svg" alt="Learn more" />
-        </button>
-        <button className={styles.continueButton} onClick={onNext}>
-          <img src="/images/continue.svg" alt="Continue" />
-        </button>
-      </div>
+          </button>
+          <button className={styles.continueButton} onClick={onNext}>
+            <img src="/images/continue.svg" alt="Continue" />
+            </button>
+        </div>
     </>
   );
 };
