@@ -19,10 +19,10 @@ export default function Page3({
         <div className="flex gap-4">
           <Image src={logo} alt="logo" />
           <div className="flex flex-col justify-center items-start">
-            <span className="text-sm md:text-xl font-bold">
+            <span className="text-xl font-bold">
               The Power of Coloring for Caregivers
             </span>
-            <span className="text-sm md:text-lg" style={{ color: "#52C5C0" }}>
+            <span className="text-lg" style={{ color: "#52C5C0" }}>
               Caregiver Wellness - Adventure Bay
             </span>
           </div>
@@ -38,10 +38,10 @@ export default function Page3({
         </div>
       </div>
 
-      <div className="h-4/6 w-full flex gap-4">
-        <div className="w-1/2 flex flex-col gap-4">
+      <div className="h-4/6 w-full flex gap-4 overflow-auto">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <h1 className="text-xl font-bold">Key Takeaways</h1>
-          <p className="text-sm 2xl:text-lg">
+          <p className="text-xl text-justify">
             Self-care and having ways to relieve stress are so important, and
             coloring is the perfect way to do this after a long day. Come back
             to this activity whenever you or your child need to relax your mind.

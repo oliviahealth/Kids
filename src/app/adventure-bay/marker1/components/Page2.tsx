@@ -18,10 +18,10 @@ export default function Page2({
         <div className="flex gap-4">
           <Image src={logo} alt="logo" />
           <div className="flex flex-col justify-center items-start">
-            <span className="text-sm md:text-xl font-bold">
+            <span className="text-xl font-bold">
               Affirmations for Children and Caregivers
             </span>
-            <span className="text-sm md:text-lg" style={{ color: "#52C5C0" }}>
+            <span className="text-lg" style={{ color: "#52C5C0" }}>
               Caregiver Wellness - Adventure Bay
             </span>
           </div>
@@ -37,17 +37,17 @@ export default function Page2({
         </div>
       </div>
 
-      <div className="h-4/6 w-full flex gap-4">
+      <div className="h-4/6 w-full flex gap-4 overflow-auto">
         <div className="w-full flex flex-col gap-4">
           <h1 className="text-xl font-bold">Activity</h1>
-          <div className="w-full h-full flex gap-4">
-            <div className="w-1/2 flex flex-col justify-between">
+          <div className="w-full h-full flex flex-col lg:flex-row gap-4">
+            <div className="w-full lg:w-1/2 flex flex-col justify-between gap-4">
               <div className="h-1/4 flex items-center gap-2">
                 <span className="rounded-2xl bg-[#C5FFFC] flex justify-center items-center p-5 text-xl font-bold">
                   1
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
+                  <p className="text-xl">
                     You may download and use the OlivaKIDS affirmation lists
                   </p>
                 </div>
@@ -58,7 +58,7 @@ export default function Page2({
                   2
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
+                  <p className="text-xl">
                     Find the affirmations that you relate to best. These will be
                     the most effective
                   </p>
@@ -70,7 +70,7 @@ export default function Page2({
                   3
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
+                  <p className="text-xl">
                     Recite these affirmations to yourself or your child at least
                     once a day
                   </p>
@@ -82,19 +82,19 @@ export default function Page2({
                   4
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
+                  <p className="text-xl">
                     Have faith in the words you are saying
                   </p>
                 </div>
               </div>
             </div>
-            <div className="w-1/2 flex flex-col justify-between">
+            <div className="w-full lg:w-1/2 flex flex-col justify-between gap-4 pt-8 lg:pt-0">
               <div className="h-1/4 flex items-center gap-2">
                 <span className="rounded-2xl bg-[#C5FFFC] flex justify-center items-center p-5 text-xl font-bold">
                   5
                 </span>
                 <div className="flex flex-col">
-                  <p className="text-xs lg:text-sm xl:text-lg 2xl:text-xl">
+                  <p className="text-xl">
                     Repeat this process at least once a day for an entire week
                   </p>
                 </div>
