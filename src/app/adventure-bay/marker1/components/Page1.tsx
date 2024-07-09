@@ -103,7 +103,7 @@ export default function Page1({
         >
           <h1 className="text-xl font-bold flex">Materials Needed</h1>
           <div className="flex flex-col gap-2 h-full w-full">
-            <div className="h-full flex flex-col md:flex-row gap-2 w-full">
+            <div className="h-full flex flex-col lg:flex-row gap-2 w-full">
               <div
                 className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center ${
                   isChecked.list ? "border-[#52C5C0]" : "border-[#52C5C0]"
@@ -163,7 +163,7 @@ export default function Page1({
               </div>
               <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white hidden md:flex"></div>
             </div>
-            <div className="h-full hidden md:flex gap-2 w-full">
+            <div className="h-full hidden lg:flex gap-2 w-full">
               <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
               <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
               <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
