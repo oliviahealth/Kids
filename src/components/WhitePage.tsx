@@ -116,7 +116,7 @@ export const WPAddPhotoButton: React.FC<{ color: string, icon: string, onClick: 
         onClick={onClick}
     >
         <div className="flex flex-col items-center">
-            <img src={icon} alt="Add a photo" className="w-12 h-12 mb-2" />
+            <img src={icon} alt="Add a photo" className="w-10 h-10 mb-2" />
             <span className="text-black text-opacity-40">Add a photo</span>
         </div>
     </div>

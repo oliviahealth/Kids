@@ -2,7 +2,7 @@ import React from 'react';
 import { WPHeader, WPDescription, WPContainer, WPNeedsContainer, WPNeedsContent } from '@/components/WhitePage';
 import { Page } from "@/components/Pagination";
 
-export default ({ onBack, onContinue, onExit }: Page) => <WPContainer backText="Learn More" image="/images/StarlightMeadows/WhitepageBackground.svg" onBack={onBack} onContinue={onContinue} onExit={onExit}>
+export default ({ onBack, onContinue, onExit }: Page) => <WPContainer backText="Back" image="/images/StarlightMeadows/WhitepageBackground.svg" onBack={onBack} onContinue={onContinue} onExit={onExit}>
     <WPHeader image={"/images/StarlightMeadows/HeaderIcon.svg"} title={"Stress Management - Stretching"} subtitleColor={"#5A6EDD"} subtitle={"Caregiver Wellness - Starlight Meadows"} />
     <WPDescription title={"Anywhere, Anytime"} paragraphs={[
         "Our method is effective for its versatility and convenience. ",
