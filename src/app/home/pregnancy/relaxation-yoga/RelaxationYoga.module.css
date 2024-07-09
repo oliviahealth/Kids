@@ -242,9 +242,13 @@
   width: 48%;
 }
 
+.activityTextWrapper {
+  margin-left: 1rem;
+}
+
 .activityItem {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
