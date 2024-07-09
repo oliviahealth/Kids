@@ -73,7 +73,7 @@ export default function Page1({
       <div className="h-4/6 w-full flex gap-4">
         <div className="w-1/2 flex flex-col gap-4">
           <h1 className="text-xl font-bold">Introduction</h1>
-          <p className="text-xs 2xl:text-lg">
+          <p className="text-xs 2xl:text-lg text-justify">
             When things do not seem to be going our way, taking the time to
             embrace and apply the art of gratitude allows us to shift our
             perspective away from hardship and focus on the gifts of life. In
