@@ -51,10 +51,10 @@ export default function Page1({
         <div className="flex gap-4">
           <Image src={logo} alt="logo" />
           <div className="flex flex-col justify-center items-start">
-            <span className="text-sm md:text-xl font-bold">
+            <span className="text-xl font-bold">
               My Gratitude Jars
             </span>
-            <span className="text-sm md:text-lg" style={{ color: "#52C5C0" }}>
+            <span className="text-lg" style={{ color: "#52C5C0" }}>
               Caregiver Wellness - Adventure Bay
             </span>
           </div>
@@ -70,10 +70,10 @@ export default function Page1({
         </div>
       </div>
 
-      <div className="h-4/6 w-full flex gap-8">
-        <div className="w-1/2 flex flex-col gap-4">
+      <div className="h-4/6 w-full flex flex-col lg:flex-row gap-8 overflow-y-auto">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <h1 className="text-xl font-bold">Introduction</h1>
-          <p className="text-xs lg:text-sm 2xl:text-lg text-justify">
+          <p className="text-lg text-justify">
             When things do not seem to be going our way, taking the time to
             embrace and apply the art of gratitude allows us to shift our
             perspective away from hardship and focus on the gifts of life. In
@@ -82,7 +82,7 @@ export default function Page1({
             example, studies have proven that a grateful mind aids in the
             regulation of blood pressure, mood, and sleep.
           </p>
-          <p className="text-xs lg:text-sm 2xl:text-lg text-justify">
+          <p className="text-lg text-justify">
             When we take a moment and reflect in a state of gratitude, this
             gives us a chance to be appreciative of little things, big things,
             and everything else in between. The benefits of demonstrating
@@ -94,7 +94,7 @@ export default function Page1({
           </p>
         </div>
         <div
-          className="w-1/2 rounded-3xl flex flex-col h-full p-5 gap-2"
+          className="w-full lg:w-1/2 rounded-3xl flex flex-col h-full p-5 gap-2"
           style={{
             border: "2px solid white",
             backgroundColor: "#C5FFFC",
@@ -102,7 +102,7 @@ export default function Page1({
         >
           <h1 className="text-xl font-bold flex">Materials Needed</h1>
           <div className="flex flex-col gap-2 h-full w-full">
-            <div className="h-full flex flex-col lg:flex-row gap-2 w-full">
+            <div className="h-full flex flex-row gap-2 w-full">
               <div
                 className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center ${
                   isChecked.list ? "border-[#52C5C0]" : "border-[#52C5C0]"
@@ -160,13 +160,19 @@ export default function Page1({
                   className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
                 />
               </div>
-              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white hidden md:flex"></div>
+              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white flex"></div>
             </div>
-            <div className="h-full hidden lg:flex gap-2 w-full">
-              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
-              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
-              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
-              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white"></div>
+            <div className="h-full flex flex-row gap-2 w-full">
+              <div
+                className={`h-full w-full rounded-2xl bg-[#8AEFEB] flex flex-col justify-around items-center`}
+              ></div>
+              <div
+                className={`h-full w-full rounded-2xl bg-[#8AEFEB] flex flex-col justify-around items-center`}
+              ></div>
+              <div
+                className={`h-full w-full rounded-2xl bg-[#8AEFEB] flex flex-col justify-around items-center`}
+              ></div>
+              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white flex"></div>
             </div>
           </div>
         </div>
