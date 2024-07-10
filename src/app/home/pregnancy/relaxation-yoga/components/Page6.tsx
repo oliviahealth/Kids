@@ -4,7 +4,7 @@ import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RelaxationYogaPage3({
+export default function RelaxationYogaPage6({
   onNext,
   onBack,
 }: {
@@ -15,12 +15,12 @@ export default function RelaxationYogaPage3({
     <div className="flex flex-col h-full w-full">
       <div className="h-1/6 flex justify-between items-center gap-8">
         <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
-          1
+          4
         </span>
 
         <div className="text-center">
-          <h1 className="text-2xl font-bold">Gather materials.</h1>
-          <p>You may download and use the OlivaKIDS affirmation lists.</p>
+          <h1 className="text-2xl font-bold">Believe</h1>
+          <p>Believe the words you are saying.</p>
         </div>
 
         <div className="">
