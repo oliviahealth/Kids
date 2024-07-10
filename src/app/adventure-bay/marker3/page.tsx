@@ -2,10 +2,15 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import backgroundMap from "../../../../public/images/background.png";
-import ActivityPage1 from "@/app/adventure-bay/marker3/components/Page1";
-import ActivityPage2 from "@/app/adventure-bay/marker3/components/Page2";
-import ActivityPage4 from "@/app/adventure-bay/marker4/components/Page4";
-import ActivityPage3 from "@/app/adventure-bay/marker3/components/Page3";
+import tempBackground from "../../../../public/images/dashboard/adventure-bay/temp_background.png";
+import Page1 from "@/app/adventure-bay/marker3/components/Page1";
+import Page2 from "@/app/adventure-bay/marker3/components/Page2";
+import Page3 from "@/app/adventure-bay/marker3/components/Page3";
+import ActivityPage1 from "./components/ActivityPage1";
+import ActivityPage2 from "./components/ActivityPage2";
+import ActivityPage3 from "./components/ActivityPage3";
+import ActivityPage4 from "./components/ActivityPage4";
+import ActivityStar from "./components/ActivityPageStar";
 
 const MeditationActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -31,7 +36,24 @@ const MeditationActivity: React.FC = () => {
       </div>
       <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
         <div className="row-start-2 row-end-12 col-start-2 col-end-12 z-20 h-full overflow-y-auto">
-          <div className="relative bg-white shadow-2xl rounded-2xl h-full p-10">
+          <div className="relative bg-white shadow-2xl rounded-2xl h-full p-10 overflow-auto">
+            {children}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const ActivityContainer: React.FC<{ children: ReactNode }> = ({
+    children,
+  }) => (
+    <div className="relative w-full h-full max-h-screen overflow-hidden">
+      <div className="h-full w-full">
+        <div className="z-20 h-full overflow-y-auto">
+          <div
+            className="relative shadow-2xl rounded-2xl h-full p-10"
+            style={{ backgroundColor: "#E1FF8D" }}
+          >
             {children}
           </div>
         </div>
@@ -43,28 +65,56 @@ const MeditationActivity: React.FC = () => {
     {
       content: (
         <MapContainer>
+          <Page1 onNext={handleNext} onBack={handleBack} />
+        </MapContainer>
+      ),
+    },
+    {
+      content: (
+        <MapContainer>
+          <Page2 onNext={handleNext} onBack={handleBack} />
+        </MapContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
           <ActivityPage1 onNext={handleNext} onBack={handleBack} />
-        </MapContainer>
+        </ActivityContainer>
       ),
     },
     {
       content: (
-        <MapContainer>
+        <ActivityContainer>
           <ActivityPage2 onNext={handleNext} onBack={handleBack} />
-        </MapContainer>
+        </ActivityContainer>
       ),
     },
     {
       content: (
-        <MapContainer>
+        <ActivityContainer>
           <ActivityPage3 onNext={handleNext} onBack={handleBack} />
-        </MapContainer>
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityPage4 onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityStar onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <ActivityPage4 onNext={handleNext} onBack={handleBack} />
+          <Page3 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
