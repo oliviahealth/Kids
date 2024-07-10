@@ -1,5 +1,6 @@
 "use client";
 
+import { it } from 'node:test';
 import React, { ReactNode, useState } from 'react';
 
 export const WPHeader: React.FC<{ image: string, title: string, subtitleColor: string, subtitle: string }> = ({ image, title, subtitleColor, subtitle }) => (
@@ -31,12 +32,12 @@ export const WPContainer: React.FC<{ children: ReactNode, onBack: () => void, ba
                 </button>
 
                 <div className="md:flex justify-between space-x-16">
-                    <div className="w-full xl:w-auto xl:max-w-[60%] flex flex-col">
+                    <div className="w-full xl:w-auto flex flex-col">
                         {children}
                     </div>
-                    {
+                    {/* {
                         image && <img src={image} className="hidden max-w-[30%] xl:block w-auto h-auto max-h-[40vh]" />
-                    }
+                    } */}
                 </div>
 
                 <div className="flex justify-between w-full mt-4">
@@ -50,22 +51,29 @@ export const WPContainer: React.FC<{ children: ReactNode, onBack: () => void, ba
     </div >
 );
 
-export const WPNeedsContainer: React.FC<{ title?: string, children: ReactNode }> = ({ title, children }) => <div className="mb-8">
-    {title && <h1 className="text-2xl font-bold mb-8">{title}</h1>}
+export const WPNeedsContainer: React.FC<{ title?: string, bgColor: string, children: ReactNode }> = ({ title, bgColor, children }) => <div style={{ backgroundColor: bgColor }} className="rounded-xl p-4 mb-8">
+    {title && <h1 className="text-2xl font-bold mb-4">{title}</h1>}
     {children}
 </div>
 
-export const WPNeedsContent: React.FC<{ title?: string, items: { name: string, image: string }[] }> = ({ title, items }) => <div>
+export const WPNeedsItem: React.FC<{ checked: boolean, name: string, image: string, bgColor: string, outlineColor: string }> = ({ checked, name, image, bgColor, outlineColor }) => (
+    <div key={name} style={{ outlineColor: outlineColor }} className="outline bg-white rounded-3xl flex flex-col items-center p-4">
+        <img src={image} alt={name} className="size-10 lg:size-20 mb-4 object-cover" />
+        <span style={{ color: outlineColor }} className="text-sm lg:text-xl">{name}</span>
+        <div style={{ outlineColor: outlineColor }} className="rounded-full outline size-8 mt-4 flex items-center justify-center">
+            {checked && <img src="/images/check.svg" alt="Checked" className="size-6" />}
+        </div>
+    </div>
+)
+
+export const WPNeedsContent: React.FC<{ title?: string, bgColor: string, outlineColor: string, items: { name: string, image: string }[] }> = ({ bgColor, outlineColor, title, items }) => <div>
     {title && <h2 className="text-lg font-semibold mb-4">{title}</h2>}
-    <div className="ml-4 sm:flex space-x-8">
-        {items.map((item) => (
-            <div key={item.name} className="flex flex-col items-center">
-                <img src={item.image} alt={item.name} className="h-16 w-16 mb-4 object-cover" />
-                <span className="text-xl">{item.name}</span>
-            </div>
-        ))}
+    <div className="grid grid-cols-4 gap-4">
+        {items.map((item) => <WPNeedsItem checked={true} outlineColor={outlineColor} bgColor={bgColor} key={item.name} {...item} />)}
+        {Array.from({ length: 4 - (items.length % 4) }, (_, index) => <div key={index} style={{ backgroundColor: bgColor }} className="rounded-3xl" />)}
     </div>
 </div>
+
 
 export const WPTitle: React.FC<{ title: string }> = ({ title }) => <h2 className="text-2xl font-bold mb-8">{title}</h2>
 
