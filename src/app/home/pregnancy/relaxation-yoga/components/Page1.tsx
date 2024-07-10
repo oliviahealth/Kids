@@ -35,12 +35,11 @@ const RelaxationYogaPage1: React.FC<{
             With the many life changes and busy schedule that comes with planning your baby’s arrival, pregnancy can be an overwhelming time in your life. This is completely normal, but it's important you are working to manage this stress, so it does not affect you and your baby’s health. Different relaxation methods can be very useful tools to cope with stress during pregnancy. One of these methods is yoga. Yoga can be a great way to boost your mental and physical health. It can be used to take a needed break from your busy schedule. Preparing for your baby is important but staying happy and healthy is too! As a bonus, yoga builds skills in strength, flexibility, and mindful breathing to better prepare you for giving birth!  Now that we know a little bit about the benefits of yoga during pregnancy, let's get started!
           </p>
         </div>
-        <div className={styles.imageWrapper}>
+        <div className={`${styles.imageWrapper}`}>
           <MaterialChecklist 
             materials={materials} 
             onComplete={() => {
               console.log("All materials checked!");
-              // You can add more logic here if needed
             }}
           />
         </div>

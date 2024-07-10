@@ -12,7 +12,6 @@ interface MaterialChecklistProps {
 
 export default function MaterialChecklist({ materials, onComplete }: MaterialChecklistProps) {
   const [isChecked, setIsChecked] = useState<Record<string, boolean>>({});
-  const [buttonDisabled, setButtonDisabled] = useState(true);
 
   useEffect(() => {
     const initialCheckedState = materials.reduce((acc, material) => {
@@ -22,54 +21,73 @@ export default function MaterialChecklist({ materials, onComplete }: MaterialChe
     setIsChecked(initialCheckedState);
   }, [materials]);
 
-  useEffect(() => {
-    const allChecked = Object.values(isChecked).every(value => value);
-    setButtonDisabled(!allChecked);
-  }, [isChecked]);
-
   const handleCheckboxChange = (label: string) => {
-    setIsChecked(prevState => ({
-      ...prevState,
-      [label]: !prevState[label],
-    }));
+    setIsChecked(prevState => {
+      const newState = {
+        ...prevState,
+        [label]: !prevState[label],
+      };
+      
+      const allChecked = Object.values(newState).every(value => value);
+      
+      if (allChecked) {
+        onComplete();
+      }
+      
+      return newState;
+    });
   };
 
-  return (
-    <div className="w-full rounded-3xl flex flex-col h-full p-5 gap-2" style={{ border: "2px solid white", backgroundColor: "#C5FFFC" }}>
-      <h1 className="text-xl font-bold flex">Materials Needed</h1>
-      <div className="flex flex-wrap gap-2 h-full w-full">
-        {materials.map((material, index) => (
-          <div
-            key={index}
-            className={`border-2 h-2/6 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 rounded-2xl bg-white flex flex-col justify-around items-center p-2 ${
-              isChecked[material.label] ? "border-[#52C5C0]" : "border-[#52C5C0]"
-            }`}
-          >
-            <Image src={material.imagePath} alt={material.label} width={60} height={60} />
-            <h1 className="text-md font-bold text-center" style={{ color: "#52C5C0" }}>
-              {material.label}
-            </h1>
-            <input
-              type="checkbox"
-              checked={isChecked[material.label]}
-              onChange={() => handleCheckboxChange(material.label)}
-              className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
-            />
-          </div>
-        ))}
-      </div>
-      {/* <div className="flex justify-end mt-4">
-        <button
-          className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center ${
-            buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
+  const renderMaterialItem = (material: { imagePath: string; label: string } | null, index: number) => {
+    if (material) {
+      return (
+        <div
+          key={index}
+          className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center p-2 ${
+            isChecked[material.label] ? "border-[#52C5C0]" : "border-[#52C5C0]"
           }`}
-          onClick={onComplete}
-          disabled={buttonDisabled}
         >
-          Continue
-          <Image src="/images/dashboard/adventure-bay/next_arrow.png" alt="arrow" width={30} height={30} />
-        </button>
-      </div> */}
+          <Image src={material.imagePath} alt={material.label} width={60} height={60} />
+          <h1
+            className="text-md font-bold text-center"
+            style={{ color: "#52C5C0" }}
+          >
+            {material.label}
+          </h1>
+          <input
+            type="checkbox"
+            checked={isChecked[material.label]}
+            onChange={() => handleCheckboxChange(material.label)}
+            className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div key={index} className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white flex"></div>
+      );
+    }
+  };
+
+  const filledMaterials = [...materials, ...Array(8 - materials.length).fill(null)];
+
+  return (
+    <div
+      className="w-full rounded-3xl flex flex-col h-full p-5 gap-2"
+      style={{
+        border: "2px solid white",
+        backgroundColor: "#C5FFFC",
+      }}
+    >
+      <h1 className="text-xl font-bold flex">Materials Needed</h1>
+      <div className="flex flex-col gap-2 h-full w-full">
+        <div className="h-full flex flex-row gap-2 w-full">
+          {filledMaterials.slice(0, 4).map((material, index) => renderMaterialItem(material, index))}
+        </div>
+        <div className="h-full flex flex-row gap-2 w-full">
+          {filledMaterials.slice(4, 8).map((material, index) => renderMaterialItem(material, index + 4))}
+        </div>
+      </div>
     </div>
   );
 }
