@@ -1,11 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../RelaxationYoga.module.css";
+import MaterialChecklist from "@/components/MaterialChecklist";
 
 const RelaxationYogaPage1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
+  const materials = [
+    { imagePath: "/images/farmer_dude.svg", label: "OliviaKids Affirmation List" },
+    { imagePath: "/images/farmer_dude.svg", label: "Pencil" },
+    { imagePath: "/images/farmer_dude.svg", label: "Paper" }
+  ];
   return (
     <>
       <div className={styles.headerWrapper}>
@@ -30,7 +36,13 @@ const RelaxationYogaPage1: React.FC<{
           </p>
         </div>
         <div className={styles.imageWrapper}>
-          <img src="/images/materialsNeeded.png" alt="Materials Needed" className={styles.illustration} />
+          <MaterialChecklist 
+            materials={materials} 
+            onComplete={() => {
+              console.log("All materials checked!");
+              // You can add more logic here if needed
+            }}
+          />
         </div>
       </div>
       <div className={styles.buttonWrapper}>
