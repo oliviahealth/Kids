@@ -13,8 +13,8 @@ export default function Page2({
   onBack: () => void;
 }) {
   return (
-    <div className="flex flex-col h-full w-full gap-4">
-      <div className="h-1/6 flex justify-between items-center">
+    <div className="flex flex-col justify-between h-full w-full gap-8">
+      <div className="flex justify-between items-center">
         <div className="flex gap-4">
           <Image src={logo} alt="logo" />
           <div className="flex flex-col justify-center items-start">
@@ -37,8 +37,8 @@ export default function Page2({
         </div>
       </div>
 
-      <div className="h-4/6 w-full flex gap-4 overflow-auto">
-        <div className="w-full flex flex-col gap-4">
+      <div className="w-full flex gap-4 flex-grow">
+        <div className="w-full flex flex-col justify-between gap-4">
           <h1 className="text-xl font-bold">Activity</h1>
           <div className="w-full h-full flex flex-col lg:flex-row gap-4">
             <div className="w-full lg:w-1/2 flex flex-col justify-between gap-4">
@@ -104,7 +104,7 @@ export default function Page2({
           </div>
         </div>
       </div>
-      <div className="h-1/6 flex justify-between items-end">
+      <div className="flex justify-between items-end">
         <div className="">
           <button
             className="text-red-600 border-2 border-red-300 rounded-3xl py-2 px-4"

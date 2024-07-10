@@ -39,7 +39,7 @@ const AdventureBayActivity: React.FC = () => {
       </div>
       <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
         <div className="row-start-2 row-end-12 col-start-2 col-end-12 z-20 h-full overflow-y-auto">
-          <div className="relative bg-white shadow-2xl rounded-2xl h-full p-10">
+          <div className="relative bg-white shadow-2xl rounded-2xl h-full p-10 overflow-auto">
             {children}
           </div>
         </div>

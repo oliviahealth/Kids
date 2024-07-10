@@ -46,8 +46,8 @@ export default function Page1({
   };
 
   return (
-    <div className="flex flex-col h-full w-full gap-4">
-      <div className="h-1/6 flex justify-between items-center">
+    <div className="flex flex-col justify-between h-full w-full gap-8">
+      <div className="flex justify-between items-center">
         <div className="flex gap-4">
           <Image src={logo} alt="logo" />
           <div className="flex flex-col justify-center items-start">
@@ -70,7 +70,7 @@ export default function Page1({
         </div>
       </div>
 
-      <div className="h-4/6 w-full flex flex-col lg:flex-row gap-8 overflow-y-auto">
+      <div className="w-full flex flex-col lg:flex-row gap-8 flex-grow">
         <div className="w-full lg:w-1/2 flex flex-col gap-4">
           <h1 className="text-xl font-bold">Introduction</h1>
           <p className="text-lg text-justify">
@@ -104,11 +104,11 @@ export default function Page1({
           <div className="flex flex-col gap-2 h-full w-full">
             <div className="h-full flex flex-row gap-2 w-full">
               <div
-                className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center ${
+                className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center p-2 ${
                   isChecked.list ? "border-[#52C5C0]" : "border-[#52C5C0]"
                 }`}
               >
-                <Image src={pages} alt="List" width={60} height={60} />
+                <Image src={pages} alt="List" width={40} height={40} />
                 <h1
                   className="text-md font-bold text-center"
                   style={{ color: "#52C5C0" }}
@@ -123,7 +123,7 @@ export default function Page1({
                 />
               </div>
               <div
-                className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center ${
+                className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center p-2 ${
                   isChecked.pen ? "border-[#52C5C0]" : "border-[#52C5C0]"
                 }`}
               >
@@ -142,7 +142,7 @@ export default function Page1({
                 />
               </div>
               <div
-                className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center ${
+                className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center p-2 ${
                   isChecked.paper ? "border-[#52C5C0]" : "border-[#52C5C0]"
                 }`}
               >
@@ -160,7 +160,7 @@ export default function Page1({
                   className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
                 />
               </div>
-              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white flex"></div>
+              <div className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white flex p-2"></div>
             </div>
             <div className="h-full flex flex-row gap-2 w-full">
               <div
@@ -177,7 +177,7 @@ export default function Page1({
           </div>
         </div>
       </div>
-      <div className="h-1/6 flex justify-between items-end">
+      <div className="flex justify-between items-end">
         <div className="">
           <button className="text-red-600 border-2 border-red-300 rounded-3xl py-2 px-4">
             Learn More
