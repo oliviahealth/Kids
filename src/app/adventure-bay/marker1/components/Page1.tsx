@@ -184,7 +184,7 @@ export default function Page1({
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-end">
+      <div className="flex justify-between items-end pb-10 lg:pb-5 2xl:pb-0">
         <div className="">
           <button className="text-red-600 border-2 border-red-300 rounded-3xl py-2 px-4">
             Learn More
