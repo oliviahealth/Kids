@@ -62,7 +62,7 @@ export default function MaterialChecklist({
           className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center p-2`}
           style={{ borderColor: `#${colorScheme.borderColor}` }}
         >
-          <Image src={material.imagePath} alt={material.label} width={60} height={60} />
+          <Image src={material.imagePath} alt={material.label} width={90} height={60} />
           <h1
             className="text-md font-bold text-center"
             style={{ color: `#${colorScheme.borderColor}` }}

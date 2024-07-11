@@ -11,16 +11,9 @@ const RelaxationYogaPage1: React.FC<{
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const materials = [
-    {
-      imagePath: "/images/farmer_dude.svg",
-      label: "OliviaKids Affirmation List",
-    },
-    { imagePath: "/images/farmer_dude.svg", label: "Pencil" },
-    { imagePath: "/images/farmer_dude.svg", label: "Pie" },
-    { imagePath: "/images/farmer_dude.svg", label: "Breeze" },
-    { imagePath: "/images/farmer_dude.svg", label: "Balls" },
-    { imagePath: "/images/farmer_dude.svg", label: "Pencil2" },
-    { imagePath: "/images/farmer_dude.svg", label: "Pencil3" },
+    { imagePath: "/images/yoga-mat.svg", label: "Yoga Mat" },
+    { imagePath: "/images/pillow.svg", label: "Pillows" },
+    { imagePath: "/images/music.svg", label: "Relaxing Music" }
   ];
   return (
     <>
@@ -74,9 +67,9 @@ const RelaxationYogaPage1: React.FC<{
             materials={materials}
             setButtonDisabled={setButtonDisabled}
             colorScheme={{
-              borderColor: "52C5C0",
-              emptySlotColor: "8AEFEB",
-              backgroundColor: "C5FFFC",
+              borderColor: "F797FF",
+              emptySlotColor: "FCD3FF",
+              backgroundColor: "FEEDFF",
             }}
           />
         </div>
