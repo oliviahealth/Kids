@@ -67,8 +67,16 @@ const RelaxationYogaPage2: React.FC<{
         <button className={styles.Button} onClick={onBack}>
           <img src="/images/backbuttonnew.svg" alt="Back" />
         </button>
-        <button className={styles.continueButton} onClick={onNext}>
-          <img src="/images/continue.svg" alt="Continue" />
+        <button
+          className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center`}
+          onClick={onNext}>
+          Continue
+          <Image
+            src="/images/dashboard/adventure-bay/next_arrow.png"
+            alt="arrow"
+            width={30}
+            height={30}
+          />
         </button>
       </div>
     </>
