@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 interface MaterialChecklistProps {
@@ -7,19 +7,32 @@ interface MaterialChecklistProps {
     imagePath: string;
     label: string;
   }[];
-  onComplete: () => void;
+  setButtonDisabled: (disabled: boolean) => void;
 }
 
-export default function MaterialChecklist({ materials, onComplete }: MaterialChecklistProps) {
+export default function MaterialChecklist({ 
+  materials, 
+  setButtonDisabled 
+}: MaterialChecklistProps) {
   const [isChecked, setIsChecked] = useState<Record<string, boolean>>({});
+  const initializedRef = useRef(false);
 
   useEffect(() => {
-    const initialCheckedState = materials.reduce((acc, material) => {
-      acc[material.label] = false;
-      return acc;
-    }, {} as Record<string, boolean>);
-    setIsChecked(initialCheckedState);
-  }, [materials]);
+    if (!initializedRef.current) {
+      const initialCheckedState = materials.reduce((acc, material) => {
+        acc[material.label] = false;
+        return acc;
+      }, {} as Record<string, boolean>);
+      setIsChecked(initialCheckedState);
+      setButtonDisabled(true);
+      initializedRef.current = true;
+    }
+  }, [materials, setButtonDisabled]);
+
+  useEffect(() => {
+    const allChecked = Object.values(isChecked).every(value => value);
+    setButtonDisabled(!allChecked);
+  }, [isChecked, setButtonDisabled]);
 
   const handleCheckboxChange = (label: string) => {
     setIsChecked(prevState => {
@@ -27,13 +40,9 @@ export default function MaterialChecklist({ materials, onComplete }: MaterialChe
         ...prevState,
         [label]: !prevState[label],
       };
-      
       const allChecked = Object.values(newState).every(value => value);
-      
-      if (allChecked) {
-        onComplete();
-      }
-      
+      // console.log('All checked:', allChecked);
+      setButtonDisabled(!allChecked);
       return newState;
     });
   };

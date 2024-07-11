@@ -2,14 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../RelaxationYoga.module.css";
 import MaterialChecklist from "@/components/MaterialChecklist";
+import { useState } from "react";
 
 const RelaxationYogaPage1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+
   const materials = [
     { imagePath: "/images/farmer_dude.svg", label: "OliviaKids Affirmation List" },
     { imagePath: "/images/farmer_dude.svg", label: "Pencil" },
+    { imagePath: "/images/farmer_dude.svg", label: "Pie" },
+    { imagePath: "/images/farmer_dude.svg", label: "Breeze" },
+    { imagePath: "/images/farmer_dude.svg", label: "Balls" },
+    { imagePath: "/images/farmer_dude.svg", label: "Pencil2" },
+    { imagePath: "/images/farmer_dude.svg", label: "Pencil3" },
     { imagePath: "/images/farmer_dude.svg", label: "Paper" }
   ];
   return (
@@ -38,9 +46,7 @@ const RelaxationYogaPage1: React.FC<{
         <div className={`${styles.imageWrapper}`}>
           <MaterialChecklist 
             materials={materials} 
-            onComplete={() => {
-              console.log("All materials checked!");
-            }}
+            setButtonDisabled={setButtonDisabled}
           />
         </div>
       </div>
@@ -48,9 +54,16 @@ const RelaxationYogaPage1: React.FC<{
         <button className={styles.learnButton}>
           <img src="/images/learnmorebutton.svg" alt="Learn more" />
           </button>
-          <button className={styles.continueButton} onClick={onNext}>
-            <img src="/images/continue.svg" alt="Continue" />
-            </button>
+          <button
+            className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center ${
+              buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            onClick={onNext}
+            disabled={buttonDisabled}
+          >
+            Continue
+            <Image src="/images/dashboard/adventure-bay/next_arrow.png" alt="arrow" width={30} height={30} />
+          </button>
         </div>
     </>
   );
