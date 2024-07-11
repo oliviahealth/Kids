@@ -2,17 +2,25 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
+interface ColorScheme {
+  borderColor: string;
+  emptySlotColor: string;
+  backgroundColor: string;
+}
+
 interface MaterialChecklistProps {
   materials: {
     imagePath: string;
     label: string;
   }[];
   setButtonDisabled: (disabled: boolean) => void;
+  colorScheme: ColorScheme;
 }
 
 export default function MaterialChecklist({ 
   materials, 
-  setButtonDisabled 
+  setButtonDisabled,
+  colorScheme
 }: MaterialChecklistProps) {
   const [isChecked, setIsChecked] = useState<Record<string, boolean>>({});
   const initializedRef = useRef(false);
@@ -41,7 +49,6 @@ export default function MaterialChecklist({
         [label]: !prevState[label],
       };
       const allChecked = Object.values(newState).every(value => value);
-      // console.log('All checked:', allChecked);
       setButtonDisabled(!allChecked);
       return newState;
     });
@@ -52,14 +59,13 @@ export default function MaterialChecklist({
       return (
         <div
           key={index}
-          className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center p-2 ${
-            isChecked[material.label] ? "border-[#52C5C0]" : "border-[#52C5C0]"
-          }`}
+          className={`border-2 h-full w-full rounded-2xl bg-white flex flex-col justify-around items-center p-2`}
+          style={{ borderColor: `#${colorScheme.borderColor}` }}
         >
           <Image src={material.imagePath} alt={material.label} width={60} height={60} />
           <h1
             className="text-md font-bold text-center"
-            style={{ color: "#52C5C0" }}
+            style={{ color: `#${colorScheme.borderColor}` }}
           >
             {material.label}
           </h1>
@@ -67,13 +73,21 @@ export default function MaterialChecklist({
             type="checkbox"
             checked={isChecked[material.label]}
             onChange={() => handleCheckboxChange(material.label)}
-            className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
+            className="appearance-none h-6 w-6 rounded-full border-2 focus:outline-none"
+            style={{ 
+              borderColor: `#${colorScheme.borderColor}`,
+              backgroundColor: isChecked[material.label] ? `#${colorScheme.borderColor}` : 'transparent'
+            }}
           />
         </div>
       );
     } else {
       return (
-        <div key={index} className="h-full w-full rounded-2xl bg-[#8AEFEB] text-white flex"></div>
+        <div 
+          key={index} 
+          className="h-full w-full rounded-2xl text-white flex"
+          style={{ backgroundColor: `#${colorScheme.emptySlotColor}` }}
+        ></div>
       );
     }
   };
@@ -85,7 +99,7 @@ export default function MaterialChecklist({
       className="w-full rounded-3xl flex flex-col h-full p-5 gap-2"
       style={{
         border: "2px solid white",
-        backgroundColor: "#C5FFFC",
+        backgroundColor: `#${colorScheme.backgroundColor}`,
       }}
     >
       <h1 className="text-xl font-bold flex">Materials Needed</h1>
