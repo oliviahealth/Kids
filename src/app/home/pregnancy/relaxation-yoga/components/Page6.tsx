@@ -18,9 +18,9 @@ export default function RelaxationYogaPage6({
           4
         </span>
 
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">Believe</h1>
-          <p>Believe the words you are saying.</p>
+        <div className="text-center max-w-2xl mx-auto">
+          <h1 className="text-2xl font-bold">Child’s Pose</h1>
+          <p>Next, slowly move into Child’s Pose by sitting back on your feet and stretching your arms out in front of you. Hold this position. Take five deep breaths.</p>
         </div>
 
         <div className="">
@@ -50,12 +50,6 @@ export default function RelaxationYogaPage6({
           </button>
         </div>
         <div className="px-4 py-4 md:px-0 grid grid-cols-12">
-          {/* <p className="text-center text-xl md:text-xl tracking-wide col-start-4 col-end-10">
-            Sit or stand up straight, relax your shoulders, and slowly move your
-            head in a circle, first to the right and then to the left, while
-            breathing deeply. Repeat this 5-10 times to help your neck feel
-            better and more flexible.
-          </p> */}
         </div>
       </div>
     </div>

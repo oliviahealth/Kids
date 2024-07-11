@@ -9,7 +9,6 @@ import RelaxationYogaPage6 from "./components/Page6";
 import RelaxationYogaPage7 from "./components/Page7";
 import RelaxationYogaPage8 from "./components/Page8";
 import RelaxationYogaPage9 from "./components/Page9";
-import RelaxationYogaPage10 from "./components/Page10";
 
 import styles from "./RelaxationYoga.module.css";
 
@@ -110,15 +109,8 @@ const RelaxationYoga: React.FC = () => {
     },
     {
       content: (
-        <ActivityContainer>
-          <RelaxationYogaPage9 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
-      ),
-    },
-    {
-      content: (
         <MapContainer>
-          <RelaxationYogaPage10 onNext={handleNext} onBack={handleBack} />
+          <RelaxationYogaPage9 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },

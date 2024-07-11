@@ -32,10 +32,7 @@ const RelaxationYogaPage2: React.FC<{
                   <p className={styles.activityNumber}>1</p>
                 </div>
                 <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg font-bold">Set Up</h1>
-                  <p>
-                    Find a quiet and comfortable place. Lay out your mat, towel, or blanket, and pillows on the floor. Play your choice of music. Sit with your legs crossed.
-                  </p>
+                  <h1 className="text-lg">Find a quiet and comfortable place</h1>
                 </div>
               </div>
               <div className={styles.activityItem}>
@@ -43,10 +40,7 @@ const RelaxationYogaPage2: React.FC<{
                   <p className={styles.activityNumber}>2</p>
                 </div>
                 <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg font-bold">Slow your breathing and mind</h1>
-                  <p>
-                    Close your eyes. Clear your mind. Take five deep breaths, holding your breath in and letting it out.
-                  </p>
+                  <h1 className="text-lg">Lay out your mat, towel, or blanket, and pillows on the floor</h1>
                 </div>
               </div>
               <div className={styles.activityItem}>
@@ -54,10 +48,7 @@ const RelaxationYogaPage2: React.FC<{
                   <p className={styles.activityNumber}>3</p>
                 </div>
                 <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg font-bold">Neck Rotation</h1>
-                  <p>
-                    With your eyes closed, put your chin to your chest and slowly rotate your head clockwise. Rotate your head three times clockwise, loosening the tension in your neck and shoulders. Rotate your head three times counterclockwise. Take deep breaths throughout.
-                  </p>
+                  <h1 className="text-lg">Play your choice of music</h1>
                 </div>
               </div>
               <div className={styles.activityItem}>
@@ -65,34 +56,7 @@ const RelaxationYogaPage2: React.FC<{
                   <p className={styles.activityNumber}>4</p>
                 </div>
                 <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg font-bold">Cat-Cow Pose</h1>
-                  <p>
-                    Open your eyes and slowly move into a tabletop position with your hands and knees on the ground. Begin by slowly arching your back towards the sky, stretching your shoulder blades apart like a cat. Breathe in while in this position. Next, stretch your belly towards the floor and your chest to the sky like a cow. Breathe out in this position. Repeat this stretch five times, breathing in on cat and out on cow.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className={styles.activityColumn}>
-              <div className={styles.activityItem}>
-                <div className={`${styles.circle}`}>
-                  <p className={styles.activityNumber}>5</p>
-                </div>
-                <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg font-bold">Child’s Pose</h1>
-                  <p>
-                    Next, slowly move into Child’s Pose by sitting back on your feet and stretching your arms out in front of you. Hold this position. Take five deep breaths.
-                  </p>
-                </div>
-              </div>
-              <div className={styles.activityItem}>
-                <div className={`${styles.circle}`}>
-                  <p className={styles.activityNumber}>6</p>
-                </div>
-                <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg font-bold">Savasana</h1>
-                  <p>
-                    Lastly, move into a comfortable laying position, using your pillows for support behind your head, back, or in between your legs. Close your eyes. Take five deep breaths.
-                  </p>
+                  <h1 className="text-lg">Sit with your legs crossed.</h1>
                 </div>
               </div>
             </div>

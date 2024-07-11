@@ -1,82 +1,72 @@
-"use client";
-import React, { useEffect } from "react";
-import star from "../../../../../../public/images/dashboard/adventure-bay/Star 27.svg";
-import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.png";
 import Image from "next/image";
 import Link from "next/link";
-import confetti from "canvas-confetti";
+import styles from "../RelaxationYoga.module.css";
 
-export default function RelaxationYogaPage9({
-  onNext,
-  onBack,
-}: {
+const RelaxationYogaPage9: React.FC<{
   onNext: () => void;
   onBack: () => void;
-}) {
-  useEffect(() => {
-    const duration = 3 * 1000; // 3 seconds
-    const end = Date.now() + duration;
-
-    const frame = () => {
-      confetti({
-        particleCount: 2,
-        angle: 60,
-        spread: 55,
-        origin: { x: Math.random(), y: Math.random() },
-      });
-      confetti({
-        particleCount: 2,
-        angle: 120,
-        spread: 55,
-        origin: { x: Math.random(), y: Math.random() },
-      });
-
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    };
-
-    frame();
-  }, []);
+}> = ({ onNext, onBack }) => {
   return (
-    <div className="flex flex-col h-full w-full">
-      <div className="h-1/6 flex justify-between items-center gap-8">
-        <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
-          7
-        </span>
-
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">Well done!</h1>
-          <p>Repeat this exercise whenever you need it. Here is your star!</p>
+    <>
+      <div className={styles.headerWrapper}>
+        <div className={styles.header}>
+          <img
+            src="/images/flower.svg"
+            alt="Flower Icon"
+            className={styles.icon}
+          />
+          <div>
+            <h1 className={styles.title}>Relaxation Yoga</h1>
+            <h2 className={styles.subtitle}>
+              Caregiver Wellness - Blossom Haven
+            </h2>
+          </div>
         </div>
-
-        <div className="">
-          <Link
-            href="/home"
-            className="rounded-full z-30 bg-[#BFDF64] flex items-center justify-center w-20 h-20"
-          >
-            X
-          </Link>
-        </div>
-      </div>
-      <div className="h-4/6 flex justify-center items-center">
-        <Image src={star} alt="Star" />
-      </div>
-      <div className="h-1/6 flex flex-col md:flex-row justify-center items-center relative">
-        <div className="absolute bottom-2 left-2 md:bottom-5 md:left-5">
-          <button className="text-red-600 py-2 px-4" onClick={onBack}>
-            Back
+        <Link href="/home">
+          <button className={styles.exitButton}>
+            <img
+              src="/images/exit.svg"
+              alt="Exit"
+              className={styles.exitIcon}
+            />
           </button>
-        </div>
-        <div className="absolute bottom-2 right-2 md:bottom-5 md:right-5">
-          <button
-            onClick={onNext}
-            className="rounded-full z-30 flex items-center justify-center w-12 h-12 md:w-20 md:h-20 bg-[#BFDF64]"
-          >
-            <Image src={arrow} alt="Arrow" />
-          </button>
+        </Link>
+      </div>
+      <div className={styles.contentWrapper}>
+        <div
+          className={`${styles.content} d-flex flex-column justify-content-between`}
+        >
+          <div>
+            <h3 className={styles.heading}>
+              <b>Key Takeaways</b>
+            </h3>
+            <p className={styles.text}>
+              Congrats, you have completed your Relaxation Yoga session! After
+              completing one session, you will recieve your activity completion
+              sticker. These are some of the many poses available for you to
+              relax, stretch, reduce pain, and build flexibility. Don't be
+              afraid to venture out and find new poses. Just remember to focus
+              on comfort and relaxation while doing so.
+            </p>
+          </div>
+          <div className={`pt-3 align-self-center`}>
+            <Image
+              height={250}
+              width={250}
+              priority
+              src="/images/pregnancy_add_a_photo.svg"
+              alt="Exit button"
+            />
+          </div>
         </div>
       </div>
-    </div>
+      <div className={styles.buttonWrapper}>
+        <button className={styles.Button} onClick={onBack}>
+          <img src="/images/backbuttonnew.svg" alt="Continue" />
+        </button>
+      </div>
+    </>
   );
-}
+};
+
+export default RelaxationYogaPage9;

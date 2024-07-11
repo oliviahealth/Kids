@@ -18,9 +18,9 @@ export default function RelaxationYogaPage7({
           5
         </span>
 
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">Repeat</h1>
-          <p>Repeat this process at least once a day for an entire week.</p>
+        <div className="text-center max-w-2xl mx-auto">
+          <h1 className="text-2xl font-bold">Savasana</h1>
+          <p>Lastly, move into a comfortable laying position, using your pillows for support behind your head, back, or in between your legs. Close your eyes. Take five deep breaths.</p>
         </div>
 
         <div className="">
@@ -50,12 +50,6 @@ export default function RelaxationYogaPage7({
           </button>
         </div>
         <div className="px-4 py-4 md:px-0 grid grid-cols-12">
-          {/* <p className="text-center text-xl md:text-xl tracking-wide col-start-4 col-end-10">
-            Sit or stand up straight, relax your shoulders, and slowly move your
-            head in a circle, first to the right and then to the left, while
-            breathing deeply. Repeat this 5-10 times to help your neck feel
-            better and more flexible.
-          </p> */}
         </div>
       </div>
     </div>

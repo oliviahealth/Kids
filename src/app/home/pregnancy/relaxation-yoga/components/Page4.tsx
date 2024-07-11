@@ -18,11 +18,10 @@ export default function RelaxationYogaPage4({
           2
         </span>
 
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">Find affirmations</h1>
+        <div className="text-center max-w-2xl mx-auto">
+          <h1 className="text-2xl font-bold">Neck Rotation</h1>
           <p>
-            Find the affirmations that you relate to best. These are the most
-            effective.
+            With your eyes closed, put your chin to your chest and slowly rotate your head clockwise. Rotate your head three times clockwise, loosening the tension in your neck and shoulders. Rotate your head three times counterclockwise. Take deep breaths throughout.
           </p>
         </div>
 
@@ -53,12 +52,6 @@ export default function RelaxationYogaPage4({
           </button>
         </div>
         <div className="px-4 py-4 md:px-0 grid grid-cols-12">
-          {/* <p className="text-center text-xl md:text-xl tracking-wide col-start-4 col-end-10">
-            Sit or stand up straight, relax your shoulders, and slowly move your
-            head in a circle, first to the right and then to the left, while
-            breathing deeply. Repeat this 5-10 times to help your neck feel
-            better and more flexible.
-          </p> */}
         </div>
       </div>
     </div>
