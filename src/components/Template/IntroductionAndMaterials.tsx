@@ -59,7 +59,8 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                       height={40}
                     />
                     <h1
-                      className={`text-md font-bold text-center text-[${materialsData.checkedCardColor}]`}
+                      className={`text-md font-bold text-center`}
+                      style={{ color: materialsData.checkedCardColor }}
                     >
                       {material.name}
                     </h1>
@@ -95,7 +96,8 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                       height={40}
                     />
                     <h1
-                      className={`text-md font-bold text-center text-[${materialsData.checkedCardColor}]`}
+                      className={`text-md font-bold text-center`}
+                      style={{ color: materialsData.checkedCardColor }}
                     >
                       {material.name}
                     </h1>

@@ -18,7 +18,10 @@ const Header: React.FC<HeaderProps> = (headerData: HeaderProps) => {
         <Image src={headerData.logoSrc} alt="logo" />
         <div className="flex flex-col justify-center items-start">
           <span className="text-xl font-bold">{headerData.title}</span>
-          <span className={`text-lg text-[${headerData.subtitleColor}]`}>
+          <span
+            className={`text-lg`}
+            style={{ color: headerData.subtitleColor }}
+          >
             {headerData.subtitle}
           </span>
         </div>
