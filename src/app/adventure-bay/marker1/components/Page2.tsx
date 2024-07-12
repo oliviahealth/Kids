@@ -5,6 +5,8 @@ import logo from "../../../../../public/images/dashboard/adventure-bay/title-ima
 import Link from "next/link";
 import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
 import Activity from "@/components/Template/ActivitySteps";
+import Footer from "@/components/Template/Footer";
+import Header from "@/components/Template/Header";
 
 export default function Page2({
   onNext,
@@ -36,51 +38,23 @@ export default function Page2({
   ];
 
   return (
-    <div className="flex flex-col justify-between h-full w-full gap-8">
-      <div className="flex justify-between items-center">
-        <div className="flex gap-4">
-          <Image src={logo} alt="logo" />
-          <div className="flex flex-col justify-center items-start">
-            <span className="text-xl font-bold">
-              Affirmations for Children and Caregivers
-            </span>
-            <span className="text-lg" style={{ color: "#52C5C0" }}>
-              Caregiver Wellness - Adventure Bay
-            </span>
-          </div>
-        </div>
+    <>
+      <Header
+        logoSrc={logo}
+        title="Affirmations for Children and Caregivers"
+        subtitle="Caregiver Wellness - Adventure Bay"
+        homeLink="/home"
+        subtitleColor="#52C5C0"
+      />
 
-        <div className="">
-          <Link
-            href="/home"
-            className="rounded-full z-30 bg-gray-300 flex items-center justify-center w-20 h-20"
-          >
-            X
-          </Link>
-        </div>
-      </div>
-
-      <Activity steps={activitySteps} />
-      <div className="flex justify-between items-end pb-10 lg:pb-5 2xl:pb-0">
-        <div className="">
-          <button
-            className="text-red-600 border-2 border-red-300 rounded-3xl py-2 px-4"
-            onClick={onBack}
-          >
-            Back
-          </button>
-        </div>
-
-        <div className="">
-          <button
-            className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center`}
-            onClick={onNext}
-          >
-            Continue
-            <Image src={arrow} alt="arrow" width={30} height={30} />
-          </button>
-        </div>
-      </div>
-    </div>
+      <Activity steps={activitySteps} stepNumberColor="#C5FFFC" />
+      <Footer
+        onNext={onNext}
+        onBack={onBack}
+        leftButtonText="Back"
+        rightButtonText="Continue"
+        leftClickAllowed={true}
+      />
+    </>
   );
 }

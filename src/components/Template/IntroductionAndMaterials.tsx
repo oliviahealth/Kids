@@ -1,64 +1,60 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-type CheckboxState = {
+export interface CheckboxState {
   [key: string]: boolean;
-};
+}
 
-interface Material {
+export interface Material {
   name: string;
-  image: any;
+  image: StaticImageData | string;
   alt: string;
   key: keyof CheckboxState;
 }
 
-interface IntroductionAndMaterialsProps {
+export interface IntroductionAndMaterialsProps {
   introductionTitle: string;
   introductionText: string;
   materialsTitle: string;
   materials: Material[];
   isChecked: CheckboxState;
+  mainBackgroundColor: string;
+  emptyCardBackgroundColor: string;
+  checkedCardColor: string;
   handleCheckboxChange: (type: keyof CheckboxState) => void;
 }
 
-const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = ({
-  introductionTitle,
-  introductionText,
-  materialsTitle,
-  materials,
-  isChecked,
-  handleCheckboxChange,
-}) => {
+const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
+  materialsData: IntroductionAndMaterialsProps
+) => {
   return (
     <div className="w-full flex flex-col lg:flex-row gap-8 justify-between flex-grow">
       <div className="w-full lg:w-1/2 flex flex-col gap-4">
-        <h1 className="text-xl font-bold">{introductionTitle}</h1>
-        <p className="text-lg text-justify">{introductionText}</p>
+        <h1 className="text-xl font-bold">{materialsData.introductionTitle}</h1>
+        <p className="text-lg text-justify">{materialsData.introductionText}</p>
       </div>
       <div
-        className="w-full lg:w-1/2 rounded-3xl flex flex-col h-full p-5 gap-2"
-        style={{
-          border: "2px solid white",
-          backgroundColor: "#C5FFFC",
-        }}
+        className={`w-full lg:w-1/2 rounded-3xl flex flex-col h-full p-5 gap-2 border-2 border-solid border-white bg-[${materialsData.mainBackgroundColor}]`}
       >
-        <h1 className="text-xl font-bold flex">{materialsTitle}</h1>
+        <h1 className="text-xl font-bold flex">
+          {materialsData.materialsTitle}
+        </h1>
         <div className="flex flex-col gap-2 h-full w-full">
           <div className="h-full flex flex-row gap-2 w-full">
-            {materials.slice(0, 4).map((material) => (
+            {materialsData.materials.slice(0, 4).map((material) => (
               <div
                 key={material.key}
                 className={`h-full w-full ${
                   material.name
-                    ? "border-2 rounded-2xl bg-white flex flex-col justify-around items-center p-2"
-                    : "rounded-2xl bg-[#8AEFEB] flex flex-col justify-around items-center p-2"
-                } ${
-                  isChecked[material.key]
-                    ? "border-[#52C5C0]"
-                    : "border-[#52C5C0]"
+                    ? `border-2 rounded-2xl bg-white flex flex-col justify-around items-center p-2`
+                    : `rounded-2xl bg-[${materialsData.emptyCardBackgroundColor}] flex flex-col justify-around items-center p-2`
+                }  ${
+                  materialsData.isChecked[material.key]
+                    ? `border-[${materialsData.checkedCardColor}]`
+                    : "border-black"
                 }`}
               >
-                {material.name ? (
+                {material.name && (
                   <>
                     <Image
                       src={material.image}
@@ -67,41 +63,38 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = ({
                       height={40}
                     />
                     <h1
-                      className="text-md font-bold text-center"
-                      style={{ color: "#52C5C0" }}
+                      className={`text-md font-bold text-center text-[${materialsData.checkedCardColor}]`}
                     >
                       {material.name}
                     </h1>
                     <input
                       type="checkbox"
-                      checked={isChecked[material.key]}
-                      onChange={() => handleCheckboxChange(material.key)}
-                      className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
+                      checked={materialsData.isChecked[material.key]}
+                      onChange={() =>
+                        materialsData.handleCheckboxChange(material.key)
+                      }
+                      className={`appearance-none h-6 w-6 rounded-full border-2 border-black checked:border-[${materialsData.checkedCardColor}] checked:bg-[${materialsData.checkedCardColor}] focus:outline-none`}
                     />
                   </>
-                ) : (
-                  <div
-                    className={`h-full w-full rounded-2xl bg-[#8AEFEB] flex flex-col justify-around items-center`}
-                  ></div>
                 )}
               </div>
             ))}
           </div>
           <div className="h-full flex flex-row gap-2 w-full">
-            {materials.slice(4).map((material) => (
+            {materialsData.materials.slice(4).map((material) => (
               <div
                 key={material.key}
                 className={`h-full w-full ${
                   material.name
-                    ? "border-2 rounded-2xl bg-white flex flex-col justify-around items-center p-2"
-                    : "rounded-2xl bg-[#8AEFEB] flex flex-col justify-around items-center"
+                    ? `border-2 rounded-2xl bg-white flex flex-col justify-around items-center p-2`
+                    : `rounded-2xl bg-[${materialsData.emptyCardBackgroundColor}] flex flex-col justify-around items-center`
                 } ${
-                  isChecked[material.key]
-                    ? "border-[#52C5C0]"
-                    : "border-[#52C5C0]"
+                  materialsData.isChecked[material.key]
+                    ? `border-[${materialsData.checkedCardColor}]`
+                    : "border-black"
                 }`}
               >
-                {material.name ? (
+                {material.name && (
                   <>
                     <Image
                       src={material.image}
@@ -110,22 +103,19 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = ({
                       height={40}
                     />
                     <h1
-                      className="text-md font-bold text-center"
-                      style={{ color: "#52C5C0" }}
+                      className={`text-md font-bold text-center text-[${materialsData.checkedCardColor}]`}
                     >
                       {material.name}
                     </h1>
                     <input
                       type="checkbox"
-                      checked={isChecked[material.key]}
-                      onChange={() => handleCheckboxChange(material.key)}
-                      className="appearance-none h-6 w-6 rounded-full border-2 border-[#52C5C0] checked:bg-[#52C5C0] focus:outline-none"
+                      checked={materialsData.isChecked[material.key]}
+                      onChange={() =>
+                        materialsData.handleCheckboxChange(material.key)
+                      }
+                      className={`appearance-none h-6 w-6 rounded-full border-2 border-black checked:border-[${materialsData.checkedCardColor}] checked:bg-[${materialsData.checkedCardColor}] focus:outline-none`}
                     />
                   </>
-                ) : (
-                  <div
-                    className={`h-full w-full rounded-2xl bg-[#8AEFEB] flex flex-col justify-around items-center`}
-                  ></div>
                 )}
               </div>
             ))}

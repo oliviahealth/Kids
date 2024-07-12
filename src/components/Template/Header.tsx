@@ -1,29 +1,33 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-type HeaderProps = {
-  logoSrc: string;
+export interface HeaderProps {
+  logoSrc: StaticImageData | string;
   title: string;
   subtitle: string;
   homeLink: string;
-};
+  subtitleColor: string;
+}
 
-const Header: React.FC<HeaderProps> = ({ logoSrc, title, subtitle, homeLink }) => {
+const Header: React.FC<HeaderProps> = (headerData: HeaderProps) => {
   return (
     <div className="flex justify-between items-center">
       <div className="flex gap-4">
-        <Image src={logoSrc} alt="logo" />
+        <Image src={headerData.logoSrc} alt="logo" />
         <div className="flex flex-col justify-center items-start">
-          <span className="text-xl font-bold">{title}</span>
-          <span className="text-lg" style={{ color: "#52C5C0" }}>
-            {subtitle}
+          <span className="text-xl font-bold">{headerData.title}</span>
+          <span className={`text-lg text-[${headerData.subtitleColor}]`}>
+            {headerData.subtitle}
           </span>
         </div>
       </div>
       <div>
-        <Link href={homeLink} className="rounded-full z-30 bg-gray-300 flex items-center justify-center w-20 h-20">
+        <Link
+          href={headerData.homeLink}
+          className="rounded-full z-30 bg-gray-300 flex items-center justify-center w-20 h-20"
+        >
           X
         </Link>
       </div>
