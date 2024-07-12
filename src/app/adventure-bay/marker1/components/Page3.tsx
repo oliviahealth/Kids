@@ -6,6 +6,8 @@ import Link from "next/link";
 import photo from "../../../../../public/images/dashboard/adventure-bay/Group 114.png";
 import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
+import Footer from "@/components/Template/Footer";
+import Header from "@/components/Template/Header";
 
 export default function Page3({
   onNext,
@@ -21,52 +23,25 @@ export default function Page3({
   positive difference in your mindset!`;
 
   return (
-    <div className="flex flex-col h-full w-full gap-8 justify-between">
-      <div className="flex justify-between items-center">
-        <div className="flex gap-4">
-          <Image src={logo} alt="logo" />
-          <div className="flex flex-col justify-center items-start">
-            <span className="text-xl font-bold">
-              Affirmations for Children and Caregivers
-            </span>
-            <span className="text-lg" style={{ color: "#52C5C0" }}>
-              Caregiver Wellness - Adventure Bay
-            </span>
-          </div>
-        </div>
-
-        <div className="">
-          <Link
-            href="/home"
-            className="rounded-full z-30 bg-gray-300 flex items-center justify-center w-20 h-20"
-          >
-            X
-          </Link>
-        </div>
-      </div>
+    <>
+      <Header
+        logoSrc={logo}
+        title="Affirmations for Children and Caregivers"
+        subtitle="Caregiver Wellness - Adventure Bay"
+        homeLink="/home"
+        subtitleColor="#52C5C0"
+      />
 
       <KeyTakeaways text={takeawayText} photoSrc={photo} photoAlt="Photo" />
-
-      <div className="flex justify-between items-end pb-10 lg:pb-5 2xl:pb-0">
-        <div className="">
-          <button
-            className="text-red-600 border-2 border-red-300 rounded-3xl py-2 px-4"
-            onClick={onBack}
-          >
-            Back
-          </button>
-        </div>
-
-        <div className="">
-          <Link
-            className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center`}
-            href="/home"
-          >
-            Continue
-            <Image src={arrow} alt="arrow" width={30} height={30} />
-          </Link>
-        </div>
-      </div>
-    </div>
+      <Footer
+        onNext={onNext}
+        onBack={onBack}
+        leftButtonText="Back"
+        rightButtonText="Continue"
+        leftClickAllowed={true}
+        rightHasLink={true}
+        rightLinkHref={"/home"}
+      />
+    </>
   );
 }
