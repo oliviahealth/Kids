@@ -46,12 +46,8 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                 key={material.key}
                 className={`h-full w-full ${
                   material.name
-                    ? `border-2 rounded-2xl bg-white flex flex-col justify-around items-center p-2`
+                    ? `border-2 rounded-2xl bg-white flex flex-col justify-around items-center p-2 border-[${materialsData.checkedCardColor}]`
                     : `rounded-2xl bg-[${materialsData.emptyCardBackgroundColor}] flex flex-col justify-around items-center p-2`
-                }  ${
-                  materialsData.isChecked[material.key]
-                    ? `border-[${materialsData.checkedCardColor}]`
-                    : "border-black"
                 }`}
               >
                 {material.name && (
@@ -73,7 +69,7 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                       onChange={() =>
                         materialsData.handleCheckboxChange(material.key)
                       }
-                      className={`appearance-none h-6 w-6 rounded-full border-2 border-black checked:border-[${materialsData.checkedCardColor}] checked:bg-[${materialsData.checkedCardColor}] focus:outline-none`}
+                      className={`appearance-none h-6 w-6 rounded-full border-2 border-[${materialsData.checkedCardColor}] checked:bg-[${materialsData.checkedCardColor}] focus:outline-none`}
                     />
                   </>
                 )}
@@ -86,12 +82,8 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                 key={material.key}
                 className={`h-full w-full ${
                   material.name
-                    ? `border-2 rounded-2xl bg-white flex flex-col justify-around items-center p-2`
+                    ? `border-2 rounded-2xl bg-white flex flex-col justify-around items-center p-2 border-[${materialsData.checkedCardColor}]`
                     : `rounded-2xl bg-[${materialsData.emptyCardBackgroundColor}] flex flex-col justify-around items-center`
-                } ${
-                  materialsData.isChecked[material.key]
-                    ? `border-[${materialsData.checkedCardColor}]`
-                    : "border-black"
                 }`}
               >
                 {material.name && (
@@ -113,7 +105,7 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                       onChange={() =>
                         materialsData.handleCheckboxChange(material.key)
                       }
-                      className={`appearance-none h-6 w-6 rounded-full border-2 border-black checked:border-[${materialsData.checkedCardColor}] checked:bg-[${materialsData.checkedCardColor}] focus:outline-none`}
+                      className={`appearance-none h-6 w-6 rounded-full border-2 border-[${materialsData.checkedCardColor}] checked:bg-[${materialsData.checkedCardColor}] focus:outline-none`}
                     />
                   </>
                 )}
