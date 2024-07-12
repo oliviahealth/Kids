@@ -5,6 +5,7 @@ import logo from "../../../../../public/images/dashboard/adventure-bay/title-ima
 import Link from "next/link";
 import photo from "../../../../../public/images/dashboard/adventure-bay/Group 114.png";
 import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
+import KeyTakeaways from "@/components/Template/KeyTakeaways";
 
 export default function Page3({
   onNext,
@@ -13,6 +14,12 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
+  const takeawayText = `Repeat after me: "I am great at positive affirmations!"
+  Congratulations on completing the affirmations activity! Recite your
+  affirmations daily for one week to earn your badge. We hope that you
+  truly believe these wonderful messages and that they begin to make a
+  positive difference in your mindset!`;
+
   return (
     <div className="flex flex-col h-full w-full gap-8 justify-between">
       <div className="flex justify-between items-center">
@@ -38,21 +45,8 @@ export default function Page3({
         </div>
       </div>
 
-      <div className="w-full flex gap-8 flex-grow">
-        <div className="w-full lg:w-1/2 flex flex-col gap-4">
-          <h1 className="text-xl font-bold">Key Takeaways</h1>
-          <p className="text-xl text-justify">
-            Repeat after me: "I am great at positive affirmations!"
-            Congratulations on completing the affirmations activity! Recite your
-            affirmations daily for one week to earn your badge. We hope that you
-            truly believe these wonderful messages and that they begin to make a
-            positive difference in your mindset!
-          </p>
-          <div className="">
-            <Image src={photo} alt="Photo" />
-          </div>
-        </div>
-      </div>
+      <KeyTakeaways text={takeawayText} photoSrc={photo} photoAlt="Photo" />
+
       <div className="flex justify-between items-end pb-10 lg:pb-5 2xl:pb-0">
         <div className="">
           <button
