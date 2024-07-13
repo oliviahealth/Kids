@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage5: React.FC<{
+const ActivityPage3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -10,15 +10,15 @@ const ActivityPage5: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              2
+              3
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Work towards BINGO</h1>
+            <h1 className="text-2xl font-black ">Take it further!</h1>
             <p className="text-lg font-semibold">
-              In order to receive a BINGO you will perform 5 of the 25
-              activities in a row. This can be vertically, horizontally, or
-              diagonally.
+              If you would like an extra challenge, you are more than welcome to
+              complete all of the activities for an extra badge at the end of
+              this activity.
             </p>
           </div>
 
@@ -53,4 +53,4 @@ const ActivityPage5: React.FC<{
   );
 };
 
-export default ActivityPage5;
+export default ActivityPage3;
