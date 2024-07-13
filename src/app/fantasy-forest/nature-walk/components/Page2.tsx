@@ -1,32 +1,27 @@
-import React from 'react';
-import { WPHeader, WPDescription, WPContainer, WPNeedsContainer, WPNeedsContent } from '@/components/WhitePage';
-import { Page } from "@/components/Pagination";
+import { ActivityPreview, EmptyWhitePage } from '@/components/activity/white-page'
+import { Page } from '@/components/Pagination';
 
-export default ({ onBack, onContinue, onExit }: Page) => <WPContainer backText="Back" image="/images/FantasyForest/WhitepageBackground.svg" onBack={onBack} onContinue={onContinue} onExit={onExit}>
-    <WPHeader image={"/images/FantasyForest/HeaderIcon.svg"} title={"Nature Walk"} subtitleColor={"#2EA05D"} subtitle={"Caregiver Wellness - Fantasy Forest"} />
-    <div className="flex justify-between">
-        <div className="flex-1 p-2">
-            <WPDescription title={"Ditch the distractions"} paragraphs={[
-                "Nature walks are easy to do with kids, or you can go alone for some quiet time. Just remember to leave your phone and music at home so you can enjoy the walk without distractions. ",
-            ]} />
-        </div>
-        <div className="flex-1 p-2">
-            <WPNeedsContainer bgColor="#B5F6D0" title={"Materials Needed"}>
-                <WPNeedsContent outlineColor="#35A663" bgColor="#88DFAC" items={[
-                    {
-                        name: "Gratitude Jars",
-                        image: "/images/FantasyForest/GratitudeJar.svg",
-                    },
-                    {
-                        name: "Pen",
-                        image: "/images/FantasyForest/Pen.svg",
-                    },
-                    {
-                        name: "Paper",
-                        image: "/images/FantasyForest/Paper.svg",
-                    },
-                ]} />
-            </WPNeedsContainer>
-        </div>
-    </div>
-</WPContainer >
+export default ({ onBack, onContinue, onExit }: Page) => <EmptyWhitePage onBack={onBack} onContinue={onContinue} onExit={onExit} colors={["#35A663", "#88DFAC", "#B5F6D0"]} image="/images/activities/fantasy-forest/header-icon.svg" title="Nature Walk" subtitle="Caregiver Wellness - Fantasy Forest" >
+    <ActivityPreview activities={[
+        {
+            id: 1,
+            title: 'Step outside',
+            description: 'Get outdoors and relax your mind',
+        },
+        {
+            id: 2,
+            title: 'Notice everything',
+            description: 'When you start walking, look and listen for new things. If you’re in a new place, most things will be new to you.',
+        },
+        {
+            id: 3,
+            title: 'Avoid tunnel vision',
+            description: "Look around at things that aren't right in front of you.",
+        },
+        {
+            id: 4,
+            title: 'Pass it down',
+            description: 'If you bring your child, teach them about what you see. You can play "I Spy" or let them show you things they find interesting.',
+        },
+    ]} />
+</EmptyWhitePage >

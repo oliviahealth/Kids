@@ -1,30 +1,54 @@
-import React from 'react';
-import { WPHeader, WPDescription, WPContainer, WPNeedsContainer, WPNeedsContent } from '@/components/WhitePage';
+import { ActivityPreview, EmptyWhitePage } from '@/components/activity/white-page'
 import { Page } from "@/components/Pagination";
 
-export default ({ onBack, onContinue, onExit, page }: Page) => <WPContainer backText="Back" image="/images/at-home-exercises-bg.svg" onBack={onBack} onContinue={onContinue} onExit={onExit}>
-    <WPHeader image={"/images/flower.svg"} title={"At-Home Exercises"} subtitleColor={"#F1A533"} subtitle={"Caregiver Wellness - Blossom Haven"} />
-    <WPDescription title={"Multifaceted Benefits"} paragraphs={[
-        "Caregivers who have recently given birth can greatly benefit from exercise as it has decreased the risk of postpartum depression, increased abdominal muscle strength, and helps to keep a healthy body weight after pregnancy (https://www.acog.org/womens-health/faqs/exercise-after-pregnancy). The exercises that this activity includes are designed for caregivers of infants to do at home, giving the same benefits as someone going to a gym.",
-    ]} />
-    <WPNeedsContainer title={"What will you need?"}>
-        <WPNeedsContent items={[
-            {
-                name: "Yoga Mat",
-                image: "/images/yogamat.svg",
-            },
-            {
-                name: "Timer",
-                image: "/images/timer.svg",
-            },
-            {
-                name: "Water",
-                image: "/images/water.svg",
-            },
-            {
-                name: "Gym Clothes",
-                image: "/images/gymclothes.svg",
-            }
-        ]} />
-    </WPNeedsContainer>
-</WPContainer>
+export default ({ onBack, onContinue, onExit }: Page) =>
+    <EmptyWhitePage onBack={onBack} onContinue={onContinue} onExit={onExit} colors={["#F1A533", "#F8E7BA", "#FFF7E3"]} title="Mindful Movement" image="/images/flower.svg" subtitle="Caregiver Wellness - Blossom Haven" >
+        <div className="md:w-1/2">
+            <ActivityPreview activities={[
+                {
+                    id: 1,
+                    title: 'Diaphragmatic breathing- An Easy, Warm Up Breathing Exercise',
+                    description: 'This exercise is tailored to everyone, and can be done just a few days after a caregiver has given birth.',
+                },
+                {
+                    id: 2,
+                    title: 'Pelvic Tilt Kegel Exercise',
+                    description: 'Strengthen your lower back and abdominal muscles.',
+                },
+                {
+                    id: 3,
+                    title: 'Cat-Cow Yoga Exercise',
+                    description: 'Increase the flexibility of your shoulders, neck, and spine.',
+                },
+                {
+                    id: 4,
+                    title: 'Postpartum Plank Exercise',
+                    description: 'An isometric exercise that can help strengthen your core.',
+                },
+            ]} />
+        </div>
+        <div className="md:w-1/2">
+            <ActivityPreview activities={[
+                {
+                    id: 1,
+                    title: 'Diaphragmatic breathing- An Easy, Warm Up Breathing Exercise',
+                    description: 'This exercise is tailored to everyone, and can be done just a few days after a caregiver has given birth.',
+                },
+                {
+                    id: 2,
+                    title: 'Pelvic Tilt Kegel Exercise',
+                    description: 'Strengthen your lower back and abdominal muscles.',
+                },
+                {
+                    id: 3,
+                    title: 'Cat-Cow Yoga Exercise',
+                    description: 'Increase the flexibility of your shoulders, neck, and spine.',
+                },
+                {
+                    id: 4,
+                    title: 'Postpartum Plank Exercise',
+                    description: 'An isometric exercise that can help strengthen your core.',
+                },
+            ]} />
+        </div>
+    </EmptyWhitePage >

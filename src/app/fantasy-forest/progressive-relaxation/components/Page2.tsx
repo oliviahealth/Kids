@@ -1,26 +1,74 @@
-import React from 'react';
-import { WPHeader, WPDescription, WPContainer, WPNeedsContainer, WPNeedsContent } from '@/components/WhitePage';
-import { Page } from "@/components/Pagination";
+import { ActivityPreview, EmptyWhitePage } from '@/components/activity/white-page'
+import { Page } from '@/components/Pagination';
 
-export default ({ onBack, onContinue, onExit }: Page) => <WPContainer backText="Back" image="/images/FantasyForest/WhitepageBackground.svg" onBack={onBack} onContinue={onContinue} onExit={onExit}>
-    <WPHeader image={"/images/FantasyForest/HeaderIcon.svg"} title={"Progressive Relaxation"} subtitleColor={"#2EA05D"} subtitle={"Caregiver Wellness - Fantasy Forest"} />
-    <WPDescription title={"?"} paragraphs={[
-        "?"
-    ]} />
-    <WPNeedsContainer title={"What will you need?"}>
-        <WPNeedsContent items={[
+export default ({ onBack, onContinue, onExit }: Page) => <EmptyWhitePage
+    onBack={onBack}
+    onContinue={onContinue}
+    onExit={onExit}
+    colors={["#35A663", "#88DFAC", "#B5F6D0"]}
+    image="/images/activities/fantasy-forest/header-icon.svg"
+    title="Progressive Relaxation"
+    subtitle="Caregiver Wellness - Fantasy Forest"
+>
+    <div className="md:w-1/2">
+        <ActivityPreview title={"Guidelines"} activities={[
             {
-                name: "Gratitude Jars",
-                image: "/images/FantasyForest/GratitudeJar.svg",
+                id: 1,
+                title: 'Get into position',
+                description: 'Find a quiet place, lie down, and close your eyes. Keep your eyes closed until the end.',
             },
             {
-                name: "Pen",
-                image: "/images/FantasyForest/Pen.svg",
+                id: 2,
+                title: 'Start with your feet',
+                description: "Squeeze the muscles in your feet and lower legs, then slowly relax them.",
             },
             {
-                name: "Paper",
-                image: "/images/FantasyForest/Paper.svg",
+                id: 3,
+                title: 'Legs and hips',
+                description: "Move to your upper legs and hips. Squeeze those muscles, then relax them.",
             },
+            {
+                id: 4,
+                title: 'Make fists',
+                description: "Next, squeeze your hands into fists, then relax them.",
+            },
+            {
+                id: 5,
+                title: 'Abdominal muscles',
+                description: "Squeeze your muscles muscles, then relax.",
+            },
+
         ]} />
-    </WPNeedsContainer>
-</WPContainer >
+    </div>
+    <div className="md:w-1/2">
+        <ActivityPreview title={"  "} activities={[
+
+            {
+                id: 6,
+                title: 'Take a deep breath',
+                description: "Take a deep breath and hold it while you tighten your chest muscles, then slowly breathe out and relax.",
+            },
+            {
+                id: 7,
+                title: 'Shoulders and uppers arms',
+                description: "Squeeze your shoulders and upper arms, then relax them.",
+            },
+            {
+                id: 8,
+                title: 'Neck',
+                description: "Squeeze the muscles in your neck, then relax them.",
+            },
+            {
+                id: 9,
+                title: 'Slow your breathing',
+                description: "Now, you should feel calm and your breathing should be slower.",
+            },
+            {
+                id: 10,
+                title: 'Finish',
+                description: "Slowly open your eyes and sit up slowly.",
+            },
+
+        ]} />
+    </div>
+</EmptyWhitePage >

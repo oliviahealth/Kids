@@ -3,19 +3,18 @@ import { APContainer, APHeader, APInstruction } from '@/components/ActivityPage'
 import { Page } from "@/components/Pagination";
 
 const activity = {
-    buttonColor: "#FF7613",
-    numColor: "#FDDE6F",
-    bgColor: "#FF8C38",
-    num: 1,
+    buttonColor: "#FFC700",
+    numColor: "#FBEBCC",
+    bgColor: "#FFED4D",
+    num: 2,
 
-    title: "Diaphragmatic breathing - An Easy, Warm Up Breathing Exercise",
-    subtitle: "This exercise is tailored to everyone, and can be done just a few days after a caregiver has given birth.",
+    title: "Pelvic Tilt Kegel Exercise",
+    subtitle: "Strengthen your lower back and abdominal muscles.",
     instructions: [
-        "Find a comfortable place and lie on your back.",
-        "Place one hand on your stomach, above your belly button, and the other hand on your chest.",
-        "Breathe in slowly through your nose.",
-        "Breathe out slowly through your mouth.",
-        "As you inhale, imagine filling a balloon in your stomach, and as you exhale, imagine shrinking the balloon. Continue breathing in and out for the remaining time.",
+        "Lie on your back with your knees bent and feet flat on the floor.",
+        "Tighten your abdominal muscles and press your lower back into the floor.",
+        "Hold for a few seconds, then release.",
+        "Repeat this movement 10-15 times, gradually increasing as your muscles become stronger.",
     ]
 }
 

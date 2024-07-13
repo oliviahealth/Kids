@@ -3,18 +3,18 @@ import { APContainer, APHeader, APInstruction } from '@/components/ActivityPage'
 import { Page } from "@/components/Pagination";
 
 const activity = {
-    buttonColor: "#FFC700",
-    numColor: "#FBEBCC",
-    bgColor: "#FFED4D",
-    num: 2,
+    buttonColor: "#8BD5FF",
+    numColor: "#FFC553",
+    bgColor: "#61C5FE",
+    num: 3,
 
-    title: "Pelvic Tilt Kegel Exercise",
-    subtitle: "Strengthen your lower back and abdominal muscles.",
+    title: "Cat-Cow Yoga Exercise",
+    subtitle: "Increase the flexibility of your shoulders, neck, and spine.",
     instructions: [
-        "Lie on your back with your knees bent and feet flat on the floor.",
-        "Tighten your abdominal muscles and press your lower back into the floor.",
-        "Hold for a few seconds, then release.",
-        "Repeat this movement 10-15 times, gradually increasing as your muscles become stronger.",
+        "Kneel on the floor and put your hands on the floor in front of you.",
+        "Keep your hands shoulder-width apart and your knees directly below your hips. ",
+        "Inhale deeply while curving your lower back and bringing your head up, tilting your pelvis up like a \"cow.\"",
+        "Exhale deeply and bring your abdomen in, arching your spine and bringing your head and pelvis down like a \"cat\". Repeat several times.",
     ]
 }
 
