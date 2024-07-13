@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage4: React.FC<{
+const ActivityPage3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -10,14 +10,15 @@ const ActivityPage4: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              1
+              3
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Obtain your template</h1>
+            <h1 className="text-2xl font-black ">Involve your kids!</h1>
             <p className="text-lg font-semibold">
-              You can choose to print the templates out and write on them or
-              transfer the information into a journal of your own.
+              Follow the same template and have the kid(s) think of ideas for
+              how they would answer each section. You can either write down
+              their answers or just listen to what they are saying.
             </p>
           </div>
 
@@ -52,4 +53,4 @@ const ActivityPage4: React.FC<{
   );
 };
 
-export default ActivityPage4;
+export default ActivityPage3;
