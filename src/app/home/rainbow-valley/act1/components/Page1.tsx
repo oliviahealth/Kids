@@ -45,7 +45,13 @@ const Page1: React.FC<{
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="Listening to music can reduce your stress by helping you focus on the lyrics and the tune of the song. As a caregiver of a 2-3 year old it can be challenging to take time for yourself. However it is important to ensure that you are healthy enough to properly care for the children. That is why we have created the activity, Create Your Own Music Playlist. This activity allows you to go onto your favorite music platform and compile a playlist made of songs that improve your mood. You can make it however long or short you would like and when the playlist is finished you can listen to it for 10-15 minutes each day. You can listen to it in the morning as you get ready, during nap time, when you are feeling overwhelmed, or whenever you would like to. "
+        introductionText={`Listening to music can reduce your stress by helping you focus on the lyrics and the tune of the song. 
+          As a caregiver of a 2-3 year old it can be challenging to take time for yourself. However it is important to ensure that 
+          you are healthy enough to properly care for the children. That is why we have created the activity, Create Your Own Music 
+          Playlist. This activity allows you to go onto your favorite music platform and compile a playlist made of songs that improve 
+          your mood. You can make it however long or short you would like and when the playlist is finished you can listen to it for 10-15 
+          minutes each day. You can listen to it in the morning as you get ready, during nap time, when you are feeling overwhelmed, or 
+          whenever you would like to. `}
         materialsTitle="Materials Needed"
         materials={[
           {
