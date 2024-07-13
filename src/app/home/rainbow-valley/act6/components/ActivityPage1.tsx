@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage6: React.FC<{
+const ActivityPage1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -10,14 +10,14 @@ const ActivityPage6: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              3
+              1
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Become accomplished</h1>
+            <h1 className="text-2xl font-black ">Get your schedule</h1>
             <p className="text-lg font-semibold">
-              By the end of the week you will have cleaned your whole house
-              while most importantly ensuring your children are well cared for.
+              You can choose to print out our pre-made schedule or the blank
+              schedule if you would like to create your own routine.
             </p>
           </div>
 
@@ -52,4 +52,4 @@ const ActivityPage6: React.FC<{
   );
 };
 
-export default ActivityPage6;
+export default ActivityPage1;

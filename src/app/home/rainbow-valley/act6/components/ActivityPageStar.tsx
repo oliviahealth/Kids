@@ -1,24 +1,47 @@
 import Link from "next/link";
+import Image from "next/image";
+import confetti from "canvas-confetti";
+import { useEffect } from "react";
+import star from "../../../../../../public/images/dashboard/rainbowValley/shared/star.svg";
 
-const ActivityPage5: React.FC<{
+const ActivityPageStar: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
+  useEffect(() => {
+    const duration = 3 * 1000;
+    const end = Date.now() + duration;
+
+    const frame = () => {
+      confetti({
+        particleCount: 7,
+        angle: 60,
+        spread: 55,
+        origin: { x: Math.random(), y: Math.random() },
+      });
+      confetti({
+        particleCount: 7,
+        angle: 120,
+        spread: 55,
+        origin: { x: Math.random(), y: Math.random() },
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    };
+
+    frame();
+  }, []);
+
   return (
     <div className="bg-orange-400 flex flex-col h-full justify-between p-10">
       <div className="space-y-10">
         <div className="flex justify-between">
-          <div className="">
-            <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              2
-            </div>
-          </div>
+          <div className=""></div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Check ‘em off</h1>
-            <p className="text-lg font-semibold">
-              Follow along each day completing the tasks and marking them off on
-              the list.
-            </p>
+            <h1 className="text-2xl font-black ">Well done!</h1>
+            <p className="text-lg font-semibold">Here is a star!</p>
           </div>
 
           <div className="">
@@ -27,6 +50,15 @@ const ActivityPage5: React.FC<{
                 X
               </button>
             </Link>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-12">
+          <div className="col-span-12 space-y-5 order-2 sm:order-1">
+            <Image
+              className="m-auto w-[600px] max-w-full"
+              src={star}
+              alt="Olivia Kids"
+            ></Image>
           </div>
         </div>
       </div>
@@ -52,4 +84,4 @@ const ActivityPage5: React.FC<{
   );
 };
 
-export default ActivityPage5;
+export default ActivityPageStar;
