@@ -8,10 +8,11 @@ const Page3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  const takeawayText = `We would like to congratulate you on completing this activity. 
-  In addition we hope that listening to some of your favorite or even a few new songs 
-  has given you more energy to care for your children. It is important to make sure you 
-  are healthy and hopefully this activity helped make that task a little easier.`;
+  const takeawayText = `We hope that being able to split up the cleaning throughout the week helped reduce some of the stress 
+  that came with looking at all that needed to be completed. Additionally we hope that after completing this schedule you will 
+  feel accomplished for getting a significant amount of work done around the living space. With a cleaner environment and being 
+  able to focus on a small section each day, we hope this activity improved your mental health and helps you better care for your 
+  children.`;
 
   return (
     <>
