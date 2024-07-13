@@ -10,27 +10,27 @@ const Page2: React.FC<{
   const activitySteps = [
     {
       stepNumber: 1,
-      description: "Choose a music platform you will create your playlist on.",
+      description:
+        "Take some distraction free time to figure out what inspires you.",
     },
     {
       stepNumber: 2,
       description:
-        "Venture through the platform and add songs to your playlist.",
+        "Decide where you want to make your vision board? Do you want to use paper, posterboard, or PowerPoint?",
     },
     {
       stepNumber: 3,
       description:
-        "When your day begins, choose a time that you plan to listen to your playlist.",
+        "Find pictures for your vision board. This may be online pictures, magazine clippings, personal photos, or drawings",
     },
     {
       stepNumber: 4,
-      description:
-        "Put it on for at least 10-15 minutes and enjoy grooving along to the beat.",
+      description: "Create a collage with your pictures.",
     },
     {
       stepNumber: 5,
       description:
-        "You can even include your children by having a dance party with them.",
+        "Hang your vision board in a place where you can see it every day. For example, next to the bedroom mirror.",
     },
   ];
 
@@ -38,7 +38,7 @@ const Page2: React.FC<{
     <>
       <Header
         logoSrc={icon}
-        title="Create Your Own Music Playlist"
+        title="Vision Board for Self-Care"
         subtitle="Caregiver Wellness - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"

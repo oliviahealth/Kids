@@ -36,7 +36,7 @@ const Page1: React.FC<{
     <>
       <Header
         logoSrc={icon}
-        title="Create Your Own Music Playlist"
+        title="Journaling"
         subtitle="Caregiver Wellness - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
