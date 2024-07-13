@@ -10,13 +10,15 @@ const ActivityPage4: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              1
+              4
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Cut out a circle</h1>
+            <h1 className="text-2xl font-black ">
+              Spin the wheel and have fun!
+            </h1>
             <p className="text-lg font-semibold">
-              Using a piece of paper, draw a circle and cut it out.
+              Complete whatever activities the wheel lands.
             </p>
           </div>
 

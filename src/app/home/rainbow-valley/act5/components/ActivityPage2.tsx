@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage7: React.FC<{
+const ActivityPage2: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -10,15 +10,14 @@ const ActivityPage7: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              4
+              2
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">
-              Spin the wheel and have fun!
-            </h1>
+            <h1 className="text-2xl font-black ">Divide into 8 sections</h1>
             <p className="text-lg font-semibold">
-              Complete whatever activities the wheel lands.
+              You will draw a circle and 4 lines inside of it (1 horizontal, 1
+              vertical, and 2 diagonal) to create 8 sections.
             </p>
           </div>
 
@@ -53,4 +52,4 @@ const ActivityPage7: React.FC<{
   );
 };
 
-export default ActivityPage7;
+export default ActivityPage2;

@@ -1,48 +1,22 @@
 import Link from "next/link";
-import Image from "next/image";
-import confetti from "canvas-confetti";
-import { useEffect } from "react";
-import star from "../../../../../../public/images/dashboard/rainbowValley/shared/star.svg";
 
-const ActivityPage8: React.FC<{
+const ActivityPage1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  useEffect(() => {
-    const duration = 3 * 1000;
-    const end = Date.now() + duration;
-
-    const frame = () => {
-      confetti({
-        particleCount: 7,
-        angle: 60,
-        spread: 55,
-        origin: { x: Math.random(), y: Math.random() },
-      });
-      confetti({
-        particleCount: 7,
-        angle: 120,
-        spread: 55,
-        origin: { x: Math.random(), y: Math.random() },
-      });
-
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    };
-
-    frame();
-  }, []);
-
   return (
     <div className="bg-sky-400 flex flex-col h-full justify-between p-10">
       <div className="space-y-10">
         <div className="flex justify-between">
-          <div className=""></div>
+          <div className="">
+            <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
+              1
+            </div>
+          </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Well done!</h1>
+            <h1 className="text-2xl font-black ">Cut out a circle</h1>
             <p className="text-lg font-semibold">
-              Repeat this exercise whenever you need it. Here is your star!
+              Using a piece of paper, draw a circle and cut it out.
             </p>
           </div>
 
@@ -52,15 +26,6 @@ const ActivityPage8: React.FC<{
                 X
               </button>
             </Link>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-12">
-          <div className="col-span-12 space-y-5 order-2 sm:order-1">
-            <Image
-              className="m-auto w-[600px] max-w-full"
-              src={star}
-              alt="Olivia Kids"
-            ></Image>
           </div>
         </div>
       </div>
@@ -86,4 +51,4 @@ const ActivityPage8: React.FC<{
   );
 };
 
-export default ActivityPage8;
+export default ActivityPage1;

@@ -2,73 +2,101 @@ import Image from "next/image";
 import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
 import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_SideImage.png";
+import { useEffect, useState } from "react";
+import IntroductionAndMaterials, {
+  CheckboxState,
+} from "@/components/Template/IntroductionAndMaterials";
+import Header from "@/components/Template/Header";
+import Footer from "@/components/Template/Footer";
+import image1 from "../../../../../../public/images/dashboard/rainbowValley/act5/act5_image1.png";
+import image2 from "../../../../../../public/images/dashboard/rainbowValley/act5/act5_image2.png";
+import image3 from "../../../../../../public/images/dashboard/rainbowValley/act5/act5_image3.png";
+import image4 from "../../../../../../public/images/dashboard/rainbowValley/act5/act5_image4.png";
 
-const ActivityPage1: React.FC<{
+const Page1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  return (
-    <div className="flex flex-col h-full justify-between p-10">
-      <div className="space-y-10">
-        <div className="flex">
-          <div className="my-auto">
-            <Image
-              className="max-w-full max-h-full"
-              src={icon}
-              alt="Olivia Kids"
-            ></Image>
-          </div>
-          <div className=" pl-5 w-full my-auto float-left">
-            <h1 className="text-xl font-bold ">Self-Care Wheel</h1>
-            <p className="text-lg text-rose-300">
-              Caregiver Wellness - Rainbow Valley
-            </p>
-          </div>
+  const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
+  const [isChecked, setIsChecked] = useState<CheckboxState>({
+    headphones: false,
+    favorite_app: false,
+    music: false,
+  });
 
-          <div className="float-right">
-            <Link href="/home">
-              <button className="h-6 w-6 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-gray-300 flex items-center justify-center text-sm">
-                X
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-12">
-          <div className="col-span-8 space-y-5 order-2 sm:order-1">
-            <p className="font-bold">Spin the wheel!</p>
-            <p>
-              Caring for a child between the ages of 2-3 can be challenging.
-              They may be full of energy and ready to move on from one activity
-              to the next within a matter of minutes. It is important to be able
-              to take a deep breath and ensure that you can fill yourself with
-              energy in order to properly look after your child. We created an
-              activity for you that allows you to write down self care ideas and
-              come back to them when you are stressed. This activity is called
-              the Self Care Wheel.
-            </p>
-          </div>
-          <div className="col-span-4 order-1 sm:order-2">
-            <Image className="w-full" src={sideImage} alt="Olivia Kids"></Image>
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 py-10">
-        <div className="justify-self-center sm:justify-self-start">
-          <button className="text-rose-600 font-bold py-2 px-4">
-            Learn More
-          </button>
-        </div>
-        <div className="justify-self-center sm:justify-self-end">
-          <button
-            onClick={onNext}
-            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
-          >
-            Continue &gt;
-          </button>
-        </div>
-      </div>
-    </div>
+  const handleCheckboxChange = (type: keyof typeof isChecked) => {
+    setIsChecked((prevState) => ({
+      ...prevState,
+      [type]: !prevState[type],
+    }));
+  };
+
+  useEffect(() => {
+    const allChecked = Object.values(isChecked).every(Boolean);
+    setButtonDisabled(!allChecked);
+  }, [isChecked]);
+
+  return (
+    <>
+      <Header
+        logoSrc={icon}
+        title="Self-Care Wheel"
+        subtitle="Caregiver Wellness - Rainbow Valley"
+        homeLink="/home"
+        subtitleColor="#E75858"
+      />
+
+      <IntroductionAndMaterials
+        introductionTitle="Introduction"
+        introductionText={`Listening to music can reduce your stress by helping you focus on the lyrics and the tune of the song. 
+          As a caregiver of a 2-3 year old it can be challenging to take time for yourself. However it is important to ensure that 
+          you are healthy enough to properly care for the children. That is why we have created the activity, Create Your Own Music 
+          Playlist. This activity allows you to go onto your favorite music platform and compile a playlist made of songs that improve 
+          your mood. You can make it however long or short you would like and when the playlist is finished you can listen to it for 10-15 
+          minutes each day. You can listen to it in the morning as you get ready, during nap time, when you are feeling overwhelmed, or 
+          whenever you would like to. `}
+        materialsTitle="Materials Needed"
+        materials={[
+          {
+            name: "Paper",
+            image: image1,
+            alt: "Paper",
+            key: "paper",
+          },
+          {
+            name: "Pen",
+            image: image2,
+            alt: "Pen",
+            key: "pen",
+          },
+          { name: "Marker", image: image3, alt: "Marker", key: "marker" },
+          {
+            name: "Paperclilp",
+            image: image4,
+            alt: "Paperclilp",
+            key: "paperclilp",
+          },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+        ]}
+        isChecked={isChecked}
+        handleCheckboxChange={handleCheckboxChange}
+        mainBackgroundColor="#FFD0D0"
+        emptyCardBackgroundColor="#FFBABA"
+        checkedCardColor="#E75858"
+      />
+      <Footer
+        onNext={onNext}
+        onBack={onBack}
+        rightButtonDisabledAllowed={true}
+        rightButtonDisabled={buttonDisabled}
+        leftButtonText="Learn More"
+        rightButtonText="Continue"
+      />
+    </>
   );
 };
 
-export default ActivityPage1;
+export default Page1;

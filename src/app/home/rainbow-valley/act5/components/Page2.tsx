@@ -1,114 +1,64 @@
-import Image from "next/image";
-import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
-import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act5/act5_SideImage.png";
-import image1 from "../../../../../../public/images/dashboard/rainbowValley/act5/act5_image1.png";
-import image2 from "../../../../../../public/images/dashboard/rainbowValley/act5/act5_image2.png";
-import image3 from "../../../../../../public/images/dashboard/rainbowValley/act5/act5_image3.png";
-import image4 from "../../../../../../public/images/dashboard/rainbowValley/act5/act5_image4.png";
+import Header from "@/components/Template/Header";
+import Activity from "@/components/Template/ActivitySteps";
+import Footer from "@/components/Template/Footer";
 
-const ActivityPage2: React.FC<{
+const Page2: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  return (
-    <div className="flex flex-col h-full justify-between p-10">
-      <div className="space-y-10">
-        <div className="flex">
-          <div className="my-auto">
-            <Image
-              className="max-w-full max-h-full"
-              src={icon}
-              alt="Olivia Kids"
-            ></Image>
-          </div>
-          <div className=" pl-5 w-full my-auto float-left">
-            <h1 className="text-xl font-bold ">Self-Care Wheel</h1>
-            <p className="text-lg text-rose-300">
-              Caregiver Wellness - Rainbow Valley
-            </p>
-          </div>
+  const activitySteps = [
+    {
+      stepNumber: 1,
+      description:
+        "To create the Self Care Wheel you can either print out the blank template we provided or create your own by getting a blank sheet of paper.",
+    },
+    {
+      stepNumber: 2,
+      description:
+        "If you choose to print out the template, you can keep the wheel on the page or cut along the dashed line for the wheel itself.",
+    },
+    {
+      stepNumber: 3,
+      description:
+        "If you choose to make your own, you will draw a circle and 4 lines inside of it (1 horizontal, 1 vertical, and 2 diagonal) to create 8 sections.",
+    },
+    {
+      stepNumber: 4,
+      description:
+        "Then you will write your activities inside each section and your self care wheel is complete (If you would like some activity ideas we have also provided an example of a completed self care wheel).",
+    },
+    {
+      stepNumber: 5,
+      description:
+        "To determine the activity you will perform, put the tip of a pencil in the middle of a paperclip and place them both in the center of the wheel (there is an image on this website that shows you what it should look like to eliminate any confusion).",
+    },
+    {
+      stepNumber: 6,
+      description:
+        "Then you will spin the paperclip around the pencil and whatever space it lands on in the wheel is the activity you will perform.",
+    },
+  ];
 
-          <div className="float-right">
-            <Link href="/home">
-              <button className="h-6 w-6 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-gray-300 flex items-center justify-center text-sm">
-                X
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-12">
-          <div className="col-span-8 space-y-5 order-2 sm:order-1">
-            <p className="font-bold">Spin the wheel!</p>
-            <p>
-              This Self Care Wheel allows you to create a list of self care
-              activities and form them into a wheel. Once made you will put the
-              tip of a pencil in the middle of a paperclip and place them both
-              in the center of the wheel. Then you will spin the paperclip
-              around the pencil and whatever space it lands on in the wheel is
-              the activity you will perform.
-            </p>
-            <p className="font-bold">What will you need?</p>
-            <div className="grid grid-cols-1 sm:grid-cols-5 space-y-5 sm:space-y-0">
-              <div className="mx-auto">
-                <Image
-                  className="m-auto h-full object-contain"
-                  src={image1}
-                  alt="Olivia Kids"
-                ></Image>
-                <p className="text-center">Paper</p>
-              </div>
-              <div className="mx-auto">
-                <Image
-                  className="m-auto h-full object-contain"
-                  src={image2}
-                  alt="Olivia Kids"
-                ></Image>
-                <p className="text-center">Pen</p>
-              </div>
-              <div className="mx-auto">
-                <Image
-                  className="m-auto h-full object-contain"
-                  src={image3}
-                  alt="Olivia Kids"
-                ></Image>
-                <p className="text-center">Marker</p>
-              </div>
-              <div className="mx-auto">
-                <Image
-                  className="m-auto h-full object-contain"
-                  src={image4}
-                  alt="Olivia Kids"
-                ></Image>
-                <p className="text-center">Paperclilp</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-span-4 order-1 sm:order-2">
-            <Image className="w-full" src={sideImage} alt="Olivia Kids"></Image>
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 py-10">
-        <div className="justify-self-center sm:justify-self-start">
-          <button
-            onClick={onBack}
-            className="text-rose-600 font-bold py-2 px-4"
-          >
-            Back
-          </button>
-        </div>
-        <div className="justify-self-center sm:justify-self-end">
-          <button
-            onClick={onNext}
-            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
-          >
-            Continue &gt;
-          </button>
-        </div>
-      </div>
-    </div>
+  return (
+    <>
+      <Header
+        logoSrc={icon}
+        title="Self-Care Wheel"
+        subtitle="Caregiver Wellness - Rainbow Valley"
+        homeLink="/home"
+        subtitleColor="#E75858"
+      />
+      <Activity steps={activitySteps} stepNumberColor="#E75858" />
+      <Footer
+        onNext={onNext}
+        onBack={onBack}
+        leftButtonText="Back"
+        rightButtonText="Continue"
+        leftClickAllowed={true}
+      />
+    </>
   );
 };
 
-export default ActivityPage2;
+export default Page2;
