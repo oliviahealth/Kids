@@ -1,125 +1,39 @@
-import Image from "next/image";
-import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
+import image1 from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_image4.png";
+import Header from "@/components/Template/Header";
+import KeyTakeaways from "@/components/Template/KeyTakeaways";
+import Footer from "@/components/Template/Footer";
 
-const ActivityPage4: React.FC<{
+const Page4: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  return (
-    <div className="flex flex-col h-full justify-between p-10">
-      <div className="space-y-10">
-        <div className="flex">
-          <div className="my-auto">
-            <Image
-              className="max-w-full max-h-full"
-              src={icon}
-              alt="Olivia Kids"
-            ></Image>
-          </div>
-          <div className=" pl-5 w-full my-auto float-left">
-            <h1 className="text-xl font-bold ">Mindful Driving</h1>
-            <p className="text-lg text-rose-300">
-              Caregiver Wellness - Rainbow Valley
-            </p>
-          </div>
+  const takeawayText = `You have successfully finished this activity and reached your destination safely. Hopefully you 
+  are calmer than before by focusing on your senses rather than consuming yourself with the stressors of driving. The next 
+  time you feel overwhelmed when inside the car you can think back to these steps to ensure safety and improve your mental health.`;
 
-          <div className="float-right">
-            <Link href="/home">
-              <button className="h-6 w-6 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-gray-300 flex items-center justify-center text-sm">
-                X
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-12">
-          <div className="col-span-12 mt-5">
-            <p className="font-bold">Guidelines</p>
-          </div>
-          <div className="col-span-12 sm:col-span-6 space-y-5 mt-2">
-            <div className="flex">
-              <div className="my-auto">
-                <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
-                  <p>9</p>
-                </div>
-              </div>
-              <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">Let the wind flow</h1>
-                <p>
-                  Feel free to roll the windows down and listen to the world
-                  around you. Focus on the sounds of birds chirping or the cars
-                  whizzing by. These noises can bring peace, help you stay calm,
-                  and might also entertain your child.
-                </p>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="my-auto">
-                <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
-                  <p>10</p>
-                </div>
-              </div>
-              <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">Let the tunes flow</h1>
-                <p>
-                  If you do not like the sound of cars, try putting the radio on
-                  and focusing on singing along to the music that makes you
-                  smile.
-                </p>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="my-auto">
-                <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
-                  <p>11</p>
-                </div>
-              </div>
-              <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">Park</h1>
-                <p>
-                  Finally, you will reach your destination and can put your car
-                  in park.
-                </p>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="my-auto">
-                <div className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-rose-100 flex items-center justify-center">
-                  <p>12</p>
-                </div>
-              </div>
-              <div className=" pl-5 w-full my-auto float-left">
-                <h1 className="text-lg font-bold ">Recall and register</h1>
-                <p>
-                  Before getting out think back to what you saw, heard, smelt,
-                  felt, and possibly tasted and how you were able to be safe.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-span-12 sm:col-span-6 space-y-5 mt-2"></div>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 py-10">
-        <div className="justify-self-center sm:justify-self-start">
-          <button
-            onClick={onBack}
-            className="text-rose-600 font-bold py-2 px-4"
-          >
-            Back
-          </button>
-        </div>
-        <div className="justify-self-center sm:justify-self-end">
-          <button
-            onClick={onNext}
-            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
-          >
-            Continue to activity &gt;
-          </button>
-        </div>
-      </div>
-    </div>
+  return (
+    <>
+      <Header
+        logoSrc={icon}
+        title="Mindful Driving"
+        subtitle="Caregiver Wellness - Rainbow Valley"
+        homeLink="/home"
+        subtitleColor="#E75858"
+      />
+
+      <KeyTakeaways text={takeawayText} photoSrc={image1} photoAlt="Photo" />
+      <Footer
+        onNext={onNext}
+        onBack={onBack}
+        leftButtonText="Back"
+        rightButtonText="Continue"
+        leftClickAllowed={true}
+        rightHasLink={true}
+        rightLinkHref={"/home"}
+      />
+    </>
   );
 };
 
-export default ActivityPage4;
+export default Page4;

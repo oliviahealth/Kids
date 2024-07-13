@@ -1,75 +1,91 @@
-import Image from "next/image";
-import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
-import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_SideImage.png";
+import { useEffect, useState } from "react";
+import IntroductionAndMaterials, {
+  CheckboxState,
+} from "@/components/Template/IntroductionAndMaterials";
+import Header from "@/components/Template/Header";
+import image1 from "../../../../../../public/images/dashboard/rainbowValley/act4/act4_image1.png";
+import image2 from "../../../../../../public/images/dashboard/rainbowValley/act4/act4_image2.png";
+import Footer from "@/components/Template/Footer";
 
-const ActivityPage1: React.FC<{
+const Page1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  return (
-    <div className="flex flex-col h-full justify-between p-10">
-      <div className="space-y-10">
-        <div className="flex">
-          <div className="my-auto">
-            <Image
-              className="max-w-full max-h-full"
-              src={icon}
-              alt="Olivia Kids"
-            ></Image>
-          </div>
-          <div className=" pl-5 w-full my-auto float-left">
-            <h1 className="text-xl font-bold ">Mindful Driving</h1>
-            <p className="text-lg text-rose-300">
-              Caregiver Wellness - Rainbow Valley
-            </p>
-          </div>
+  const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
+  const [isChecked, setIsChecked] = useState<CheckboxState>({
+    vehicle: false,
+    the_road: false,
+  });
 
-          <div className="float-right">
-            <Link href="/home">
-              <button className="h-6 w-6 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-gray-300 flex items-center justify-center text-sm">
-                X
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-12">
-          <div className="col-span-8 space-y-5 order-2 sm:order-1">
-            <p className="font-bold">Highway towards responsibility</p>
-            <p>
-              Driving a car can be stressful especially as a caregiver of a
-              child or multiple children between the ages of 2-3. If the child
-              is emotional this can distract you as a driver and increase
-              feelings of stress or can make you want to get to the destination
-              sooner. This sense of hurry can decrease how aware you are of your
-              surroundings and can put the passengers in your car more at risk.
-              We have created an activity for you to focus on your five senses
-              as you drive to increase safety in addition to your mental
-              well-being.
-            </p>
-          </div>
-          <div className="col-span-4 order-1 sm:order-2">
-            <Image className="w-full" src={sideImage} alt="Olivia Kids"></Image>
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 py-10">
-        <div className="justify-self-center sm:justify-self-start">
-          <button className="text-rose-600 font-bold py-2 px-4">
-            Learn More
-          </button>
-        </div>
-        <div className="justify-self-center sm:justify-self-end">
-          <button
-            onClick={onNext}
-            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
-          >
-            Continue &gt;
-          </button>
-        </div>
-      </div>
-    </div>
+  const handleCheckboxChange = (type: keyof typeof isChecked) => {
+    setIsChecked((prevState) => ({
+      ...prevState,
+      [type]: !prevState[type],
+    }));
+  };
+
+  useEffect(() => {
+    const allChecked = Object.values(isChecked).every(Boolean);
+    setButtonDisabled(!allChecked);
+  }, [isChecked]);
+
+  return (
+    <>
+      <Header
+        logoSrc={icon}
+        title="Mindful Driving"
+        subtitle="Caregiver Wellness - Rainbow Valley"
+        homeLink="/home"
+        subtitleColor="#E75858"
+      />
+
+      <IntroductionAndMaterials
+        introductionTitle="Introduction"
+        introductionText={`Driving a car can be stressful especially as a caregiver of a child or multiple children between the
+          ages of 2-3. If the child is emotional this can distract you as a driver and increase feelings of stress or can make
+          you want to get to the destination sooner. This sense of hurry can decrease how aware you are of your surroundings
+          and can put the passengers in your car more at risk. We have created an activity for you to focus on your five senses 
+          as you drive to increase safety in addition to your mental wellbeing. This activity is called Mindful Driving and 
+          encourages you to take an active part in paying attention to the details when driving. This will allow you to calm 
+          your mind and ensure you will safely reach your intended destination. `}
+        materialsTitle="Materials Needed"
+        materials={[
+          {
+            name: "Vehicle",
+            image: image1,
+            alt: "Vehicle",
+            key: "vehicle",
+          },
+          {
+            name: "The Road",
+            image: image2,
+            alt: "The Road",
+            key: "the_road",
+          },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+        ]}
+        isChecked={isChecked}
+        handleCheckboxChange={handleCheckboxChange}
+        mainBackgroundColor="#FFD0D0"
+        emptyCardBackgroundColor="#FFBABA"
+        checkedCardColor="#E75858"
+      />
+      <Footer
+        onNext={onNext}
+        onBack={onBack}
+        rightButtonDisabledAllowed={true}
+        rightButtonDisabled={buttonDisabled}
+        leftButtonText="Learn More"
+        rightButtonText="Continue"
+      />
+    </>
   );
 };
 
-export default ActivityPage1;
+export default Page1;
