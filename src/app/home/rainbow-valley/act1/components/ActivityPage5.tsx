@@ -10,13 +10,13 @@ const ActivityPage5: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              2
+              5
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Compile a playlist</h1>
+            <h1 className="text-2xl font-black ">Make it a party</h1>
             <p className="text-lg font-semibold">
-              Venture through the platform and add songs to your playlist.
+              Include your children and start a dance party!
             </p>
           </div>
 

@@ -4,7 +4,7 @@ import confetti from "canvas-confetti";
 import { useEffect } from "react";
 import star from "../../../../../../public/images/dashboard/rainbowValley/shared/star.svg";
 
-const ActivityPage9: React.FC<{
+const ActivityPageStar: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -86,4 +86,4 @@ const ActivityPage9: React.FC<{
   );
 };
 
-export default ActivityPage9;
+export default ActivityPageStar;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage7: React.FC<{
+const ActivityPage3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -10,14 +10,14 @@ const ActivityPage7: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              4
+              3
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Let it play</h1>
+            <h1 className="text-2xl font-black ">Pick a time</h1>
             <p className="text-lg font-semibold">
-              Put it on for at least 10-15 minutes and enjoy grooving along to
-              the beat.
+              When your day begins, choose a time that you plan to listen to
+              your playlist.
             </p>
           </div>
 
@@ -52,4 +52,4 @@ const ActivityPage7: React.FC<{
   );
 };
 
-export default ActivityPage7;
+export default ActivityPage3;

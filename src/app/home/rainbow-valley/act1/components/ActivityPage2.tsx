@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage4: React.FC<{
+const ActivityPage2: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -10,13 +10,13 @@ const ActivityPage4: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              1
+              2
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Select an app</h1>
+            <h1 className="text-2xl font-black ">Compile a playlist</h1>
             <p className="text-lg font-semibold">
-              Choose a music platform you will create your playlist on.
+              Venture through the platform and add songs to your playlist.
             </p>
           </div>
 
@@ -51,4 +51,4 @@ const ActivityPage4: React.FC<{
   );
 };
 
-export default ActivityPage4;
+export default ActivityPage2;
