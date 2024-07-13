@@ -2,7 +2,15 @@ import { Description, AddPhotoButton, EmptyWhitePage } from '@/components/activi
 import { Page } from '@/components/Pagination';
 
 export default ({ onBack, onContinue, onExit }: Page) =>
-    <EmptyWhitePage onBack={onBack} onContinue={onContinue} onExit={onExit} colors={["#35A663", "#88DFAC", "#B5F6D0"]} image="/images/activities/fantasy-forest/header-icon.svg" title="Nature Walk" subtitle="Caregiver Wellness - Fantasy Forest" >
+    <EmptyWhitePage
+        onBack={onBack}
+        onContinue={onContinue}
+        onExit={onExit}
+        colors={["#35A663", "#88DFAC", "#B5F6D0"]}
+        image="/images/activities/fantasy-forest/header-icon.svg"
+        title="Healthy Weekly Meal Planner"
+        subtitle="Caregiver Wellness - Fantasy Forest"
+    >
 
         <div className='w-1/2'>
             <Description title="Key Takeaways" paragraphs={[

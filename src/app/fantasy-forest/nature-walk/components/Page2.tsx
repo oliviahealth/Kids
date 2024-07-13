@@ -1,7 +1,15 @@
 import { ActivityPreview, EmptyWhitePage } from '@/components/activity/white-page'
 import { Page } from '@/components/Pagination';
 
-export default ({ onBack, onContinue, onExit }: Page) => <EmptyWhitePage onBack={onBack} onContinue={onContinue} onExit={onExit} colors={["#35A663", "#88DFAC", "#B5F6D0"]} image="/images/activities/fantasy-forest/header-icon.svg" title="Nature Walk" subtitle="Caregiver Wellness - Fantasy Forest" >
+export default ({ onBack, onContinue, onExit }: Page) => <EmptyWhitePage
+    onBack={onBack}
+    onContinue={onContinue}
+    onExit={onExit}
+    colors={["#35A663", "#88DFAC", "#B5F6D0"]}
+    image="/images/activities/fantasy-forest/header-icon.svg"
+    title="Nature Walk"
+    subtitle="Caregiver Wellness - Fantasy Forest"
+>
     <ActivityPreview activities={[
         {
             id: 1,

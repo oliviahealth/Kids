@@ -2,7 +2,15 @@ import { MaterialChecklist, Description, EmptyWhitePage } from '@/components/act
 import { Page } from '@/components/Pagination';
 
 export default ({ onBack, onContinue, onExit }: Page) =>
-    <EmptyWhitePage onBack={onBack} onContinue={onContinue} onExit={onExit} colors={["#35A663", "#88DFAC", "#B5F6D0"]} image="/images/activities/fantasy-forest/header-icon.svg" title="Nature Walk" subtitle="Caregiver Wellness - Fantasy Forest" >
+    <EmptyWhitePage
+        onBack={onBack}
+        onContinue={onContinue}
+        onExit={onExit}
+        colors={["#35A663", "#88DFAC", "#B5F6D0"]}
+        image="/images/activities/fantasy-forest/header-icon.svg"
+        title="Healthy Weekly Meal Planner"
+        subtitle="Caregiver Wellness - Fantasy Forest"
+    >
         <div className="md:w-1/2">
             <Description title={"Take Control"} paragraphs={[
                 "There are many things you can't control in life, especially when you have to take care of others. But one thing you can control is making a meal plan each week! This can help reduce some stress.",
