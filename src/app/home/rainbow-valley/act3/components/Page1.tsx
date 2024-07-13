@@ -1,100 +1,95 @@
-import Image from "next/image";
-import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
-import sideImage from "../../../../../../public/images/dashboard/rainbowValley/act1/act1_SideImage.png";
+import { useEffect, useState } from "react";
+import IntroductionAndMaterials, {
+  CheckboxState,
+} from "@/components/Template/IntroductionAndMaterials";
+import Header from "@/components/Template/Header";
+import Footer from "@/components/Template/Footer";
+import image1 from "../../../../../../public/images/dashboard/rainbowValley/act3/act3_image1.png";
+import image2 from "../../../../../../public/images/dashboard/rainbowValley/act3/act3_image2.png";
+import image3 from "../../../../../../public/images/dashboard/rainbowValley/act3/act3_image3.png";
+import image4 from "../../../../../../public/images/dashboard/rainbowValley/act3/act3_image4.png";
 
-const ActivityPage1: React.FC<{
+const Page1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  return (
-    <div className="flex flex-col h-full justify-between p-10">
-      <div className="space-y-10">
-        <div className="flex">
-          <div className="my-auto">
-            <Image
-              className="max-w-full max-h-full"
-              src={icon}
-              alt="Olivia Kids"
-            ></Image>
-          </div>
-          <div className=" pl-5 w-full my-auto float-left">
-            <h1 className="text-xl font-bold ">Vision Board for Self-Care</h1>
-            <p className="text-lg text-rose-300">
-              Caregiver Wellness - Rainbow Valley
-            </p>
-          </div>
+  const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
+  const [isChecked, setIsChecked] = useState<CheckboxState>({
+    paper: false,
+    scissors: false,
+    glue: false,
+    magazine: false,
+  });
 
-          <div className="float-right">
-            <Link href="/home">
-              <button className="h-6 w-6 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-gray-300 flex items-center justify-center text-sm">
-                X
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-12">
-          <div className="col-span-8 space-y-5 order-2 sm:order-1">
-            <p className="font-bold">Tap into your creative side</p>
-            <p>
-              By the age of two, your childs imagination is beginning to bloom!
-              You may notice this in the way they play pretend with the objects
-              they have around them. This creativity is important for your child
-              because it allows for self expression, problem solving, the
-              expression of feelings, and{" "}
-              <a
-                className="underline text-blue-600"
-                href="https://www.pbs.org/wholechild/providers/play.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                improves their fine motor skills
-              </a>
-              . Just as it is important for toddlers to be creative, it is also
-              just important for adults to foster their own creativity. This is
-              why we created a Vision Board for Self Care.
-            </p>
-            <p>
-              A{" "}
-              <a
-                className="underline text-blue-600"
-                href="https://www.tandfonline.com/doi/full/10.1080/15401383.2015.1092901?casa_token=qUWifU0ggYAAAAAA%3A2rKg9IVhIXUo_t4pvzMosanTh5WcwUEEzcNjOMTFwx4leqCnVuBKsaAh-dOSHyti-jGp9CGp24J1LA"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                vision board
-              </a>{" "}
-              is a collection of pictures that represents your goals and
-              aspirations. As a parent, you can decide what it is that gives you
-              motivation, peaks your intestest, and inspires you! This could be
-              something such as baking, gardening, health goals, or maybe even
-              your five year plan! It is easy to get caught up in the stress of
-              life, this vision board provides a concrete and observable visual
-              for you to focus on and feel positive about.
-            </p>
-          </div>
-          <div className="col-span-4 order-1 sm:order-2">
-            <Image className="w-full" src={sideImage} alt="Olivia Kids"></Image>
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 py-10">
-        <div className="justify-self-center sm:justify-self-start">
-          <button className="text-rose-600 font-bold py-2 px-4">
-            Learn More
-          </button>
-        </div>
-        <div className="justify-self-center sm:justify-self-end">
-          <button
-            onClick={onNext}
-            className="bg-rose-600 text-white font-bold py-2 px-4 rounded-3xl"
-          >
-            Continue &gt;
-          </button>
-        </div>
-      </div>
-    </div>
+  const handleCheckboxChange = (type: keyof typeof isChecked) => {
+    setIsChecked((prevState) => ({
+      ...prevState,
+      [type]: !prevState[type],
+    }));
+  };
+
+  useEffect(() => {
+    const allChecked = Object.values(isChecked).every(Boolean);
+    setButtonDisabled(!allChecked);
+  }, [isChecked]);
+
+  return (
+    <>
+      <Header
+        logoSrc={icon}
+        title="Vision Board for Self-Care"
+        subtitle="Caregiver Wellness - Rainbow Valley"
+        homeLink="/home"
+        subtitleColor="#E75858"
+      />
+
+      <IntroductionAndMaterials
+        introductionTitle="Introduction"
+        introductionText={`By the age of two, your child's imagination is beginning to bloom! This creativity is important for your child 
+          because it allows for self-expression, problem solving, the expression of feelings, and improves their fine motor skills. Just 
+          as it is important for toddlers to be creative, it is also just important for adults to foster their own creativity. This is why 
+          we created a Vision Board for Self-Care. A vision board is a collection of pictures that represents your goals and aspirations.
+          As a parent, you can decide what it is that gives you motivation, piques your interest, and inspires you! This could be something 
+          such as baking, gardening, health goals, or maybe even your five-year plan! It is easy to get caught up in the stress of life, 
+          this vision board provides a concrete and observable visual for you to focus on and feel positive about.`}
+        materialsTitle="Materials Needed"
+        materials={[
+          {
+            name: "Paper",
+            image: image1,
+            alt: "Paper",
+            key: "paper",
+          },
+          {
+            name: "Scissors",
+            image: image2,
+            alt: "Scissors",
+            key: "scissors",
+          },
+          { name: "Glue", image: image3, alt: "Glue", key: "glue" },
+          { name: "Magazine", image: image4, alt: "Magazine", key: "Magazine" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+        ]}
+        isChecked={isChecked}
+        handleCheckboxChange={handleCheckboxChange}
+        mainBackgroundColor="#FFD0D0"
+        emptyCardBackgroundColor="#FFBABA"
+        checkedCardColor="#E75858"
+      />
+      <Footer
+        onNext={onNext}
+        onBack={onBack}
+        rightButtonDisabledAllowed={true}
+        rightButtonDisabled={buttonDisabled}
+        leftButtonText="Learn More"
+        rightButtonText="Continue"
+      />
+    </>
   );
 };
 
-export default ActivityPage1;
+export default Page1;

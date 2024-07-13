@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import icon from "../../../../../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
 import Header from "@/components/Template/Header";
 import Activity from "@/components/Template/ActivitySteps";

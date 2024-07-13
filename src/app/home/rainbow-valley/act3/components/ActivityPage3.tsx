@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage5: React.FC<{
+const ActivityPage3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -10,14 +10,14 @@ const ActivityPage5: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              2
+              3
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Establish materials</h1>
+            <h1 className="text-2xl font-black ">Go picture hunting</h1>
             <p className="text-lg font-semibold">
-              Decide where you want to make your vision board? Do you want to
-              use paper, poster board, or PowerPoint?
+              Find pictures for your vision board. This may be online pictures,
+              magazine clippings, personal photos, or drawings.
             </p>
           </div>
 
@@ -52,4 +52,4 @@ const ActivityPage5: React.FC<{
   );
 };
 
-export default ActivityPage5;
+export default ActivityPage3;
