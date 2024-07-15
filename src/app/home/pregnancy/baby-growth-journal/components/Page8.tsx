@@ -4,7 +4,7 @@ import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.
 import Image from "next/image";
 import Link from "next/link";
 
-export default function PregnancySupportSystemPage5({
+export default function BabyGrowthJournalPage8({
   onNext,
   onBack,
 }: {
@@ -15,14 +15,12 @@ export default function PregnancySupportSystemPage5({
     <div className="flex flex-col h-full w-full">
       <div className="h-1/6 flex justify-between items-center gap-8">
         <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
-          3
+          5
         </span>
 
         <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-2xl font-bold">Print Multiple Copies (if using a template)</h1>
-          <p>
-            If you are using the template, you can print multiple copies if needed.
-          </p>
+          <h1 className="text-2xl font-bold">Important Events</h1>
+          <p>Lastly, write about anything else important or exciting that happened that week</p>
         </div>
 
         <div className="">

@@ -4,7 +4,7 @@ import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.
 import Image from "next/image";
 import Link from "next/link";
 
-export default function PregnancySupportSystemPage5({
+export default function BabyGrowthJournalPage5({
   onNext,
   onBack,
 }: {
@@ -19,9 +19,9 @@ export default function PregnancySupportSystemPage5({
         </span>
 
         <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-2xl font-bold">Print Multiple Copies (if using a template)</h1>
+          <h1 className="text-2xl font-bold">Baby's Development</h1>
           <p>
-            If you are using the template, you can print multiple copies if needed.
+            Write about the development of your baby that week
           </p>
         </div>
 
