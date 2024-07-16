@@ -67,9 +67,9 @@ const RelaxationYogaPage1: React.FC<{
             materials={materials}
             setButtonDisabled={setButtonDisabled}
             colorScheme={{
-              borderColor: "F797FF",
-              emptySlotColor: "FCD3FF",
-              backgroundColor: "FEEDFF",
+              borderColor: "F797FF", // the border of the items in the material neeeded section
+              emptySlotColor: "FCD3FF", // the background color of the empty slots in the material needed section
+              backgroundColor: "FEEDFF", // the background color of the material needed section
             }}
           />
         </div>
