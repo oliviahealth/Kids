@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../RelaxationYoga.module.css";
+import styles from "../HomemadeGrowthChart.module.css";
 
 const RelaxationYogaPage9: React.FC<{
   onNext: () => void;
@@ -16,9 +16,9 @@ const RelaxationYogaPage9: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>Relaxation Yoga</h1>
+            <h1 className={styles.title}>Homemade Growth Chart</h1>
             <h2 className={styles.subtitle}>
-              Caregiver Wellness - Blossom Haven
+              Creative Arts - Prenatal Paradise
             </h2>
           </div>
         </div>
@@ -41,12 +41,14 @@ const RelaxationYogaPage9: React.FC<{
               <b>Key Takeaways</b>
             </h3>
             <p className={styles.text}>
-              Congrats, you have completed your Relaxation Yoga session! After
-              completing one session, you will recieve your activity completion
-              sticker. These are some of the many poses available for you to
-              relax, stretch, reduce pain, and build flexibility. Don't be
-              afraid to venture out and find new poses. Just remember to focus
-              on comfort and relaxation while doing so.
+              Now you have a cute, customizable, homemade growth chart to
+              celebrate each stage of your child's growth that you can cherish
+              forever! Participating in creative activities when pregnant is
+              very beneficial, reducing stress, boosting emotional wellbeing,
+              promoting cognitive function, and providing a sense of
+              accomplisment. It is also an opportunity for you to bond with both
+              the baby and any other family members that may take part in the
+              project!
             </p>
           </div>
           <div className={`pt-3 align-self-center`}>

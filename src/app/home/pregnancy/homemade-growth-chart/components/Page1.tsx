@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../RelaxationYoga.module.css";
+import styles from "../HomemadeGrowthChart.module.css";
 import MaterialChecklist from "@/components/MaterialChecklist";
 import { useState } from "react";
 
@@ -11,9 +11,14 @@ const RelaxationYogaPage1: React.FC<{
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const materials = [
-    { imagePath: "/images/dashboard/pregnancy/yoga-mat.svg", label: "Yoga Mat" },
-    { imagePath: "/images/dashboard/pregnancy/pillow.svg", label: "Pillows" },
-    { imagePath: "/images/dashboard/pregnancy/music.svg", label: "Relaxing Music" }
+    { imagePath: "/images/dashboard/pregnancy/plank.svg", label: "Plank" },
+    { imagePath: "/images/dashboard/pregnancy/sandpaper.svg", label: "Sandpaper" },
+    { imagePath: "/images/dashboard/pregnancy/paint.svg", label: "Paint" },
+    { imagePath: "/images/dashboard/pregnancy/polyacrylic.svg", label: "Polyacrylic" },
+    { imagePath: "/images/dashboard/pregnancy/paint-brush.svg", label: "Paint Brush" },
+    { imagePath: "/images/dashboard/pregnancy/scissors.svg", label: "Scissors" },
+    { imagePath: "/images/dashboard/pregnancy/vinyl-decal.svg", label: "Vinyl Decal" },
+    { imagePath: "/images/dashboard/pregnancy/measuring-tape.svg", label: "Measuring Tape" }
   ];
   return (
     <>
@@ -25,9 +30,9 @@ const RelaxationYogaPage1: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>Relaxation Yoga</h1>
+            <h1 className={styles.title}>Homemade Growth Chart</h1>
             <h2 className={styles.subtitle}>
-              Caregiver Wellness - Blossom Haven
+              Creative Arts - Prenatal Paradise
             </h2>
           </div>
         </div>
@@ -47,19 +52,7 @@ const RelaxationYogaPage1: React.FC<{
             <b>Introduction</b>
           </h3>
           <p className={styles.text}>
-            With the many life changes and busy schedule that comes with
-            planning your baby’s arrival, pregnancy can be an overwhelming time
-            in your life. This is completely normal, but it's important you are
-            working to manage this stress, so it does not affect you and your
-            baby’s health. Different relaxation methods can be very useful tools
-            to cope with stress during pregnancy. One of these methods is yoga.
-            Yoga can be a great way to boost your mental and physical health. It
-            can be used to take a needed break from your busy schedule.
-            Preparing for your baby is important but staying happy and healthy
-            is too! As a bonus, yoga builds skills in strength, flexibility, and
-            mindful breathing to better prepare you for giving birth! Now that
-            we know a little bit about the benefits of yoga during pregnancy,
-            let's get started!
+          Creative expression can be a great way to practice self-care throughout your life, especially during pregnancy. When you feel overwhelmed by the many changes pregnancy brings, finding a hobby or activity that brings you joy is important to you and your baby's health. Photography is just one way you can take part in a creative activity that will let your ideas and personality grow! In this activity, you will transform into both a photagrapher and a model to create your own maternity photoshoot! 
           </p>
         </div>
         <div className={`${styles.imageWrapper}`}>

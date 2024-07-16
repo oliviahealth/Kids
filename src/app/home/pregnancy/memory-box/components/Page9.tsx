@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../RelaxationYoga.module.css";
+import styles from "../MemoryBox.module.css";
 
 const RelaxationYogaPage9: React.FC<{
   onNext: () => void;
@@ -16,9 +16,9 @@ const RelaxationYogaPage9: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>Relaxation Yoga</h1>
+            <h1 className={styles.title}>Memory Box</h1>
             <h2 className={styles.subtitle}>
-              Caregiver Wellness - Blossom Haven
+              Creative Arts - Prenatal Paradise
             </h2>
           </div>
         </div>
@@ -41,12 +41,13 @@ const RelaxationYogaPage9: React.FC<{
               <b>Key Takeaways</b>
             </h3>
             <p className={styles.text}>
-              Congrats, you have completed your Relaxation Yoga session! After
-              completing one session, you will recieve your activity completion
-              sticker. These are some of the many poses available for you to
-              relax, stretch, reduce pain, and build flexibility. Don't be
-              afraid to venture out and find new poses. Just remember to focus
-              on comfort and relaxation while doing so.
+              Creating a memory box is a beautiful way for you to encapsulate
+              your pregnancy jouney. It captures the love, preparation, and
+              celebration that goes into bringing a new life into the world! It
+              is a tangible, timeless project that you can share with your child
+              in years to come. The creativity aspect of it also offers a
+              holistic way for you to nurture your emotional and mental
+              well-being while preparing for the arrival of your baby!
             </p>
           </div>
           <div className={`pt-3 align-self-center`}>

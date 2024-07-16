@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../RelaxationYoga.module.css";
+import styles from "../MyBabysNameSign.module.css";
 
 const RelaxationYogaPage9: React.FC<{
   onNext: () => void;
@@ -16,9 +16,9 @@ const RelaxationYogaPage9: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>Relaxation Yoga</h1>
+            <h1 className={styles.title}>My Baby's Name Sign</h1>
             <h2 className={styles.subtitle}>
-              Caregiver Wellness - Blossom Haven
+              Creative Arts - Prenatal Paradise
             </h2>
           </div>
         </div>
@@ -41,12 +41,13 @@ const RelaxationYogaPage9: React.FC<{
               <b>Key Takeaways</b>
             </h3>
             <p className={styles.text}>
-              Congrats, you have completed your Relaxation Yoga session! After
-              completing one session, you will recieve your activity completion
-              sticker. These are some of the many poses available for you to
-              relax, stretch, reduce pain, and build flexibility. Don't be
-              afraid to venture out and find new poses. Just remember to focus
-              on comfort and relaxation while doing so.
+              As your baby grows, Creative Art will be an important skill for
+              him/her to learn. As their caregiver, they'll need you to teach
+              them these skills along the way. This activity allows you to
+              practice self-care, decorate your nursery, and get a head start on
+              your many years of crafting to come! <br></br><br></br> Once you complete this
+              activity, you will receive an activity completion sticker for the
+              Creative Arts Learning Domain.
             </p>
           </div>
           <div className={`pt-3 align-self-center`}>

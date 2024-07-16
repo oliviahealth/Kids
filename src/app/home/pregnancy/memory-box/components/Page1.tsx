@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../RelaxationYoga.module.css";
+import styles from "../MemoryBox.module.css";
 import MaterialChecklist from "@/components/MaterialChecklist";
 import { useState } from "react";
 
@@ -11,9 +11,9 @@ const RelaxationYogaPage1: React.FC<{
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const materials = [
-    { imagePath: "/images/dashboard/pregnancy/yoga-mat.svg", label: "Yoga Mat" },
-    { imagePath: "/images/dashboard/pregnancy/pillow.svg", label: "Pillows" },
-    { imagePath: "/images/dashboard/pregnancy/music.svg", label: "Relaxing Music" }
+    { imagePath: "/images/dashboard/pregnancy/box.svg", label: "Box" },
+    { imagePath: "/images/dashboard/pregnancy/decorative-supplies.svg", label: "Decorative Supplies" },
+    { imagePath: "/images/dashboard/pregnancy/box-items.svg", label: "Mementos to store in the Box" }
   ];
   return (
     <>
@@ -25,9 +25,9 @@ const RelaxationYogaPage1: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>Relaxation Yoga</h1>
+            <h1 className={styles.title}>Memory Box</h1>
             <h2 className={styles.subtitle}>
-              Caregiver Wellness - Blossom Haven
+              Creative Arts - Prenatal Paradise
             </h2>
           </div>
         </div>
@@ -47,19 +47,7 @@ const RelaxationYogaPage1: React.FC<{
             <b>Introduction</b>
           </h3>
           <p className={styles.text}>
-            With the many life changes and busy schedule that comes with
-            planning your baby’s arrival, pregnancy can be an overwhelming time
-            in your life. This is completely normal, but it's important you are
-            working to manage this stress, so it does not affect you and your
-            baby’s health. Different relaxation methods can be very useful tools
-            to cope with stress during pregnancy. One of these methods is yoga.
-            Yoga can be a great way to boost your mental and physical health. It
-            can be used to take a needed break from your busy schedule.
-            Preparing for your baby is important but staying happy and healthy
-            is too! As a bonus, yoga builds skills in strength, flexibility, and
-            mindful breathing to better prepare you for giving birth! Now that
-            we know a little bit about the benefits of yoga during pregnancy,
-            let's get started!
+          Pregnancy can be such a special, transformative time filled with lots of excitement, celebration, and sentiment. Creating a memory box to help capture those treasured memories and momentos is a relaxing project that can help alleviate stress, allow for reflection, and foster excitement while awaiting the arrival of your precious little one! It is also a great way to collect keepsakes that you can one day show your child, allowing them insight into the journey you embarked upon before they were even born! 
           </p>
         </div>
         <div className={`${styles.imageWrapper}`}>
