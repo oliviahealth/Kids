@@ -1,19 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../RelaxationYoga.module.css";
+import styles from "../PregnancySupportSystem.module.css";
 import MaterialChecklist from "@/components/MaterialChecklist";
 import { useState } from "react";
 
-const RelaxationYogaPage1: React.FC<{
+const PregnancySupportSystemPage1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const materials = [
-    { imagePath: "/images/dashboard/pregnancy/yoga-mat.svg", label: "Yoga Mat" },
-    { imagePath: "/images/dashboard/pregnancy/pillow.svg", label: "Pillows" },
-    { imagePath: "/images/dashboard/pregnancy/music.svg", label: "Relaxing Music" }
+    { imagePath: "/images/dashboard/pregnancy/paper.svg", label: "Paper" },
+    { imagePath: "/images/dashboard/pregnancy/pencil.svg", label: "Writing Utensil" },
+    { imagePath: "/images/dashboard/pregnancy/printer.svg", label: "Printer (Optional)" },
+    { imagePath: "/images/dashboard/pregnancy/phone.svg", label: "Phone (Optional)" }
   ];
   return (
     <>
@@ -25,7 +26,7 @@ const RelaxationYogaPage1: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>Relaxation Yoga</h1>
+            <h1 className={styles.title}>My Pregnancy Support System</h1>
             <h2 className={styles.subtitle}>
               Caregiver Wellness - Blossom Haven
             </h2>
@@ -47,19 +48,7 @@ const RelaxationYogaPage1: React.FC<{
             <b>Introduction</b>
           </h3>
           <p className={styles.text}>
-            With the many life changes and busy schedule that comes with
-            planning your baby’s arrival, pregnancy can be an overwhelming time
-            in your life. This is completely normal, but it's important you are
-            working to manage this stress, so it does not affect you and your
-            baby’s health. Different relaxation methods can be very useful tools
-            to cope with stress during pregnancy. One of these methods is yoga.
-            Yoga can be a great way to boost your mental and physical health. It
-            can be used to take a needed break from your busy schedule.
-            Preparing for your baby is important but staying happy and healthy
-            is too! As a bonus, yoga builds skills in strength, flexibility, and
-            mindful breathing to better prepare you for giving birth! Now that
-            we know a little bit about the benefits of yoga during pregnancy,
-            let's get started!
+            Pregnancy is a very exciting time in your life. It can also be unpredictable and overwhelming at times, but you are not alone. Many pregnant people exeprience these emotions. With the many changes happening to your body, hormones, and lifestyle, stress is expected. Luckily, there are many ways to prepare for the stress to come. Having a support system to encourage you throughout your pregnancy is a great place to start. This can be family, friends, doctors, therapists, counselors, teachers, coaches, and more! For this activity, you are going to build your support system. This system can be as small or as big as you want. It is all up to you! Whatever makes you feel comfortable and supported.
           </p>
         </div>
         <div className={`${styles.imageWrapper}`}>
@@ -67,9 +56,9 @@ const RelaxationYogaPage1: React.FC<{
             materials={materials}
             setButtonDisabled={setButtonDisabled}
             colorScheme={{
-              borderColor: "F797FF", // the border of the items in the material neeeded section
-              emptySlotColor: "FCD3FF", // the background color of the empty slots in the material needed section
-              backgroundColor: "FEEDFF", // the background color of the material needed section
+              borderColor: "F797FF",
+              emptySlotColor: "FCD3FF",
+              backgroundColor: "FEEDFF",
             }}
           />
         </div>
@@ -98,4 +87,4 @@ const RelaxationYogaPage1: React.FC<{
   );
 };
 
-export default RelaxationYogaPage1;
+export default PregnancySupportSystemPage1;

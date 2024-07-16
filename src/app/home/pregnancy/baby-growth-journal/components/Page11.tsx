@@ -1,26 +1,53 @@
-import React from "react";
-import image from "../../../../../../public/images/dashboard/adventure-bay/Ellipse 169.png";
+"use client";
+import React, { useEffect } from "react";
+import star from "../../../../../../public/images/dashboard/adventure-bay/Star 27.svg";
 import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.png";
 import Image from "next/image";
 import Link from "next/link";
+import confetti from "canvas-confetti";
 
-export default function RelaxationYogaPage7({
+export default function BabyGrowthJournalPage11({
   onNext,
   onBack,
 }: {
   onNext: () => void;
   onBack: () => void;
 }) {
+  useEffect(() => {
+    const duration = 3 * 1000; // 3 seconds
+    const end = Date.now() + duration;
+
+    const frame = () => {
+      confetti({
+        particleCount: 2,
+        angle: 60,
+        spread: 55,
+        origin: { x: Math.random(), y: Math.random() },
+      });
+      confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        origin: { x: Math.random(), y: Math.random() },
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    };
+
+    frame();
+  }, []);
   return (
     <div className="flex flex-col h-full w-full">
       <div className="h-1/6 flex justify-between items-center gap-8">
         <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
-          5
+          7
         </span>
 
-        <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-2xl font-bold">Savasana</h1>
-          <p>Lastly, move into a comfortable laying position, using your pillows for support behind your head, back, or in between your legs. Close your eyes. Take five deep breaths.</p>
+        <div className="text-center">
+          <h1 className="text-2xl font-bold">Well done!</h1>
+          <p>Repeat this exercise whenever you need it. Here is your star!</p>
         </div>
 
         <div className="">
@@ -33,7 +60,7 @@ export default function RelaxationYogaPage7({
         </div>
       </div>
       <div className="h-4/6 flex justify-center items-center">
-        <Image src={image} alt="Image" />
+        <Image src={star} alt="Star" />
       </div>
       <div className="h-1/6 flex flex-col md:flex-row justify-center items-center relative">
         <div className="absolute bottom-2 left-2 md:bottom-5 md:left-5">
@@ -48,8 +75,6 @@ export default function RelaxationYogaPage7({
           >
             <Image src={arrow} alt="Arrow" />
           </button>
-        </div>
-        <div className="px-4 py-4 md:px-0 grid grid-cols-12">
         </div>
       </div>
     </div>

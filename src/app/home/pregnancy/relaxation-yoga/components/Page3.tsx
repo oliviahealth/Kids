@@ -18,9 +18,9 @@ export default function RelaxationYogaPage3({
           1
         </span>
 
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">Gather materials.</h1>
-          <p>You may download and use the OlivaKIDS affirmation lists.</p>
+        <div className="text-center max-w-2xl mx-auto">
+          <h1 className="text-2xl font-bold">Slow your breathing and mind</h1>
+          <p>Close your eyes. Clear your mind. Take five deep breaths, holding your breath in and letting it out.</p>
         </div>
 
         <div className="">
@@ -50,12 +50,6 @@ export default function RelaxationYogaPage3({
           </button>
         </div>
         <div className="px-4 py-4 md:px-0 grid grid-cols-12">
-          {/* <p className="text-center text-xl md:text-xl tracking-wide col-start-4 col-end-10">
-            Sit or stand up straight, relax your shoulders, and slowly move your
-            head in a circle, first to the right and then to the left, while
-            breathing deeply. Repeat this 5-10 times to help your neck feel
-            better and more flexible.
-          </p> */}
         </div>
       </div>
     </div>

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../RelaxationYoga.module.css";
+import styles from "../BabyGrowthJournal.module.css";
 
-const RelaxationYogaPage2: React.FC<{
+// TODO: Update these steps
+
+const BabyGrowthJournalPage2: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -12,7 +14,7 @@ const RelaxationYogaPage2: React.FC<{
         <div className={styles.header}>
           <img src="/images/flower.svg" alt="Flower Icon" className={styles.icon} />
           <div>
-            <h1 className={styles.title}>Relaxation Yoga</h1>
+            <h1 className={styles.title}>Baby Growth Journal</h1>
             <h2 className={styles.subtitle}>Caregiver Wellness - Blossom Haven</h2>
           </div>
         </div>
@@ -32,7 +34,7 @@ const RelaxationYogaPage2: React.FC<{
                   <p className={styles.activityNumber}>1</p>
                 </div>
                 <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg">Find a quiet and comfortable place</h1>
+                  <h1 className="text-lg">Step 1</h1>
                 </div>
               </div>
               <div className={styles.activityItem}>
@@ -40,7 +42,7 @@ const RelaxationYogaPage2: React.FC<{
                   <p className={styles.activityNumber}>2</p>
                 </div>
                 <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg">Lay out your mat, towel, or blanket, and pillows on the floor</h1>
+                  <h1 className="text-lg">Step 2</h1>
                 </div>
               </div>
               <div className={styles.activityItem}>
@@ -48,7 +50,7 @@ const RelaxationYogaPage2: React.FC<{
                   <p className={styles.activityNumber}>3</p>
                 </div>
                 <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg">Play your choice of music</h1>
+                  <h1 className="text-lg">Step 3</h1>
                 </div>
               </div>
               <div className={styles.activityItem}>
@@ -56,7 +58,17 @@ const RelaxationYogaPage2: React.FC<{
                   <p className={styles.activityNumber}>4</p>
                 </div>
                 <div className={styles.activityTextWrapper}>
-                  <h1 className="text-lg">Sit with your legs crossed.</h1>
+                  <h1 className="text-lg">Step 4</h1>
+                </div>
+              </div>
+            </div>
+            <div className={styles.activityColumn}>
+              <div className={styles.activityItem}>
+                <div className={`${styles.circle}`}>
+                  <p className={styles.activityNumber}>5</p>
+                </div>
+                <div className={styles.activityTextWrapper}>
+                  <h1 className="text-lg">Step 5</h1>
                 </div>
               </div>
             </div>
@@ -83,4 +95,4 @@ const RelaxationYogaPage2: React.FC<{
   );
 };
 
-export default RelaxationYogaPage2;
+export default BabyGrowthJournalPage2;

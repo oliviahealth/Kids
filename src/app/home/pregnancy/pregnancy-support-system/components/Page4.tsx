@@ -4,7 +4,7 @@ import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RelaxationYogaPage7({
+export default function RelaxationYogaPage4({
   onNext,
   onBack,
 }: {
@@ -15,12 +15,14 @@ export default function RelaxationYogaPage7({
     <div className="flex flex-col h-full w-full">
       <div className="h-1/6 flex justify-between items-center gap-8">
         <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
-          5
+          2
         </span>
 
         <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-2xl font-bold">Savasana</h1>
-          <p>Lastly, move into a comfortable laying position, using your pillows for support behind your head, back, or in between your legs. Close your eyes. Take five deep breaths.</p>
+          <h1 className="text-2xl font-bold">Create a List of Supporters</h1>
+          <p>
+            With your writing utensil, create a list of people who will provide any form of support to you during and after your pregnancy. This can include someone to talk to when you feel stressed, someone to drive you to your doctors’ appointments, someone to teach you caregiver skills, and much more.
+          </p>
         </div>
 
         <div className="">

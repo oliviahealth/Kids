@@ -4,7 +4,7 @@ import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RelaxationYogaPage7({
+export default function BabyGrowthJournalPage3({
   onNext,
   onBack,
 }: {
@@ -15,13 +15,16 @@ export default function RelaxationYogaPage7({
     <div className="flex flex-col h-full w-full">
       <div className="h-1/6 flex justify-between items-center gap-8">
         <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
-          5
+          1
         </span>
 
         <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-2xl font-bold">Savasana</h1>
-          <p>Lastly, move into a comfortable laying position, using your pillows for support behind your head, back, or in between your legs. Close your eyes. Take five deep breaths.</p>
+          <h1 className="text-2xl font-bold">Visit the March Of Dimes Page</h1>
+          <p>
+            Using <a href="https://www.marchofdimes.org/pregnancy-week-week#1" className="text-blue-500 underline">March Of Dimes</a> “Pregnancy Week by Week” page
+          </p>
         </div>
+
 
         <div className="">
           <Link

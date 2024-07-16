@@ -1,16 +1,17 @@
 "use client";
 import { ReactNode, useState } from "react";
-import RelaxationYogaPage1 from "./components/Page1";
-import RelaxationYogaPage2 from "./components/Page2";
-import RelaxationYogaPage3 from "./components/Page3";
-import RelaxationYogaPage4 from "./components/Page4";
-import RelaxationYogaPage5 from "./components/Page5";
-import RelaxationYogaPage6 from "./components/Page6";
-import RelaxationYogaPage7 from "./components/Page7";
-import RelaxationYogaPage8 from "./components/Page8";
-import RelaxationYogaPage9 from "./components/Page9";
+import PregnancySupportSystemPage1 from "./components/Page1";
+import PregnancySupportSystemPage2 from "./components/Page2";
+import PregnancySupportSystemPage3 from "./components/Page3";
+import PregnancySupportSystemPage4 from "./components/Page4";
+import PregnancySupportSystemPage5 from "./components/Page5";
+import PregnancySupportSystemPage6 from "./components/Page6";
+import PregnancySupportSystemPage7 from "./components/Page7";
+import PregnancySupportSystemPage8 from "./components/Page8";
+import PregnancySupportSystemPage9 from "./components/Page9";
+import PregnancySupportSystemPage10 from "./components/Page10";
 
-import styles from "./RelaxationYoga.module.css";
+import styles from "./PregnancySupportSystem.module.css";
 
 const RelaxationYoga: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -54,63 +55,70 @@ const RelaxationYoga: React.FC = () => {
     {
       content: (
         <MapContainer>
-          <RelaxationYogaPage1 onNext={handleNext} onBack={handleBack} />
+          <PregnancySupportSystemPage1 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <RelaxationYogaPage2 onNext={handleNext} onBack={handleBack} />
+          <PregnancySupportSystemPage2 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
     {
       content: (
         <ActivityContainer>
-          <RelaxationYogaPage3 onNext={handleNext} onBack={handleBack} />
+          <PregnancySupportSystemPage3 onNext={handleNext} onBack={handleBack} />
         </ActivityContainer>
       ),
     },
     {
       content: (
         <ActivityContainer>
-          <RelaxationYogaPage4 onNext={handleNext} onBack={handleBack} />
+          <PregnancySupportSystemPage4 onNext={handleNext} onBack={handleBack} />
         </ActivityContainer>
       ),
     },
     {
       content: (
         <ActivityContainer>
-          <RelaxationYogaPage5 onNext={handleNext} onBack={handleBack} />
+          <PregnancySupportSystemPage5 onNext={handleNext} onBack={handleBack} />
         </ActivityContainer>
       ),
     },
     {
       content: (
         <ActivityContainer>
-          <RelaxationYogaPage6 onNext={handleNext} onBack={handleBack} />
+          <PregnancySupportSystemPage6 onNext={handleNext} onBack={handleBack} />
         </ActivityContainer>
       ),
     },
     {
       content: (
         <ActivityContainer>
-          <RelaxationYogaPage7 onNext={handleNext} onBack={handleBack} />
+          <PregnancySupportSystemPage7 onNext={handleNext} onBack={handleBack} />
         </ActivityContainer>
       ),
     },
     {
       content: (
         <ActivityContainer>
-          <RelaxationYogaPage8 onNext={handleNext} onBack={handleBack} />
+          <PregnancySupportSystemPage8 onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <PregnancySupportSystemPage9 onNext={handleNext} onBack={handleBack} />
         </ActivityContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <RelaxationYogaPage9 onNext={handleNext} onBack={handleBack} />
+          <PregnancySupportSystemPage10 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },

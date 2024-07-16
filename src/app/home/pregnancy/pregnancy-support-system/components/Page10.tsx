@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../RelaxationYoga.module.css";
+import styles from "../PregnancySupportSystem.module.css";
 
-const RelaxationYogaPage9: React.FC<{
+const PregnancySupportSystemPage10: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -16,7 +16,7 @@ const RelaxationYogaPage9: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>Relaxation Yoga</h1>
+            <h1 className={styles.title}>My Pregnancy Support System</h1>
             <h2 className={styles.subtitle}>
               Caregiver Wellness - Blossom Haven
             </h2>
@@ -41,12 +41,7 @@ const RelaxationYogaPage9: React.FC<{
               <b>Key Takeaways</b>
             </h3>
             <p className={styles.text}>
-              Congrats, you have completed your Relaxation Yoga session! After
-              completing one session, you will recieve your activity completion
-              sticker. These are some of the many poses available for you to
-              relax, stretch, reduce pain, and build flexibility. Don't be
-              afraid to venture out and find new poses. Just remember to focus
-              on comfort and relaxation while doing so.
+              You can refer to this list when you are feeling stressed or overwhelmed during and after your pregnancy. It will serve as a reminder that you are supported throughout your journey. Once you complete your support list, you will recieve your activity completion sticker!
             </p>
           </div>
           <div className={`pt-3 align-self-center`}>
@@ -69,4 +64,4 @@ const RelaxationYogaPage9: React.FC<{
   );
 };
 
-export default RelaxationYogaPage9;
+export default PregnancySupportSystemPage10;

@@ -4,7 +4,7 @@ import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RelaxationYogaPage7({
+export default function BabyGrowthJournalPage7({
   onNext,
   onBack,
 }: {
@@ -19,8 +19,8 @@ export default function RelaxationYogaPage7({
         </span>
 
         <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-2xl font-bold">Savasana</h1>
-          <p>Lastly, move into a comfortable laying position, using your pillows for support behind your head, back, or in between your legs. Close your eyes. Take five deep breaths.</p>
+          <h1 className="text-2xl font-bold">Weekly Feelings</h1>
+          <p>Write about how you are feeling that week</p>
         </div>
 
         <div className="">

@@ -4,7 +4,7 @@ import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RelaxationYogaPage7({
+export default function PregnancySupportSystemPage7({
   onNext,
   onBack,
 }: {
@@ -19,8 +19,8 @@ export default function RelaxationYogaPage7({
         </span>
 
         <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-2xl font-bold">Savasana</h1>
-          <p>Lastly, move into a comfortable laying position, using your pillows for support behind your head, back, or in between your legs. Close your eyes. Take five deep breaths.</p>
+          <h1 className="text-2xl font-bold">Describe Support Provided</h1>
+          <p>Underneath the form of contact, write a short description of what support you will receive from this person.</p>
         </div>
 
         <div className="">

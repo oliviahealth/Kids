@@ -18,11 +18,10 @@ export default function RelaxationYogaPage5({
           3
         </span>
 
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">Recite</h1>
+        <div className="text-center max-w-2xl mx-auto">
+          <h1 className="text-2xl font-bold">Cat-Cow Pose</h1>
           <p>
-            Recite these affirmations to yourself or your child at least once a
-            day.
+            Open your eyes and slowly move into a tabletop position with your hands and knees on the ground. Begin by slowly arching your back towards the sky, stretching your shoulder blades apart like a cat. Breathe in while in this position. Next, stretch your belly towards the floor and your chest to the sky like a cow. Breathe out in this position. Repeat this stretch five times, breathing in on cat and out on cow.
           </p>
         </div>
 
@@ -53,12 +52,6 @@ export default function RelaxationYogaPage5({
           </button>
         </div>
         <div className="px-4 py-4 md:px-0 grid grid-cols-12">
-          {/* <p className="text-center text-xl md:text-xl tracking-wide col-start-4 col-end-10">
-            Sit or stand up straight, relax your shoulders, and slowly move your
-            head in a circle, first to the right and then to the left, while
-            breathing deeply. Repeat this 5-10 times to help your neck feel
-            better and more flexible.
-          </p> */}
         </div>
       </div>
     </div>
