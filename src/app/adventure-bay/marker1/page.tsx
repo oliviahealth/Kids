@@ -3,6 +3,10 @@ import { ReactNode, useState } from "react";
 import Image from "next/image";
 import backgroundMap from "../../../../public/images/background.png";
 import tempBackground from "../../../../public/images/dashboard/adventure-bay/temp_background.png";
+
+import imageSrc from "@/public/images/dashboard/adventure-bay/Ellipse 169.png";
+import arrowSrc from "@/public/images/dashboard/adventure-bay/icon.png";
+
 import Page1 from "@/app/adventure-bay/marker1/components/Page1";
 import Page2 from "@/app/adventure-bay/marker1/components/Page2";
 import Page3 from "@/app/adventure-bay/marker1/components/Page3";
@@ -14,6 +18,7 @@ import ActivityPage5 from "./components/ActivityPage5";
 import ActivityPage6 from "./components/ActivityPage6";
 
 import ActivityStar from "./components/ActivityPageStar";
+import ActivityPage from "@/components/Template/ActivityPage";
 
 const AdventureBayActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -56,7 +61,7 @@ const AdventureBayActivity: React.FC = () => {
       <div className="h-full w-full">
         <div className="z-20 h-full overflow-y-auto">
           <div
-            className="relative shadow-2xl rounded-2xl h-full p-10"
+            className="relative shadow-2xl h-full p-10 overflow-auto"
             style={{ backgroundColor: "#E1FF8D" }}
           >
             {children}
@@ -83,9 +88,17 @@ const AdventureBayActivity: React.FC = () => {
     },
     {
       content: (
-        <ActivityContainer>
-          <ActivityPage1 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
+        <ActivityPage
+          stepNumber={1}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Gather materials."
+          description="You may download and use the OlivaKIDS affirmation lists."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
       ),
     },
     {
