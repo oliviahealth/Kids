@@ -17,9 +17,8 @@ const Page1: React.FC<{
 }> = ({ onNext, onBack }) => {
   const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
   const [isChecked, setIsChecked] = useState<CheckboxState>({
-    headphones: false,
-    favorite_app: false,
-    music: false,
+    marker: false,
+    bingo_card: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {

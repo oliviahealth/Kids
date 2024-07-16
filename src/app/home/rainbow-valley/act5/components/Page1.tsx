@@ -19,9 +19,10 @@ const Page1: React.FC<{
 }> = ({ onNext, onBack }) => {
   const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
   const [isChecked, setIsChecked] = useState<CheckboxState>({
-    headphones: false,
-    favorite_app: false,
-    music: false,
+    paper: false,
+    pen: false,
+    marker: false,
+    paperclip: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -69,10 +70,10 @@ const Page1: React.FC<{
           },
           { name: "Marker", image: image3, alt: "Marker", key: "marker" },
           {
-            name: "Paperclilp",
+            name: "Paperclip",
             image: image4,
-            alt: "Paperclilp",
-            key: "paperclilp",
+            alt: "Paperclip",
+            key: "paperclip",
           },
           { name: "", image: image1, alt: "Empty", key: "empty" },
           { name: "", image: image1, alt: "Empty", key: "empty" },

@@ -68,7 +68,7 @@ const Page1: React.FC<{
             key: "scissors",
           },
           { name: "Glue", image: image3, alt: "Glue", key: "glue" },
-          { name: "Magazine", image: image4, alt: "Magazine", key: "Magazine" },
+          { name: "Magazine", image: image4, alt: "Magazine", key: "magazine" },
           { name: "", image: image1, alt: "Empty", key: "empty" },
           { name: "", image: image1, alt: "Empty", key: "empty" },
           { name: "", image: image1, alt: "Empty", key: "empty" },
