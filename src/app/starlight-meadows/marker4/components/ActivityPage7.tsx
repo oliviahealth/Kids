@@ -13,11 +13,11 @@ export default function ActivityPage1({
 }) {
   return (
     <ActivityPage
-      stepNumber={2}
+      stepNumber={7}
       onNext={onNext}
       onBack={onBack}
-      title="Hold that breath in for 4 counts"
-      description="Let the pressure sit."
+      title="Repeat"
+      description="You may repeat this activities as many times as you wish, or just do it one time.  "
       imageUrl={image}
       buttonImageUrl={arrow}
       backgroundColor="#61C5FE"
