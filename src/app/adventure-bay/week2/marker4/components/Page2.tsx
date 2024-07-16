@@ -22,7 +22,7 @@ export default function Page2({
               Focusing on Feelings
             </span>
             <span className="text-lg" style={{ color: "#52C5C0" }}>
-              Caregiver Wellness - Adventure Bay
+              Creative Arts - Adventure Bay
             </span>
           </div>
         </div>

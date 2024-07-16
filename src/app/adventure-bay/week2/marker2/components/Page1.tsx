@@ -55,7 +55,7 @@ export default function Page1({
               The Power of Coloring for Caregivers
             </span>
             <span className="text-lg" style={{ color: "#52C5C0" }}>
-              Caregiver Wellness - Adventure Bay
+              Creative Arts - Adventure Bay
             </span>
           </div>
         </div>

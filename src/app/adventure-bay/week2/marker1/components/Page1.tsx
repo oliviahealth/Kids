@@ -43,15 +43,16 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Affirmations for Children and Caregivers"
-        subtitle="Caregiver Wellness - Adventure Bay"
+        title="Popsicle Stick Puppets"
+        subtitle="Creative Arts - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"
       />
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="At 3-4 years of age, children are little bundles of energy that are learning, growing, and exploring every day. They require a lot of attention from their caregiver, which can be physically and mentally taxing for that caregiver. As wonderful as it is for you to give so much of your attention to your child's health and development, it may cause burnout and negative thoughts over time. One way to combat these negative thoughts is by practicing daily affirmations. These short statements can help retrain your brain into a mindset that is supportive and encouraging, aiding in in your resilience as a caregiver. Your child could practice positive affirmations as well! Not only could it help boost their confidence and self-image, but it could also help them make advancements in their speech and language skills. The affirmations can be short and simple while still making a powerful impact on their positive thinking. This is an activity that you and your child can practice together each day. You can recite them together, brainstorm unique ones for each of you, and even use a pencil and paper to write them out and practice letters at the same time!"
+        introductionText="In general, creative arts is important when it comes to growing in communication, self-expression, and many other skills. When we participate in activites as simple as do-it-yourself crafts and interactive pretend play, we are able to expand the realm of our imaginative and creative mind. Many of us believe we can “grow out” of imaginative play and be too old for arts and crafts, but the creative arts as a whole is something for everyone, for the whole family! When we partake in pretend play, we have the opportunity to be anything, anyone, and anywhere we want to be. Essentially, we gain a sense of freedom and limitless possibility when we are able to explore the worlds within our powerful minds and outside the bounds of reality.
+There is an infinite amount of activities you can use to implement imaginative play and the creative arts, and today we get to have a blend of both with craft sticks or spare popsicle sticks you may have around the house!"
         materialsTitle="Materials Needed"
         materials={[
           {

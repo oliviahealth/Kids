@@ -53,7 +53,7 @@ export default function Page1({
           <div className="flex flex-col justify-center items-start">
             <span className="text-xl font-bold">Focusing on Feelings</span>
             <span className="text-lg" style={{ color: "#52C5C0" }}>
-              Caregiver Wellness - Adventure Bay
+              Creative Arts - Adventure Bay
             </span>
           </div>
         </div>

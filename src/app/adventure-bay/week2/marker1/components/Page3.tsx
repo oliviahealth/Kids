@@ -26,8 +26,8 @@ export default function Page3({
     <>
       <Header
         logoSrc={logo}
-        title="Affirmations for Children and Caregivers"
-        subtitle="Caregiver Wellness - Adventure Bay"
+        title="Popsicle Stick Puppets"
+        subtitle="Creative Arts - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"
       />
