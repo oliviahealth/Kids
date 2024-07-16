@@ -10,7 +10,7 @@ const PregnancySupportSystemPage2: React.FC<{
     <>
       <div className={styles.headerWrapper}>
         <div className={styles.header}>
-          <img src="/images/flower.svg" alt="Flower Icon" className={styles.icon} />
+          <img src="/images/dashboard/pregnancy/prenatal-icon.svg" alt="Flower Icon" className={styles.icon} />
           <div>
             <h1 className={styles.title}>My Pregnancy Support System</h1>
             <h2 className={styles.subtitle}>Caregiver Wellness - Prenatal Paradise</h2>

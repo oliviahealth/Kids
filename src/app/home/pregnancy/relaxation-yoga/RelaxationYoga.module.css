@@ -165,7 +165,7 @@
 .subtitle {
   margin: 0;
   font-size: 25px;
-  color: #f59e0b;
+  color: #F797FF;
   font-family: 'Inter', sans-serif;
 }
 
@@ -246,7 +246,7 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background-color: #FBEBCC;
+  background-color: #FDE3FF;
   border-radius: 50%;
   flex-shrink: 0;
 }

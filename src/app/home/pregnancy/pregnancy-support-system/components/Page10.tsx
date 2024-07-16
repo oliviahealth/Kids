@@ -11,7 +11,7 @@ const PregnancySupportSystemPage10: React.FC<{
       <div className={styles.headerWrapper}>
         <div className={styles.header}>
           <img
-            src="/images/flower.svg"
+            src="/images/dashboard/pregnancy/prenatal-icon.svg"
             alt="Flower Icon"
             className={styles.icon}
           />
