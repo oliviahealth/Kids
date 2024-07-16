@@ -16,10 +16,10 @@ const ActivityPage9: React.FC<{
           <div className="my-auto mt-24 text-center">
             <h1 className="text-2xl font-black ">Let the wind flow</h1>
             <p className="text-lg font-semibold">
-              Feel free to roll the windows down and listen to the world around
-              you. Focus on the sounds of birds chirping or the cars whizzing
-              by. These noises can bring peace, help you stay calm, and might
-              also entertain your child.
+              If it is safe and you would like to, feel free to roll the windows
+              down and listen to the world around you. Focus on the sounds of
+              birds chirping or the cars whizzing by. These noises can bring
+              peace, help you stay calm, and might also entertain your child.
             </p>
           </div>
 

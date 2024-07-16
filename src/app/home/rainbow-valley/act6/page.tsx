@@ -8,6 +8,8 @@ import Page2 from "./components/Page2";
 import ActivityPage1 from "./components/ActivityPage1";
 import ActivityPage2 from "./components/ActivityPage2";
 import ActivityPage3 from "./components/ActivityPage3";
+import ActivityPage4 from "./components/ActivityPage4";
+import ActivityPage5 from "./components/ActivityPage5";
 import ActivityPageStar from "./components/ActivityPageStar";
 import Page3 from "./components/Page3";
 
@@ -67,6 +69,12 @@ const MeditationActivity: React.FC = () => {
     },
     {
       content: <ActivityPage3 onNext={handleNext} onBack={handleBack} />,
+    },
+    {
+      content: <ActivityPage4 onNext={handleNext} onBack={handleBack} />,
+    },
+    {
+      content: <ActivityPage5 onNext={handleNext} onBack={handleBack} />,
     },
     {
       content: <ActivityPageStar onNext={handleNext} onBack={handleBack} />,

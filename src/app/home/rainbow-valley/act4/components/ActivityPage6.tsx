@@ -16,10 +16,11 @@ const ActivityPage6: React.FC<{
           <div className="my-auto mt-24 text-center">
             <h1 className="text-2xl font-black ">Be patient</h1>
             <p className="text-lg font-semibold">
-              If you start to feel in a hurry be sure to take extra breaths and
-              remind yourself that you will get to your destination. If you are
-              reckless and try to weave in between other vehicles that might
-              cause an accident.
+              If you start to feel impatient or in a hurry be sure to take more
+              breaths and remind yourself that you will get to your destination.
+              If you are reckless and try to weave in between other vehicles
+              that might cause an accident and can prevent you from getting
+              where you need to go.
             </p>
           </div>
 

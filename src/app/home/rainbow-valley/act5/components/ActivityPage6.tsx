@@ -1,30 +1,31 @@
 import Link from "next/link";
 
-const ActivityPage3: React.FC<{
+const ActivityPage6: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
   return (
-    <div className="bg-orange-400 flex flex-col h-full justify-between p-10">
+    <div className="bg-sky-400 flex flex-col h-full justify-between p-10">
       <div className="space-y-10">
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              3
+              6
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Involve your kids!</h1>
+            <h1 className="text-2xl font-black ">
+              Spin the wheel and have fun!
+            </h1>
             <p className="text-lg font-semibold">
-            If you would like to incorporate the children into this activity, you can follow the templates and have the kid(s) 
-            think of ideas for how they would answer each section. You can either write down their answers or just listen to what
-            they are saying.
+              Then you will spin the paperclip around the pencil and whatever
+              space it lands on in the wheel is the activity you will perform.
             </p>
           </div>
 
           <div className="">
             <Link href="/home">
-              <button className="h-6 w-6 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-orange-300 flex items-center justify-center text-sm">
+              <button className="h-6 w-6 sm:h-12 sm:w-12 mx-auto mt-3 rounded-full bg-sky-300 flex items-center justify-center text-sm">
                 X
               </button>
             </Link>
@@ -43,7 +44,7 @@ const ActivityPage3: React.FC<{
         <div className="justify-self-center sm:justify-self-end">
           <button
             onClick={onNext}
-            className="h-20 w-20 inline-block align-middle text-center bg-orange-600 text-white font-extrabold rounded-full text-3xl"
+            className="h-20 w-20 inline-block align-middle text-center bg-sky-600 text-white font-extrabold rounded-full text-3xl"
           >
             &#8594;
           </button>
@@ -53,4 +54,4 @@ const ActivityPage3: React.FC<{
   );
 };
 
-export default ActivityPage3;
+export default ActivityPage6;

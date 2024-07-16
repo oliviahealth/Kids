@@ -16,8 +16,8 @@ const ActivityPage2: React.FC<{
           <div className="my-auto mt-24 text-center">
             <h1 className="text-2xl font-black ">Fill in the blanks</h1>
             <p className="text-lg font-semibold">
-              Fill out the information for each section and reflect on how you
-              answered each of the questions.
+              You will fill out the information for each section and reflect on
+              how you answered each of the questions
             </p>
           </div>
 

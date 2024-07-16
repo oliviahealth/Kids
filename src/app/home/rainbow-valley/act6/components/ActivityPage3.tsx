@@ -14,10 +14,10 @@ const ActivityPage3: React.FC<{
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Become accomplished</h1>
+            <h1 className="text-2xl font-black ">Check 'em off</h1>
             <p className="text-lg font-semibold">
-              By the end of the week you will have cleaned your whole house
-              while most importantly ensuring your children are well cared for.
+              If you use the pre-made schedule you will follow along each day
+              completing the tasks and marking them off on the list.
             </p>
           </div>
 

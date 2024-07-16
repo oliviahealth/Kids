@@ -16,8 +16,8 @@ const ActivityPage1: React.FC<{
           <div className="my-auto mt-24 text-center">
             <h1 className="text-2xl font-black ">Obtain your template</h1>
             <p className="text-lg font-semibold">
-              You can choose to print the templates out and write on them or
-              transfer the information into a journal of your own.
+            This task can be completed by using the journal templates we have created as inspiration for what to write about. 
+            You can choose to print the templates out and write on them or transfer the information into a journal of your own. 
             </p>
           </div>
 

@@ -14,12 +14,11 @@ const ActivityPage3: React.FC<{
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">
-              Write down your favorite self-care activities
-            </h1>
+            <h1 className="text-2xl font-black ">Divide into 8 sections</h1>
             <p className="text-lg font-semibold">
-              These can be those you found online, or some you came up with
-              yourself.
+              If you choose to make your own, you will draw a circle and 4 lines
+              inside of it (1 horizontal, 1 vertical, and 2 diagonal) to create
+              8 sections.
             </p>
           </div>
 

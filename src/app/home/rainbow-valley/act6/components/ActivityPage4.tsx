@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage3: React.FC<{
+const ActivityPage4: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -10,15 +10,15 @@ const ActivityPage3: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              3
+              4
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Involve your kids!</h1>
+            <h1 className="text-2xl font-black ">Writing down the tasks</h1>
             <p className="text-lg font-semibold">
-            If you would like to incorporate the children into this activity, you can follow the templates and have the kid(s) 
-            think of ideas for how they would answer each section. You can either write down their answers or just listen to what
-            they are saying.
+              Creating your own includes determining the tasks you want to focus
+              on each day and writing them onto your schedule. Then you will
+              follow that plan throughout the next 7 days.
             </p>
           </div>
 
@@ -53,4 +53,4 @@ const ActivityPage3: React.FC<{
   );
 };
 
-export default ActivityPage3;
+export default ActivityPage4;

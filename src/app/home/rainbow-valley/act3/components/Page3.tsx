@@ -10,7 +10,7 @@ const Page3: React.FC<{
 }> = ({ onNext, onBack }) => {
   const takeawayText = `Congratulations on completing your very own vision board! We hope that you were able to set apart 
   time to really focus on your goals and aspirations! Remember, it is totally okay for your goals to change! So, if you 
-  ever find yourself in a place with new goals don’t hesitate to create a new and updated vision board! `;
+  ever find yourself in a place with new goals don't hesitate to create a new and updated vision board! `;
 
   return (
     <>

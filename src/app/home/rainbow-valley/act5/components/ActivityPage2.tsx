@@ -14,10 +14,10 @@ const ActivityPage2: React.FC<{
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Divide into 8 sections</h1>
+            <h1 className="text-2xl font-black ">Print out the template</h1>
             <p className="text-lg font-semibold">
-              You will draw a circle and 4 lines inside of it (1 horizontal, 1
-              vertical, and 2 diagonal) to create 8 sections.
+              If you choose to print out the template, you can keep the wheel on
+              the page or cut along the dashed line for the wheel itself.
             </p>
           </div>
 

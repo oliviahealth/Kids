@@ -10,15 +10,14 @@ const ActivityPage3: React.FC<{
         <div className="flex justify-between">
           <div className="">
             <div className="bg-yellow-400 h-20 w-20 stoneBullet flex items-center justify-center text-lg font-bold">
-              3
+              2
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Take it further!</h1>
+            <h1 className="text-2xl font-black ">Mark it off</h1>
             <p className="text-lg font-semibold">
-              If you would like an extra challenge, you are more than welcome to
-              complete all of the activities for an extra badge at the end of
-              this activity.
+              Each time you complete an activity you will mark it off on the
+              BINGO card which will bring you closer to winning a BINGO.
             </p>
           </div>
 

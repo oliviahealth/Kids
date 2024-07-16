@@ -16,8 +16,8 @@ const ActivityPage13: React.FC<{
           <div className="my-auto mt-24 text-center">
             <h1 className="text-2xl font-black ">Check your mirrors</h1>
             <p className="text-lg font-semibold">
-              Are they in the proper positions. What do you see when you are
-              looking through each one of them?
+              Check your mirrors to make sure they are in the proper positions.
+              What do you see when you are looking through each one of them?
             </p>
           </div>
 

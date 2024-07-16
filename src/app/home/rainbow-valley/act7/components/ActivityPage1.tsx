@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ActivityPage4: React.FC<{
+const ActivityPage1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
@@ -52,4 +52,4 @@ const ActivityPage4: React.FC<{
   );
 };
 
-export default ActivityPage4;
+export default ActivityPage1;

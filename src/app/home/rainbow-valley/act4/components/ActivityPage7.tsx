@@ -16,10 +16,11 @@ const ActivityPage7: React.FC<{
           <div className="my-auto mt-24 text-center">
             <h1 className="text-2xl font-black ">Look out for others</h1>
             <p className="text-lg font-semibold">
-              If you have a child in the backseat who is fussy why might they be
-              overwhelmed? Are they tired? Is it hot in the car? Did they drop
-              their toy on the floor? Whatever the situation may be offer
-              compassion and encourage them to take deep breaths as well.
+              If you have a child in the backseat who is fussy try to put
+              yourself in their shoes and think why they might be overwhelmed.
+              Are they tired? Is it hot in the car? Did they drop their toy on
+              the floor? Whatever the situation may be offer compassion and
+              encourage them to take deep breaths as well.
             </p>
           </div>
 

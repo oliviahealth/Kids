@@ -16,7 +16,9 @@ const ActivityPage1: React.FC<{
           <div className="my-auto mt-24 text-center">
             <h1 className="text-2xl font-black ">Cut out a circle</h1>
             <p className="text-lg font-semibold">
-              Using a piece of paper, draw a circle and cut it out.
+              To create the Self Care Wheel you can either print out the blank
+              template we provided or create your own by getting a blank sheet
+              of paper.
             </p>
           </div>
 

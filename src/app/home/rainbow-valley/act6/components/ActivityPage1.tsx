@@ -14,10 +14,12 @@ const ActivityPage1: React.FC<{
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Get your schedule</h1>
+            <h1 className="text-2xl font-black ">Spliting up the tasks</h1>
             <p className="text-lg font-semibold">
-              You can choose to print out our pre-made schedule or the blank
-              schedule if you would like to create your own routine.
+              This schedule begins on Sunday and follows the days of the week
+              with different chores split up based on sections of the living
+              space. Examples of the sections are bedrooms, laundry, bathrooms,
+              etc.
             </p>
           </div>
 

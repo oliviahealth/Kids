@@ -21,7 +21,7 @@ const Page2: React.FC<{
     {
       stepNumber: 3,
       description:
-        " If you would like to incorporate the children into this activity, you can follow the templates and have the kid(s) think of ideas for how they would answer each section. You can either write down their answers or just listen to what they are saying.",
+        "If you would like to incorporate the children into this activity, you can follow the templates and have the kid(s) think of ideas for how they would answer each section. You can either write down their answers or just listen to what they are saying.",
     },
   ];
 

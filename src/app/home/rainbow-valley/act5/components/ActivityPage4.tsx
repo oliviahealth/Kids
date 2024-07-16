@@ -15,10 +15,12 @@ const ActivityPage4: React.FC<{
           </div>
           <div className="my-auto mt-24 text-center">
             <h1 className="text-2xl font-black ">
-              Spin the wheel and have fun!
+              Write down your favorite self-care activities
             </h1>
             <p className="text-lg font-semibold">
-              Complete whatever activities the wheel lands.
+              Then you will write your activities inside each section and your
+              self care wheel is complete (If you would like some activity ideas
+              we have also provided an example of a completed self care wheel).
             </p>
           </div>
 
