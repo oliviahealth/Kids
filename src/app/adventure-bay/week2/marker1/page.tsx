@@ -12,7 +12,6 @@ import ActivityPage3 from "./components/ActivityPage3";
 import ActivityPage4 from "./components/ActivityPage4";
 import ActivityPage5 from "./components/ActivityPage5";
 import ActivityPage6 from "./components/ActivityPage6";
-
 import ActivityStar from "./components/ActivityPageStar";
 
 const AdventureBayActivity: React.FC = () => {
