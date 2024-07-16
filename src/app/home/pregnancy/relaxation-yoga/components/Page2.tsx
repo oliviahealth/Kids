@@ -13,7 +13,7 @@ const RelaxationYogaPage2: React.FC<{
           <img src="/images/dashboard/pregnancy/prenatal-icon.svg" alt="Flower Icon" className={styles.icon} />
           <div>
             <h1 className={styles.title}>Relaxation Yoga</h1>
-            <h2 className={styles.subtitle}>Caregiver Wellness - Blossom Haven</h2>
+            <h2 className={styles.subtitle}>Caregiver Wellness - Prenatal Paradise</h2>
           </div>
         </div>
         <Link href="/home">

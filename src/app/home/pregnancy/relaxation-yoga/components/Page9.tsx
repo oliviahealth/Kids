@@ -18,7 +18,7 @@ const RelaxationYogaPage9: React.FC<{
           <div>
             <h1 className={styles.title}>Relaxation Yoga</h1>
             <h2 className={styles.subtitle}>
-              Caregiver Wellness - Blossom Haven
+              Caregiver Wellness - Prenatal Paradise
             </h2>
           </div>
         </div>

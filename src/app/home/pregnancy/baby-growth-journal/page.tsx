@@ -1,7 +1,7 @@
 "use client";
 import { ReactNode, useState } from "react";
 import BabyGrowthJournalPage1 from "./components/Page1";
-import BabyGrowthJournalPage2 from "./components/Page2";
+// import BabyGrowthJournalPage2 from "./components/Page2";
 import BabyGrowthJournalPage3 from "./components/Page3";
 import BabyGrowthJournalPage4 from "./components/Page4";
 import BabyGrowthJournalPage5 from "./components/Page5";
@@ -61,13 +61,13 @@ const BabyGrowthJournal: React.FC = () => {
         </MapContainer>
       ),
     },
-    {
-      content: (
-        <MapContainer>
-          <BabyGrowthJournalPage2 onNext={handleNext} onBack={handleBack} />
-        </MapContainer>
-      ),
-    },
+    // {
+    //   content: (
+    //     <MapContainer>
+    //       <BabyGrowthJournalPage2 onNext={handleNext} onBack={handleBack} />
+    //     </MapContainer>
+    //   ),
+    // },
     {
       content: (
         <ActivityContainer>

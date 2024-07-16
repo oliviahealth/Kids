@@ -4,7 +4,7 @@ import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RelaxationYogaPage4({
+export default function PregnancySupportSystemPage4({
   onNext,
   onBack,
 }: {
