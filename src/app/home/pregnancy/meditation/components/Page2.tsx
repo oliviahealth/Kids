@@ -26,7 +26,7 @@ const MeditationActivityPage2: React.FC<{
           <div className=" pl-5 w-full my-auto float-left">
             <h1 className="text-xl font-bold ">Meditation</h1>
             <p className="text-lg text-yellow-400">
-              Caregiver Wellness - Blossom Haven{" "}
+              Caregiver Wellness - Prenatal Paradise{" "}
             </p>
           </div>
 

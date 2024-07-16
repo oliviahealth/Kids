@@ -27,7 +27,7 @@ const BabyGrowthJournalPage1: React.FC<{
           <div>
             <h1 className={styles.title}>Baby Growth Journal</h1>
             <h2 className={styles.subtitle}>
-              Caregiver Wellness - Blossom Haven
+              Caregiver Wellness - Prenatal Paradise
             </h2>
           </div>
         </div>
