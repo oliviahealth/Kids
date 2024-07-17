@@ -18,12 +18,10 @@ const Activity: React.FC<ActivityProps> = (activityProps: ActivityProps) => {
         <div className="w-full h-full flex flex-col lg:flex-row gap-4">
           <div className="w-full lg:w-1/2 flex flex-col justify-between gap-4">
             {activityProps.steps.slice(0, 4).map((step) => (
-              <div
-                key={step.stepNumber}
-                className="h-1/4 flex items-center gap-2"
-              >
+              <div key={step.stepNumber} className="h-1/4 flex items-center gap-2">
                 <span
-                  className={`rounded-2xl bg-[${activityProps.stepNumberColor}] flex justify-center items-center p-5 text-xl font-bold`}
+                  className="rounded-2xl flex justify-center items-center p-5 text-xl font-bold"
+                  style={{ backgroundColor: activityProps.stepNumberColor }}
                 >
                   {step.stepNumber}
                 </span>
@@ -35,12 +33,10 @@ const Activity: React.FC<ActivityProps> = (activityProps: ActivityProps) => {
           </div>
           <div className="w-full lg:w-1/2 flex flex-col justify-between gap-4 pt-8 lg:pt-0">
             {activityProps.steps.slice(4).map((step) => (
-              <div
-                key={step.stepNumber}
-                className="h-1/4 flex items-center gap-2"
-              >
+              <div key={step.stepNumber} className="h-1/4 flex items-center gap-2">
                 <span
-                  className={`rounded-2xl bg-[${activityProps.stepNumberColor}] flex justify-center items-center p-5 text-xl font-bold`}
+                  className="rounded-2xl flex justify-center items-center p-5 text-xl font-bold"
+                  style={{ backgroundColor: activityProps.stepNumberColor }}
                 >
                   {step.stepNumber}
                 </span>
