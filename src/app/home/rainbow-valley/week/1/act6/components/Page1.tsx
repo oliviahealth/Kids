@@ -5,8 +5,8 @@ import IntroductionAndMaterials, {
 } from "@/components/Template/IntroductionAndMaterials";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
-import image1 from "@/../../public/images/dashboard/rainbowValley/act6/act6_image1.png";
-import image2 from "@/../../public/images/dashboard/rainbowValley/act6/act6_image2.png";
+import image1 from "@/../../public/images/dashboard/rainbowValley/week/1/act6/act6_image1.png";
+import image2 from "@/../../public/images/dashboard/rainbowValley/week/1/act6/act6_image2.png";
 
 const Page1: React.FC<{
   onNext: () => void;

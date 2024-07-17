@@ -4,8 +4,8 @@ import IntroductionAndMaterials, {
   CheckboxState,
 } from "@/components/Template/IntroductionAndMaterials";
 import Header from "@/components/Template/Header";
-import image1 from "@/../../public/images/dashboard/rainbowValley/act4/act4_image1.png";
-import image2 from "@/../../public/images/dashboard/rainbowValley/act4/act4_image2.png";
+import image1 from "@/../../public/images/dashboard/rainbowValley/week/1/act4/act4_image1.png";
+import image2 from "@/../../public/images/dashboard/rainbowValley/week/1/act4/act4_image2.png";
 import Footer from "@/components/Template/Footer";
 
 const Page1: React.FC<{

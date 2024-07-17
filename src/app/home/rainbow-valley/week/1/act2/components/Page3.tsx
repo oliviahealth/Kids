@@ -1,5 +1,5 @@
 import icon from "@/../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
-import image1 from "@/../../public/images/dashboard/rainbowValley/act2/act2_image4.png";
+import image1 from "@/../../public/images/dashboard/rainbowValley/week/1/act2/act2_image4.png";
 import Header from "@/components/Template/Header";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";

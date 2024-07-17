@@ -1,8 +1,8 @@
 "use client";
 import icon from "@/../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
-import image1 from "@/../../public/images/dashboard/rainbowValley/act1/act1_image1.png";
-import image2 from "@/../../public/images/dashboard/rainbowValley/act1/act1_image2.png";
-import image3 from "@/../../public/images/dashboard/rainbowValley/act1/act1_image3.png";
+import image1 from "@/../../public/images/dashboard/rainbowValley/week/1/act1/act1_image1.png";
+import image2 from "@/../../public/images/dashboard/rainbowValley/week/1/act1/act1_image2.png";
+import image3 from "@/../../public/images/dashboard/rainbowValley/week/1/act1/act1_image3.png";
 import Header from "@/components/Template/Header";
 import IntroductionAndMaterials, {
   CheckboxState,

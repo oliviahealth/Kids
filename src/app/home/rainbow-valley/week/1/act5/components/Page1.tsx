@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import icon from "@/../../public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
-import sideImage from "@/../../public/images/dashboard/rainbowValley/act1/act1_SideImage.png";
+import sideImage from "@/../../public/images/dashboard/rainbowValley/week/1/act1/act1_SideImage.png";
 import { useEffect, useState } from "react";
 import IntroductionAndMaterials, {
   CheckboxState,
 } from "@/components/Template/IntroductionAndMaterials";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
-import image1 from "@/../../public/images/dashboard/rainbowValley/act5/act5_image1.png";
-import image2 from "@/../../public/images/dashboard/rainbowValley/act5/act5_image2.png";
-import image3 from "@/../../public/images/dashboard/rainbowValley/act5/act5_image3.png";
-import image4 from "@/../../public/images/dashboard/rainbowValley/act5/act5_image4.png";
+import image1 from "@/../../public/images/dashboard/rainbowValley/week/1/act5/act5_image1.png";
+import image2 from "@/../../public/images/dashboard/rainbowValley/week/1/act5/act5_image2.png";
+import image3 from "@/../../public/images/dashboard/rainbowValley/week/1/act5/act5_image3.png";
+import image4 from "@/../../public/images/dashboard/rainbowValley/week/1/act5/act5_image4.png";
 
 const Page1: React.FC<{
   onNext: () => void;

@@ -5,10 +5,10 @@ import IntroductionAndMaterials, {
 } from "@/components/Template/IntroductionAndMaterials";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
-import image1 from "@/../../public/images/dashboard/rainbowValley/act3/act3_image1.png";
-import image2 from "@/../../public/images/dashboard/rainbowValley/act3/act3_image2.png";
-import image3 from "@/../../public/images/dashboard/rainbowValley/act3/act3_image3.png";
-import image4 from "@/../../public/images/dashboard/rainbowValley/act3/act3_image4.png";
+import image1 from "@/../../public/images/dashboard/rainbowValley/week/1/act3/act3_image1.png";
+import image2 from "@/../../public/images/dashboard/rainbowValley/week/1/act3/act3_image2.png";
+import image3 from "@/../../public/images/dashboard/rainbowValley/week/1/act3/act3_image3.png";
+import image4 from "@/../../public/images/dashboard/rainbowValley/week/1/act3/act3_image4.png";
 
 const Page1: React.FC<{
   onNext: () => void;
