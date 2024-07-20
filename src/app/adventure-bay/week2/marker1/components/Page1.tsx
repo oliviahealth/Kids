@@ -1,9 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import logo from "@/public/images/dashboard/adventure-bay/title-image.png";
-import list from "@/public/images/dashboard/adventure-bay/Vector.png";
-import pen from "@/public/images/dashboard/adventure-bay/fluent_pen-20-filled.png";
-import paper from "@/public/images/dashboard/adventure-bay/mdi_paper.png";
+import popsicle from "@/public/images/dashboard/adventure-bay/Creative-Arts/popsicle.png";
+import scissors from "@/public/images/dashboard/adventure-bay/Creative-Arts/scissors.png";
+import glue from "@/public/images/dashboard/adventure-bay/Creative-Arts/glue.png";
+import paper from "@/public/images/dashboard/adventure-bay/Creative-Arts/paper.png";
+import crayons from "@/public/images/dashboard/adventure-bay/Creative-Arts/crayon.png";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
@@ -20,9 +22,11 @@ export default function Page1({
   onBack: () => void;
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
-    list: false,
-    pen: false,
-    paper: false,
+    Popsicle: false,
+    Scissors: false,
+    Tape: false,
+    Paper: false,
+    Pencils: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -56,18 +60,28 @@ There is an infinite amount of activities you can use to implement imaginative p
         materialsTitle="Materials Needed"
         materials={[
           {
-            name: "OliviaKids Affirmation List",
-            image: list,
-            alt: "List",
-            key: "list",
+            name: "Popsicle Sticks",
+            image: popsicle,
+            alt: "Popsicle Sticks",
+            key: "Popsicle",
           },
-          { name: "Pencil", image: pen, alt: "Pen", key: "pen" },
-          { name: "Paper", image: paper, alt: "Paper", key: "paper" },
-          { name: "", image: list, alt: "Item 4", key: "item4" },
-          { name: "", image: pen, alt: "Item 5", key: "item5" },
+          {
+            name: "Scissors",
+            image: scissors,
+            alt: "Scissors",
+            key: "Scissors",
+          },
+          { name: "Tape OR Glue", image: glue, alt: "Tape", key: "Tape" },
+          { name: "Paper", image: paper, alt: "Item 4", key: "Paper" },
+          {
+            name: "Colored Pencils",
+            image: crayons,
+            alt: "Pencils",
+            key: "Pencils",
+          },
           { name: "", image: paper, alt: "Item 6", key: "item6" },
-          { name: "", image: list, alt: "Item 7", key: "item7" },
-          { name: "", image: pen, alt: "Item 8", key: "item8" },
+          { name: "", image: paper, alt: "Item 7", key: "item7" },
+          { name: "", image: paper, alt: "Item 8", key: "item8" },
         ]}
         isChecked={isChecked}
         handleCheckboxChange={handleCheckboxChange}

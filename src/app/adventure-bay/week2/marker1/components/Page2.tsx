@@ -18,22 +18,27 @@ export default function Page2({
   const activitySteps = [
     {
       stepNumber: 1,
-      description: "You may download and use the OlivaKIDS affirmation lists",
+      description: "Gather supplies.",
     },
     {
       stepNumber: 2,
       description:
-        "Find the affirmations that you relate to best. These will be the most effective",
+        "Print out Olivia-KIDS “Popsicle Stick Puppets” packet (Colored or black & white options are available).",
     },
     {
       stepNumber: 3,
       description:
-        "Recite these affirmations to yourself or your child at least once a day",
+        "Cut out animal faces for puppets. If you desire, grab a blank piece of paper and draw/color puppet characters from your own imagination. These puppets do not even have to be animals, so feel free to think outside of the box with this one!",
     },
-    { stepNumber: 4, description: "Have faith in the words you are saying" },
+    {
+      stepNumber: 4,
+      description:
+        "Tape or glue cut-outs to tip of individual popsicle sticks, and there you have it!",
+    },
     {
       stepNumber: 5,
-      description: "Repeat this process at least once a day for an entire week",
+      description:
+        "Make up your own stories or plays with your brand new popsicle stick puppets! Have your zoo animals escaped out into the wild? Have the dogs and cats teamed up together? Think outside the box and have fun with your new crew of animal puppets!",
     },
   ];
 

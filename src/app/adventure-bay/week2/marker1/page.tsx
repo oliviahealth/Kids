@@ -2,18 +2,14 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import backgroundMap from "@/public/images/background.png";
-import tempBackground from "@/public/images/dashboard/adventure-bay/temp_background.png";
+import imageSrc from "@/public/images/dashboard/adventure-bay/Ellipse 169.png";
+import star from "@/public/images/dashboard/adventure-bay/Star 27.svg";
+import arrowSrc from "@/public/images/dashboard/adventure-bay/icon.png";
 import Page1 from "@/app/adventure-bay/week2/marker1/components/Page1";
 import Page2 from "@/app/adventure-bay/week2/marker1/components/Page2";
 import Page3 from "@/app/adventure-bay/week2/marker1/components/Page3";
-import ActivityPage1 from "./components/ActivityPage1";
-import ActivityPage2 from "./components/ActivityPage2";
-import ActivityPage3 from "./components/ActivityPage3";
-import ActivityPage4 from "./components/ActivityPage4";
-import ActivityPage5 from "./components/ActivityPage5";
-import ActivityPage6 from "./components/ActivityPage6";
-import ActivityStar from "./components/ActivityPageStar";
-
+import ActivityPage from "@/components/Template/ActivityPage";
+import ActivityStar from "@/components/Template/ActivityStar";
 const AdventureBayActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -50,20 +46,7 @@ const AdventureBayActivity: React.FC = () => {
 
   const ActivityContainer: React.FC<{ children: ReactNode }> = ({
     children,
-  }) => (
-    <div className="relative w-full h-full max-h-screen overflow-hidden">
-      <div className="h-full w-full">
-        <div className="z-20 h-full overflow-y-auto">
-          <div
-            className="relative shadow-2xl rounded-2xl h-full p-10"
-            style={{ backgroundColor: "#E1FF8D" }}
-          >
-            {children}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  }) => <>{children}</>;
 
   const pagesData = [
     {
@@ -82,51 +65,91 @@ const AdventureBayActivity: React.FC = () => {
     },
     {
       content: (
-        <ActivityContainer>
-          <ActivityPage1 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
+        <ActivityPage
+          stepNumber={1}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Gather supplies."
+          description="Gather all the necessary supplies for the activity."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
       ),
     },
     {
       content: (
-        <ActivityContainer>
-          <ActivityPage2 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
+        <ActivityPage
+          stepNumber={2}
+          onNext={handleNext}
+          onBack={handleBack}
+          title=""
+          description="Print out the Olivia-KIDS “Popsicle Stick Puppets” packet. Colored or black & white options are available."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
       ),
     },
     {
       content: (
-        <ActivityContainer>
-          <ActivityPage3 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
+        <ActivityPage
+          stepNumber={3}
+          onNext={handleNext}
+          onBack={handleBack}
+          title=""
+          description="Cut out animal faces for the puppets. You can also draw and color your own puppet characters."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
       ),
     },
     {
       content: (
-        <ActivityContainer>
-          <ActivityPage4 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
+        <ActivityPage
+          stepNumber={4}
+          onNext={handleNext}
+          onBack={handleBack}
+          title=""
+          description="Tape or glue the cut-outs to the tips of individual popsicle sticks."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
       ),
     },
     {
       content: (
-        <ActivityContainer>
-          <ActivityPage5 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
+        <ActivityPage
+          stepNumber={5}
+          onNext={handleNext}
+          onBack={handleBack}
+          title=""
+          description="Create your own stories or plays with your new popsicle stick puppets. Think outside the box and have fun!"
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
       ),
     },
     {
       content: (
-        <ActivityContainer>
-          <ActivityPage6 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
-      ),
-    },
-    {
-      content: (
-        <ActivityContainer>
-          <ActivityStar onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
+        <ActivityStar
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Well done!"
+          description="Repeat this exercise whenever you need it. Here is your star!"
+          imageUrl={star}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
       ),
     },
     {

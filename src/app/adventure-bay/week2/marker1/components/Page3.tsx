@@ -16,11 +16,7 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `Repeat after me: "I am great at positive affirmations!"
-  Congratulations on completing the affirmations activity! Recite your
-  affirmations daily for one week to earn your badge. We hope that you
-  truly believe these wonderful messages and that they begin to make a
-  positive difference in your mindset!`;
+  const takeawayText = `Round of applause for these fantastic puppet masters! You have created such amazing popsicle stick puppets and put on a great show while you were at it! After completing this activity, you will receive a completion sticker. From here on out, if you have spare popsicle sticks after a summer day sweet treat, you can save them to make as many popsicle stick puppets as you like. From this fun arts and crafts activity, we have learned that the sky is the limit when it comes to our imaginations- anything is possible when we put our mind to it!`;
 
   return (
     <>
