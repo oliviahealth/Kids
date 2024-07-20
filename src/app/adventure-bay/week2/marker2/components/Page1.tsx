@@ -61,7 +61,7 @@ export default function Page1({
           {
             name: "Cardboard",
             image: cardboard,
-            alt: "Popsicle Sticks",
+            alt: "Cardboard",
             key: "Cardboard",
           },
           {
@@ -73,7 +73,7 @@ export default function Page1({
           { name: "Glue", image: glue, alt: "Tape", key: "Tape" },
           { name: "Blank Paper", image: paper, alt: "Item 4", key: "Paper" },
           {
-            name: "Colored Pencils",
+            name: "Crayons Or Markers",
             image: crayons,
             alt: "Pencils",
             key: "Pencils",

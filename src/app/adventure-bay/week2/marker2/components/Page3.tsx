@@ -16,13 +16,12 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `Round of applause for these fantastic puppet masters! You have created such amazing popsicle stick puppets and put on a great show while you were at it! After completing this activity, you will receive a completion sticker. From here on out, if you have spare popsicle sticks after a summer day sweet treat, you can save them to make as many popsicle stick puppets as you like. From this fun arts and crafts activity, we have learned that the sky is the limit when it comes to our imaginations- anything is possible when we put our mind to it!`;
-
+  const takeawayText = `Congratulations on completing your puzzle! After assembling your puzzle one time, you will recieve your activity completion sticker. If you assemble it 4 times, you will earn your puzzle badge! Keep creating more awesome puzzles of things you love. Complete them on your own, or invite your family to do it with you! Happy puzzling!`;
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Popsicle Stick Puppets"
+        title="DIY Puzzles"
         subtitle="Creative Arts - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"

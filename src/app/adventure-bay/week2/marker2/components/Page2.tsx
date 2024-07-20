@@ -23,22 +23,34 @@ export default function Page2({
     {
       stepNumber: 2,
       description:
-        "Print out Olivia-KIDS “Popsicle Stick Puppets” packet (Colored or black & white options are available).",
+        "Talk with your child to come up with a puzzle image that is interesting to them, such as their favorite animal or food.",
     },
     {
       stepNumber: 3,
       description:
-        "Cut out animal faces for puppets. If you desire, grab a blank piece of paper and draw/color puppet characters from your own imagination. These puppets do not even have to be animals, so feel free to think outside of the box with this one!",
+        "Have your child draw the desired image onto a blank piece of paper. If necessary, you may provide assistance or draw it for them.",
     },
     {
       stepNumber: 4,
-      description:
-        "Tape or glue cut-outs to tip of individual popsicle sticks, and there you have it!",
+      description: "Color the image in!",
     },
     {
       stepNumber: 5,
       description:
-        "Make up your own stories or plays with your brand new popsicle stick puppets! Have your zoo animals escaped out into the wild? Have the dogs and cats teamed up together? Think outside the box and have fun with your new crew of animal puppets!",
+        "Glue the picture onto a piece of cardboard of the same size. Allow it to dry completely.",
+    },
+    {
+      stepNumber: 6,
+      description:
+        "Use safety scissors to cut the picture into 10-25 jigsaw pieces.",
+    },
+    {
+      stepNumber: 7,
+      description: "Mix the pieces up.",
+    },
+    {
+      stepNumber: 8,
+      description: "Assemble the puzzle!",
     },
   ];
 
@@ -46,7 +58,7 @@ export default function Page2({
     <>
       <Header
         logoSrc={logo}
-        title="Popsicle Stick Puppets"
+        title="DIY Puzzles"
         subtitle="Creative Arts - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"
