@@ -13,6 +13,7 @@ interface Marker {
   link: string;
   backgroundColor: string;
   borderColor: string;
+  name: string;
 }
 
 interface MarkerProps {
@@ -25,24 +26,71 @@ interface MapProps {
   markers: Omit<Marker, 'x' | 'y'>[];
 }
 
+const SmoothPath: React.FC<{ markers: Marker[]; scale: number }> = ({ markers, scale }) => {
+  if (markers.length < 2) return null;
+
+  const path = markers.reduce((acc, marker, index, array) => {
+    if (index === 0) {
+      return `M ${marker.x},${marker.y}`;
+    }
+
+    const prev = array[index - 1];
+    const next = array[index + 1];
+
+    const controlPoint1 = {
+      x: prev.x + (marker.x - prev.x) * 0.5,
+      y: prev.y + (marker.y - prev.y) * 0.1
+    };
+
+    const controlPoint2 = {
+      x: marker.x - (next ? next.x - marker.x : marker.x - prev.x) * 0.5,
+      y: marker.y - (next ? next.y - marker.y : marker.y - prev.y) * 0.1
+    };
+
+    return `${acc} C ${controlPoint1.x},${controlPoint1.y} ${controlPoint2.x},${controlPoint2.y} ${marker.x},${marker.y}`;
+  }, '');
+
+  return (
+    <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}>
+      <path
+        d={path}
+        fill="none"
+        stroke="white"
+        strokeWidth={15 / scale}
+        strokeDasharray={`${30 / scale},${20 / scale}`}
+      />
+    </svg>
+  );
+};
+
 const MemorizedMarker: React.FC<MarkerProps> = React.memo(({ marker, scale }) => (
-  <Link
-    href={marker.link}
-    className="absolute flex items-center justify-center text-white font-bold rounded-xl transform -translate-x-1/2 -translate-y-1/2"
+  <div className="absolute transform -translate-x-1/2 -translate-y-1/2"
     style={{
       left: `${marker.x}px`,
       top: `${marker.y}px`,
-      width: `${40 / scale}px`,
-      height: `${40 / scale}px`,
-      fontSize: `${16 / scale}px`,
-      backgroundColor: marker.backgroundColor,
-      borderColor: marker.borderColor,
-      borderWidth: `${5 / scale}px`,
-      borderStyle: 'solid',
-    }}
-  >
-    {marker.id}
-  </Link>
+    }}>
+    <Link
+      href={marker.link}
+      className="flex items-center justify-center text-white font-bold rounded-full"
+      style={{
+        width: `${40 / scale}px`,
+        height: `${40 / scale}px`,
+        fontSize: `${16 / scale}px`,
+        backgroundColor: marker.backgroundColor,
+        borderColor: "white",
+        borderWidth: `${2 / scale}px`,
+        borderStyle: 'solid',
+      }}
+    >
+      {marker.id}
+    </Link>
+    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 whitespace-nowrap text-center">
+      <span className="bg-black bg-opacity-40 px-3 py-1 rounded text-white font-bold"
+        style={{ fontSize: `${15 / scale}px` }}>
+        {marker.name}
+      </span>
+    </div>
+  </div>
 ));
 
 MemorizedMarker.displayName = 'MemorizedMarker';
@@ -164,7 +212,8 @@ const Map: React.FC<MapProps> = ({ map, markers: initialMarkers }) => {
           priority
           draggable={false}
         />
-        {markers.map(marker => (
+        <SmoothPath markers={markers} scale={scale} />
+        {markers.map((marker) => (
           <MemorizedMarker key={marker.id} marker={marker} scale={scale} />
         ))}
       </div>
