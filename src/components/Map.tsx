@@ -38,13 +38,13 @@ const SmoothPath: React.FC<{ markers: Marker[]; scale: number }> = ({ markers, s
     const next = array[index + 1];
 
     const controlPoint1 = {
-      x: prev.x + (marker.x - prev.x) * 0.5,
-      y: prev.y + (marker.y - prev.y) * 0.1
+      x: prev.x + (marker.x - prev.x) * 0.1,
+      y: prev.y + (marker.y - prev.y) * 1
     };
 
     const controlPoint2 = {
-      x: marker.x - (next ? next.x - marker.x : marker.x - prev.x) * 0.5,
-      y: marker.y - (next ? next.y - marker.y : marker.y - prev.y) * 0.1
+      x: marker.x - (next ? next.x - marker.x : marker.x - prev.x) * 0.1,
+      y: marker.y - (next ? next.y - marker.y : marker.y - prev.y) * 0.2
     };
 
     return `${acc} C ${controlPoint1.x},${controlPoint1.y} ${controlPoint2.x},${controlPoint2.y} ${marker.x},${marker.y}`;
