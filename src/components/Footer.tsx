@@ -4,7 +4,7 @@ import React from "react";
 import Sponsors from "../../public/images/Sponsors.png";
 import oliviaLogo from "../../public/images/olivia-health-logo.png";
 
-const Footer: React.FC = () => {
+const LandingPageFooter: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-5 gap-5">
       <div className="flex flex-col md:flex-row items-center justify-between w-10/12 px-10 pb-4 md:pb-0 space-x-0 md:space-x-2">
@@ -29,4 +29,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default LandingPageFooter;
