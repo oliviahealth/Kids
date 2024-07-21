@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import LandingPageFooter from "@/components/Footer";
 import Image, { StaticImageData } from "next/image";
 import island from "../../public/images/landingPage/island.jpeg";
 import map1 from "../../public/images/landingPage/map1.jpeg";
@@ -569,7 +569,7 @@ const LandingPage: React.FC = () => {
           </div>
         </section>
 
-        <Footer />
+        <LandingPageFooter />
       </div>
     </>
   );

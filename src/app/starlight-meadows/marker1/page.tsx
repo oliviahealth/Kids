@@ -57,7 +57,7 @@ const StarlightMeadowsActivity: React.FC = () => {
         <div className="z-20 h-full overflow-y-auto">
           <div
             className="relative shadow-2xl rounded-2xl h-full p-10"
-            style={{ backgroundColor: "#E1FF8D" }}
+            style={{ backgroundColor: "#FEEE61" }}
           >
             {children}
           </div>
@@ -83,51 +83,38 @@ const StarlightMeadowsActivity: React.FC = () => {
     },
     {
       content: (
-        <ActivityContainer>
+        
           <ActivityPage1 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage2 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage3 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage4 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage5 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage6 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityStar onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {

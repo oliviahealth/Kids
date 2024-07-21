@@ -9,9 +9,7 @@ import Page3 from "@/app/starlight-meadows/marker2/components/Page3";
 import ActivityPage1 from "./components/ActivityPage1";
 import ActivityPage2 from "./components/ActivityPage2";
 import ActivityPage3 from "./components/ActivityPage3";
-import ActivityPage4 from "./components/ActivityPage4";
-import ActivityPage5 from "./components/ActivityPage5";
-import ActivityPage6 from "./components/ActivityPage6";
+
 
 import ActivityStar from "./components/ActivityPageStar";
 
@@ -57,7 +55,7 @@ const StarlightMeadowsActivity: React.FC = () => {
         <div className="z-20 h-full overflow-y-auto">
           <div
             className="relative shadow-2xl rounded-2xl h-full p-10"
-            style={{ backgroundColor: "#E1FF8D" }}
+            style={{ backgroundColor: "#FF8C38" }}
           >
             {children}
           </div>
@@ -83,51 +81,23 @@ const StarlightMeadowsActivity: React.FC = () => {
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage1 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage2 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage3 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
+    
     {
       content: (
-        <ActivityContainer>
-          <ActivityPage4 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
-      ),
-    },
-    {
-      content: (
-        <ActivityContainer>
-          <ActivityPage5 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
-      ),
-    },
-    {
-      content: (
-        <ActivityContainer>
-          <ActivityPage6 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
-      ),
-    },
-    {
-      content: (
-        <ActivityContainer>
           <ActivityStar onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {

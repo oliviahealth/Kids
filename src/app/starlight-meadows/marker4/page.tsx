@@ -12,6 +12,7 @@ import ActivityPage3 from "./components/ActivityPage3";
 import ActivityPage4 from "./components/ActivityPage4";
 import ActivityPage5 from "./components/ActivityPage5";
 import ActivityPage6 from "./components/ActivityPage6";
+import ActivityPage7 from "./components/ActivityPage7";
 
 import ActivityStar from "./components/ActivityPageStar";
 
@@ -83,51 +84,42 @@ const StarlightMeadowsActivity: React.FC = () => {
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage1 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage2 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage3 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage4 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage5 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
           <ActivityPage6 onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {
       content: (
-        <ActivityContainer>
+          <ActivityPage7 onNext={handleNext} onBack={handleBack} />
+      ),
+    },
+    {
+      content: (
           <ActivityStar onNext={handleNext} onBack={handleBack} />
-        </ActivityContainer>
       ),
     },
     {

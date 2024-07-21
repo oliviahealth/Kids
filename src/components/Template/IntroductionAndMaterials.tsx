@@ -16,7 +16,16 @@ export interface IntroductionAndMaterialsProps {
   introductionTitle: string;
   introductionText: string;
   materialsTitle: string;
-  materials: Material[];
+  materials: [
+    Material,
+    Material,
+    Material,
+    Material,
+    Material,
+    Material,
+    Material,
+    Material
+  ];
   isChecked: CheckboxState;
   mainBackgroundColor: string;
   emptyCardBackgroundColor: string;
@@ -48,13 +57,13 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                 className={`h-full w-full flex flex-col justify-around items-center p-2`}
                 style={{
                   backgroundColor: material.name
-                    ? 'white'
+                    ? "white"
                     : materialsData.emptyCardBackgroundColor,
                   borderColor: material.name
                     ? materialsData.checkedCardColor
-                    : 'transparent',
-                  borderWidth: material.name ? '2px' : '0',
-                  borderRadius: '1rem',
+                    : "transparent",
+                  borderWidth: material.name ? "2px" : "0",
+                  borderRadius: "1rem",
                 }}
               >
                 {material.name && (
@@ -80,11 +89,11 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                       className="appearance-none h-6 w-6 rounded-full focus:outline-none"
                       style={{
                         borderColor: materialsData.checkedCardColor,
-                        borderWidth: '2px',
-                        borderStyle: 'solid',
+                        borderWidth: "2px",
+                        borderStyle: "solid",
                         backgroundColor: materialsData.isChecked[material.key]
                           ? materialsData.checkedCardColor
-                          : 'transparent',
+                          : "transparent",
                       }}
                     />
                   </>
@@ -99,13 +108,13 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                 className={`h-full w-full flex flex-col justify-around items-center p-2`}
                 style={{
                   backgroundColor: material.name
-                    ? 'white'
+                    ? "white"
                     : materialsData.emptyCardBackgroundColor,
                   borderColor: material.name
                     ? materialsData.checkedCardColor
-                    : 'transparent',
-                  borderWidth: material.name ? '2px' : '0',
-                  borderRadius: '1rem',
+                    : "transparent",
+                  borderWidth: material.name ? "2px" : "0",
+                  borderRadius: "1rem",
                 }}
               >
                 {material.name && (
@@ -131,11 +140,11 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
                       className="appearance-none h-6 w-6 rounded-full focus:outline-none"
                       style={{
                         borderColor: materialsData.checkedCardColor,
-                        borderWidth: '2px',
-                        borderStyle: 'solid',
+                        borderWidth: "2px",
+                        borderStyle: "solid",
                         backgroundColor: materialsData.isChecked[material.key]
                           ? materialsData.checkedCardColor
-                          : 'transparent',
+                          : "transparent",
                       }}
                     />
                   </>

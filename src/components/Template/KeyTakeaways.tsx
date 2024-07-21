@@ -3,8 +3,8 @@ import Image, { StaticImageData } from "next/image";
 
 export interface KeyTakeawaysProps {
   text: string;
-  photoSrc: StaticImageData | string;
-  photoAlt: string;
+  photoSrc?: StaticImageData | string;
+  photoAlt?: string;
 }
 
 const KeyTakeaways: React.FC<KeyTakeawaysProps> = (
@@ -15,12 +15,12 @@ const KeyTakeaways: React.FC<KeyTakeawaysProps> = (
       <div className="w-full lg:w-1/2 flex flex-col gap-4">
         <h1 className="text-xl font-bold">Key Takeaways</h1>
         <p className="text-xl text-justify">{keyTakeawaysData.text}</p>
-        <div className="">
+        {keyTakeawaysData.photoSrc && <div className="">
           <Image
             src={keyTakeawaysData.photoSrc}
-            alt={keyTakeawaysData.photoAlt}
+            alt={keyTakeawaysData.photoAlt || ""}
           />
-        </div>
+        </div>}
       </div>
     </div>
   );
