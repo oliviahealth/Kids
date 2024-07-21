@@ -8,7 +8,6 @@ import WalkingActivityPage5 from "./components/Page5";
 import WalkingActivityPage6 from "./components/Page6";
 import WalkingActivityPage7 from "./components/Page7";
 import styles from "./WalkingNatureJournal.module.css";
-import WalkingNatureJournalWrapUp from "./components/_page";
 
 const WalkingNatureJournal: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);

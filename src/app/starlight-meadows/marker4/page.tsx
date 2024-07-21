@@ -3,18 +3,19 @@ import { ReactNode, useState } from "react";
 import Image from "next/image";
 import backgroundMap from "../../../../public/images/background.png";
 import tempBackground from "../../../../public/images/dashboard/adventure-bay/temp_background.png";
-import Page1 from "@/app/adventure-bay/marker1/components/Page1";
-import Page2 from "@/app/adventure-bay/marker1/components/Page2";
-import Page3 from "@/app/adventure-bay/marker1/components/Page3";
+import Page1 from "@/app/starlight-meadows/marker4/components/Page1";
+import Page2 from "@/app/starlight-meadows/marker4/components/Page2";
+import Page3 from "@/app/starlight-meadows/marker4/components/Page3";
 import ActivityPage1 from "./components/ActivityPage1";
 import ActivityPage2 from "./components/ActivityPage2";
 import ActivityPage3 from "./components/ActivityPage3";
 import ActivityPage4 from "./components/ActivityPage4";
 import ActivityPage5 from "./components/ActivityPage5";
 import ActivityPage6 from "./components/ActivityPage6";
+
 import ActivityStar from "./components/ActivityPageStar";
 
-const AdventureBayActivity: React.FC = () => {
+const StarlightMeadowsActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handleBack = () => {
@@ -140,4 +141,4 @@ const AdventureBayActivity: React.FC = () => {
   return <>{pagesData[currentPage].content}</>;
 };
 
-export default AdventureBayActivity;
+export default StarlightMeadowsActivity;
