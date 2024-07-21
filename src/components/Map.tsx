@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,50 +11,69 @@ interface Marker {
   x: number;
   y: number;
   link: string;
+  backgroundColor: string;
+  borderColor: string;
 }
 
 interface MarkerProps {
   marker: Marker;
+  scale: number;
 }
 
-const MemorizedMarker: React.FC<MarkerProps> = React.memo(({ marker }) => (
+interface MapProps {
+  map: string;
+  markers: Omit<Marker, 'x' | 'y'>[];
+}
+
+const MemorizedMarker: React.FC<MarkerProps> = React.memo(({ marker, scale }) => (
   <Link
     href={marker.link}
-    className="absolute flex items-center justify-center text-white font-bold rounded-xl bg-[#ec9bfc] border-[5px] border-[#e466fc] transform -translate-x-1/2 -translate-y-1/2 w-10 h-10"
-    style={{ left: `${marker.x}px`, top: `${marker.y}px` }}
+    className="absolute flex items-center justify-center text-white font-bold rounded-xl transform -translate-x-1/2 -translate-y-1/2"
+    style={{
+      left: `${marker.x}px`,
+      top: `${marker.y}px`,
+      width: `${40 / scale}px`,
+      height: `${40 / scale}px`,
+      fontSize: `${16 / scale}px`,
+      backgroundColor: marker.backgroundColor,
+      borderColor: marker.borderColor,
+      borderWidth: `${5 / scale}px`,
+      borderStyle: 'solid',
+    }}
   >
     {marker.id}
   </Link>
 ));
+
 MemorizedMarker.displayName = 'MemorizedMarker';
 
-const Map: React.FC = () => {
+const Map: React.FC<MapProps> = ({ map, markers: initialMarkers }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const imageRef = useRef<HTMLImageElement | null>(null);
-  const [markers, setMarkers] = useState<Marker[]>([
-    { id: 1, top: '30%', left: '20%', x: 0, y: 0, link: '/home/pregnancy/meditation' },
-    { id: 2, top: '50%', left: '40%', x: 0, y: 0, link: '/home/walking-nature-journal' },
-    { id: 3, top: '50%', left: '60%', x: 0, y: 0, link: '/blossom-haven/at-home-exercises' },
-  ]);
+  const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
+  const [markers, setMarkers] = useState<Marker[]>(
+    initialMarkers.map(marker => ({ ...marker, x: 0, y: 0 }))
+  );
+
+  const [scale, setScale] = useState(1);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [dragging, setDragging] = useState(false);
+  const [startPosition, setStartPosition] = useState({ x: 0, y: 0 });
 
   const positionMarkers = useCallback(() => {
     const container = containerRef.current;
-    const image = imageRef.current;
-    if (!container || !image) return;
+    if (!container || imageSize.width === 0 || imageSize.height === 0) return;
 
     const containerRect = container.getBoundingClientRect();
-    const imageAspectRatio = image.naturalWidth / image.naturalHeight;
+    const imageAspectRatio = imageSize.width / imageSize.height;
     const containerAspectRatio = containerRect.width / containerRect.height;
     let displayWidth, displayHeight, offsetX, offsetY;
 
     if (imageAspectRatio > containerAspectRatio) {
-      // Image is wider than the container
       displayHeight = containerRect.height;
       displayWidth = displayHeight * imageAspectRatio;
       offsetX = (displayWidth - containerRect.width) / 2;
       offsetY = 0;
     } else {
-      // Image is taller than the container
       displayWidth = containerRect.width;
       displayHeight = displayWidth / imageAspectRatio;
       offsetX = 0;
@@ -67,18 +87,17 @@ const Map: React.FC = () => {
     });
 
     setMarkers(updatedMarkers);
-  }, [markers]);
+  }, [markers, imageSize]);
 
-  // Initial positioning when component mounts
   useEffect(() => {
     positionMarkers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [positionMarkers, imageSize]);
 
-  // Update positioning when window resizes
   useEffect(() => {
     const handleResize = () => {
       positionMarkers();
+      setScale(1);
+      setPosition({ x: 0, y: 0 });
     };
 
     window.addEventListener('resize', handleResize);
@@ -88,21 +107,67 @@ const Map: React.FC = () => {
     };
   }, [positionMarkers]);
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setDragging(true);
+    setStartPosition({ x: e.clientX - position.x, y: e.clientY - position.y });
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!dragging) return;
+    const newX = e.clientX - startPosition.x;
+    const newY = e.clientY - startPosition.y;
+    setPosition({ x: newX, y: newY });
+  };
+
+  const handleMouseUp = () => {
+    setDragging(false);
+  };
+
+  const handleWheel = (e: React.WheelEvent) => {
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? 0.9 : 1.1;
+    setScale(prevScale => Math.min(Math.max(prevScale * delta, 0.5), 3));
+  };
+
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.target as HTMLImageElement;
+    setImageSize({ width: img.naturalWidth, height: img.naturalHeight });
+  };
 
   return (
-    <div className="relative w-3/4 h-full overflow-hidden" ref={containerRef}>
-      <Image
-        src="/images/map.svg"
-        alt="Map"
-        layout="fill"
-        objectFit="cover"
-        ref={imageRef}
-        onLoadingComplete={positionMarkers}
-        priority={true}
-      />
-      {markers.map(marker => (
-        <MemorizedMarker key={marker.id} marker={marker} />
-      ))}
+    <div
+      className="relative w-3/4 h-full overflow-hidden cursor-move"
+      ref={containerRef}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+      onWheel={handleWheel}
+    >
+      <div
+        style={{
+          transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
+          transformOrigin: '0 0',
+          transition: dragging ? 'none' : 'transform 0.3s ease-out',
+          width: '100%',
+          height: '100%',
+          position: 'relative',
+        }}
+      >
+        <Image
+          src={map}
+          alt="Map"
+          fill
+          style={{ objectFit: 'cover' }}
+          onLoad={handleImageLoad}
+          priority
+          draggable={false}
+        />
+        {markers.map(marker => (
+          <MemorizedMarker key={marker.id} marker={marker} scale={scale} />
+        ))}
+      </div>
     </div>
   );
 };
