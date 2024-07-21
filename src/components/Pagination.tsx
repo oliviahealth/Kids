@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Page } from './Types';
+
+export interface Page { page?: number, setCurrentPage?: (page: number) => void, onBack: () => void; onContinue: () => void, onExit: () => void }
 
 const Pagination: React.FC<{ onFinish?: () => void, onExit: () => void, onPageChange?: (page: number) => void, page?: number, pages: React.FC<Page>[] }> = ({ onFinish, onExit, onPageChange, page, pages }) => {
     const [currentPage, setCurrentPage] = useState(page || 0);

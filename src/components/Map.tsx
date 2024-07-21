@@ -33,7 +33,7 @@ const Map: React.FC = () => {
   const [markers, setMarkers] = useState<Marker[]>([
     { id: 1, top: '30%', left: '20%', x: 0, y: 0, link: '/home/pregnancy/meditation' },
     { id: 2, top: '50%', left: '40%', x: 0, y: 0, link: '/home/walking-nature-journal' },
-    { id: 3, top: '50%', left: '60%', x: 0, y: 0, link: '/home/at-home-exercises' },
+    { id: 3, top: '50%', left: '60%', x: 0, y: 0, link: '/blossom-haven/at-home-exercises' },
   ]);
 
   const positionMarkers = useCallback(() => {

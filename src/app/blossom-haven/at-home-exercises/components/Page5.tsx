@@ -1,6 +1,6 @@
 import React from 'react';
-import { APContainer, APHeader, APInstruction } from './ActivityPage';
-import { Page } from './Types';
+import { APContainer, APHeader, APInstruction } from '@/components/ActivityPage';
+import { Page } from "@/components/Pagination";
 
 const activity = {
     buttonColor: "#8BD5FF",
