@@ -3,8 +3,8 @@
 import SideNav from "@/components/SideNav";
 import React, { useState } from "react";
 import HomeNav from '@/components/HomeNav';
-import Map from '@/components/Map';
 import Map2 from "@/components/Map2";
+
 const mapImages = [
     "/images/activities/parental-paradise/parental-paradise-map.png",
     "/images/activities/blossom-haven/blossom-haven-map.png",
@@ -12,7 +12,7 @@ const mapImages = [
     "/images/activities/rainbow-valley/rainbow-valley-map.png",
     "/images/activities/adventure-bay/adventure-bay-map.png",
     "/images/activities/fantasy-forest/fantasy-forest-map.png",
-]
+];
 
 const mapMarkers = [
     {
@@ -34,7 +34,6 @@ const mapMarkers = [
             { id: '8', x: 85, y: 40, link: '/prenatal-paradise/sound-and-music', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Sound and Music' },
             { id: '9', x: 80, y: 25, link: '/prenatal-paradise/touch', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Touch' }
         ],
-
     },
     {
         name: "Blossom Haven",
@@ -111,7 +110,7 @@ const mapMarkers = [
             { id: '10', x: 80, y: 25, link: '/fantasy-forest/touch', backgroundColor: '#2ecc71', borderColor: '#27ae60', name: 'Touch' },
         ]
     }
-]
+];
 
 const Dashboard: React.FC = () => {
     const [currentMapIndex, setCurrentMapIndex] = useState(0);
@@ -126,25 +125,11 @@ const Dashboard: React.FC = () => {
     return (
         <div className="w-full h-screen flex flex-col">
             <div className="w-full">
-                <HomeNav />
+                <HomeNav onMapChange={handleMapChange} />
             </div>
             <div className="flex flex-grow h-[calc(100%-6rem)]">
                 <SideNav />
                 <div className="flex flex-col w-3/4">
-                    <div className="flex justify-center space-x-4 mb-4">
-                        {mapMarkers.map((mapData, index) => (
-                            <button
-                                key={index}
-                                onClick={() => handleMapChange(index)}
-                                className={`px-4 py-2 rounded ${currentMapIndex === index
-                                    ? 'bg-blue-500 text-white'
-                                    : 'bg-gray-200 text-black'
-                                    }`}
-                            >
-                                {mapData.name}
-                            </button>
-                        ))}
-                    </div>
                     <Map2
                         image={map}
                         markers={markers}
