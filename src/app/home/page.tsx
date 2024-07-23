@@ -18,7 +18,13 @@ const mapMarkers = [
     {
         name: 'Pregnancy Meditation',
         markers: [
-            { id: '1', x: 25, y: 20, link: '/prenatal-paradise/caregiver-wellness', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Caregiver Wellness' },
+            {
+                id: '1', x: 25, y: 20, link: '/prenatal-paradise/caregiver-wellness', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Caregiver Wellness', activities: [
+                    { name: 'Meditation', icon: '/path-to-meditation-icon.svg' },
+                    { name: 'Walking Journal', icon: '/path-to-walking-journal-icon.svg' },
+                    { name: 'Typing Hero', icon: '/path-to-typing-hero-icon.svg' },
+                ],
+            },
             { id: '2', x: 10, y: 30, link: '/prenatal-paradise/creative-arts', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Creative Arts' },
             { id: '3', x: 15, y: 55, link: '/prenatal-paradise/emotional-social-behavioral', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Emotional Social Behavioral' },
             { id: '4', x: 25, y: 75, link: '/prenatal-paradise/language-literacy-speech', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Language Literacy Speech' },
@@ -27,7 +33,8 @@ const mapMarkers = [
             { id: '7', x: 75, y: 65, link: '/prenatal-paradise/safety', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Safety' },
             { id: '8', x: 85, y: 40, link: '/prenatal-paradise/sound-and-music', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Sound and Music' },
             { id: '9', x: 80, y: 25, link: '/prenatal-paradise/touch', backgroundColor: '#EC407A', borderColor: '#D81B60', name: 'Touch' }
-        ]
+        ],
+
     },
     {
         name: "Blossom Haven",
