@@ -1,7 +1,7 @@
 "use client"
 
 import SideNav from "@/components/SideNav";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import HomeNav from '@/components/HomeNav';
 import Map2 from "@/components/Map2";
 
@@ -114,6 +114,15 @@ const mapMarkers = [
 
 const Dashboard: React.FC = () => {
     const [currentMapIndex, setCurrentMapIndex] = useState(0);
+    const [containerDimensions, setContainerDimensions] = useState({ width: 0, height: 0 });
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (containerRef.current) {
+            const { clientWidth, clientHeight } = containerRef.current;
+            setContainerDimensions({ width: clientWidth, height: clientHeight });
+        }
+    }, [containerRef.current]);
 
     const map = mapImages[currentMapIndex];
     const markers = mapMarkers[currentMapIndex].markers;
@@ -127,15 +136,17 @@ const Dashboard: React.FC = () => {
             <div className="w-full">
                 <HomeNav onMapChange={handleMapChange} />
             </div>
-            <div className="flex flex-grow h-[calc(100%-6rem)]">
+            <div className="flex flex-grow h-full overflow-hidden">
                 <SideNav />
-                <div className="flex flex-col w-3/4">
-                    <Map2
-                        image={map}
-                        markers={markers}
-                        height={1000}
-                        width={1500}
-                    />
+                <div ref={containerRef} className="flex flex-col flex-grow">
+                    <div className="flex-grow relative">
+                        <Map2
+                            image={map}
+                            markers={markers}
+                            height={containerDimensions.height}
+                            width={containerDimensions.width}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

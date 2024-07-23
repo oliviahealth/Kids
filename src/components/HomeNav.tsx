@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import '../app/globals.css';
 import logoCompany from "../../public/images/Logo+Company.svg";
-import Image from 'next/image';  // Import the Image component from next/image
+import Image from 'next/image';
 
 interface NavbarProps {
     onMapChange: (index: number) => void;
