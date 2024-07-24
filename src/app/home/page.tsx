@@ -3,8 +3,8 @@
 import SideNav from "@/components/SideNav";
 import React, { useState } from "react";
 import HomeNav from '@/components/HomeNav';
-import Map from '@/components/Map';
-import Map2 from "@/components/Map2";
+import Map from "@/components/Map";
+
 const mapImages = [
     "/images/activities/parental-paradise/parental-paradise-map.png",
     "/images/activities/blossom-haven/blossom-haven-map.png",
@@ -145,7 +145,7 @@ const Dashboard: React.FC = () => {
                             </button>
                         ))}
                     </div>
-                    <Map2
+                    <Map
                         image={map}
                         markers={markers}
                         height={1000}
