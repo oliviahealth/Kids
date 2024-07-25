@@ -4,8 +4,8 @@ import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
 import logo from "@/public/images/dashboard/fantasyForest/shared/logo.png";
-import image1 from "@/public/images/dashboard/fantasyForest/week/2/act4/sheet_printouts.png"
-import image2 from "@/public/images/dashboard/fantasyForest/week/2/act4/crayons.png"
+import image1 from "@/public/images/dashboard/fantasyForest/week/2/act4/sheet_printouts.png";
+import image2 from "@/public/images/dashboard/fantasyForest/week/2/act4/crayons.png";
 
 type CheckboxState = {
   [key: string]: boolean;
@@ -19,9 +19,8 @@ export default function Page1({
   onBack: () => void;
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
-    list: false,
-    pen: false,
-    paper: false,
+    sheet_printouts: false,
+    crayons: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -45,7 +44,7 @@ export default function Page1({
         title="My Rainbow"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
-        subtitleColor="#52C5C0"
+        subtitleColor="#35A663"
       />
 
       <IntroductionAndMaterials
@@ -69,9 +68,9 @@ export default function Page1({
         ]}
         isChecked={isChecked}
         handleCheckboxChange={handleCheckboxChange}
-        mainBackgroundColor="#C5FFFC"
-        emptyCardBackgroundColor="#8AEFEB"
-        checkedCardColor="#52C5C0"
+        mainBackgroundColor="#B5F6D0"
+        emptyCardBackgroundColor="#88DFAC"
+        checkedCardColor="#35A663"
       />
       <Footer
         onNext={onNext}

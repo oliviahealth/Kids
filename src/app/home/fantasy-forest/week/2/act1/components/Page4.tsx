@@ -1,15 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import logo from "../../../../../public/images/dashboard/adventure-bay/title-image.png";
-import Link from "next/link";
-import photo from "../../../../../public/images/dashboard/adventure-bay/Group 114.png";
-import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
+import React from "react";
+import logo from "@/public/images/dashboard/fantasyForest/shared/logo.png";
+import photo from "@/public/images/dashboard/fantasyForest/shared/keyTakeway.png";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";
 
-export default function Page3({
+export default function Page4({
   onNext,
   onBack,
 }: {
@@ -29,7 +26,7 @@ export default function Page3({
         title="Rock Painting"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
-        subtitleColor="#52C5C0"
+        subtitleColor="#35A663"
       />
 
       <KeyTakeaways text={takeawayText} photoSrc={photo} photoAlt="Photo" />

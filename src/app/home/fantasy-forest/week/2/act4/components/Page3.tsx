@@ -1,11 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import logo from "../../../../../public/images/dashboard/adventure-bay/title-image.png";
-import Link from "next/link";
-import photo from "../../../../../public/images/dashboard/adventure-bay/Group 114.png";
-import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
-import KeyTakeaways from "@/components/Template/KeyTakeaways";
+import React from "react";
+import logo from "@/public/images/dashboard/fantasyForest/shared/logo.png";
+import Activity, { ActivityStep } from "@/components/Template/ActivitySteps";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";
 
@@ -16,9 +12,14 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `You completed the activity and earned your sticker! We hope you are able to see how 
-  being unqiue is special. This activity should have shown that being different is a good thing and that even 
-  when coloring you can learn! Keep being you!`;
+  const activitySteps: ActivityStep[] = [
+    {
+      stepNumber: 9,
+      description: `"Lastly, let's color in the next line - my favorite drink color.  What is your favorite drink?" 
+(Help your child chose whatever color they want.)   
+"Let's color the section of the rainbow for our favorite drink color."`,
+    },
+  ];
 
   return (
     <>
@@ -27,18 +28,16 @@ export default function Page3({
         title="My Rainbow"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
-        subtitleColor="#52C5C0"
+        subtitleColor="#35A663"
       />
 
-      <KeyTakeaways text={takeawayText} photoSrc={photo} photoAlt="Photo" />
+      <Activity steps={activitySteps} stepNumberColor="#A7F2C5" />
       <Footer
         onNext={onNext}
         onBack={onBack}
         leftButtonText="Back"
         rightButtonText="Continue"
         leftClickAllowed={true}
-        rightHasLink={true}
-        rightLinkHref={"/home"}
       />
     </>
   );

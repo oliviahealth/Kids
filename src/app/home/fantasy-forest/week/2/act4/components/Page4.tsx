@@ -6,22 +6,22 @@ import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";
 
-export default function Page3({
+export default function Page4({
   onNext,
   onBack,
 }: {
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `Hooray! This fun stress ball should be used to decrease worry and learn about 
-  self-adjusting your feelings. Remember to practice breathing while you squish your new ball. After 
-  you complete this craft, you get a sticker closer to earning your Creative Arts badge!`;
+  const takeawayText = `You completed the activity and earned your sticker! We hope you are able to see how 
+  being unqiue is special. This activity should have shown that being different is a good thing and that even 
+  when coloring you can learn! Keep being you!`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="DIY Stress Ball"
+        title="My Rainbow"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"

@@ -1,13 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import logo from "../../../../../public/images/dashboard/adventure-bay/title-image.png";
-import Link from "next/link";
-import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
+import React from "react";
+import logo from "@/public/images/dashboard/fantasyForest/shared/logo.png";
 import Activity, { ActivityStep } from "@/components/Template/ActivitySteps";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";
-import { ActivityPageProps } from "@/components/Template/ActivityPage";
 
 export default function Page2({
   onNext,
@@ -63,12 +59,6 @@ export default function Page2({
 (Help your child chose whatever color they want.)   
 "What is your favorite outfit to wear in that color? - (accept your child's response). Each person likes different clothes. Some clothes may be different that the clothes you like to wear. You should always compliment your friends' clothes. They wear their clothes because they like how it makes them look and feel. Let's color the section of the rainbow for our favorite color to wear."`,
     },
-    {
-      stepNumber: 9,
-      description: `"Lastly, let's color in the next line - my favorite drink color.  What is your favorite drink?" 
-(Help your child chose whatever color they want.)   
-"Let's color the section of the rainbow for our favorite drink color."`,
-    },
   ];
 
   return (
@@ -78,10 +68,10 @@ export default function Page2({
         title="My Rainbow"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
-        subtitleColor="#52C5C0"
+        subtitleColor="#35A663"
       />
 
-      <Activity steps={activitySteps} stepNumberColor="#C5FFFC" />
+      <Activity steps={activitySteps} stepNumberColor="#A7F2C5" />
       <Footer
         onNext={onNext}
         onBack={onBack}

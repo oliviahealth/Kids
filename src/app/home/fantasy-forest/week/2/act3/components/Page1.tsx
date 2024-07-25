@@ -4,14 +4,12 @@ import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
 import logo from "@/public/images/dashboard/fantasyForest/shared/logo.png";
-import image1 from "@/public/images/dashboard/fantasyForest/week/2/act3/flour.png"
-import image2 from "@/public/images/dashboard/fantasyForest/week/2/act3/balloon.png"
-import image3 from "@/public/images/dashboard/fantasyForest/week/2/act3/funnel.png"
-import image4 from "@/public/images/dashboard/fantasyForest/week/2/act3/water_bottle.png"
-import image5 from "@/public/images/dashboard/fantasyForest/week/2/act3/yarn.png"
-import image6 from "@/public/images/dashboard/fantasyForest/week/2/act3/permanent_marker.png"
-
-
+import image1 from "@/public/images/dashboard/fantasyForest/week/2/act3/flour.png";
+import image2 from "@/public/images/dashboard/fantasyForest/week/2/act3/balloon.png";
+import image3 from "@/public/images/dashboard/fantasyForest/week/2/act3/funnel.png";
+import image4 from "@/public/images/dashboard/fantasyForest/week/2/act3/water_bottle.png";
+import image5 from "@/public/images/dashboard/fantasyForest/week/2/act3/yarn.png";
+import image6 from "@/public/images/dashboard/fantasyForest/week/2/act3/permanent_marker.png";
 
 type CheckboxState = {
   [key: string]: boolean;
@@ -25,9 +23,12 @@ export default function Page1({
   onBack: () => void;
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
-    list: false,
-    pen: false,
-    paper: false,
+    flour: false,
+    balloon: false,
+    funnel: false,
+    water_bottle: false,
+    yarn: false,
+    permanent_marker: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -51,7 +52,7 @@ export default function Page1({
         title="DIY Stress Ball"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
-        subtitleColor="#52C5C0"
+        subtitleColor="#35A663"
       />
 
       <IntroductionAndMaterials
@@ -85,9 +86,9 @@ export default function Page1({
         ]}
         isChecked={isChecked}
         handleCheckboxChange={handleCheckboxChange}
-        mainBackgroundColor="#C5FFFC"
-        emptyCardBackgroundColor="#8AEFEB"
-        checkedCardColor="#52C5C0"
+        mainBackgroundColor="#B5F6D0"
+        emptyCardBackgroundColor="#88DFAC"
+        checkedCardColor="#35A663"
       />
       <Footer
         onNext={onNext}
