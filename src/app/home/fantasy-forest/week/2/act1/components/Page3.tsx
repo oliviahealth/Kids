@@ -17,44 +17,25 @@ export default function Page2({
 }) {
   const activitySteps: ActivityStep[] = [
     {
-      stepNumber: 1,
+      stepNumber: 9,
       description:
         " After the rocks are dry, head back out into the yard or on a walk around the neighborgood to distribute the rocks. ",
     },
     {
-      stepNumber: 2,
+      stepNumber: 10,
       description:
         "Encourage your child to place their rocks in places that are easily visible so as many people will be able to see them as possible.  ",
     },
     {
-      stepNumber: 3,
+      stepNumber: 11,
       description:
         "You can also take your child's rocks to the yards of grandparents, other family or friends to bring a smile to their face. ",
     },
     {
-      stepNumber: 4,
+      stepNumber: 12,
       description:
         "Make sure to explain to your child the importance of their creative art adding to the beauty of the environment around them and bringing joy to others who see them.  ",
-    },
-    {
-      stepNumber: 5,
-      description: "Collect your acrylic paint and paint brushes to begin.",
-    },
-    {
-      stepNumber: 6,
-      description:
-        "Allow your child to use their paint and paintbrushes to decorate their rocks with things that remind them of the outdoors or that they may have seen on their walk. ",
-    },
-    {
-      stepNumber: 7,
-      description:
-        "Encourage your child to make the rocks colorful and vibrant so they will catch the attention of others as they pass them. They may also add words of encouragement or bible verses to the other side of their rock to bring a smile to someone's face who may pickup the rock.  ",
-    },
-    {
-      stepNumber: 8,
-      description:
-        " Once your child has finished painting their rocks, allow the rocks to dry for 1-2 hours.",
-    },
+    }
   ];
 
   return (

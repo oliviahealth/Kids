@@ -56,7 +56,7 @@ export default function Page1({
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="From this activity, your child will have the opportunity to practice following directions by learning how to make a stress ball. Also, your child will practice self-regulation by learning how to use the stress ball in times of worry or unease. Depending on your child’s ability, you may need to actively make the stress ball yourself, but be sure to narrate what you’re doing as you do it so your child can follow along. The BOLD text consists of things you can say throughout the activity when teaching your child! The prompts in parentheses are actions to take within the activity."
+        introductionText="From this activity, your child will have the opportunity to practice following directions by learning how to make a stress ball. Also, your child will practice self-regulation by learning how to use the stress ball in times of worry or unease. Depending on your child's ability, you may need to actively make the stress ball yourself, but be sure to narrate what you're doing as you do it so your child can follow along. The QUOTED text consists of things you can say throughout the activity when teaching your child! The prompts in parentheses are actions to take within the activity."
         materialsTitle="Materials Needed"
         materials={[
           {

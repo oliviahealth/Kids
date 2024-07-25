@@ -50,7 +50,7 @@ export default function Page1({
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="At this age, kids often start to notice the things that are different between them and other people in their life. This activity will help show that everone is different, everyone likes different things, and that it is a good thing! Participating in this activity with your child will show that even you are different from them. Hopefully your child will be able to look at their rainbow and see the uniqueness that makes them special. The BOLD text are things you can say throughout the activity when teaching your child! The prompts in parentheses are actions to take within the activity."
+        introductionText="At this age, kids often start to notice the things that are different between them and other people in their life. This activity will help show that everone is different, everyone likes different things, and that it is a good thing! Participating in this activity with your child will show that even you are different from them. Hopefully your child will be able to look at their rainbow and see the uniqueness that makes them special. The QUOTED text are things you can say throughout the activity when teaching your child! The prompts in parentheses are actions to take within the activity."
         materialsTitle="Materials Needed"
         materials={[
           {
