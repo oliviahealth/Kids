@@ -38,32 +38,32 @@ const mapMarkers = [
     {
         name: "Starlight Meadows",
         markers: [
-            { id: '1', x: 50, y: 20, link: '/activities/starlight-meadows/marker1', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Marker 1' },
-            { id: '2', x: 35, y: 30, link: '/activities/starlight-meadows/marker2', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Marker 2' },
-            { id: '3', x: 20, y: 30, link: '/activities/starlight-meadows/marker3', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Marker 3' },
-            { id: '4', x: 15, y: 60, link: '/activities/starlight-meadows/marker4', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Marker 4' }
+            { id: '1', x: 50, y: 20, link: '/activities/starlight-meadows/marker1', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Creating a Nighttime Routine' },
+            { id: '2', x: 35, y: 30, link: '/activities/starlight-meadows/marker2', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Stretching (Stress Management)' },
+            { id: '3', x: 20, y: 30, link: '/activities/starlight-meadows/marker3', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Box Breathing (Stress Management)' },
+            { id: '4', x: 15, y: 60, link: '/activities/starlight-meadows/marker4', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Walking (Stress Management)' }
         ]
     },
 
     {
         name: "Rainbow Valley",
         markers: [
-            { id: '1', x: 50, y: 30, link: '/activities/rainbow-valley/week/1/act1', backgroundColor: '#E74C3C', borderColor: '#C0392B', name: 'Act 1' },
-            { id: '2', x: 35, y: 35, link: '/activities/rainbow-valley/week/1/act2', backgroundColor: '#E67E22', borderColor: '#D35400', name: 'Act 2' },
-            { id: '3', x: 20, y: 35, link: '/activities/rainbow-valley/week/1/act3', backgroundColor: '#F1C40F', borderColor: '#F39C12', name: 'Act 3' },
-            { id: '4', x: 15, y: 60, link: '/activities/rainbow-valley/week/1/act4', backgroundColor: '#2ECC71', borderColor: '#27AE60', name: 'Act 4' },
-            { id: '5', x: 45, y: 50, link: '/activities/rainbow-valley/week/1/act5', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Act 5' },
-            { id: '6', x: 65, y: 55, link: '/activities/rainbow-valley/week/1/act6', backgroundColor: '#9B59B6', borderColor: '#8E44AD', name: 'Act 6' },
-            { id: '7', x: 75, y: 65, link: '/activities/rainbow-valley/week/1/act7', backgroundColor: '#E74C3C', borderColor: '#C0392B', name: 'Act 7' }
+            { id: '1', x: 50, y: 30, link: '/activities/rainbow-valley/week/1/act1', backgroundColor: '#E74C3C', borderColor: '#C0392B', name: 'Create Your Own Music Playlist' },
+            { id: '2', x: 35, y: 35, link: '/activities/rainbow-valley/week/1/act2', backgroundColor: '#E67E22', borderColor: '#D35400', name: 'Journaling' },
+            { id: '3', x: 20, y: 35, link: '/activities/rainbow-valley/week/1/act3', backgroundColor: '#F1C40F', borderColor: '#F39C12', name: 'Vision Board for Self-Care' },
+            { id: '4', x: 15, y: 60, link: '/activities/rainbow-valley/week/1/act4', backgroundColor: '#2ECC71', borderColor: '#27AE60', name: 'Mindful Driving' },
+            { id: '5', x: 45, y: 50, link: '/activities/rainbow-valley/week/1/act5', backgroundColor: '#3498DB', borderColor: '#2980B9', name: 'Self-Care Wheel' },
+            { id: '6', x: 65, y: 55, link: '/activities/rainbow-valley/week/1/act6', backgroundColor: '#9B59B6', borderColor: '#8E44AD', name: 'Cleaning Schedule' },
+            { id: '7', x: 75, y: 65, link: '/activities/rainbow-valley/week/1/act7', backgroundColor: '#E74C3C', borderColor: '#C0392B', name: 'Self-Care Bingo' }
         ]
     },
     {
         name: "Adventure Bay",
         markers: [
-            { id: '1', x: 30, y: 15, link: '/activities/adventure-bay/marker1', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Marker 1' },
-            { id: '2', x: 15, y: 25, link: '/activities/adventure-bay/marker2', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Marker 2' },
-            { id: '3', x: 20, y: 40, link: '/activities/adventure-bay/marker3', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Marker 3' },
-            { id: '4', x: 25, y: 65, link: '/activities/adventure-bay/marker4', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Marker 4' }
+            { id: '1', x: 30, y: 15, link: '/activities/adventure-bay/marker1', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Affirmations' },
+            { id: '2', x: 15, y: 25, link: '/activities/adventure-bay/marker2', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Power of Coloring' },
+            { id: '3', x: 20, y: 40, link: '/activities/adventure-bay/marker3', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'My Gratitude Jars' },
+            { id: '4', x: 25, y: 65, link: '/activities/adventure-bay/marker4', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' }
         ]
     },
     {
