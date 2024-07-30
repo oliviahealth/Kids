@@ -3,9 +3,9 @@ import { ReactNode, useState } from "react";
 import Image from "next/image";
 import backgroundMap from "/public/images/background.png";
 import tempBackground from "/public/images/dashboard/adventure-bay/temp_background.png";
-import Page1 from "@/app/adventure-bay/marker3/components/Page1";
-import Page2 from "@/app/adventure-bay/marker3/components/Page2";
-import Page3 from "@/app/adventure-bay/marker3/components/Page3";
+import Page1 from "./components/Page1";
+import Page2 from "./components/Page2";
+import Page3 from "./components/Page3";
 import ActivityPage1 from "./components/ActivityPage1";
 import ActivityPage2 from "./components/ActivityPage2";
 import ActivityPage3 from "./components/ActivityPage3";
@@ -20,7 +20,6 @@ const MeditationActivity: React.FC = () => {
   };
 
   const handleNext = () => {
-    console.log("handleNext", currentPage);
     if (currentPage < pagesData.length - 1) setCurrentPage(currentPage + 1);
   };
 
