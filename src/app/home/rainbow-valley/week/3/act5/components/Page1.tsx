@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import image1 from "@/public/images/dashboard/rainbowValley/week/3/act5/coping_skills_template.png";
 import image2 from "@/public/images/dashboard/rainbowValley/week/3/act5/writing_utensils.png";
 import image3 from "@/public/images/dashboard/rainbowValley/week/3/act5/paper.png";
+import downloadIcon from "@/public/images/dashboard/rainbowValley/shared/download.png";
 
 const Page1: React.FC<{
   onNext: () => void;
@@ -72,6 +73,13 @@ const Page1: React.FC<{
         mainBackgroundColor="#FFD0D0"
         emptyCardBackgroundColor="#FFBABA"
         checkedCardColor="#E75858"
+        link={[
+          {
+            text: "OLIVIAKIDS Creating Coping Skills.pdf",
+            img: downloadIcon,
+            url: "https://tamucs.sharepoint.com/teams/Team-OLIVIAContentWorkgroup/Shared%20Documents/Forms/AllItems.aspx?id=%2Fteams%2FTeam%2DOLIVIAContentWorkgroup%2FShared%20Documents%2FGeneral%2FOlivia%2DKIDS%2FContent%20Team%20Folder%2FFINALIZED%20Content%20Folder%2FWeek%203%20Emotional%2C%20Behavioral%20%26%20Social%20FINAL%2FOLIVIAKIDS%20Creating%20Coping%20Skills%2Epdf&parent=%2Fteams%2FTeam%2DOLIVIAContentWorkgroup%2FShared%20Documents%2FGeneral%2FOlivia%2DKIDS%2FContent%20Team%20Folder%2FFINALIZED%20Content%20Folder%2FWeek%203%20Emotional%2C%20Behavioral%20%26%20Social%20FINAL",
+          },
+        ]}
       />
       <Footer
         onNext={onNext}

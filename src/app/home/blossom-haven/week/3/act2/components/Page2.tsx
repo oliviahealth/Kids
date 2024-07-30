@@ -49,7 +49,11 @@ export default function Page2({
         subtitleColor="#F1A533"
       />
 
-      <Activity steps={activitySteps} stepNumberColor="#F8E7BA" />
+      <Activity
+        title="Activity #1: Paper Bag Puppet Playtime"
+        steps={activitySteps}
+        stepNumberColor="#F8E7BA"
+      />
       <Footer
         onNext={onNext}
         onBack={onBack}

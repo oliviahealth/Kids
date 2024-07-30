@@ -57,7 +57,7 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
             style={{ color: materialsData.checkedCardColor }}
           >
             {materialsData.link[0]?.text}
-            <Image src={materialsData?.link[0]?.img} />
+            <Image alt="doanload" src={materialsData?.link[0]?.img} />
           </a>
         )}
       </div>

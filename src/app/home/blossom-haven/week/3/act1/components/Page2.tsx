@@ -36,7 +36,7 @@ export default function Page2({
     {
       stepNumber: 5,
       description:
-        "Spend as much time as you'd like in front of the mirror,  letting your child explore on their own, asking questions, dancing, playing peek-a-boo, and even singing. You're providing more opportunities for your child to reach their emotional, behavioral, and social milestones.",
+        "Spend as much time as you'd like in front of the mirror, letting your child explore on their own, asking questions, dancing, playing peek-a-boo, and even singing. You're providing more opportunities for your child to reach their emotional, behavioral, and social milestones.",
     },
   ];
 

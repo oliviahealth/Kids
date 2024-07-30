@@ -54,7 +54,11 @@ export default function Page4({
         subtitleColor="#F1A533"
       />
 
-      <Activity steps={activitySteps} stepNumberColor="#F8E7BA" />
+      <Activity
+        title="Activity #3: Glove/Mitten Puppet Playtime"
+        steps={activitySteps}
+        stepNumberColor="#F8E7BA"
+      />
       <Footer
         onNext={onNext}
         onBack={onBack}
