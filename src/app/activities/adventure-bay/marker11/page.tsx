@@ -5,9 +5,9 @@ import backgroundMap from "@/public/images/background.png";
 import imageSrc from "@/public/images/dashboard/adventure-bay/Ellipse 169.png";
 import star from "@/public/images/dashboard/adventure-bay/Star 27.svg";
 import arrowSrc from "@/public/images/dashboard/adventure-bay/icon.png";
-import Page1 from "@/app/adventure-bay/week4/marker1/components/Page1";
-import Page2 from "@/app/adventure-bay/week4/marker1/components/Page2";
-import Page3 from "@/app/adventure-bay/week4/marker1/components/Page3";
+import Page1 from "./components/Page1";
+import Page2 from "./components/Page2";
+import Page3 from "./components/Page3";
 import ActivityPage from "@/components/Template/ActivityPage";
 import ActivityStar from "@/components/Template/ActivityStar";
 
