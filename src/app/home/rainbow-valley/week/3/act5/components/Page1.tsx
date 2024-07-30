@@ -1,0 +1,88 @@
+"use client";
+import icon from "@/public/images/dashboard/rainbowValley/shared/rainbowValleyIconImage.png";
+import Header from "@/components/Template/Header";
+import IntroductionAndMaterials, {
+  CheckboxState,
+} from "@/components/Template/IntroductionAndMaterials";
+import Footer from "@/components/Template/Footer";
+import { useEffect, useState } from "react";
+import image1 from "@/public/images/dashboard/rainbowValley/week/3/act5/coping_skills_template.png";
+import image2 from "@/public/images/dashboard/rainbowValley/week/3/act5/writing_utensils.png";
+import image3 from "@/public/images/dashboard/rainbowValley/week/3/act5/paper.png";
+
+const Page1: React.FC<{
+  onNext: () => void;
+  onBack: () => void;
+}> = ({ onNext, onBack }) => {
+  const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
+  const [isChecked, setIsChecked] = useState<CheckboxState>({
+    coping_skills_template: false,
+    writing_utensils: false,
+    paper: false,
+  });
+
+  const handleCheckboxChange = (type: keyof typeof isChecked) => {
+    setIsChecked((prevState) => ({
+      ...prevState,
+      [type]: !prevState[type],
+    }));
+  };
+
+  useEffect(() => {
+    const allChecked = Object.values(isChecked).every(Boolean);
+    setButtonDisabled(!allChecked);
+  }, [isChecked]);
+
+  return (
+    <>
+      <Header
+        logoSrc={icon}
+        title="Creating Coping Skills"
+        subtitle="Creative Arts - Rainbow Valley"
+        homeLink="/home"
+        subtitleColor="#E75858"
+      />
+
+      <IntroductionAndMaterials
+        introductionTitle="Introduction"
+        introductionText="It can be challenging to express your emotions especially as a two year old who has not had much time practicing these skills. When a child gets mad, it is important to stay calm as the caregiver and offer ideas to them that can help them feel better. This will teach them that there are better ways to cope with emotions than kicking someone or throwing an object. This activity is called Creating Coping Skills and allows the child to practice different coping skills that may help them when feeling a certain emotion. They will get to explain the emotion they are feeling and find an activity to help them feel better. Lets get started!"
+        materialsTitle="Materials Needed"
+        materials={[
+          {
+            name: "Coping Skills Template",
+            image: image1,
+            alt: "Coping Skills Template",
+            key: "coping_skills_template",
+          },
+          {
+            name: "Writing Utensils",
+            image: image2,
+            alt: "Writing Utensils",
+            key: "writing_utensils",
+          },
+          { name: "Paper", image: image3, alt: "Paper", key: "paper" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+          { name: "", image: image1, alt: "Empty", key: "empty" },
+        ]}
+        isChecked={isChecked}
+        handleCheckboxChange={handleCheckboxChange}
+        mainBackgroundColor="#FFD0D0"
+        emptyCardBackgroundColor="#FFBABA"
+        checkedCardColor="#E75858"
+      />
+      <Footer
+        onNext={onNext}
+        onBack={onBack}
+        rightButtonDisabledAllowed={true}
+        rightButtonDisabled={buttonDisabled}
+        leftButtonText="Learn More"
+        rightButtonText="Continue"
+      />
+    </>
+  );
+};
+
+export default Page1;
