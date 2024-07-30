@@ -1,11 +1,11 @@
+
 import React from "react";
-import ellipse from "/public/images/dashboard/adventure-bay/Ellipse 122.png";
 import image from "/public/images/dashboard/adventure-bay/Ellipse 169.png";
 import arrow from "/public/images/dashboard/adventure-bay/icon.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ActivityPage3({
+export default function ActivityPage4({
   onNext,
   onBack,
 }: {
@@ -16,15 +16,20 @@ export default function ActivityPage3({
     <div className="flex flex-col h-full w-full">
       <div className="h-1/6 flex justify-between items-center gap-8">
         <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
-          3
+          4
         </span>
 
         <div className="text-center">
-          <h1 className="text-2xl font-bold">Heading</h1>
+          <h1 className="text-2xl font-bold">Postpartum Plank Exercise</h1>
           <p>
-            Take some time to color the Caregiver&apos;s Coloring pages provided or
-            paper from home.
+            Start on your comfortable place on the floor with your forearms and knees on the ground for the starting position.
           </p>
+
+          <p>Raise your back up a few inches, keeping your forearms and toes on the ground, trying to put your body into a straight position. Keep your eyes forward because this will help you keep your body straight.</p>
+
+          <p>When your in the straight position, hold this pose for about 30 seconds focusing on breathing in through your nose, and exhaling through your mouth. Focus on keeping your stomach tight to help in keeping the straight position</p>
+
+          <p>After 30 seconds, relax back down onto the ground and let yourself recover a bit. Repeat this exercise 1-3 times, but each time you come back to this exercise try to hold the straight position for more than 30 seconds if you are able.</p>
         </div>
 
         <div className="">

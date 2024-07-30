@@ -1,11 +1,11 @@
+
 import React from "react";
-import ellipse from "/public/images/dashboard/adventure-bay/Ellipse 122.png";
 import image from "/public/images/dashboard/adventure-bay/Ellipse 169.png";
 import arrow from "/public/images/dashboard/adventure-bay/icon.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ActivityPage3({
+export default function ActivityPage7({
   onNext,
   onBack,
 }: {
@@ -16,15 +16,11 @@ export default function ActivityPage3({
     <div className="flex flex-col h-full w-full">
       <div className="h-1/6 flex justify-between items-center gap-8">
         <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
-          3
+          7
         </span>
 
         <div className="text-center">
-          <h1 className="text-2xl font-bold">Heading</h1>
-          <p>
-            Take some time to color the Caregiver&apos;s Coloring pages provided or
-            paper from home.
-          </p>
+          <h1 className="text-2xl font-bold">Update your journal each time you go on a walk or see something new that brings you good emotions.</h1>
         </div>
 
         <div className="">

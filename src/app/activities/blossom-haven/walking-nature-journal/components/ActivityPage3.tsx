@@ -1,5 +1,5 @@
+
 import React from "react";
-import ellipse from "/public/images/dashboard/adventure-bay/Ellipse 122.png";
 import image from "/public/images/dashboard/adventure-bay/Ellipse 169.png";
 import arrow from "/public/images/dashboard/adventure-bay/icon.png";
 import Image from "next/image";
@@ -20,11 +20,7 @@ export default function ActivityPage3({
         </span>
 
         <div className="text-center">
-          <h1 className="text-2xl font-bold">Heading</h1>
-          <p>
-            Take some time to color the Caregiver&apos;s Coloring pages provided or
-            paper from home.
-          </p>
+          <h1 className="text-2xl font-bold">This is your decision but you can go by yourself, take your child along to observe, or even other household caregivers.</h1>
         </div>
 
         <div className="">

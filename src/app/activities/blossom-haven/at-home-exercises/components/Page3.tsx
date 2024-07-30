@@ -1,37 +1,43 @@
-import React from 'react';
-import { APContainer, APHeader, APInstruction } from '@/components/ActivityPage';
-import { Page } from "@/components/Pagination";
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import headerIcon from "/public/images/activities/blossom-haven/header-icon.png";
+import Link from "next/link";
+import photo from "/public/images/dashboard/adventure-bay/Group 114.png";
+import arrow from "/public/images/dashboard/adventure-bay/next_arrow.png";
+import KeyTakeaways from "@/components/Template/KeyTakeaways";
+import Footer from "@/components/Template/Footer";
+import Header from "@/components/Template/Header";
 
-const activity = {
-    buttonColor: "#FF7613",
-    numColor: "#FDDE6F",
-    bgColor: "#FF8C38",
-    num: 1,
+export default function Page3({
+  onNext,
+  onBack,
+}: {
+  onNext: () => void;
+  onBack: () => void;
+}) {
+  const takeawayText = `These four exercise routines are designed for you to do at home at you own pace in a place where you feel comfortable and relaxed. Exercising benefits your physical and mental health by providing you with more energy, improving yout mood/emotions, and improving your sleep. With continual practice, these exercises will become a normal routine and help you ensure you're ability to care for your growing child.`;
 
-    title: "Diaphragmatic breathing - An Easy, Warm Up Breathing Exercise",
-    subtitle: "This exercise is tailored to everyone, and can be done just a few days after a caregiver has given birth.",
-    instructions: [
-        "Find a comfortable place and lie on your back.",
-        "Place one hand on your stomach, above your belly button, and the other hand on your chest.",
-        "Breathe in slowly through your nose.",
-        "Breathe out slowly through your mouth.",
-        "As you inhale, imagine filling a balloon in your stomach, and as you exhale, imagine shrinking the balloon. Continue breathing in and out for the remaining time.",
-    ]
+  return (
+    <>
+      <Header
+        logoSrc={headerIcon}
+        title="At-Home Exercises"
+        subtitle="Caregiver Wellness - Blossom Haven"
+        homeLink="/home"
+        subtitleColor="#F1A533"
+      />
+
+      <KeyTakeaways text={takeawayText} photoSrc={photo} photoAlt="Photo" />
+      <Footer
+        onNext={onNext}
+        onBack={onBack}
+        leftButtonText="Back"
+        rightButtonText="Continue"
+        leftClickAllowed={true}
+        rightHasLink={true}
+        rightLinkHref={"/home"}
+      />
+    </>
+  );
 }
-
-export default activity.instructions.map((instruction, instructionIndex) => ({ onBack, onContinue, onExit }: Page) => <APContainer
-    key={`activity-${instructionIndex}`}
-    bgColor={activity.bgColor}
-    buttonColor={activity.buttonColor}
-    numColor={activity.numColor}
-
-    time={0}
-    num={activity.num}
-
-    onBack={onBack}
-    onContinue={onContinue}
-    onExit={onExit}
->
-    <APHeader title={activity.title} subtitle={activity.subtitle} />
-    <APInstruction instruction={instruction} />
-</APContainer>)

@@ -71,7 +71,7 @@ export default function Page2({
                 </span>
                 <div className="flex flex-col">
                   <p className="text-xl">
-                    Take some time to color the Caregiver's Coloring pages
+                    Take some time to color the Caregiver&apos;s Coloring pages
                     provided or paper from home
                   </p>
                 </div>

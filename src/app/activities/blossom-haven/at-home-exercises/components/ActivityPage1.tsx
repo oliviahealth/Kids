@@ -1,11 +1,11 @@
+
 import React from "react";
-import ellipse from "/public/images/dashboard/adventure-bay/Ellipse 122.png";
 import image from "/public/images/dashboard/adventure-bay/Ellipse 169.png";
 import arrow from "/public/images/dashboard/adventure-bay/icon.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ActivityPage3({
+export default function ActivityPage1({
   onNext,
   onBack,
 }: {
@@ -16,15 +16,22 @@ export default function ActivityPage3({
     <div className="flex flex-col h-full w-full">
       <div className="h-1/6 flex justify-between items-center gap-8">
         <span className="rounded-full bg-[#BFDF64] flex justify-center items-center w-20 h-20 text-xl font-bold">
-          3
+          1
         </span>
 
         <div className="text-center">
-          <h1 className="text-2xl font-bold">Heading</h1>
+          <h1 className="text-2xl font-bold">Diaphragmatic breathing - An Easy, Warm Up Breathing Exercise</h1>
           <p>
-            Take some time to color the Caregiver&apos;s Coloring pages provided or
-            paper from home.
+            Kneel on the floor and put your hands on the floor in front of you.
           </p>
+
+          <p>Place one hand on your stomach, above your belly button, and the other hand on your chest.</p>
+
+          <p>Breathe in slowly through your nose.</p>
+
+          <p>Breathe out slowly through your mouth.</p>
+
+          <p>As you inhale, imagine filling a balloon in your stomach, and as you exhale, imagine shrinking the balloon. Continue breathing in and out for the remaining time.</p>
         </div>
 
         <div className="">

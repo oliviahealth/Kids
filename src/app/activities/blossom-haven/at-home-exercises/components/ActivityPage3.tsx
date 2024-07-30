@@ -1,5 +1,5 @@
+
 import React from "react";
-import ellipse from "/public/images/dashboard/adventure-bay/Ellipse 122.png";
 import image from "/public/images/dashboard/adventure-bay/Ellipse 169.png";
 import arrow from "/public/images/dashboard/adventure-bay/icon.png";
 import Image from "next/image";
@@ -20,11 +20,16 @@ export default function ActivityPage3({
         </span>
 
         <div className="text-center">
-          <h1 className="text-2xl font-bold">Heading</h1>
+          <h1 className="text-2xl font-bold">Cat-Cow Yoga Exercise</h1>
           <p>
-            Take some time to color the Caregiver&apos;s Coloring pages provided or
-            paper from home.
+            Kneel on the floor and put your hands on the floor in front of you.
           </p>
+
+          <p>Keep your hands shoulder-width apart and your knees directly below your hips. </p>
+
+          <p>Inhale deeply while curving your lower back and bringing your head up, tilting your pelvis up like a \&quot;cow.&quot;</p>
+
+          <p>Exhale deeply and bring your abdomen in, arching your spine and bringing your head and pelvis down like a \&quot;cat\&quot;. Repeat several times.</p>
         </div>
 
         <div className="">
