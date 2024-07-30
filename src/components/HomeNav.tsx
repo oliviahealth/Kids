@@ -1,15 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from 'next/link';
 import '../app/globals.css';
-import logoCompany from "../../public//images/Logo+Company.svg";
-import Image from 'next/image';  // Import the Image component from next/image
+import logoCompany from "../../public/images/Logo+Company.svg";
+import Image from 'next/image';
 
+interface NavbarProps {
+    onMapChange: (index: number) => void;
+}
 
-
-
-const Navbar: React.FC = () => {
+const Navbar: React.FC<NavbarProps> = ({ onMapChange }) => {
     const [isOpen, setOpen] = useState(false);
 
     const menuToggle = () => {
@@ -29,44 +29,41 @@ const Navbar: React.FC = () => {
                 <div className="flex-1 flex justify-center items-end relative w-full">
                     <div className="flex h-[3rem] relative z-10 w-full justify-between">
                         <div className="absolute bottom-0 left-0 right-0 h-[0.8rem] w-full rounded-md z-0" style={{ backgroundColor: '#E0E0E0' }}></div>
-                        <Link
-                            href={'/home'}
+                        <button
+                            onClick={() => onMapChange(0)}
                             className="pregnancy-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-q mr-6 hover-grow hover-bg-pregnancy"
                         >
-                        </Link>
-                        <Link
-                            href={'/lessons'}
+                        </button>
+                        <button
+                            onClick={() => onMapChange(1)}
                             className="age-one-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-one"
                         >
-                        </Link>
-                        <Link
-                            href={'/activities'}
+                        </button>
+                        <button
+                            onClick={() => onMapChange(2)}
                             className="age-two-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-two"
                         >
-                        </Link>
-                        <Link
-                            href={'/worlds'}
+                        </button>
+                        <button
+                            onClick={() => onMapChange(3)}
                             className="age-three-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-three"
                         >
-                        </Link>
-                        <Link
-                            href={'/volcano'}
+                        </button>
+                        <button
+                            onClick={() => onMapChange(4)}
                             className="age-four-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-four"
                         >
-                        </Link>
-                        <Link
-                            href={'/volcano'}
+                        </button>
+                        <button
+                            onClick={() => onMapChange(5)}
                             className="age-five-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 hover-grow hover-bg-age-five"
                         >
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-
     );
 }
-
-
 
 export default Navbar;
