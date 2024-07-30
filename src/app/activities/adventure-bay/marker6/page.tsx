@@ -84,8 +84,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={2}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Print out the Olivia-KIDS “Popsicle Stick Puppets” packet. Colored or black & white options are available."
+          title="Talk with your child."
+          description="Discuss and come up with a puzzle image that interests them, such as their favorite animal or food."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -99,8 +99,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={3}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Cut out animal faces for the puppets. You can also draw and color your own puppet characters."
+          title="Draw the image."
+          description="Have your child draw the desired image onto a blank piece of paper. Provide assistance if necessary."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -114,8 +114,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={4}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Tape or glue the cut-outs to the tips of individual popsicle sticks."
+          title="Color the image."
+          description="Color the drawn image to make it vibrant and engaging."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -129,8 +129,53 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={5}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Create your own stories or plays with your new popsicle stick puppets. Think outside the box and have fun!"
+          title="Glue the picture."
+          description="Glue the picture onto a piece of cardboard of the same size. Allow it to dry completely."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={6}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Cut the picture."
+          description="Use safety scissors to cut the picture into 10-25 jigsaw pieces."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={7}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Mix the pieces."
+          description="Mix up the jigsaw pieces to prepare for assembly."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={8}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Assemble the puzzle."
+          description="Put the jigsaw pieces together to assemble the puzzle."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"

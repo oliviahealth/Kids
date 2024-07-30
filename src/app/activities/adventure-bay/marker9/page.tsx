@@ -10,6 +10,7 @@ import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
 import ActivityPage from "@/components/Template/ActivityPage";
 import ActivityStar from "@/components/Template/ActivityStar";
+
 const AdventureBayActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -69,8 +70,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={1}
           onNext={handleNext}
           onBack={handleBack}
-          title="Gather supplies."
-          description="Gather all the necessary supplies for the activity."
+          title="Introduction to Friendship Flower."
+          description="This week we are talking about what it means to be a good friend. For this activity, we are going to use The Friend Flower to draw out what it means to be a good friend."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -84,8 +85,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={2}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Print out the Olivia-KIDS “Popsicle Stick Puppets” packet. Colored or black & white options are available."
+          title="Name 6 qualities of a good friend."
+          description="Before we draw and color, let's name 6 qualities that make a good friend. As your child names the 6 qualities, write each one next to each petal on the activity sheet."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -99,8 +100,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={3}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Cut out animal faces for the puppets. You can also draw and color your own puppet characters."
+          title="Discuss the qualities."
+          description="Now that we have named our 6 friendship qualities, we are going to talk about each one. After we talk about each one, we are going to draw a picture that best represents that quality."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -114,8 +115,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={4}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Tape or glue the cut-outs to the tips of individual popsicle sticks."
+          title="Explore the first quality."
+          description="For this quality (name the first quality), what do you think about when you hear this word? Let your child explore that."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -129,8 +130,53 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={5}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Create your own stories or plays with your new popsicle stick puppets. Think outside the box and have fun!"
+          title="Identify actions."
+          description="Now, what action shows (name the first quality)? Let your child explore that thought."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={6}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Decide on a drawing."
+          description="What should we draw to represent that? Let your child explore that thought and have them name what should be drawn."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={7}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Draw the representation."
+          description="Great idea, can you draw that? Let them draw, help if needed."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={8}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Repeat for remaining qualities."
+          description="Repeat the same process for the 5 remaining qualities. By the end, each petal should have a picture drawn in it."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"

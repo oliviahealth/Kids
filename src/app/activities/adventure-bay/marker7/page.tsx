@@ -84,8 +84,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={2}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Print out the Olivia-KIDS “Popsicle Stick Puppets” packet. Colored or black & white options are available."
+          title="Glue popsicle sticks together."
+          description="Glue four or more craft popsicle sticks together to form the desired shape (e.g., four sticks for a square)."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -99,8 +99,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={3}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Cut out animal faces for the puppets. You can also draw and color your own puppet characters."
+          title="Allow the glue to dry."
+          description="Allow the glue to completely dry before proceeding to the next step."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -114,8 +114,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={4}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Tape or glue the cut-outs to the tips of individual popsicle sticks."
+          title="Decorate the frame."
+          description="Decorate the frame with materials of your choice: paint colors, glue on buttons, paste on stickers, etc."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -129,8 +129,38 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={5}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Create your own stories or plays with your new popsicle stick puppets. Think outside the box and have fun!"
+          title="Measure the picture."
+          description="Measure the picture of your choice (e.g., family, sibling, pet photos) with a ruler, then measure the picture frame."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={6}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Trim the picture."
+          description="Use scissors to trim the picture to fit the picture frame box."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={7}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Attach the picture."
+          description="Glue or tape the picture from the back and enjoy your keepsake picture frame!"
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"

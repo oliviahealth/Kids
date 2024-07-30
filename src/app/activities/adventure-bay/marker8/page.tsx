@@ -84,8 +84,12 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={2}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Print out the Olivia-KIDS “Popsicle Stick Puppets” packet. Colored or black & white options are available."
+          title="Decide what type of tree to make."
+          description="Choose the type of tree:
+- Fall Tree: Use red, orange, and yellow paints for the leaves.
+- Winter Tree: Use blue and white paint for the leaves.
+- Spring Tree: Make a Cherry Blossom tree with pink and white paint for the leaves.
+- Summer Tree: Make an Apple tree with green paint for the leaves and red paint for the apples."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -99,8 +103,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={3}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Cut out animal faces for the puppets. You can also draw and color your own puppet characters."
+          title="Prepare the tree trunk."
+          description="Either print out the OliviaKids Tree Trunk Template or use a piece of paper available to you."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -114,8 +118,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={4}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Tape or glue the cut-outs to the tips of individual popsicle sticks."
+          title="Draw the tree trunk."
+          description="If using your own paper, draw out the trunk of a tree with branches using brown paint. You can also add a blue sky as the background."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -129,8 +133,53 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={5}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Create your own stories or plays with your new popsicle stick puppets. Think outside the box and have fun!"
+          title="Prepare the cotton ball."
+          description="Attach a cotton ball to the end of a clothespin."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={6}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Paint the leaves."
+          description="Dip the cotton ball end into the colored paints and stamp it onto the paper to create leaves."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={7}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Fill the branches with leaves."
+          description="Repeat the stamping process until there are leaves on all of the branches."
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={8}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Add fruits to the tree."
+          description="If creating apples or other fruits, use the cotton ball to create green leaves first. After it dries, use the cotton ball to create red circles on top to represent the apples."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"

@@ -16,14 +16,14 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `Round of applause for these fantastic puppet masters! You have created such amazing popsicle stick puppets and put on a great show while you were at it! After completing this activity, you will receive a completion sticker. From here on out, if you have spare popsicle sticks after a summer day sweet treat, you can save them to make as many popsicle stick puppets as you like. From this fun arts and crafts activity, we have learned that the sky is the limit when it comes to our imaginations- anything is possible when we put our mind to it!`;
+  const takeawayText = `Fabulous work! You have just finished a wonderful storytime session together with your child. What's more is that you all made a beautiful craft. Hope you enjoyed sparking your creative outlet while you were exploring this book. Keep on reading, and enjoy!`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Popsicle Stick Puppets"
-        subtitle="Creative Arts - Adventure Bay"
+        title="Eric carle Read-Along & Caterpillar Craft"
+        subtitle="Language, Literacy, & Speech - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"
       />

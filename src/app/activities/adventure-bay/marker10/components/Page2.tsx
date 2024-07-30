@@ -23,22 +23,26 @@ export default function Page2({
     {
       stepNumber: 2,
       description:
-        "Print out Olivia-KIDS “Popsicle Stick Puppets” packet (Colored or black & white options are available).",
+        "Measure bracelet string around wrist and cut to desired length.",
     },
     {
       stepNumber: 3,
       description:
-        "Cut out animal faces for puppets. If you desire, grab a blank piece of paper and draw/color puppet characters from your own imagination. These puppets do not even have to be animals, so feel free to think outside of the box with this one!",
+        "Pick beads and letter beads to spell out a quality trait of choice (ex. 'KINDNESS' or 'LOVING') that your child sees in themselves.",
     },
     {
       stepNumber: 4,
-      description:
-        "Tape or glue cut-outs to tip of individual popsicle sticks, and there you have it!",
+      description: "Knot finalized bracelet.",
     },
     {
       stepNumber: 5,
       description:
-        "Make up your own stories or plays with your brand new popsicle stick puppets! Have your zoo animals escaped out into the wild? Have the dogs and cats teamed up together? Think outside the box and have fun with your new crew of animal puppets!",
+        "As you create your bracelets, invite your child to explain why this is an important quality trait to embrace. Celebrate this wonderful virtue!",
+    },
+    {
+      stepNumber: 6,
+      description:
+        "Encourage your child to reflect on these positive affirmations not only for themselves but for their community around them. For instance, invite your child to create more affirmation bracelets, but this time for every member of the family or for their friends.",
     },
   ];
 
@@ -46,8 +50,8 @@ export default function Page2({
     <>
       <Header
         logoSrc={logo}
-        title="Popsicle Stick Puppets"
-        subtitle="Creative Arts - Adventure Bay"
+        title="Affirmation Friendship Bracelets"
+        subtitle="Emotional, Behavioral, & Social - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"
       />

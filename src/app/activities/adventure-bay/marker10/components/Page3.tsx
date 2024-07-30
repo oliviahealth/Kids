@@ -16,14 +16,14 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `Round of applause for these fantastic puppet masters! You have created such amazing popsicle stick puppets and put on a great show while you were at it! After completing this activity, you will receive a completion sticker. From here on out, if you have spare popsicle sticks after a summer day sweet treat, you can save them to make as many popsicle stick puppets as you like. From this fun arts and crafts activity, we have learned that the sky is the limit when it comes to our imaginations- anything is possible when we put our mind to it!`;
+  const takeawayText = `Wow, you have now created wonderful affirmation bracelets to celebrate what makes you, you! With these affirmation bracelets, we not only get to celebrate our individuality, but establish the empowerment and confidence we need to navigate our everyday lives. Continue practicing affirmation in your day to day routine and enjoy trading these with family and friends!`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Popsicle Stick Puppets"
-        subtitle="Creative Arts - Adventure Bay"
+        title="Affirmation Friendship Bracelets"
+        subtitle="Emotional, Behavioral, & Social - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"
       />
