@@ -71,7 +71,8 @@ const mapMarkers = [
         markers: [
             { id: '1', x: 40, y: 15, link: '/activities/fantasy-forest/healthy-weekly-meal-planner', backgroundColor: '#2ecc71', borderColor: '#27ae60', name: 'Healthy Weekly Meal Planner' },
             { id: '2', x: 20, y: 20, link: '/activities/fantasy-forest/nature-walk', backgroundColor: '#2ecc71', borderColor: '#27ae60', name: 'Nature Walk' },
-            { id: '3', x: 15, y: 35, link: '/activities/fantasy-forest/progressive-relaxation', backgroundColor: '#2ecc71', borderColor: '#27ae60', name: 'Progressive Relaxation' }
+            { id: '3', x: 15, y: 35, link: '/activities/fantasy-forest/progressive-relaxation', backgroundColor: '#2ecc71', borderColor: '#27ae60', name: 'Progressive Relaxation' },
+            { id: '4', x: 25, y: 55, link: '/fantasy-forest/week3/emotion-matching', backgroundColor: '#2ecc71', borderColor: '#27ae60', name: 'Emotion Matching' }
         ]
     }
 ];
