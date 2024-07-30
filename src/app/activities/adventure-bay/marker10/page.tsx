@@ -5,11 +5,12 @@ import backgroundMap from "@/public/images/background.png";
 import imageSrc from "@/public/images/dashboard/adventure-bay/Ellipse 169.png";
 import star from "@/public/images/dashboard/adventure-bay/Star 27.svg";
 import arrowSrc from "@/public/images/dashboard/adventure-bay/icon.png";
-import Page1 from "@/app/adventure-bay/week2/marker1/components/Page1";
-import Page2 from "@/app/adventure-bay/week2/marker1/components/Page2";
-import Page3 from "@/app/adventure-bay/week2/marker1/components/Page3";
+import Page1 from "./components/Page1";
+import Page2 from "./components/Page2";
+import Page3 from "./components/Page3";
 import ActivityPage from "@/components/Template/ActivityPage";
 import ActivityStar from "@/components/Template/ActivityStar";
+
 const AdventureBayActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -84,8 +85,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={2}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Print out the Olivia-KIDS “Popsicle Stick Puppets” packet. Colored or black & white options are available."
+          title="Measure bracelet string."
+          description="Measure the bracelet string around your wrist and cut it to the desired length."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -99,8 +100,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={3}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Cut out animal faces for the puppets. You can also draw and color your own puppet characters."
+          title="Pick beads and letters."
+          description="Pick beads and letter beads to spell out a quality trait of your choice (e.g., 'KINDNESS' or 'LOVING') that your child sees in themselves."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -114,8 +115,8 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={4}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Tape or glue the cut-outs to the tips of individual popsicle sticks."
+          title="Knot the bracelet."
+          description="Knot the finalized bracelet securely."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"
@@ -129,8 +130,23 @@ const AdventureBayActivity: React.FC = () => {
           stepNumber={5}
           onNext={handleNext}
           onBack={handleBack}
-          title=""
-          description="Create your own stories or plays with your new popsicle stick puppets. Think outside the box and have fun!"
+          title="Discuss the quality trait."
+          description="As you create your bracelets, invite your child to explain why this is an important quality trait to embrace. Celebrate this wonderful virtue!"
+          imageUrl={imageSrc}
+          buttonImageUrl={arrowSrc}
+          color="#BFDF64"
+          backgroundColor="#E1FF8D"
+        />
+      ),
+    },
+    {
+      content: (
+        <ActivityPage
+          stepNumber={6}
+          onNext={handleNext}
+          onBack={handleBack}
+          title="Reflect on positive affirmations."
+          description="Encourage your child to reflect on these positive affirmations not only for themselves but for their community around them. Invite your child to create more affirmation bracelets for every member of the family or for their friends."
           imageUrl={imageSrc}
           buttonImageUrl={arrowSrc}
           color="#BFDF64"

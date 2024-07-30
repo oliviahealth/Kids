@@ -18,22 +18,31 @@ export default function Page2({
   const activitySteps = [
     {
       stepNumber: 1,
-      description: "You may download and use the OlivaKIDS affirmation lists",
+      description: "Gather supplies.",
     },
     {
       stepNumber: 2,
       description:
-        "Find the affirmations that you relate to best. These will be the most effective",
+        "Measure bracelet string around wrist and cut to desired length.",
     },
     {
       stepNumber: 3,
       description:
-        "Recite these affirmations to yourself or your child at least once a day",
+        "Pick beads and letter beads to spell out a quality trait of choice (ex. 'KINDNESS' or 'LOVING') that your child sees in themselves.",
     },
-    { stepNumber: 4, description: "Have faith in the words you are saying" },
+    {
+      stepNumber: 4,
+      description: "Knot finalized bracelet.",
+    },
     {
       stepNumber: 5,
-      description: "Repeat this process at least once a day for an entire week",
+      description:
+        "As you create your bracelets, invite your child to explain why this is an important quality trait to embrace. Celebrate this wonderful virtue!",
+    },
+    {
+      stepNumber: 6,
+      description:
+        "Encourage your child to reflect on these positive affirmations not only for themselves but for their community around them. For instance, invite your child to create more affirmation bracelets, but this time for every member of the family or for their friends.",
     },
   ];
 
@@ -41,8 +50,8 @@ export default function Page2({
     <>
       <Header
         logoSrc={logo}
-        title="Affirmations for Children and Caregivers"
-        subtitle="Caregiver Wellness - Adventure Bay"
+        title="Affirmation Friendship Bracelets"
+        subtitle="Emotional, Behavioral, & Social - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"
       />

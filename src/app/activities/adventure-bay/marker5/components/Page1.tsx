@@ -1,10 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import logo from "@/public/images/dashboard/adventure-bay/title-image.png";
-import beads from "@/public/images/dashboard/adventure-bay/week3/beads.png";
-import colorBeads from "@/public/images/dashboard/adventure-bay/week3/colored-beads.png";
-import strings from "@/public/images/dashboard/adventure-bay/week3/string.png";
-import scissors from "@/public/images/dashboard/adventure-bay/week3/scissors.png";
+import popsicle from "@/public/images/dashboard/adventure-bay/Creative-Arts/popsicle.png";
+import scissors from "@/public/images/dashboard/adventure-bay/Creative-Arts/scissors.png";
+import glue from "@/public/images/dashboard/adventure-bay/Creative-Arts/glue.png";
+import paper from "@/public/images/dashboard/adventure-bay/Creative-Arts/paper.png";
+import crayons from "@/public/images/dashboard/adventure-bay/Creative-Arts/crayon.png";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
@@ -21,10 +22,11 @@ export default function Page1({
   onBack: () => void;
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
-    LetterBeads: false,
-    ColorBeads: false,
-    Strings: false,
+    Popsicle: false,
     Scissors: false,
+    Tape: false,
+    Paper: false,
+    Pencils: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -45,22 +47,23 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Affirmation Friendship Bracelets"
-        subtitle="Emotional, Behavioral, & Social - Adventure Bay"
+        title="Popsicle Stick Puppets"
+        subtitle="Creative Arts - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"
       />
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="In this ever-changing modern world, our sense of self or identity evolves over time. With the utilization of positive affirmations, we invite ourselves to reflect upon our personal character traits that make us unique. In general, affirmations are a way to reinforce a positive growth mindset in our children. Additionally, it helps our children gain a greater sense of confidence and where exactly they belong in their community. In this activity, we invite our children to reflect upon quality traits they believe they embody, and encourage them to celebrate their individuality and identity  through colorful affirmation bracelets. What's more is that we can swap or trade bracelets with other family members, neighbors, or friends! Happy bracelet making!"
+        introductionText="In general, creative arts is important when it comes to growing in communication, self-expression, and many other skills. When we participate in activites as simple as do-it-yourself crafts and interactive pretend play, we are able to expand the realm of our imaginative and creative mind. Many of us believe we can “grow out” of imaginative play and be too old for arts and crafts, but the creative arts as a whole is something for everyone, for the whole family! When we partake in pretend play, we have the opportunity to be anything, anyone, and anywhere we want to be. Essentially, we gain a sense of freedom and limitless possibility when we are able to explore the worlds within our powerful minds and outside the bounds of reality.
+There is an infinite amount of activities you can use to implement imaginative play and the creative arts, and today we get to have a blend of both with craft sticks or spare popsicle sticks you may have around the house!"
         materialsTitle="Materials Needed"
         materials={[
           {
-            name: "Letter Beads",
-            image: beads,
-            alt: "Letter Beads",
-            key: "LetterBeads",
+            name: "Popsicle Sticks",
+            image: popsicle,
+            alt: "Popsicle Sticks",
+            key: "Popsicle",
           },
           {
             name: "Scissors",
@@ -68,17 +71,17 @@ export default function Page1({
             alt: "Scissors",
             key: "Scissors",
           },
+          { name: "Tape OR Glue", image: glue, alt: "Tape", key: "Tape" },
+          { name: "Paper", image: paper, alt: "Item 4", key: "Paper" },
           {
-            name: "Color Beads",
-            image: colorBeads,
-            alt: "ColorBeads",
-            key: "ColorBeads",
+            name: "Colored Pencils",
+            image: crayons,
+            alt: "Pencils",
+            key: "Pencils",
           },
-          { name: "String", image: strings, alt: "String", key: "Strings" },
-          { name: "", image: strings, alt: "Item 6", key: "item6" },
-          { name: "", image: strings, alt: "Item 6", key: "item6" },
-          { name: "", image: strings, alt: "Item 7", key: "item7" },
-          { name: "", image: strings, alt: "Item 8", key: "item8" },
+          { name: "", image: paper, alt: "Item 6", key: "item6" },
+          { name: "", image: paper, alt: "Item 7", key: "item7" },
+          { name: "", image: paper, alt: "Item 8", key: "item8" },
         ]}
         isChecked={isChecked}
         handleCheckboxChange={handleCheckboxChange}

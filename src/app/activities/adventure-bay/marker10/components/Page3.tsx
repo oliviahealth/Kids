@@ -16,18 +16,14 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `Repeat after me: "I am great at positive affirmations!"
-  Congratulations on completing the affirmations activity! Recite your
-  affirmations daily for one week to earn your badge. We hope that you
-  truly believe these wonderful messages and that they begin to make a
-  positive difference in your mindset!`;
+  const takeawayText = `Wow, you have now created wonderful affirmation bracelets to celebrate what makes you, you! With these affirmation bracelets, we not only get to celebrate our individuality, but establish the empowerment and confidence we need to navigate our everyday lives. Continue practicing affirmation in your day to day routine and enjoy trading these with family and friends!`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Affirmations for Children and Caregivers"
-        subtitle="Caregiver Wellness - Adventure Bay"
+        title="Affirmation Friendship Bracelets"
+        subtitle="Emotional, Behavioral, & Social - Adventure Bay"
         homeLink="/home"
         subtitleColor="#52C5C0"
       />

@@ -64,7 +64,17 @@ const mapMarkers = [
             { id: '2', x: 15, y: 25, link: '/activities/adventure-bay/marker2', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Power of Coloring' },
             { id: '3', x: 20, y: 40, link: '/activities/adventure-bay/marker3', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'My Gratitude Jars' },
             { id: '4', x: 25, y: 65, link: '/activities/adventure-bay/marker4', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' },
-            { id: '5', x: 35, y: 65, link: '/activities/adventure-bay/marker4', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' }
+
+            { id: '5', x: 35, y: 65, link: '/activities/adventure-bay/marker5', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' },
+            { id: '6', x: 45, y: 65, link: '/activities/adventure-bay/marker6', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' },
+            { id: '7', x: 55, y: 65, link: '/activities/adventure-bay/marker7', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' },
+            { id: '8', x: 75, y: 50, link: '/activities/adventure-bay/marker8', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' },
+
+            { id: '9', x: 85, y: 40, link: '/activities/adventure-bay/marker9', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' },
+            { id: '10', x: 80, y: 20, link: '/activities/adventure-bay/marker10', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' },
+
+            { id: '11', x: 70, y: 25, link: '/activities/adventure-bay/marker11', backgroundColor: '#1ABC9C', borderColor: '#16A085', name: 'Focusing on Feelings' },
+
         ]
     },
     {
