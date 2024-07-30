@@ -1,108 +1,88 @@
-"use client";
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 interface Marker {
-  id: number;
-  top: string;
-  left: string;
+  id: string;
   x: number;
   y: number;
   link: string;
+  backgroundColor: string;
+  borderColor: string;
+  name: string;
 }
 
-interface MarkerProps {
-  marker: Marker;
+interface MapProps {
+  image: string;
+  markers: Marker[];
+  height: number;
+  width: number;
 }
 
-const MemorizedMarker: React.FC<MarkerProps> = React.memo(({ marker }) => (
-  <Link
-    href={marker.link}
-    className="absolute flex items-center justify-center text-white font-bold rounded-xl bg-[#ec9bfc] border-[5px] border-[#e466fc] transform -translate-x-1/2 -translate-y-1/2 w-10 h-10"
-    style={{ left: `${marker.x}px`, top: `${marker.y}px` }}
-  >
-    {marker.id}
-  </Link>
-));
-MemorizedMarker.displayName = 'MemorizedMarker';
-
-const Map: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const imageRef = useRef<HTMLImageElement | null>(null);
-  const [markers, setMarkers] = useState<Marker[]>([
-    { id: 1, top: '30%', left: '20%', x: 0, y: 0, link: '/home/pregnancy/meditation' },
-    { id: 2, top: '50%', left: '40%', x: 0, y: 0, link: '/home/walking-nature-journal' },
-    { id: 3, top: '50%', left: '60%', x: 0, y: 0, link: '/blossom-haven/at-home-exercises' },
-  ]);
-
-  const positionMarkers = useCallback(() => {
-    const container = containerRef.current;
-    const image = imageRef.current;
-    if (!container || !image) return;
-
-    const containerRect = container.getBoundingClientRect();
-    const imageAspectRatio = image.naturalWidth / image.naturalHeight;
-    const containerAspectRatio = containerRect.width / containerRect.height;
-    let displayWidth, displayHeight, offsetX, offsetY;
-
-    if (imageAspectRatio > containerAspectRatio) {
-      // Image is wider than the container
-      displayHeight = containerRect.height;
-      displayWidth = displayHeight * imageAspectRatio;
-      offsetX = (displayWidth - containerRect.width) / 2;
-      offsetY = 0;
-    } else {
-      // Image is taller than the container
-      displayWidth = containerRect.width;
-      displayHeight = displayWidth / imageAspectRatio;
-      offsetX = 0;
-      offsetY = (displayHeight - containerRect.height) / 2;
-    }
-
-    const updatedMarkers = markers.map(marker => {
-      const markerX = (parseFloat(marker.left) / 100) * displayWidth - offsetX;
-      const markerY = (parseFloat(marker.top) / 100) * displayHeight - offsetY;
-      return { ...marker, x: markerX, y: markerY };
-    });
-
-    setMarkers(updatedMarkers);
-  }, [markers]);
-
-  // Initial positioning when component mounts
-  useEffect(() => {
-    positionMarkers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Update positioning when window resizes
-  useEffect(() => {
-    const handleResize = () => {
-      positionMarkers();
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [positionMarkers]);
-
-
+const Map: React.FC<MapProps> = ({ image, markers, height, width }) => {
   return (
-    <div className="relative w-3/4 h-full overflow-hidden" ref={containerRef}>
-      <Image
-        src="/images/map.svg"
-        alt="Map"
-        layout="fill"
-        objectFit="cover"
-        ref={imageRef}
-        onLoadingComplete={positionMarkers}
-        priority={true}
-      />
-      {markers.map(marker => (
-        <MemorizedMarker key={marker.id} marker={marker} />
-      ))}
+    <div style={{ position: 'relative', width, height }}>
+      <TransformWrapper>
+        <TransformComponent
+          wrapperStyle={{ width: "100%", height: "100%" }}
+        >
+          <div style={{ position: 'relative', width, height }}>
+            <img src={image} alt="Map" className="w-full h-full" />
+            <svg
+              className="absolute top-0 left-0 w-full h-full pointer-events-none"
+              viewBox={`0 0 100 100`}
+              preserveAspectRatio="none"
+            >
+              {markers.map((marker, index) => {
+                if (index === 0) return null;
+                const start = markers[index - 1];
+                const end = marker;
+                const midX = (start.x + end.x) / 2;
+                const pathD = `M ${start.x} ${start.y} C ${midX} ${start.y}, ${midX} ${end.y}, ${end.x} ${end.y}`;
+                return (
+                  <path
+                    key={`path-${marker.id}`}
+                    d={pathD}
+                    fill="none"
+                    stroke="rgba(255, 255, 255, 0.8)"
+                    strokeWidth="0.75"
+                    strokeDasharray="1 2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                );
+              })}
+            </svg>
+            {markers.map((marker) => (
+              <div
+                key={marker.id}
+                className="absolute"
+                style={{
+                  top: `${marker.y}%`,
+                  left: `${marker.x}%`,
+                  transform: "translate(-50%, -50%)",
+                  backgroundColor: marker.backgroundColor,
+                  borderColor: marker.borderColor,
+                  borderWidth: 2,
+                  borderStyle: "solid",
+                  borderRadius: "50%",
+                  width: 40,
+                  height: 40,
+                  cursor: "pointer",
+                  zIndex: 1,
+                }}
+                onClick={() => {
+                  window.location.href = marker.link;
+                }}
+              >
+                <div className="flex items-center justify-center h-full w-full">
+                  <span className="text-white font-bold">{marker.id}</span>
+                </div>
+                <span className="text-white font-extrabold drop-shadow-xl">{marker.name}</span>
+              </div>
+            ))}
+          </div>
+        </TransformComponent>
+      </TransformWrapper>
     </div>
   );
 };
