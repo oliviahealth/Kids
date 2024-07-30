@@ -13,13 +13,13 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `The purpose of this activity is to help your child recognize and understand their own emotions and the emotions of others. You can continue practicing this activity by pausing when your child is watching their favorite show or cartoon and asking them, "What do you think this character is feeling right now?" This thought-provoking question will help your child identify different expressions in various situations, further aiding them in associating emotions with different actions.`;
+  const takeawayText = `You have just learned more about 6 emotions that you can use to express what you are feeling inside. Make sure you also use your words when you are feeling a certain way. Congrats on getting one sticker closer to your Emotional, Behavioral, and Social badge! Good job expressing your emotions!`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Emotion Matching"
+        title="Cardboard Emotions"
         subtitle="Emotional, Behavioral, Social - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"

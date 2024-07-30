@@ -13,13 +13,13 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `The purpose of this activity is to help your child recognize and understand their own emotions and the emotions of others. You can continue practicing this activity by pausing when your child is watching their favorite show or cartoon and asking them, "What do you think this character is feeling right now?" This thought-provoking question will help your child identify different expressions in various situations, further aiding them in associating emotions with different actions.`;
+  const takeawayText = `Great job! You just finished practicing a way to decrease worry with your worry pyramid. Use this when you are feeling like your thoughts are hard to slow down or when you feel worried. You also earned a sticker! We are proud of you for practicing these skills. Keep it up!`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Emotion Matching"
+        title="Worry Pyramid"
         subtitle="Emotional, Behavioral, Social - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"

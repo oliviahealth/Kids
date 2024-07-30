@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../../../../../public/images/activities/fantasy-forest/header-icon.svg";
 import paper from "../../../../../../public/images/activities/fantasy-forest/activity-sheet.svg";
-import scissors from "../../../../../../public/images/activities/fantasy-forest/scissors.svg";
-import tape from "../../../../../../public/images/activities/fantasy-forest/tape.svg";
+import marker from "../../../../../../public/images/activities/fantasy-forest/marker.svg";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
@@ -21,8 +20,7 @@ export default function Page1({
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
     paper: false,
-    scissors: false,
-    tape: false,
+    marker: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -51,8 +49,8 @@ export default function Page1({
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="Helping your child start recognizing and expressing their emotions at an early age can improve their ability to manage them as they grow and develop. Sometimes we do not know how to express what we are feeling, and we may need pictures or descriptions to help us recognize our emotions. This exercise uses pictures and graphics to help children begin to recognize different emotions they may be feeling, and also work to help them start identifying other people's emotions as well. From this activity your child will practice visual discrimination by noting the differences between the expressive emotions on the faces and matching the faces with their appropriate label. Expressive emotions are observable details that communicate internal emotion. Your child will have the opportunity to practice memory recall as they describe a time when they felt a particular emotion."
-        materialsTitle="Materials Needed"
+        introductionText="During this activity your child will be able to practice sensory discrimination and task concentration by naming different items derived from their five senses. The 5-4-3-2-1 method learned during this activity also allows the child to practice their counting. This activity is a great introduction to the concept of spatial perception as they learn and explore the world around them. Understanding ways to cope with emotions when they feel too big for them to handle is a great skill to start building early in childhood. The sentences in parenthesis are suggestions for things to say throughout the activity to promote engagement with your child."
+        materialsTitle="Worry Pyramid"
         materials={[
           {
             name: "Activity Sheet",
@@ -60,8 +58,8 @@ export default function Page1({
             alt: "paper",
             key: "paper",
           },
-          { name: "Scissors", image: scissors, alt: "scissors", key: "scissors" },
-          { name: "Tape", image: tape, alt: "tape", key: "tape" },
+          { name: "Coloring Utensils", image: marker, alt: "marker", key: "marker" },
+          { name: "", image: paper, alt: "Item 3", key: "item3" },
           { name: "", image: paper, alt: "Item 4", key: "item4" },
           { name: "", image: paper, alt: "Item 5", key: "item5" },
           { name: "", image: paper, alt: "Item 6", key: "item6" },

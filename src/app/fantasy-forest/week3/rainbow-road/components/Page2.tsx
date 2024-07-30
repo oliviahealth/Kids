@@ -15,17 +15,26 @@ export default function Page2({
   const activitySteps = [
     {
       stepNumber: 1,
-      description: "Gather the 6 different faces on from the activity sheet, or create your own expressive faces with markers",
+      description: "Secure the rainbow road papers to the floor with tape. Tell your child: 'We're going to use this dice and the rainbow road to talk about our feelings. We'll roll the dice, count the steps, and stop on the color it lands on. Then, we'll complete the sentence on the paper for that color",
     },
     {
       stepNumber: 2,
-      description:
-        "Prompt your child with each face, and ask them to assign the proper written emotion to each one. Provide guidance where needed, and help them tape the descriptive text under the paper face",
+      description: `
+        Position yourselves at the start of the rainbow road, at the color red. Say to your child:
+        “Let's do a practice round. Roll the dice.” (Let your child roll)
+        “Let's count the steps.” (Count aloud)
+        “What color did we land on?” (Let your child respond)
+        “This color says (read the sentence). When do you feel _______?” (Let your child answer)
+        “Great job!”
+      `,
     },
+    
+    
+    
     {
       stepNumber: 3,
       description:
-        "Upon taping the text under the corresponding expression, ask your child to think of a time they felt that emotion, and ask them to explain the situation. Talk them through their emotions, and assure them that what they feel is normal",
+        "Repeat until you or your child have completed each sentence. Try switching roles",
     },
   ];
 
@@ -33,7 +42,7 @@ export default function Page2({
     <>
       <Header
         logoSrc={logo}
-        title="Emotion Matching"
+        title="The Rainbow Road"
         subtitle="Emotional, Behavioral, Social - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"
