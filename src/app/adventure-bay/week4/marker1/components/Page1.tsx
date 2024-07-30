@@ -6,8 +6,8 @@ import scissors from "@/public/images/dashboard/adventure-bay/week4/scissors.png
 import crayons from "@/public/images/dashboard/adventure-bay/week4/crayons.png";
 import paper from "@/public/images/dashboard/adventure-bay/week4/paper.png";
 import glue from "@/public/images/dashboard/adventure-bay/week4/glue.png";
+import download from "@/public/images/dashboard/adventure-bay/download.png";
 import pencil from "@/public/images/dashboard/adventure-bay/week4/pencil.png";
-
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
@@ -62,6 +62,13 @@ export default function Page1({
 
 In this activity, we are going to be reading  “The Very Hungry Caterpillar” by Eric Carle. As we follow our hungry caterpillar through their food adventure, we invite children to reflect on growth, change, and even healthy eating! In this craft inspired by the book, we also let our child recognize and count various fruits directly from the story. Happy reading! "
         materialsTitle="Materials Needed"
+        link={[
+          {
+            text: "Download 'OliviaKIDS printable'",
+            url: "",
+            img: download,
+          },
+        ]}
         materials={[
           {
             name: "'The Very Hungry Caterpillar' by Eric Carle",

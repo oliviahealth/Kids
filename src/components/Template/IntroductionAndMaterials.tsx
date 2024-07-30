@@ -12,10 +12,17 @@ export interface Material {
   key: keyof CheckboxState;
 }
 
+export interface Link {
+  text: string;
+  url: string;
+  img: StaticImageData | string;
+}
+
 export interface IntroductionAndMaterialsProps {
   introductionTitle: string;
   introductionText: string;
   materialsTitle: string;
+  link: [Link];
   materials: [
     Material,
     Material,
@@ -41,6 +48,16 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
       <div className="w-full lg:w-1/2 flex flex-col gap-4">
         <h1 className="text-xl font-bold">{materialsData.introductionTitle}</h1>
         <p className="text-lg text-justify">{materialsData.introductionText}</p>
+        <a
+          href={materialsData?.link[0]?.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline flex gap-2"
+          style={{ color: materialsData.checkedCardColor }}
+        >
+          {materialsData.link[0]?.text}
+          <Image src={materialsData?.link[0]?.img} />
+        </a>
       </div>
       <div
         className="w-full lg:w-1/2 rounded-3xl flex flex-col h-full p-5 gap-2 border-2 border-solid border-white"
