@@ -11,7 +11,13 @@ const Page2: React.FC<{
     {
       stepNumber: 1,
       description:
-        "Walk around the living space with your child and pick out 10 household items. The goal is for them to be able to be put the items into two groups based on color so make sure the items allow for that.",
+        "Walk around the living space with your child and pick out 10 household items.",
+      subSteps: [
+        {
+          description:
+            "The goal is for them to be able to be put the items into two groups based on color so make sure the items allow for that.",
+        },
+      ],
     },
     {
       stepNumber: 2,
@@ -26,7 +32,17 @@ const Page2: React.FC<{
     {
       stepNumber: 4,
       description:
-        "Watch as they start to create the piles and encourgage discussion between the people completing the task, whether it is you and the child or multiple children. As the caregiver it is important to start conversations between the children or between you and the child as their mindset will be to complete the activity by themselves. It may not be perfect cooperation but introducing this to them will get them thinking about how to interact with others.",
+        "Watch as they start to create the piles and encourgage discussion between the people completing the task, whether it is you and the child or multiple children.",
+      subSteps: [
+        {
+          description:
+            "As the caregiver it is important to start conversations between the children or between you and the child as their mindset will be to complete the activity by themselves.",
+        },
+        {
+          description:
+            " It may not be perfect cooperation but introducing this to them will get them thinking about how to interact with others.",
+        },
+      ],
     },
     {
       stepNumber: 5,

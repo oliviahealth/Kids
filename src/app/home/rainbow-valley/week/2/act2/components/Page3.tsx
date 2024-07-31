@@ -3,30 +3,26 @@ import image1 from "@/public/images/dashboard/rainbowValley/week/1/act1/act1_ima
 import Header from "@/components/Template/Header";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
-import keyTakeaway from "@/public/images/dashboard/rainbowValley/week/3/act4/keyTakeaway.png";
 
 const Page3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  const takeawayText = `Congratulations, you have finished this activity! You did a great job sharing the ball and we hope you had a great time. Remember that sharing is important and can also be very exciting. Good luck with practicing your sharing skills!`;
+  const takeawayText = `We hope you have enjoyed making your nature collage! The goal of this activity was to encourage 
+  physical activity, learn more about nature, and create a fun arts and craft! We hope you and your toddler were able to 
+  spend quality time together as well as create a memory you can keep forever!`;
 
   return (
     <>
       <Header
         logoSrc={icon}
-        title="Toss With a Friend"
+        title="Nature Collage"
         subtitle="Creative Arts - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />
 
-      <KeyTakeaways
-        text={takeawayText}
-        photoSrc={image1}
-        photoAlt="Photo"
-        img={keyTakeaway}
-      />
+      <KeyTakeaways text={takeawayText} photoSrc={image1} photoAlt="Photo" />
       <Footer
         onNext={onNext}
         onBack={onBack}

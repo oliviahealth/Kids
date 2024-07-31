@@ -3,6 +3,7 @@ import image1 from "@/public/images/dashboard/rainbowValley/week/1/act1/act1_ima
 import Header from "@/components/Template/Header";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
+import keyTakeaway from "@/public/images/dashboard/rainbowValley/week/3/act2/keyTakeaway.png";
 
 const Page3: React.FC<{
   onNext: () => void;
@@ -20,7 +21,12 @@ const Page3: React.FC<{
         subtitleColor="#E75858"
       />
 
-      <KeyTakeaways text={takeawayText} photoSrc={image1} photoAlt="Photo" />
+      <KeyTakeaways
+        text={takeawayText}
+        photoSrc={image1}
+        photoAlt="Photo"
+        img={keyTakeaway}
+      />
       <Footer
         onNext={onNext}
         onBack={onBack}

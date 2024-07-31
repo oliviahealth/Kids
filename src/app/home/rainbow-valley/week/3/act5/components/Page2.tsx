@@ -16,7 +16,13 @@ const Page2: React.FC<{
     {
       stepNumber: 2,
       description:
-        "If you choose to use the blank template, begin discussing with your child the different emotions and how they would like to respond to the different feelings. Once the template is complete you can begin the activity.",
+        "If you choose to use the blank template, begin discussing with your child the different emotions and how they would like to respond to the different feelings.",
+      subSteps: [
+        {
+          description:
+            " Once the template is complete you can begin the activity.",
+        },
+      ],
     },
     {
       stepNumber: 3,
@@ -41,7 +47,13 @@ const Page2: React.FC<{
     {
       stepNumber: 7,
       description:
-        "If that activity helped them feel better you can keep it in your mind for the next time they experience that emotion. If not, continue working through the activities to find one that helps.",
+        "If that activity helped them feel better you can keep it in your mind for the next time they experience that emotion.",
+      subSteps: [
+        {
+          description:
+            "If not, continue working through the activities to find one that helps.",
+        },
+      ],
     },
   ];
 

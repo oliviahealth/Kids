@@ -40,7 +40,17 @@ const Page2: React.FC<{
     {
       stepNumber: 7,
       description:
-        "When your child does squeeze a certain stress ball, ask them what is making them feel that certain emotion. It is important to let them feel the emotion they are experiencing but also ensuring that the child and others around them are safe. Let them explain themselves, and if there is a negative behavior they performed, offer alternate actions they can choose in the future.",
+        "When your child does squeeze a certain stress ball, ask them what is making them feel that certain emotion.",
+      subSteps: [
+        {
+          description:
+            "It is important to let them feel the emotion they are experiencing but also ensuring that the child and others around them are safe.",
+        },
+        {
+          description:
+            "Let them explain themselves, and if there is a negative behavior they performed, offer alternate actions they can choose in the future.",
+        },
+      ],
     },
   ];
 

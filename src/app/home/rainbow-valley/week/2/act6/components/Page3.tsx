@@ -3,30 +3,28 @@ import image1 from "@/public/images/dashboard/rainbowValley/week/1/act1/act1_ima
 import Header from "@/components/Template/Header";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
-import keyTakeaway from "@/public/images/dashboard/rainbowValley/week/3/act4/keyTakeaway.png";
 
 const Page3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  const takeawayText = `Congratulations, you have finished this activity! You did a great job sharing the ball and we hope you had a great time. Remember that sharing is important and can also be very exciting. Good luck with practicing your sharing skills!`;
+  const takeawayText = `Congratulations! You have completed your paper plate sun. We hope that your child had a 
+  great time learning about the different properties of the sun (its temperature, shape, size, etc.) as they 
+  created it with a few household items. We also hope they were able to express their creativity by choosing 
+  where to place the glue dots and seeing how the pacement of those straws/pipe cleaners transformed a paper 
+  plate into a sun.`;
 
   return (
     <>
       <Header
         logoSrc={icon}
-        title="Toss With a Friend"
+        title="Create Your Own Paper Plate Sun"
         subtitle="Creative Arts - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />
 
-      <KeyTakeaways
-        text={takeawayText}
-        photoSrc={image1}
-        photoAlt="Photo"
-        img={keyTakeaway}
-      />
+      <KeyTakeaways text={takeawayText} photoSrc={image1} photoAlt="Photo" />
       <Footer
         onNext={onNext}
         onBack={onBack}

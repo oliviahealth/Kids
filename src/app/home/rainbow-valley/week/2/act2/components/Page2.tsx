@@ -11,37 +11,25 @@ const Page2: React.FC<{
     {
       stepNumber: 1,
       description:
-        "Grab three toys for each of the people who will be participating in the circle.",
+        "Take your child to the park or stay in the comfort of your own backyard.",
     },
     {
       stepNumber: 2,
       description:
-        "Sit in a circle (or right across from each other if there are only two people) with the toys sitting in front of you.",
+        "Allow your child to collect items that pique their interest such as leaves, twigs, and flowers",
     },
     {
       stepNumber: 3,
-      description: `The caregiver will go first as they say "I would like to share my toy with (insert name)". Then they will pass their toy to that person.`,
+      description: "Bring all the fun and interesting objects home.",
     },
     {
       stepNumber: 4,
-      description:
-        "Next encourage the child to do the same and pass their toy to someone.",
+      description: "Glue or tape all of the objects on a piece of paper.",
     },
     {
       stepNumber: 5,
       description:
-        "Continue passing the toys until all three of your original toys are no longer sitting in front of you.",
-    },
-    {
-      stepNumber: 6,
-      description:
-        "If the child had a hard time during this activity, talk with them about why they did not want to share.",
-      subSteps: [
-        {
-          description:
-            "Explain the importance of sharing and how it gives everyone a chance to play with that toy, and them a chance to find a new one.",
-        },
-      ],
+        "Take a picture of your child's collage so it can last forever. ",
     },
   ];
 
@@ -49,7 +37,7 @@ const Page2: React.FC<{
     <>
       <Header
         logoSrc={icon}
-        title="The Sharing Circle"
+        title="Nature Collage"
         subtitle="Creative Arts - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"

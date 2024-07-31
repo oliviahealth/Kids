@@ -3,30 +3,27 @@ import image1 from "@/public/images/dashboard/rainbowValley/week/1/act1/act1_ima
 import Header from "@/components/Template/Header";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
-import keyTakeaway from "@/public/images/dashboard/rainbowValley/week/3/act4/keyTakeaway.png";
 
 const Page3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  const takeawayText = `Congratulations, you have finished this activity! You did a great job sharing the ball and we hope you had a great time. Remember that sharing is important and can also be very exciting. Good luck with practicing your sharing skills!`;
+  const takeawayText = `Congratulations on completing your very own ornament! A badge has been awarded to you for your 
+  hard work! We hope you enjoyed exploring the different textures included in this activity. We also hope that you were 
+  able to use your imagination and creativity to create a piece of art. Remember, you can continue to make more ornaments 
+  or just play with the unbaked salt dough!`;
 
   return (
     <>
       <Header
         logoSrc={icon}
-        title="Toss With a Friend"
+        title="Salt Dough"
         subtitle="Creative Arts - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />
 
-      <KeyTakeaways
-        text={takeawayText}
-        photoSrc={image1}
-        photoAlt="Photo"
-        img={keyTakeaway}
-      />
+      <KeyTakeaways text={takeawayText} photoSrc={image1} photoAlt="Photo" />
       <Footer
         onNext={onNext}
         onBack={onBack}

@@ -11,37 +11,27 @@ const Page2: React.FC<{
     {
       stepNumber: 1,
       description:
-        "Grab three toys for each of the people who will be participating in the circle.",
+        "You will simply lay out a sheet of foil  on any hard surface either inside or outside of your living space.",
     },
     {
       stepNumber: 2,
       description:
-        "Sit in a circle (or right across from each other if there are only two people) with the toys sitting in front of you.",
+        "Then you will get out some paint and and let the kids paint on top of it. ",
     },
     {
       stepNumber: 3,
-      description: `The caregiver will go first as they say "I would like to share my toy with (insert name)". Then they will pass their toy to that person.`,
+      description:
+        "They can even crumple up a section of it and create different characters for them to paint.",
     },
     {
       stepNumber: 4,
       description:
-        "Next encourage the child to do the same and pass their toy to someone.",
+        "You can also paint with the child and have them copy certain shapes that you paint.",
     },
     {
       stepNumber: 5,
       description:
-        "Continue passing the toys until all three of your original toys are no longer sitting in front of you.",
-    },
-    {
-      stepNumber: 6,
-      description:
-        "If the child had a hard time during this activity, talk with them about why they did not want to share.",
-      subSteps: [
-        {
-          description:
-            "Explain the importance of sharing and how it gives everyone a chance to play with that toy, and them a chance to find a new one.",
-        },
-      ],
+        "At the end of all their fun you can pick up the foil, fold it, and throw it away for an easy clean up.",
     },
   ];
 
@@ -49,7 +39,7 @@ const Page2: React.FC<{
     <>
       <Header
         logoSrc={icon}
-        title="The Sharing Circle"
+        title="Foil Painting"
         subtitle="Creative Arts - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"

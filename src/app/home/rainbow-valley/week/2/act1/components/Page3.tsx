@@ -3,30 +3,27 @@ import image1 from "@/public/images/dashboard/rainbowValley/week/1/act1/act1_ima
 import Header from "@/components/Template/Header";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
-import keyTakeaway from "@/public/images/dashboard/rainbowValley/week/3/act4/keyTakeaway.png";
 
 const Page3: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  const takeawayText = `Congratulations, you have finished this activity! You did a great job sharing the ball and we hope you had a great time. Remember that sharing is important and can also be very exciting. Good luck with practicing your sharing skills!`;
+  const takeawayText = `This activity was created to allow your children to be creative while also keeping your living space 
+  clean. They are able to paint on a surface that may be new and exciting for them and can crumple up the foil for an 
+  additional new experience. We hope that your children had a great time painting on the foil and were able to learn 
+  another way to express their creativity through art.`;
 
   return (
     <>
       <Header
         logoSrc={icon}
-        title="Toss With a Friend"
+        title="Foil Painting"
         subtitle="Creative Arts - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />
 
-      <KeyTakeaways
-        text={takeawayText}
-        photoSrc={image1}
-        photoAlt="Photo"
-        img={keyTakeaway}
-      />
+      <KeyTakeaways text={takeawayText} photoSrc={image1} photoAlt="Photo" />
       <Footer
         onNext={onNext}
         onBack={onBack}

@@ -10,38 +10,37 @@ const Page2: React.FC<{
   const activitySteps: ActivityStep[] = [
     {
       stepNumber: 1,
-      description:
-        "Grab three toys for each of the people who will be participating in the circle.",
+      description: "Begin by preheating your oven to 250 degrees Fahrenheit",
     },
     {
       stepNumber: 2,
-      description:
-        "Sit in a circle (or right across from each other if there are only two people) with the toys sitting in front of you.",
+      description: "Mix 2 cup of flour with 1/2 cup of salt. ",
     },
     {
       stepNumber: 3,
-      description: `The caregiver will go first as they say "I would like to share my toy with (insert name)". Then they will pass their toy to that person.`,
+      description: "Add 1/2 cup of water and mix.",
     },
     {
       stepNumber: 4,
-      description:
-        "Next encourage the child to do the same and pass their toy to someone.",
+      description: "Knead the dough until its soft.",
     },
     {
       stepNumber: 5,
       description:
-        "Continue passing the toys until all three of your original toys are no longer sitting in front of you.",
+        "Use a rolling pin (or a reuseable water bottle!) to roll the dough out to 1/4-inch thickness.",
     },
     {
       stepNumber: 6,
       description:
-        "If the child had a hard time during this activity, talk with them about why they did not want to share.",
-      subSteps: [
-        {
-          description:
-            "Explain the importance of sharing and how it gives everyone a chance to play with that toy, and them a chance to find a new one.",
-        },
-      ],
+        "Use your favorite cookie cutters to make different shapes with your dough. You can also try allowing your toddler to make a handprint in the dough!",
+    },
+    {
+      stepNumber: 7,
+      description: "Bake your creation in the oven for 2-3 hours or until dry.",
+    },
+    {
+      stepNumber: 8,
+      description: "Allow to cool completely and then decorate with paint.",
     },
   ];
 
@@ -49,7 +48,7 @@ const Page2: React.FC<{
     <>
       <Header
         logoSrc={icon}
-        title="The Sharing Circle"
+        title="Salt Dough"
         subtitle="Creative Arts - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
