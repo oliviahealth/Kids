@@ -22,7 +22,7 @@ export default function ActivityPage3({
         <div className="text-center">
           <h1 className="text-2xl font-bold">Heading</h1>
           <p>
-            Take some time to color the Caregiver's Coloring pages provided or
+            Take some time to color the Caregiver&apos;s Coloring pages provided or
             paper from home.
           </p>
         </div>
