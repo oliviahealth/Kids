@@ -13,13 +13,13 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `Child socialization can be described as exposing  your baby to their environment and world, so they can observe and learn with the support of their caregiver. Through socialization at home, in nature, and in public locations, your baby will begin to learn about emotions, grow in their bond with you, and learn new ways to communicate!`;
+  const takeawayText = `The "Baby's Magic Mirror" mirror play seems like a fairly simple activity, but the benefits this activity brings shows how important it is to engage in this activity. Mirror play allows your baby to gain self awareness, regulate their emotions, and gain more knowledge of the world around them. These key learnings are what emotional, behavioral, and social milestones aim to achieve in growing children.`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Baby's Day Out!"
+        title="Baby's Magic Mirror!"
         subtitle="Emotional, Behavioral, & Social - Blossom Haven"
         homeLink="/home"
         subtitleColor="#F1A533"

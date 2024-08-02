@@ -16,7 +16,7 @@ const Page3: React.FC<{
       <Header
         logoSrc={icon}
         title="Create Your Own Stress Ball"
-        subtitle="Creative Arts - Rainbow Valley"
+        subtitle="Emotional, Behavioral, & Social - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />

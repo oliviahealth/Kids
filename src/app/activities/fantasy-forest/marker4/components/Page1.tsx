@@ -4,8 +4,9 @@ import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
 import logo from "@/public/images/dashboard/fantasyForest/shared/logo.png";
-import image1 from "@/public/images/dashboard/fantasyForest/week/2/act4/sheet_printouts.png";
-import image2 from "@/public/images/dashboard/fantasyForest/week/2/act4/crayons.png";
+import image1 from "@/public/images/dashboard/fantasyForest/week/2/act1/acrylic_paint.png";
+import image2 from "@/public/images/dashboard/fantasyForest/week/2/act1/paint_brushes.png";
+import image3 from "@/public/images/dashboard/fantasyForest/week/2/act1/rocks.png";
 
 type CheckboxState = {
   [key: string]: boolean;
@@ -19,8 +20,9 @@ export default function Page1({
   onBack: () => void;
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
-    sheet_printouts: false,
-    crayons: false,
+    acrylic_paint: false,
+    paint_brushes: false,
+    rocks: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -41,7 +43,7 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="My Rainbow"
+        title="Rock Painting"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"
@@ -49,17 +51,22 @@ export default function Page1({
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="At this age, kids often start to notice the things that are different between them and other people in their life. This activity will help show that everone is different, everyone likes different things, and that it is a good thing! Participating in this activity with your child will show that even you are different from them. Hopefully your child will be able to look at their rainbow and see the uniqueness that makes them special. The QUOTED text are things you can say throughout the activity when teaching your child! The prompts in parentheses are actions to take within the activity."
+        introductionText="This acitivity focuses on two important parts of a child's development at this age, physical activity and creative arts. Creative arts are important for children because they help work on fine motor skills, encourage creativity, and allow your child to be introduced to a new form of self-expression through art. This activity allows your child to get outside, enjoy the environment around them, and also make a craft that can be enjoyed by other people in their community. Whether your child places their rocks in their own yard, the yard of a family member, or in a nearby park, it allows your child to add to the beauty of the environment around them. This craft can also be used as an act of kindness to bring a smile to a friend, family member or neighbor by encouraging your child to decorate their craft for someone special."
         materialsTitle="Materials Needed"
         materials={[
           {
-            name: "Sheet Printouts",
+            name: "Acrylic Paint",
             image: image1,
-            alt: "Sheet Printouts",
-            key: "sheet_printouts",
+            alt: "Acrylic Paint",
+            key: "acrylic_paint",
           },
-          { name: "Crayons", image: image2, alt: "Crayons", key: "crayons" },
-          { name: "", image: image1, alt: "Empty", key: "empty" },
+          {
+            name: "Paint Brushes",
+            image: image2,
+            alt: "Paint Brushes",
+            key: "paint_brushes",
+          },
+          { name: "Rocks", image: image3, alt: "Rocks", key: "rocks" },
           { name: "", image: image1, alt: "Empty", key: "empty" },
           { name: "", image: image1, alt: "Empty", key: "empty" },
           { name: "", image: image1, alt: "Empty", key: "empty" },

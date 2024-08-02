@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, useState } from "react";
-import "./../../../rainbowValleyModule.css";
+import "./../rainbowValleyModule.css";
 import backgroundMap from "@/../../public/images/dashboard/rainbowValley/shared/map.svg";
 import Image from "next/image";
 import Page1 from "./components/Page1";

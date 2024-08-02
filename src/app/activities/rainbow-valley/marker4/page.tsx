@@ -19,7 +19,7 @@ import ActivityPage11 from "./components/ActivityPage11";
 import ActivityPage12 from "./components/ActivityPage12";
 import ActivityPageStar from "./components/ActivityPageStar";
 import Page4 from "./components/Page4";
-import "./../../../rainbowValleyModule.css";
+import "./../rainbowValleyModule.css";
 
 
 const MeditationActivity: React.FC = () => {

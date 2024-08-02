@@ -3,7 +3,7 @@ import image1 from "@/public/images/dashboard/rainbowValley/week/1/act1/act1_ima
 import Header from "@/components/Template/Header";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
-import keyTakeaway from "@/public/images/dashboard/rainbowValley/week/4/act2/keyTakeaway.png";
+import keyTakeaway from "@/public/images/dashboard/rainbowValley/week/3/act2/keyTakeaway.png";
 
 const Page3: React.FC<{
   onNext: () => void;
@@ -17,7 +17,7 @@ const Page3: React.FC<{
       <Header
         logoSrc={icon}
         title="The Sharing Circle"
-        subtitle="Creative Arts - Rainbow Valley"
+        subtitle="Emotional, Behavioral, & Social - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />

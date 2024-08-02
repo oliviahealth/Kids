@@ -50,7 +50,7 @@ const Page2: React.FC<{
       <Header
         logoSrc={icon}
         title="The Sharing Circle"
-        subtitle="Creative Arts - Rainbow Valley"
+        subtitle="Emotional, Behavioral, & Social - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />

@@ -15,49 +15,42 @@ export default function Page2({
   const activitySteps: ActivityStep[] = [
     {
       stepNumber: 1,
-      description: ` (Place both "My Rainbow” coloring sheets in front of your child along with colored pencils/crayons/markers) "We are going to each color our rainbow reading each line. Let's write our names at the top of the page." `,
+      description:
+        "You and your child can venture out into the yard or take a quick walk around the neighborhood to collect rocks of different sizes and shapes.",
     },
     {
       stepNumber: 2,
-      description: `"Okay, lets color in the first line - my skin color. What color should we chose?"  
-(Help your child chose the color close to their skin color.)  
-"Everyone has a different skin color. No one person has the same color. That makes us unique. Let's color the section of the rainbow for our skin color. " `,
+      description:
+        "Encoruage your child to observe the beauty of nature around them as they walk to help gather ideas for what they may want to paint on their rocks (ex: sunshine, butterflies, flowers, dogs, etc.). ",
     },
     {
       stepNumber: 3,
-      description: ` "Let's color in the next line - my hair color. What color should we chose?" 
-(Help your child chose the color close to their hair color.)  
-"Everyone has a different hair color. No one person has the same color or texture of hair. That makes us unique and different from one another. Let's color the section of the rainbow for our hair color."  `,
+      description:
+        "Once your child has collected 3-5 rocks from their surrounding environment, you can head back home to start your craft!",
     },
     {
       stepNumber: 4,
-      description: `"What is your favorite vegetable?"  
-(Help your child chose whatever color they want that resembles their favorite vegetable.)   
-"Each person has a different favorite vegetable. It's okay to like different things from your friends. That's what makes us unique. Let's color the section of the rainbow for our favorite vegetable color."  `,
+      description:
+        "You may want to wash the rocks off in the sink to remove any dirt or dust before starting to paint. ",
     },
     {
       stepNumber: 5,
-      description: `"Let's color in the next line - my favorite fruit color. What is your favorite fruit?"   
-(Help your child chose whatever color they want that resembles their favorite fruit.)   
-"Let's color the section of the rainbow for our favorite fruit color."`,
+      description: "Collect your acrylic paint and paint brushes to begin.",
     },
     {
       stepNumber: 6,
-      description: `"Let's color in the next line - my favorite color.  What is your favorite color?"   
-(Help your child chose whatever color they want.)   
-"Let's color the section of the rainbow for our favorite color. Everyone has a different favorite color. It can be blue, pink, yellow, green. It is okay to like different colors from your friends."  `,
+      description:
+        "Allow your child to use their paint and paintbrushes to decorate their rocks with things that remind them of the outdoors or that they may have seen on their walk. ",
     },
     {
       stepNumber: 7,
-      description: `"Let's color in the next line - my eye color. What color should we chose?"  
-(Help your child chose the color close to their eye color.)  
-"Everyone has a different eye color. It is how we were born. Each of us have different genes or DNA in our body. My genes and DNA are different than yours. Let's color the section of the rainbow for our eye color."    `,
+      description:
+        "Encourage your child to make the rocks colorful and vibrant so they will catch the attention of others as they pass them. They may also add words of encouragement or bible verses to the other side of their rock to bring a smile to someone's face who may pickup the rock.  ",
     },
     {
       stepNumber: 8,
-      description: `"Let's color in the next line - my favorite color to wear. What color should we chose?"  
-(Help your child chose whatever color they want.)   
-"What is your favorite outfit to wear in that color? - (accept your child's response). Each person likes different clothes. Some clothes may be different that the clothes you like to wear. You should always compliment your friends' clothes. They wear their clothes because they like how it makes them look and feel. Let's color the section of the rainbow for our favorite color to wear."`,
+      description:
+        " Once your child has finished painting their rocks, allow the rocks to dry for 1-2 hours.",
     },
   ];
 
@@ -65,7 +58,7 @@ export default function Page2({
     <>
       <Header
         logoSrc={logo}
-        title="My Rainbow"
+        title="Rock Painting"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"

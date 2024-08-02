@@ -4,8 +4,12 @@ import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
 import logo from "@/public/images/dashboard/blossomHaven/shared/logo.png";
-import image1 from "@/public/images/dashboard/blossomHaven/week/3/act1/camera_lens.png";
-import image2 from "@/public/images/dashboard/blossomHaven/week/3/act1/mirror.png";
+import image1 from "@/public/images/dashboard/blossomHaven/week/3/act3/camera_lens.png";
+import image2 from "@/public/images/dashboard/blossomHaven/week/3/act3/baby_sling_carrier.png";
+import image3 from "@/public/images/dashboard/blossomHaven/week/3/act3/childs_toys.png";
+import image4 from "@/public/images/dashboard/blossomHaven/week/3/act3/child_stroller.png";
+
+
 type CheckboxState = {
   [key: string]: boolean;
 };
@@ -19,7 +23,9 @@ export default function Page1({
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
     camera_lens: false,
-    mirror: false,
+    baby_sling_carrier: false,
+    childs_toys: false,
+    child_stroller: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -40,7 +46,7 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Baby's Magic Mirror!"
+        title="Baby's Day Out!"
         subtitle="Emotional, Behavioral, & Social - Blossom Haven"
         homeLink="/home"
         subtitleColor="#F1A533"
@@ -48,7 +54,7 @@ export default function Page1({
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText={`Emotional, behavioral, and social activities for your 0-1 year old focus on developing their abilities of attention, regulating emotions, and building relationships between their caregivers and other people they interact with. There are many activities that work on developing these skills, but the one we're going to focus on today is called "Baby's Magic Mirror". Using mirror play activities gives your child the opportunity to learn about themselves, learn to express their emotions, and practice social interactions. Continual mirror play will improve their emotional, behavioral, and social skills, and let you and your child have fun, increasing the social/emotional bond with each other. Below we'll give you the steps on how to do the "Baby's Magic Mirror" activity so your child will achieve their growth and development milestones of a 0-1 year old.`}
+        introductionText="Getting your child to learn and gain emotional, behavioral, and social skills can be done in a number of ways, and one of the popular ways caregivers use is socialization exposing your baby to the outside world. A child's exposure to the world first begins at home with their caregiver, but the benefits of getting your child out of the house to see other people, nature, and other children greatly increases your baby's social skills. Today we're going to walk you through an activity where you, the caregiver, will help your child get social exposure.Continuing to use this activity will not only increase the emotional bond between the caregiver and child, but give your child opportunities to explore and learn about the world."
         materialsTitle="Materials Needed"
         materials={[
           {
@@ -58,13 +64,23 @@ export default function Page1({
             key: "camera_lens",
           },
           {
-            name: "Mirror",
+            name: "Baby Sling/Carrier",
             image: image2,
-            alt: "Mirror",
-            key: "mirror",
+            alt: "Baby Sling/Carrier",
+            key: "baby_sling_carrier",
           },
-          { name: "", image: image1, alt: "Empty", key: "empty" },
-          { name: "", image: image1, alt: "Empty", key: "empty" },
+          {
+            name: "Child's Toys",
+            image: image3,
+            alt: "Child's Toys",
+            key: "childs_toys",
+          },
+          {
+            name: "Child Stroller",
+            image: image4,
+            alt: "Child Stroller",
+            key: "child_stroller",
+          },
           { name: "", image: image1, alt: "Empty", key: "empty" },
           { name: "", image: image1, alt: "Empty", key: "empty" },
           { name: "", image: image1, alt: "Empty", key: "empty" },

@@ -2,7 +2,7 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import backgroundMap from "@/../../public/images/dashboard/rainbowValley/shared/map.svg";
-import "./../../../rainbowValleyModule.css";
+import "./../rainbowValleyModule.css";
 import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
 import ActivityPage1 from "./components/ActivityPage1";

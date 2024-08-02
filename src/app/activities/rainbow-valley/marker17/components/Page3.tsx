@@ -16,7 +16,7 @@ const Page3: React.FC<{
       <Header
         logoSrc={icon}
         title="Toss With a Friend"
-        subtitle="Creative Arts - Rainbow Valley"
+        subtitle="Emotional, Behavioral, & Social - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />

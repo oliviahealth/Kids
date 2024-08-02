@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import logo from "@/public/images/dashboard/blossomHaven/shared/logo.png";
-import Activity from "@/components/Template/ActivitySteps";
+import Activity, { ActivityStep } from "@/components/Template/ActivitySteps";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";
 
@@ -12,26 +12,31 @@ export default function Page2({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const activitySteps = [
+  const activitySteps: ActivityStep[] = [
     {
       stepNumber: 1,
       description:
-        "A child's socialization (exposure to the world) first begins at home with the caregivers. Some of the best ways to get your child on track to reach their milestones include skin to skin contact, talking to your baby in both a childlike and adult conversation, and playing games with your child.",
+        "Choose a room in your house that contains a mirror. It is also acceptable to use smaller, child-safe mirrors if you are not currently at home, but please monitor your child when using these mirrors.",
     },
     {
       stepNumber: 2,
       description:
-        "The next stage of socialization is walking around your neighborhood/community. Put your baby in a carrier/sling or in a stroller and take a walk around your community. Taking a walk with your child exposes them to nature, animals, and other people, working on communication skills, learning emotions, and gaining sensory experiences.",
+        "Talk to your baby before showing them in the mirror. Doing this step raises your child's attention and gets them ready for learning/exploring through mirror play. ",
     },
     {
       stepNumber: 3,
       description:
-        "The final stage of socialization for your 0-1 year old involves meeting other children, preferably children around their age. This can be done with other children in the family, friends and their kids, or community childcare groups. Getting your child exposed to other babies increases their communication skills, movement/motor skills, and social-emotional skills such as sharing, confidence, and self esteem.",
+        "When ready, place or hold your child in front of the mirror. First, let them explore on their own. Watch how your child reacts with their eyes and facial expressions. Your child is being exposed to a new concept, and you want to provide them some time to readjust if needed.",
     },
     {
       stepNumber: 4,
       description:
-        "No matter where you go, you can get your child used to socializing. Early exposure to socialization is key to your child’s development. The important thing to remember is that this is not a one time activity, this should be done multiple times across your child's life for them to gain the skills they need to grow into a smart, happy child.",
+        "After giving your child some time to get used to the mirror, start talking/asking them questions through the mirror. Look at your child using the mirror and ask them questions, so they are viewing you in the mirror. You can also point to and say what body part your pointing at to help wth language development later.",
+    },
+    {
+      stepNumber: 5,
+      description:
+        "Spend as much time as you'd like in front of the mirror, letting your child explore on their own, asking questions, dancing, playing peek-a-boo, and even singing. You're providing more opportunities for your child to reach their emotional, behavioral, and social milestones.",
     },
   ];
 
@@ -39,7 +44,7 @@ export default function Page2({
     <>
       <Header
         logoSrc={logo}
-        title="Baby's Day Out!"
+        title="Baby's Magic Mirror!"
         subtitle="Emotional, Behavioral, & Social - Blossom Haven"
         homeLink="/home"
         subtitleColor="#F1A533"

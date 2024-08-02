@@ -15,7 +15,7 @@ const Page3: React.FC<{
       <Header
         logoSrc={icon}
         title="Creating Coping Skills"
-        subtitle="Creative Arts - Rainbow Valley"
+        subtitle="Emotional, Behavioral, & Social - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />

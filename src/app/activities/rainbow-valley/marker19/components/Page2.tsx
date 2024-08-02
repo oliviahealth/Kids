@@ -55,7 +55,7 @@ const Page2: React.FC<{
       <Header
         logoSrc={icon}
         title="Match the Faces"
-        subtitle="Creative Arts - Rainbow Valley"
+        subtitle="Emotional, Behavioral, & Social - Rainbow Valley"
         homeLink="/home"
         subtitleColor="#E75858"
       />

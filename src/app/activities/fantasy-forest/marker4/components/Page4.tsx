@@ -13,15 +13,17 @@ export default function Page4({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `You completed the activity and earned your sticker! We hope you are able to see how 
-  being unqiue is special. This activity should have shown that being different is a good thing and that even 
-  when coloring you can learn! Keep being you!`;
+  const takeawayText = `This is a low-cost, at-home activity that can encourage physical activity, promote 
+  family time, and teach the child the importance of improving their environment. It can also be used as an 
+  "act of kindess" activity if the child makes these rocks as a gift for someone else. Overall, this acitivity
+   can encourage creativity while also allowing you and your child to get outside and enjoy the environment 
+   around you`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="My Rainbow"
+        title="Rock Painting"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"
