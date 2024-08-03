@@ -1,15 +1,19 @@
 "use client";
 import { ReactNode, useState } from "react";
-import WalkingActivityPage1 from "./components/Page1";
-import WalkingActivityPage2 from "./components/Page2";
-import WalkingActivityPage3 from "./components/Page3";
-import WalkingActivityPage4 from "./components/Page4";
-import WalkingActivityPage5 from "./components/Page5";
-import WalkingActivityPage6 from "./components/Page6";
-import WalkingActivityPage7 from "./components/Page7";
-import styles from "./WalkingNatureJournal.module.css";
+import Image from "next/image";
+import backgroundMap from "/public/images/background.png";
+import Page1 from "./components/Page1";
+import Page2 from "./components/Page2";
+import ActivityPage2 from "./components/ActivityPage2";
+import ActivityPage3 from './components/ActivityPage3';
+import ActivityPage1 from './components/ActivityPage1'
+import ActivityPage4 from "./components/ActivityPage4"
+import ActivityStar from "./components/ActivityPageStar";
+import ActivityPage5 from "./components/ActivityPage5";
+import ActivityPage6 from "./components/ActivityPage6";
+import ActivityPage7 from "./components/ActivityPage7";
 
-const WalkingNatureJournal: React.FC = () => {
+const AdventureBayActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handleBack = () => {
@@ -21,10 +25,39 @@ const WalkingNatureJournal: React.FC = () => {
   };
 
   const MapContainer: React.FC<{ children: ReactNode }> = ({ children }) => (
-    <div className={styles.container}>
-      <div className={styles.main}>
-        <div className={styles.card}>
-          {children}
+    <div className="relative w-full h-full max-h-screen overflow-hidden">
+      <div className="z-5 absolute inset-0">
+        <Image
+          src={backgroundMap}
+          layout="fill"
+          objectFit="cover"
+          alt="Background Image"
+        />
+      </div>
+      <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
+        <div className="row-start-2 row-end-12 col-start-2 col-end-12 z-20 h-full overflow-y-auto">
+          <div className="relative bg-white shadow-2xl rounded-2xl h-full p-10 overflow-auto">
+            <div className="flex flex-col justify-between h-full w-full gap-8">
+              {children}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const ActivityContainer: React.FC<{ children: ReactNode }> = ({
+    children,
+  }) => (
+    <div className="relative w-full h-full max-h-screen overflow-hidden">
+      <div className="h-full w-full">
+        <div className="z-20 h-full overflow-y-auto">
+          <div
+            className="relative shadow-2xl rounded-2xl h-full p-10"
+            style={{ backgroundColor: "#E1FF8D" }}
+          >
+            {children}
+          </div>
         </div>
       </div>
     </div>
@@ -34,49 +67,75 @@ const WalkingNatureJournal: React.FC = () => {
     {
       content: (
         <MapContainer>
-          <WalkingActivityPage1 onNext={handleNext} onBack={handleBack} />
+          <Page1 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityPage1 onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityPage2 onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityPage3 onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityPage4 onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityPage5 onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityPage6 onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityPage7 onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
+      ),
+    },
+    {
+      content: (
+        <ActivityContainer>
+          <ActivityStar onNext={handleNext} onBack={handleBack} />
+        </ActivityContainer>
       ),
     },
     {
       content: (
         <MapContainer>
-          <WalkingActivityPage2 onNext={handleNext} onBack={handleBack} />
+          <Page2 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
     },
-    {
-      content: (
-        <MapContainer>
-          <WalkingActivityPage3 onNext={handleNext} onBack={handleBack} />
-        </MapContainer>
-      ),
-    },
-    {
-      content: (
-          <WalkingActivityPage4 onNext={handleNext} onBack={handleBack} />
-      ),
-    },
-    {
-      content: (
-          <WalkingActivityPage5 onNext={handleNext} onBack={handleBack} />
-      ),
-    },
-    {
-      content: (
-          <WalkingActivityPage6 onNext={handleNext} onBack={handleBack} />
-      ),
-    },
-    {
-      content: (
-        <MapContainer>
-          <WalkingActivityPage7 onNext={handleNext} onBack={handleBack} />
-        </MapContainer>
-      ),
-    }
   ];
-
   return <>{pagesData[currentPage].content}</>;
 };
 
-export default WalkingNatureJournal;
+export default AdventureBayActivity;

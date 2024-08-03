@@ -77,13 +77,13 @@ export default function Page1({
             can lead to you putting your own feelings on the backburner.
             Ignoring your emotions can cause them to build up over time.
             Emotions send important messages to your mind and body -- messages
-            that shouldn't be ignored! Listen to your emotions to help recognize
+            that shouldn&apos;t be ignored! Listen to your emotions to help recognize
             what your needs are. This activity can help you recognize what
             feelings you are experiencing.
           </p>
           <p className="text-lg text-justify">
             At the age of 3-4, children experience many different emotions that
-            they don't know the names of. This activity will not only help them
+            they don&apos;t know the names of. This activity will not only help them
             identify their feelings, but it will also teach them the names of
             these feelings and how to verbally express what they feel. You will
             then have more insight into their needs while also assisting in
