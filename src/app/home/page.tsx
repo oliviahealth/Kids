@@ -547,6 +547,15 @@ const mapMarkers: MapMarkers[] = [
         borderColor: "#27ae60",
         name: "My Rainbow",
       },
+      {
+        id: "8",
+        x: 72,
+        y: 67,
+        link: "/activities/fantasy-forest/move-like-an-animal",
+        backgroundColor: "#2ecc71",
+        borderColor: "#27ae60",
+        name: "Move Like an Animal",
+      },
     ],
   },
 ];
