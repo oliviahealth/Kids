@@ -2,7 +2,6 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import backgroundMap from "/public/images/background.png";
-import tempBackground from "/public/images/dashboard/adventure-bay/temp_background.png";
 import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";

@@ -23,16 +23,7 @@ export interface IntroductionAndMaterialsProps {
   introductionText: string;
   materialsTitle: string;
   link?: [Link];
-  materials: [
-    Material,
-    Material,
-    Material,
-    Material,
-    Material,
-    Material,
-    Material,
-    Material
-  ];
+  materials: Material[];
   isChecked: CheckboxState;
   mainBackgroundColor: string;
   emptyCardBackgroundColor: string;
@@ -57,7 +48,7 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
             style={{ color: materialsData.checkedCardColor }}
           >
             {materialsData.link[0]?.text}
-            <Image src={materialsData?.link[0]?.img} />
+            <Image src={materialsData?.link[0]?.img} alt={""} />
           </a>
         )}
       </div>
