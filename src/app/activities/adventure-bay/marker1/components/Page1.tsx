@@ -32,7 +32,7 @@ export default function Page1({
     }));
   };
 
-  const [buttonDisabled, setButtonDisabled] = useState(true);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
 
   useEffect(() => {
     const allChecked = Object.values(isChecked).every(Boolean);

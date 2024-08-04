@@ -41,7 +41,7 @@ const BabyGrowthJournalPage12: React.FC<{
               <b>Key Takeaways</b>
             </h3>
             <p className={styles.text}>
-              This activity will be continuous throughout your pregnancy, allowing you to relieve stress, work through your thoughts, and track your baby's growth! Once you have completed 5 weeks of entries, you will recieve your activity completion sticker. You can continue this journal once your child is born to keep track of their milestones and growth!
+              This activity will be continuous throughout your pregnancy, allowing you to relieve stress, work through your thoughts, and track your baby&apos;s growth! Once you have completed 5 weeks of entries, you will recieve your activity completion sticker. You can continue this journal once your child is born to keep track of their milestones and growth!
             </p>
           </div>
           <div className={`pt-3 align-self-center`}>

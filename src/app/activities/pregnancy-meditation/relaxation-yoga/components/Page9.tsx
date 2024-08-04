@@ -44,7 +44,7 @@ const RelaxationYogaPage9: React.FC<{
               Congrats, you have completed your Relaxation Yoga session! After
               completing one session, you will recieve your activity completion
               sticker. These are some of the many poses available for you to
-              relax, stretch, reduce pain, and build flexibility. Don't be
+              relax, stretch, reduce pain, and build flexibility. Don&apos;t be
               afraid to venture out and find new poses. Just remember to focus
               on comfort and relaxation while doing so.
             </p>

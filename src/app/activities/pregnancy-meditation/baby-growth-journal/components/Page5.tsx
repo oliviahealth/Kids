@@ -19,7 +19,7 @@ export default function BabyGrowthJournalPage5({
         </span>
 
         <div className="text-center max-w-2xl mx-auto">
-          <h1 className="text-2xl font-bold">Baby's Development</h1>
+          <h1 className="text-2xl font-bold">Baby&apos;s Development</h1>
           <p>
             Write about the development of your baby that week
           </p>

@@ -35,7 +35,7 @@ const RelaxationYogaPage1: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>My Baby's Name Sign</h1>
+            <h1 className={styles.title}>My Baby&apos;s Name Sign</h1>
             <h2 className={styles.subtitle}>
               Creative Arts - Prenatal Paradise
             </h2>
@@ -57,7 +57,7 @@ const RelaxationYogaPage1: React.FC<{
             <b>Introduction</b>
           </h3>
           <p className={styles.text}>
-          Take part in a peaceful painting activity while also preparing for your baby to arrive! Painting can be a great way to express your emotions, practice creativity, and learn new skills. In this activity, you will paint a name sign to hang in your baby's nursery! There are so many ways you can decorate a nursery. Why not make it a fun activity for you to practice creativity and bond with your baby at the same time?
+          Take part in a peaceful painting activity while also preparing for your baby to arrive! Painting can be a great way to express your emotions, practice creativity, and learn new skills. In this activity, you will paint a name sign to hang in your baby&apos;s nursery! There are so many ways you can decorate a nursery. Why not make it a fun activity for you to practice creativity and bond with your baby at the same time?
           </p>
         </div>
         <div className={`${styles.imageWrapper}`}>
