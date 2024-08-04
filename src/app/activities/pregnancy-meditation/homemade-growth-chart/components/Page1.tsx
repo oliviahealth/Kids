@@ -52,7 +52,7 @@ const RelaxationYogaPage1: React.FC<{
             <b>Introduction</b>
           </h3>
           <p className={styles.text}>
-          Creative expression can be a great way to practice self-care throughout your life, especially during pregnancy. When you feel overwhelmed by the many changes pregnancy brings, finding a hobby or activity that brings you joy is important to you and your baby's health. Photography is just one way you can take part in a creative activity that will let your ideas and personality grow! In this activity, you will transform into both a photagrapher and a model to create your own maternity photoshoot! 
+          Creative expression can be a great way to practice self-care throughout your life, especially during pregnancy. When you feel overwhelmed by the many changes pregnancy brings, finding a hobby or activity that brings you joy is important to you and your baby&apos;s health. Photography is just one way you can take part in a creative activity that will let your ideas and personality grow! In this activity, you will transform into both a photagrapher and a model to create your own maternity photoshoot! 
           </p>
         </div>
         <div className={`${styles.imageWrapper}`}>

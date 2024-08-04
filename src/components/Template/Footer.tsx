@@ -15,7 +15,7 @@ export interface FooterProps {
   leftButtonText: string;
 }
 
-const Footer: React.FC<FooterProps> = (footerData: FooterProps) => {
+const Footer: React.FC<FooterProps> = (footerData: FooterProps) => {  
   return (
     <div className="flex justify-between items-end pb-10 lg:pb-5 2xl:pb-5">
       <div className="">

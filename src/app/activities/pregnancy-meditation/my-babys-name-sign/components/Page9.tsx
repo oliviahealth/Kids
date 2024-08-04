@@ -16,7 +16,7 @@ const RelaxationYogaPage9: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>My Baby's Name Sign</h1>
+            <h1 className={styles.title}>My Baby&apos;s Name Sign</h1>
             <h2 className={styles.subtitle}>
               Creative Arts - Prenatal Paradise
             </h2>
@@ -42,7 +42,7 @@ const RelaxationYogaPage9: React.FC<{
             </h3>
             <p className={styles.text}>
               As your baby grows, Creative Art will be an important skill for
-              him/her to learn. As their caregiver, they'll need you to teach
+              him/her to learn. As their caregiver, they&apos;ll need you to teach
               them these skills along the way. This activity allows you to
               practice self-care, decorate your nursery, and get a head start on
               your many years of crafting to come! <br></br><br></br> Once you complete this

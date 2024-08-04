@@ -124,7 +124,7 @@ const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onSignUp }) => {
                     {errors.parentType && <p className="text-red-500 text-xs mt-1">{errors.parentType}</p>}
                 </div>
                 <div className="mb-4">
-                    <label className="font-bold block mb-2">What is your child's birth date?</label>
+                    <label className="font-bold block mb-2">What is your child&apos;s birth date?</label>
                     <input
                         className="rounded-md border border-[#23176D] p-2"
                         type="date"
@@ -152,7 +152,7 @@ const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onSignUp }) => {
                     {errors.heardAboutUs && <p className="text-red-500 text-xs mt-1">{errors.heardAboutUs}</p>}
                 </div>
                 <div>
-                    <label className="block font-bold mb-2">Let's get started!</label>
+                    <label className="block font-bold mb-2">Let&apos;s get started!</label>
                     <button
                         type="submit"
                         className="border border-[#23176D] text-[#23176D] py-2 px-4 rounded focus:outline-none focus:shadow-outline"
