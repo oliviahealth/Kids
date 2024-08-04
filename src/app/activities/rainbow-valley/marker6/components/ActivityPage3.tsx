@@ -14,7 +14,7 @@ const ActivityPage3: React.FC<{
             </div>
           </div>
           <div className="my-auto mt-24 text-center">
-            <h1 className="text-2xl font-black ">Check 'em off</h1>
+            <h1 className="text-2xl font-black ">Check &apos;em off</h1>
             <p className="text-lg font-semibold">
               If you use the pre-made schedule you will follow along each day
               completing the tasks and marking them off on the list.

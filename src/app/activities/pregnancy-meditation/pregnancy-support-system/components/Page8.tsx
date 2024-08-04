@@ -20,7 +20,7 @@ export default function PregnancySupportSystemPage8({
 
         <div className="text-center max-w-2xl mx-auto">
           <h1 className="text-2xl font-bold">Thank Your Supporters</h1>
-          <p>Lastly, if you're able to, thank each person on your list for their support, and tell them how they will support you. This can be a text message, a phone call, or an in-person conversation.</p>
+          <p>Lastly, if you&apos;re able to, thank each person on your list for their support, and tell them how they will support you. This can be a text message, a phone call, or an in-person conversation.</p>
         </div>
 
         <div className="">
