@@ -18,7 +18,6 @@ export default function ActivityPageStar({
 }) {
   return (
     <ActivityStar
-      stepNumber={6}
       onNext={onNext}
       onBack={onBack}
       title="You are finished!"

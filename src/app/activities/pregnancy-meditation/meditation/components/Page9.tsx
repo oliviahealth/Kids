@@ -1,8 +1,8 @@
 import Image from "next/image";
-import meditationImage from "../../../../../../public/images/dashboard/meditation/mediatationImage.png";
-import meditationImage9 from "../../../../../../public/images/dashboard/meditation/mediatationImage9.png";
-import meditationImage10 from "../../../../../../public/images/dashboard/meditation/meditationImage10.png";
-import meditationImage11 from "../../../../../../public/images/dashboard/meditation/meditationImage11.jpeg";
+import meditationImage from "@/public/images/dashboard/meditation/mediatationImage.png";
+import meditationImage9 from "@/public/images/dashboard/meditation/mediatationImage9.png";
+import meditationImage10 from "@/public/images/dashboard/meditation/meditationImage10.png";
+import meditationImage11 from "@/public/images/dashboard/meditation/meditationImage11.jpeg";
 import Link from "next/link";
 const MeditationActivityPage9: React.FC<{
   onNext: () => void;

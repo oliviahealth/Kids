@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../../../../../../public/images/dashboard/StarlightMeadows/nightlogo.svg";
+import logo from "@/public/images/dashboard/StarlightMeadows/nightlogo.svg";
 import Link from "next/link";
-import photo from "../../../../../../public/images/dashboard/StarlightMeadows/addphoto.png";
-import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
+import photo from "@/public/images/dashboard/StarlightMeadows/addphoto.png";
+import arrow from "@/public/images/dashboard/adventure-bay/next_arrow.png";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";
@@ -16,7 +16,7 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `Your child learned about how different objects can sink and float. An important part of developing your child's science and math skills is through developing curiosity in them. This activity can help to encourage curiosity in your developing child. This activity can be continued as your child grows older and you can encourage them to make their own guesses about what might sink or float. `;
+  const takeawayText = `In this activity you helped your child explore their curiosity by providing them an opportunity to experiment with ice and colors. Children at this age love to experiment and learn new things through their senses and this activity is a perfect way to let them do that! You can continue to inspire curiosity in your child by pointing out things in every day life and encouraging them to explore and learn independently. `;
 
 ;
 
@@ -24,7 +24,7 @@ export default function Page3({
     <>
       <Header
         logoSrc={logo}
-        title="Sink and Float"
+        title="Colorful Ice Activity"
         subtitle="Caregiver Wellness - Starlight Meadows"
         homeLink="/home"
         subtitleColor="#5A6EDD"

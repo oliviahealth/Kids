@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../../../../../../public/images/dashboard/StarlightMeadows/nightlogo.svg";
+import logo from "@/public/images/dashboard/StarlightMeadows/nightlogo.svg";
 import Link from "next/link";
-import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
+import arrow from "@/public/images/dashboard/adventure-bay/next_arrow.png";
 import Activity from "@/components/Template/ActivitySteps";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";

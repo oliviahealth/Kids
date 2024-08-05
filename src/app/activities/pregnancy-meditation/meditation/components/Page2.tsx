@@ -1,11 +1,11 @@
 import Image from "next/image";
-import meditationImage from "../../../../../../public/images/dashboard/meditation/mediatationImage.png";
-import meditationImage2 from "../../../../../../public/images/dashboard/meditation/mediatationImage2.png";
-import meditationImage3 from "../../../../../../public/images/dashboard/meditation/mediatationImage3.png";
-import meditationImage4 from "../../../../../../public/images/dashboard/meditation/mediatationImage4.png";
-import meditationImage5 from "../../../../../../public/images/dashboard/meditation/mediatationImage5.png";
-import meditationImage6 from "../../../../../../public/images/dashboard/meditation/mediatationImage6.png";
-import meditationImage7 from "../../../../../../public/images/dashboard/meditation/mediatationImage7.png";
+import meditationImage from "@/public/images/dashboard/meditation/mediatationImage.png";
+import meditationImage2 from "@/public/images/dashboard/meditation/mediatationImage2.png";
+import meditationImage3 from "@/public/images/dashboard/meditation/mediatationImage3.png";
+import meditationImage4 from "@/public/images/dashboard/meditation/mediatationImage4.png";
+import meditationImage5 from "@/public/images/dashboard/meditation/mediatationImage5.png";
+import meditationImage6 from "@/public/images/dashboard/meditation/mediatationImage6.png";
+import meditationImage7 from "@/public/images/dashboard/meditation/mediatationImage7.png";
 import Link from "next/link";
 
 const MeditationActivityPage2: React.FC<{

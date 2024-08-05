@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import SmileLine from "../../../../../../public/images/Line 16.png";
-import EyeClosed from "../../../../../../public/images/Line 17.png";
+import SmileLine from "@/public/images/Line 16.png";
+import EyeClosed from "@/public/images/Line 17.png";
 import "../../../../globals.css";
 
 interface SixthPageProps {
