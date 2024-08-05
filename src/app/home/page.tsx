@@ -90,6 +90,15 @@ const mapMarkers = [
         borderColor: "#D81B60",
         name: "Relaxation Yoga",
       },
+      {
+        id: "9",
+        x: 70,
+        y: 35,
+        link: "/home/prenatal-paradise(pregnancy)/week4/narrating-daily-activities",
+        backgroundColor: "#EC407A",
+        borderColor: "#D81B60",
+        name: "Narrating Your Daily Activities",
+      },
     ],
   },
   {
