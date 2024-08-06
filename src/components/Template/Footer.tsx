@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import arrow from "../../../public/images/dashboard/adventure-bay/next_arrow.png";
+import arrow from "@/public/images/dashboard/adventure-bay/next_arrow.png";
 import Link from "next/link";
 
 export interface FooterProps {

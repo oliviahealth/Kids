@@ -1,13 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../public/images/dashboard/StarlightMeadows/nightlogo.svg";
+import logo from "@/public/images/dashboard/StarlightMeadows/nightlogo.svg";
 
 
-import clothes from "../../../../../../public/images/dashboard/StarlightMeadows/week3/clothesoptions.svg"
-import toys from "../../../../../../public/images/dashboard/StarlightMeadows/week3/childrenstoys.svg"
-import animalPictures from "../../../../../../public/images/dashboard/StarlightMeadows/week4/animalpictures.svg"
+import clothes from "@/public/images/dashboard/StarlightMeadows/week3/clothesoptions.svg"
+import toys from "@/public/images/dashboard/StarlightMeadows/week3/childrenstoys.svg"
+import animalPictures from "@/public/images/dashboard/StarlightMeadows/week4/animalpictures.svg"
 
-import water from "../../../../../../public/images/dashboard/StarlightMeadows/week2/water.svg";
+import water from "@/public/images/dashboard/StarlightMeadows/week2/water.svg";
 
 
 

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import SmileLine from "../../../../../../public/images/Line 16.png";
+import SmileLine from "@/public/images/Line 16.png";
 import "../../../../globals.css";
 
 interface SeventhPageProps {

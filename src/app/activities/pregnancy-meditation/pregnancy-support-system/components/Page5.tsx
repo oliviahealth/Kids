@@ -1,6 +1,6 @@
 import React from "react";
-import image from "../../../../../../public/images/dashboard/adventure-bay/Ellipse 169.png";
-import arrow from "../../../../../../public/images/dashboard/adventure-bay/icon.png";
+import image from "@/public/images/dashboard/adventure-bay/Ellipse 169.png";
+import arrow from "@/public/images/dashboard/adventure-bay/icon.png";
 import Image from "next/image";
 import Link from "next/link";
 
