@@ -4,6 +4,7 @@ import SideNav from "@/components/SideNav";
 import React, { useState, useEffect, useRef } from "react";
 import HomeNav from "@/components/HomeNav";
 import Map from "@/components/Map";
+import { link } from "fs";
 
 const mapImages = [
     "/images/activities/parental-paradise/parental-paradise-map.png",
@@ -139,7 +140,39 @@ const mapMarkers = [
                 backgroundColor: "#FFA500",
                 borderColor: "#FF8C00",
                 name: "Animal Safari: Baby Animal’s Adventure!",
-            }
+            },
+
+
+
+
+
+            {
+                id: "6",
+                x: 80,
+                y: 65,
+                link: "/activities/blossom-haven/week-8/bedtime-bliss-babys-sleep-routine",
+                backgroundColor: "#FFA500",
+                borderColor: "#FF8C00",
+                name: "Bedtime Bliss: Baby’s Sleep Routine",
+            },
+            {
+                id: "7",
+                x: 60,
+                y: 65,
+                link: "/activities/blossom-haven/week-8/babys-development-diary",
+                backgroundColor: "#FFA500",
+                borderColor: "#FF8C00",
+                name: "Baby's Developmental Diary",
+            },
+            {
+                id: "8",
+                x: 50,
+                y: 65,
+                link: "/activities/blossom-haven/week-8/stop-and-go-fun",
+                backgroundColor: "#FFA500",
+                borderColor: "#FF8C00",
+                name: "Stop And Go Fun",
+            },
         ],
     },
     {
