@@ -565,7 +565,7 @@ const mapMarkers: MapMarkers[] = [
         id: "20",
         x: 15,
         y: 50,
-        link: "/activities/rainbow-valley/marker20",
+        link: "/activities/rainbow-valley/week5/traveling-water",
         backgroundColor: "#E67E22",
         borderColor: "#D35400",
         name: "Traveling Water",
