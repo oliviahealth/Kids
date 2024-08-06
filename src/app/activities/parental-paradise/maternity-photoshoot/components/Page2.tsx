@@ -45,7 +45,7 @@ const RelaxationYogaPage2: React.FC<{
                 </div>
                 <div className={styles.activityTextWrapper}>
                   <h1 className="text-lg">
-                    You're first going to pick out and put on an outfit you feel
+                    You&apos;re first going to pick out and put on an outfit you feel
                     comfortable in. Outfits will differ for each person. Pick
                     something that represents you!
                   </h1>
@@ -58,7 +58,7 @@ const RelaxationYogaPage2: React.FC<{
                 <div className={styles.activityTextWrapper}>
                   <h1 className="text-lg">
                     Next, find a location to take your pictures. This can be
-                    anywhere you'd like. Whether it's a blank wall in your
+                    anywhere you&apos;d like. Whether it&apos;s a blank wall in your
                     house, a peaceful place in nature, or a location meaningful
                     to you and your family.
                   </h1>
@@ -70,7 +70,7 @@ const RelaxationYogaPage2: React.FC<{
                 </div>
                 <div className={styles.activityTextWrapper}>
                   <h1 className="text-lg">
-                    Once you're in your photoshoot outfit at your shoot site,
+                    Once you&apos;re in your photoshoot outfit at your shoot site,
                     prepare any props you brought. This may include hanging up a
                     backdrop/sheet, positioning a chair, or practicing poses
                     with sonagram pictures and more.

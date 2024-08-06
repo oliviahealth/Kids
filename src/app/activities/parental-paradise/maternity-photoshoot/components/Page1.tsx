@@ -60,7 +60,7 @@ const RelaxationYogaPage1: React.FC<{
             Creative expression can be a great way to practice self-care
             throughout your life, especially during pregnancy. When you feel
             overwhelmed by the many changes pregnancy brings, finding a hobby or
-            activity that brings you joy is important to you and your baby's
+            activity that brings you joy is important to you and your baby&apos;s
             health. Photography is just one way you can take part in a creative
             activity that will let your ideas and personality grow! In this
             activity, you will transform into both a photagrapher and a model to

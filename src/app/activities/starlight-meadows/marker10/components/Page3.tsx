@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../../../../../../public/images/dashboard/StarlightMeadows/nightlogo.svg";
+import logo from "@/public/images/dashboard/StarlightMeadows/nightlogo.svg";
 import Link from "next/link";
-import photo from "../../../../../../public/images/dashboard/StarlightMeadows/addphoto.png";
-import arrow from "../../../../../public/images/dashboard/adventure-bay/next_arrow.png";
+import photo from "@/public/images/dashboard/StarlightMeadows/addphoto.png";
+import arrow from "@/public/images/dashboard/adventure-bay/next_arrow.png";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";

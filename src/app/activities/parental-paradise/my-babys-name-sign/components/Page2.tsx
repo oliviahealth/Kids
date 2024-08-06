@@ -16,7 +16,7 @@ const RelaxationYogaPage2: React.FC<{
             className={styles.icon}
           />
           <div>
-            <h1 className={styles.title}>My Baby's Name Sign</h1>
+            <h1 className={styles.title}>My Baby&apos;s Name Sign</h1>
             <h2 className={styles.subtitle}>
               Creative Arts - Prenatal Paradise
             </h2>
@@ -57,7 +57,7 @@ const RelaxationYogaPage2: React.FC<{
                 </div>
                 <div className={styles.activityTextWrapper}>
                   <h1 className="text-lg">
-                  Find the paint and colors of your choice. Choose colors that best fit you and your baby's personalities! 
+                  Find the paint and colors of your choice. Choose colors that best fit you and your baby&apos;s personalities! 
                   </h1>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const RelaxationYogaPage2: React.FC<{
                 </div>
                 <div className={styles.activityTextWrapper}>
                   <h1 className="text-lg">
-                  Paint Away! You may want to use a pencil to outline the letters and design of your baby's name before painting. 
+                  Paint Away! You may want to use a pencil to outline the letters and design of your baby&apos;s name before painting. 
                   </h1>
                 </div>
               </div>
@@ -97,7 +97,7 @@ const RelaxationYogaPage2: React.FC<{
                 </div>
                 <div className={styles.activityTextWrapper}>
                   <h1 className="text-lg">
-                  If applicable, hang your painting anywhere in your baby's nursery. Make sure the painting is secure for safety. 
+                  If applicable, hang your painting anywhere in your baby&apos;s nursery. Make sure the painting is secure for safety. 
                   </h1>
                 </div>
               </div>

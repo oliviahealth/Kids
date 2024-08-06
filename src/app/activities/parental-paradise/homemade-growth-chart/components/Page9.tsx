@@ -42,7 +42,7 @@ const RelaxationYogaPage9: React.FC<{
             </h3>
             <p className={styles.text}>
               Now you have a cute, customizable, homemade growth chart to
-              celebrate each stage of your child's growth that you can cherish
+              celebrate each stage of your child&apos;s growth that you can cherish
               forever! Participating in creative activities when pregnant is
               very beneficial, reducing stress, boosting emotional wellbeing,
               promoting cognitive function, and providing a sense of

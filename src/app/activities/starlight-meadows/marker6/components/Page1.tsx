@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../public/images/dashboard/StarlightMeadows/nightlogo.svg";
+import logo from "@/public/images/dashboard/StarlightMeadows/nightlogo.svg";
 
 
-import toys from "../../../../../../public/images/dashboard/StarlightMeadows/week3/childrenstoys.svg"
+import toys from "@/public/images/dashboard/StarlightMeadows/week3/childrenstoys.svg"
 
 
-import water from "../../../../../../public/images/dashboard/StarlightMeadows/week2/water.svg";
+import water from "@/public/images/dashboard/StarlightMeadows/week2/water.svg";
 
 
 
