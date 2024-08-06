@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
-import photo from "../../../../../../../public/images/pregnancy_add_a_photo.svg";
+import logo from "../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
+import photo from "../../../../../../public/images/pregnancy_add_a_photo.svg";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";
@@ -13,13 +13,13 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `Talking to your baby can be very helpful in developing language skills. It's important to start teaching your baby new skills as soon as possible because YOU are they're lifelong teacher! Narrating throughout your pregnancy is just one way you can get a head start!`;
+  const takeawayText = `Reading to your baby in the womb promotes early bonding and stimulates cognitive development. It helps the baby become familiar with parents' voices, creating a sense of security and comfort. Additionally, this practice can instill a love for reading and learning from an early age, setting a positive foundation for future literacy skills.`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Narrating Your Daily Activities"
+        title="Books for your Baby!"
         subtitle="Language, Literacy, & Speech - Prenatal Paradise"
         homeLink="/home"
         subtitleColor="#F797FF"

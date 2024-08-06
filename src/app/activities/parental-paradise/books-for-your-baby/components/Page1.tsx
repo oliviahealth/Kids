@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
-import book from "../../../../../../../public/images/dashboard/pregnancy/journal.svg";
-import paper from "../../../../../../../public/images/dashboard/pregnancy/paper.svg";
+import logo from "../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
+import book from "../../../../../../public/images/dashboard/pregnancy/journal.svg";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
@@ -20,7 +19,6 @@ export default function Page1({
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
     book: false,
-    paper: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -41,7 +39,7 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Daily Reading Routine"
+        title="Books for your Baby!"
         subtitle="Language, Literacy, & Speech - Prenatal Paradise"
         homeLink="/home"
         subtitleColor="#F797FF"
@@ -49,7 +47,7 @@ export default function Page1({
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="In this activity about books for your baby, we discussed the benefits of reading to your baby in the womb. For this activity, we are going to create a flexible schedule that works for you and allows you to establish a consistent routine of reading to your baby. Reading aloud to your baby for even 10-15 minutes each day is enough time to reap many cognitive and relational benefits. We have created a reading log to track your daily reading and help hold you accountable. Consistency is key; by maintaining a routine, you create a predictable and soothing environment for both you and your baby!"
+        introductionText="Reading to your baby in the womb may seem a little silly and unusual, but it is actually proven to provide many wonderful benefits. While the baby is growing inside the mother, its brain is developing quickly, and during the second trimester the baby will begin to be able to hear different sounds and voices! During the third trimester, the baby may start to respond to sounds from outside of the womb. By reading aloud during pregnancy, parents can help the baby's early language development, create a strong emotional bond, and establish a calming routine. This practice introduces the baby to the sounds and patterns of speech and helps the baby feel safe and connected to the parents even before birth! We have compiled a list of books for you to read to your growing baby while awaiting their arrival!"
         materialsTitle="Materials Needed"
         materials={[
           {
@@ -58,7 +56,7 @@ export default function Page1({
             alt: "book",
             key: "book",
           },
-          { name: "Reading Log", image: paper, alt: "paper", key: "paper" },
+          { name: "", image: logo, alt: "Item 2", key: "item2" },
           { name: "", image: logo, alt: "Item 3", key: "item3" },
           { name: "", image: logo, alt: "Item 4", key: "item4" },
           { name: "", image: logo, alt: "Item 5", key: "item5" },

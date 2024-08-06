@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
+import logo from "../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
+import book from "../../../../../../public/images/dashboard/pregnancy/journal.svg";
+import paper from "../../../../../../public/images/dashboard/pregnancy/paper.svg";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
@@ -17,6 +19,8 @@ export default function Page1({
   onBack: () => void;
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
+    book: false,
+    paper: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -37,7 +41,7 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Narrating Your Daily Activities"
+        title="Daily Reading Routine"
         subtitle="Language, Literacy, & Speech - Prenatal Paradise"
         homeLink="/home"
         subtitleColor="#F797FF"
@@ -45,16 +49,16 @@ export default function Page1({
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="Language, Literacy, and Speech are very important milestones your child will develop throughout their life! Did you know you can help your baby start developing these skills while still in the womb? According to the March of Dimes, your baby can recognize sounds starting at 23 weeks of pregnancy. Hearing you voice while in the womb then starts the process of teaching your baby how to talk and read. The activity, Narrating Your Daily Activities, will encourage you to talk to your baby as much as possible throughout your pregnancy! Talking aloud can be strange at first, but remember who you are talking to: your baby, who will be able to recognize and learn from you voice each day!"
+        introductionText="In this activity about books for your baby, we discussed the benefits of reading to your baby in the womb. For this activity, we are going to create a flexible schedule that works for you and allows you to establish a consistent routine of reading to your baby. Reading aloud to your baby for even 10-15 minutes each day is enough time to reap many cognitive and relational benefits. We have created a reading log to track your daily reading and help hold you accountable. Consistency is key; by maintaining a routine, you create a predictable and soothing environment for both you and your baby!"
         materialsTitle="Materials Needed"
         materials={[
           {
-            name: "",
-            image: logo,
-            alt: "Item 1",
-            key: "item1",
+            name: "Books",
+            image: book,
+            alt: "book",
+            key: "book",
           },
-          { name: "", image: logo, alt: "Item 2", key: "item2" },
+          { name: "Reading Log", image: paper, alt: "paper", key: "paper" },
           { name: "", image: logo, alt: "Item 3", key: "item3" },
           { name: "", image: logo, alt: "Item 4", key: "item4" },
           { name: "", image: logo, alt: "Item 5", key: "item5" },

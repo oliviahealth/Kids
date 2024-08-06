@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
+import logo from "../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
 import Activity from "@/components/Template/ActivitySteps";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";
