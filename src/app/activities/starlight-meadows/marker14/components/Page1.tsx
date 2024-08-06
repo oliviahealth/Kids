@@ -1,17 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../public/images/dashboard/StarlightMeadows/nightlogo.svg";
+import logo from "@/public/images/dashboard/StarlightMeadows/nightlogo.svg";
 
 
-import clothes from "../../../../../../public/images/dashboard/StarlightMeadows/week3/clothesoptions.svg"
-import toys from "../../../../../../public/images/dashboard/StarlightMeadows/week3/childrenstoys.svg"
-import books from "../../../../../../public/images/dashboard/StarlightMeadows/week3/books.svg"
+import clothes from "@/public/images/dashboard/StarlightMeadows/week3/clothesoptions.svg"
+import toys from "@/public/images/dashboard/StarlightMeadows/week3/childrenstoys.svg"
+import books from "@/public/images/dashboard/StarlightMeadows/week3/books.svg"
 
-import water from "../../../../../../public/images/dashboard/StarlightMeadows/week2/water.svg";
+import water from "@/public/images/dashboard/StarlightMeadows/week2/water.svg";
 
-import iceCubeTray from "../../../../../../public/images/dashboard/StarlightMeadows/week5/icecubetray.svg";
-import foodColoring from "../../../../../../public/images/dashboard/StarlightMeadows/week5/foodcoloring.svg";
-import toyHammer from "../../../../../../public/images/dashboard/StarlightMeadows/week5/hammer.svg";
+import iceCubeTray from "@/public/images/dashboard/StarlightMeadows/week5/stackable.svg";
 
 
 import Header from "@/components/Template/Header";
@@ -34,9 +32,7 @@ export default function Page1({
   const [isChecked, setIsChecked] = useState<CheckboxState>({
     
     iceCubeTray: false,
-    foodColoring: false,
-    toyHammer: false,
-    water: false,
+    
     
   });
 
@@ -58,25 +54,27 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Colorful Ice Activity"
+        title="Blocks"
         subtitle="Caregiver Wellness - Starlight Meadows"
         homeLink="/home"
         subtitleColor="#5A6EDD"
       />
 
       <IntroductionAndMaterials
-        introductionTitle="Colorful Ice Activity"
-          introductionText={`As your child is learning and growing, they are become more and more curious. At this age they love to learn and discover new things and are fascinated with the world. Providing your child with hands-on opportunities to learn new things is great for their development. Children at this age love bright colors and will love this colorful ice cube activity! In this activity you will be teaching your child about freezing and melting water and colors by experimenting with food coloring and ice! `}
+        introductionTitle="Blocks"
+          introductionText={`Young children are often paying a lot of attention to the people and things around them, soaking up information like a sponge. It is important to introduce math concepts (such as counting, shapes, and spacial awareness) to them as soon as you can. In fact, even just counting items out loud can help introduce your child to numbers and counting!
+
+In this activity, you will be using playtime with blocks as an opportunity to practice counting, shapes, and where things are (such as “under”, “over”, or “next to”) to your child. Following the activity instructions, you will count, talk about the shape, how many blocks there are, etc. This will allow your child to hear basic math concepts from an early age.  `}
 
 
 
 
         materialsTitle="Materials Needed"
         materials={[
-          { name: "ice cube tray", image: iceCubeTray, alt: "iceCubeTray", key: "iceCubeTray" },
-          { name: "food coloring", image: foodColoring, alt: "foodColoring", key: "foodColoring" },
-          { name: "toy hammer", image: toyHammer, alt: "toyHammer", key: "toyHammer" },
-          { name: "water", image: water, alt: "water", key: "water" },
+          { name: "stackable object", image: iceCubeTray, alt: "iceCubeTray", key: "iceCubeTray" },
+          { name: "", image: water, alt: "Item 5", key: "item5" },
+          { name: "", image: water, alt: "Item 5", key: "item5" },
+          { name: "", image: water, alt: "Item 5", key: "item5" },
           { name: "", image: water, alt: "Item 5", key: "item5" },
           { name: "", image: water, alt: "Item 6", key: "item6" },
           { name: "", image: water, alt: "Item 7", key: "item7" },

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import meditationImage from "../../../../../../public/images/dashboard/meditation/mediatationImage.png";
-import meditationImage1 from "../../../../../../public/images/dashboard/meditation/mediatationImage1.png";
+import meditationImage from "@/public/images/dashboard/meditation/mediatationImage.png";
+import meditationImage1 from "@/public/images/dashboard/meditation/mediatationImage1.png";
 import Link from "next/link";
 const MeditationActivityPage1: React.FC<{
   onNext: () => void;

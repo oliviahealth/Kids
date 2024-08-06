@@ -36,7 +36,7 @@ const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
 ) => {
   return (
     <div className="w-full flex flex-col lg:flex-row gap-8 justify-between flex-grow">
-      <div className="w-full lg:w-1/2 flex flex-col gap-4">
+      <div className="w-full lg:w-1/2 flex flex-col gap-4 ">
         <h1 className="text-xl font-bold">{materialsData.introductionTitle}</h1>
         <p className="text-lg text-justify">{materialsData.introductionText}</p>
         {materialsData?.link && materialsData.link.length && (
