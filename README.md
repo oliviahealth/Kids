@@ -34,3 +34,44 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Regarding the File Structure
+
+##### Main Idea
+Generally, we should be restructuring the code base in this format for readability and ease of access via URL.
+##### General Rules
+- Age Groups 
+	- week-domain, **abbreviated the domain if it is too long**
+		- full-name-of-activity-separated-by-dashes
+
+- Activities
+	- Prenatal Paradise
+		- week1-caregiveWellness
+		- week2-creativeArts
+		- week3-EBS
+			- breathing-techniques-for-pregnant-women
+			- birth-affirmations
+		- week4-LLS
+		- week5-mathAndScience
+		- week6-nutrition
+		- week7-physicalActivity
+		- week8-safety
+		- week9-soundAndMusic
+		- week10-touch
+	- Blossom Haven
+		- week1-caregiveWellness
+		- week2-creativeArts
+		- week3-EBS
+			- breathing-techniques-for-pregnant-women
+			- birth-affirmations
+		- week4-LLS
+		- week5-mathAndScience
+		- week6-nutrition
+		- week7-physicalActivity
+		- week8-safety
+		- week9-soundAndMusic
+		- week10-touch
+	- Starlight Meadows
+	- Rainbow Valley
+	- Adventure Bay
+	- Fantasy Forest
