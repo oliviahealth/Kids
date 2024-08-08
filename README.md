@@ -41,35 +41,35 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 Generally, we should be restructuring the code base in this format for readability and ease of access via URL.
 ##### General Rules
 - Age Groups 
-	- week-domain, **abbreviated the domain if it is too long**
+	- week-domain, **don't abbreviate the domain, separate by dashes**
 		- full-name-of-activity-separated-by-dashes
 
 - Activities
 	- Prenatal Paradise
-		- week1-caregiveWellness
-		- week2-creativeArts
-		- week3-EBS
+		- week1-caregiver-wellness
+		- week2-creative-arts
+		- week3-emotional-social-behavioral
 			- breathing-techniques-for-pregnant-women
 			- birth-affirmations
 		- week4-LLS
-		- week5-mathAndScience
+		- week5-math-and-science
 		- week6-nutrition
-		- week7-physicalActivity
+		- week7-physical-activity
 		- week8-safety
-		- week9-soundAndMusic
+		- week9-sound-and-music
 		- week10-touch
 	- Blossom Haven
-		- week1-caregiveWellness
-		- week2-creativeArts
-		- week3-EBS
+		- week1-caregiver-wellness
+		- week2-creative-arts
+		- week3-emotional-social-behavioral
 			- breathing-techniques-for-pregnant-women
 			- birth-affirmations
 		- week4-LLS
-		- week5-mathAndScience
+		- week5-math-and-science
 		- week6-nutrition
-		- week7-physicalActivity
+		- week7-physical-activity
 		- week8-safety
-		- week9-soundAndMusic
+		- week9-sound-and-music
 		- week10-touch
 	- Starlight Meadows
 	- Rainbow Valley
