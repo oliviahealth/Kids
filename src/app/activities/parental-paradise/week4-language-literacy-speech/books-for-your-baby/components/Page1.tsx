@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
+import logo from "/public/images/dashboard/pregnancy/prenatal-icon.svg";
+import book from "/public/images/dashboard/pregnancy/journal.svg";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
@@ -17,6 +18,7 @@ export default function Page1({
   onBack: () => void;
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
+    book: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -37,7 +39,7 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Narrating Your Daily Activities"
+        title="Books for your Baby!"
         subtitle="Language, Literacy, & Speech - Prenatal Paradise"
         homeLink="/home"
         subtitleColor="#F797FF"
@@ -45,14 +47,14 @@ export default function Page1({
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="Language, Literacy, and Speech are very important milestones your child will develop throughout their life! Did you know you can help your baby start developing these skills while still in the womb? According to the March of Dimes, your baby can recognize sounds starting at 23 weeks of pregnancy. Hearing you voice while in the womb then starts the process of teaching your baby how to talk and read. The activity, Narrating Your Daily Activities, will encourage you to talk to your baby as much as possible throughout your pregnancy! Talking aloud can be strange at first, but remember who you are talking to: your baby, who will be able to recognize and learn from you voice each day!"
+        introductionText="Reading to your baby in the womb may seem a little silly and unusual, but it is actually proven to provide many wonderful benefits. While the baby is growing inside the mother, its brain is developing quickly, and during the second trimester the baby will begin to be able to hear different sounds and voices! During the third trimester, the baby may start to respond to sounds from outside of the womb. By reading aloud during pregnancy, parents can help the baby's early language development, create a strong emotional bond, and establish a calming routine. This practice introduces the baby to the sounds and patterns of speech and helps the baby feel safe and connected to the parents even before birth! We have compiled a list of books for you to read to your growing baby while awaiting their arrival!"
         materialsTitle="Materials Needed"
         materials={[
           {
-            name: "",
-            image: logo,
-            alt: "Item 1",
-            key: "item1",
+            name: "Books",
+            image: book,
+            alt: "book",
+            key: "book",
           },
           { name: "", image: logo, alt: "Item 2", key: "item2" },
           { name: "", image: logo, alt: "Item 3", key: "item3" },

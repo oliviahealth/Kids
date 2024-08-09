@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import SmileLine from "@/public/images/Line 16.png";
 import Link from "next/link";
-import "../../../../globals.css";
+import "../../../../../globals.css";
 
 const MeditationActivityPage4: React.FC<{
   onNext: () => void;

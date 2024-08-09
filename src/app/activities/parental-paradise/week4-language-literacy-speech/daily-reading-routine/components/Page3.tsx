@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../public/images/dashboard/pregnancy/prenatal-icon.svg";
-import photo from "../../../../../../public/images/pregnancy_add_a_photo.svg";
+import logo from "/public/images/dashboard/pregnancy/prenatal-icon.svg";
+import photo from "/public/images/pregnancy_add_a_photo.svg";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Footer from "@/components/Template/Footer";
 import Header from "@/components/Template/Header";

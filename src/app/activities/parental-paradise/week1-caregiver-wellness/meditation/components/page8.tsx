@@ -6,7 +6,7 @@ import Image from "next/image";
 import confetti from "canvas-confetti";
 import Star from "@/public/images/Star 26.svg";
 import ContinueIcon from "@/public/images/openmoji_return.png";
-import "../../../../globals.css";
+import "../../../../../globals.css";
 
 interface EighthPageProps {
   onNext: () => void;
