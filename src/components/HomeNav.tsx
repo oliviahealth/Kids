@@ -1,9 +1,17 @@
-"use client";
-
 import React, { useState } from "react";
 import '../app/globals.css';
-import logoCompany from "../../public/images/Logo+Company.svg";
-import Image from 'next/image';
+
+// Define a dictionary mapping with newline characters
+const mapDictionary: { [key: string]: string } = {
+    "Pregnancy Meditation": "Pregnancy Meditation",
+    "Blossom Haven": "Ages 0-1\nBlossom Haven",
+    "Starlight Meadows": "Ages 1-2\nStarlight Meadows",
+    "Rainbow Valley": "Ages 2-3\nRainbow Valley",
+    "Adventure Bay": "Ages 3-4\nAdventure Bay",
+    "Fantasy Forest": "Ages 4-5\nFantasy Forest"
+};
+
+const mapNames = Object.keys(mapDictionary);
 
 interface NavbarProps {
     onMapChange: (index: number) => void;
@@ -11,55 +19,44 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onMapChange }) => {
     const [isOpen, setOpen] = useState(false);
+    const [selectedMap, setSelectedMap] = useState(mapNames[0]);
 
     const menuToggle = () => {
         setOpen(!isOpen);
     };
 
+    const handleMapChange = (index: number) => {
+        const selectedKey = mapNames[index];
+        setSelectedMap(selectedKey);
+        onMapChange(index);
+        setOpen(false); // Close the dropdown after selection
+    };
+
     return (
-        <div className="flex min-h-[6rem] w-full text-black border-b z-10 shadow-sm">
-            <div className="w-1/3 flex flex-col items-center">
-                <Image
-                    src={logoCompany}
-                    alt="Logo"
-                    priority
-                />
-            </div>
-            <div className="xl:container xl:px-2 flex px-5 mx-auto justify-between">
-                <div className="flex-1 flex justify-center items-end relative w-full">
-                    <div className="flex h-[3rem] relative z-10 w-full justify-between">
-                        <div className="absolute bottom-0 left-0 right-0 h-[0.8rem] w-full rounded-md z-0" style={{ backgroundColor: '#E0E0E0' }}></div>
-                        <button
-                            onClick={() => onMapChange(0)}
-                            className="pregnancy-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-q mr-6 hover-grow hover-bg-pregnancy"
-                        >
-                        </button>
-                        <button
-                            onClick={() => onMapChange(1)}
-                            className="age-one-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-one"
-                        >
-                        </button>
-                        <button
-                            onClick={() => onMapChange(2)}
-                            className="age-two-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-two"
-                        >
-                        </button>
-                        <button
-                            onClick={() => onMapChange(3)}
-                            className="age-three-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-three"
-                        >
-                        </button>
-                        <button
-                            onClick={() => onMapChange(4)}
-                            className="age-four-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 mr-6 hover-grow hover-bg-age-four"
-                        >
-                        </button>
-                        <button
-                            onClick={() => onMapChange(5)}
-                            className="age-five-button flex items-center justify-center text-white font-bold rounded-xl px-8 py-2 hover-grow hover-bg-age-five"
-                        >
-                        </button>
-                    </div>
+        <div className="xl:container xl:px-2 flex px-5 mx-auto justify-between relative">
+            <div className="flex-1 flex justify-center items-end w-full pr-5">
+                <div className="relative">
+                    <button
+                        onClick={menuToggle}
+                        className="flex items-center justify-center w-60 text-white font-bold py-2 bg-gray-800 whitespace-nowrap"
+                    >
+                        {selectedMap}
+                    </button>
+                    {isOpen && (
+                        <div className="absolute top-full left-0 bg-white border shadow-lg w-full">
+                            <div className="flex flex-col">
+                                {mapNames.map((name, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => handleMapChange(index)}
+                                        className="block px-4 py-2 text-center text-black hover:bg-gray-200 whitespace-pre-wrap"
+                                    >
+                                        {mapDictionary[name]}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

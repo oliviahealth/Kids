@@ -863,19 +863,18 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="w-full h-screen flex flex-col">
-      <div className="w-full">
-        <HomeNav onMapChange={handleMapChange} />
-      </div>
-      <div className="flex flex-grow h-full overflow-hidden">
-        <SideNav />
-        <div ref={containerRef} className="flex flex-col flex-grow">
-          <div className="flex-grow relative">
+      <div className="relative flex-grow">
+        <div ref={containerRef} className="flex flex-col h-full">
+          <div className="relative flex-grow">
             <Map
               image={map}
               markers={markers}
               height={containerDimensions.height}
               width={containerDimensions.width}
             />
+            <div className="absolute top-0 right-0 mt-4 mr-4 z-20">
+              <HomeNav onMapChange={handleMapChange} />
+            </div>
           </div>
         </div>
       </div>
