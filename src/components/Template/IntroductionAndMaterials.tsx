@@ -31,7 +31,6 @@ export interface IntroductionAndMaterialsProps {
   handleCheckboxChange: (type: keyof CheckboxState) => void;
 }
 
-// Introduction
 const IntroductionAndMaterials: React.FC<IntroductionAndMaterialsProps> = (
   materialsData: IntroductionAndMaterialsProps
 ) => {
