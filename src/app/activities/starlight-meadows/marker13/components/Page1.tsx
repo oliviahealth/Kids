@@ -1,16 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import logo from "../../../../../../public/images/dashboard/StarlightMeadows/nightlogo.svg";
+import logo from "@/public/images/dashboard/StarlightMeadows/nightlogo.svg";
 
 
-import clothes from "../../../../../../public/images/dashboard/StarlightMeadows/week3/clothesoptions.svg"
-import toys from "../../../../../../public/images/dashboard/StarlightMeadows/week3/childrenstoys.svg"
-import books from "../../../../../../public/images/dashboard/StarlightMeadows/week3/books.svg"
+import clothes from "@/public/images/dashboard/StarlightMeadows/week3/clothesoptions.svg"
+import toys from "@/public/images/dashboard/StarlightMeadows/week3/childrenstoys.svg"
+import books from "@/public/images/dashboard/StarlightMeadows/week3/books.svg"
 
-import water from "../../../../../../public/images/dashboard/StarlightMeadows/week2/water.svg";
+import water from "@/public/images/dashboard/StarlightMeadows/week2/water.svg";
 
-import floatObject from "../../../../../../public/images/dashboard/StarlightMeadows/week5/floatobj.svg";
-import container from "../../../../../../public/images/dashboard/StarlightMeadows/week5/bigcontainer.svg";
+import iceCubeTray from "@/public/images/dashboard/StarlightMeadows/week5/icecubetray.svg";
+import foodColoring from "@/public/images/dashboard/StarlightMeadows/week5/foodcoloring.svg";
+import toyHammer from "@/public/images/dashboard/StarlightMeadows/week5/hammer.svg";
 
 
 import Header from "@/components/Template/Header";
@@ -32,8 +33,10 @@ export default function Page1({
 
   const [isChecked, setIsChecked] = useState<CheckboxState>({
     
-    floatObject: false,
-    container: false,
+    iceCubeTray: false,
+    foodColoring: false,
+    toyHammer: false,
+    water: false,
     
   });
 
@@ -55,25 +58,25 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Sink and Float"
+        title="Colorful Ice Activity"
         subtitle="Caregiver Wellness - Starlight Meadows"
         homeLink="/home"
         subtitleColor="#5A6EDD"
       />
 
       <IntroductionAndMaterials
-        introductionTitle="Sink and Float"
-          introductionText={`At the ages of 1-2, your child is developing curiosity about the world around them. They learn best by using their senses and motor skills so letting them explore and experiment with things is a great way to enhance their learning. At this age, it is important to encourage curiosity in your child and to help them explore and learn new things. An easy science experiment you can complete with your toddler is to test whether items will sink or float! In this activity you will collect items from around the house with your toddler and place them in a bowl of water to see whether they sink or float. `}
+        introductionTitle="Colorful Ice Activity"
+          introductionText={`As your child is learning and growing, they are become more and more curious. At this age they love to learn and discover new things and are fascinated with the world. Providing your child with hands-on opportunities to learn new things is great for their development. Children at this age love bright colors and will love this colorful ice cube activity! In this activity you will be teaching your child about freezing and melting water and colors by experimenting with food coloring and ice! `}
 
 
 
 
         materialsTitle="Materials Needed"
         materials={[
-          { name: "Floatable Object", image: floatObject, alt: "floatObject", key: "floatObject" },
-          { name: "Container", image: container, alt: "container", key: "container" },
-          { name: "", image: water, alt: "Item 4", key: "item4" },
-          { name: "", image: water, alt: "Item 4", key: "item4" },
+          { name: "ice cube tray", image: iceCubeTray, alt: "iceCubeTray", key: "iceCubeTray" },
+          { name: "food coloring", image: foodColoring, alt: "foodColoring", key: "foodColoring" },
+          { name: "toy hammer", image: toyHammer, alt: "toyHammer", key: "toyHammer" },
+          { name: "water", image: water, alt: "water", key: "water" },
           { name: "", image: water, alt: "Item 5", key: "item5" },
           { name: "", image: water, alt: "Item 6", key: "item6" },
           { name: "", image: water, alt: "Item 7", key: "item7" },
