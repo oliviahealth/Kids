@@ -44,14 +44,14 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Creating a Nighttime Routine"
+        title="Sleep Health - Creating a Nighttime Routine"
         subtitle="Caregiver Wellness - Starlight Meadows"
         homeLink="/home"
         subtitleColor="#5A6EDD"
       />
 
       <IntroductionAndMaterials
-        introductionTitle="Caregiver Wellness - Starlight Meadows "
+        introductionTitle="Introduction "
         introductionText="Getting good sleep is one of the keys to maintaining your physical and mental health. Maintaining good sleep health will help you function each day as a caregiver and will help reduce fatigue and burnout.  However, the excitement and stress of parenthood can affect the quality and amount of sleep you get. A great way to promote sleep health is to create a bedtime routine you can follow each night. This helps your brain to adjust to your routine and start preparing for sleep at the same time each night. For this activity, you will be creating your own nighttime routine. Use the template to create and follow your nightly routine!"
         materialsTitle="Materials Needed"
         materials={[

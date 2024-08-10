@@ -24,7 +24,7 @@ export default function Page3({
     <>
       <Header
         logoSrc={logo}
-        title="Sleep Health"
+        title="Sleep Health - Creating a Nighttime Routine"
         subtitle="Caregiver Wellness - Starlight Meadows"
         homeLink="/home"
         subtitleColor="#5A6EDD"
