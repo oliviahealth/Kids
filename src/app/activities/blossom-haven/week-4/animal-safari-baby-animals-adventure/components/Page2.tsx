@@ -41,18 +41,16 @@ const activitySteps = [
     },
 ];
 
-export default ({ onBack, onContinue, onExit }: Page) => <>
-    <PageContainer>
-        <Header logoSrc={headerIcon} title="Animal Safari: Baby Animal’s Adventure!" subtitle="Language, Literacy, & Speech - Blossom Haven" homeLink="/" subtitleColor="#F1A533" />
-        <ActivitySteps steps={activitySteps} stepNumberColor="#FFF7E3" />
-        <Footer
-            onNext={onContinue}
-            onBack={onBack}
-            leftButtonText="Back"
-            rightButtonText="Continue"
-            leftClickAllowed={true}
-        />
-    </PageContainer>
+export default ({ onBack, onNext }: { onBack: () => void, onNext: () => void }) => <>
+    <Header logoSrc={headerIcon} title="Animal Safari: Baby Animal’s Adventure!" subtitle="Language, Literacy, & Speech - Blossom Haven" homeLink="/" subtitleColor="#F1A533" />
+    <ActivitySteps steps={activitySteps} stepNumberColor="#FFF7E3" />
+    <Footer
+        onNext={onNext}
+        onBack={onBack}
+        leftButtonText="Back"
+        rightButtonText="Continue"
+        leftClickAllowed={true}
+    />
 </>
 
 // export default ({ onBack, onContinue, onExit }: Page) => <EmptyWhitePage
