@@ -13,13 +13,13 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `The purpose of this activity is to emphasize the importance of exercising daily, while also learning about various animals and stimulating your child's creativity. Finding fun ways to move your body allows you to look for different methods of exercising to find what works best to maintain long-term. This activity also allows your child to learn about different animals and express themselves through dramatic play. `;
+  const takeawayText = `The purpose of this activity is to exercise and move your body in a fun way. Exercising doesn't have to be very strenuous or long to be effective. This activity gives you a short and fun way to get moving and get your heart rate up.  `;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Move Like an Animal"
+        title="Family Dance Party!"
         subtitle="Physical Activity - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"

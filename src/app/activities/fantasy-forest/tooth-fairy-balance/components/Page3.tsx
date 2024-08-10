@@ -13,13 +13,13 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `The purpose of this activity is to emphasize the importance of exercising daily, while also learning about various animals and stimulating your child's creativity. Finding fun ways to move your body allows you to look for different methods of exercising to find what works best to maintain long-term. This activity also allows your child to learn about different animals and express themselves through dramatic play. `;
+  const takeawayText = `Great job! You showed such good balance and you made such a great tooth fairy. We hope this helped you with problem solving, creativity, and motor control. These are important things to keep practicing so here is a sticker to show that you are growing those skills! We are proud of you, keep up your good work! `;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Move Like an Animal"
+        title="Tooth Fairy Balance"
         subtitle="Physical Activity - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"

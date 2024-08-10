@@ -4,10 +4,11 @@ import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
 import logo from "@/public/images/dashboard/fantasyForest/shared/logo.png";
-import image1 from "@/public/images/dashboard/fantasyForest/week/7/scissors.png";
-import image2 from "@/public/images/dashboard/fantasyForest/week/7/empty_bowl.png";
-import image3 from "@/public/images/dashboard/fantasyForest/week/7/animal_cards.png";
-import downloadIcon from "@/public/images/dashboard/fantasyForest/shared/download.png";
+import image1 from "@/public/images/dashboard/fantasyForest/week/7/paper.png";
+import image2 from "@/public/images/dashboard/fantasyForest/week/7/pen.png";
+import image3 from "@/public/images/dashboard/fantasyForest/week/7/bowl.png";
+import image4 from "@/public/images/dashboard/fantasyForest/week/7/music.png";
+import image5 from "@/public/images/dashboard/fantasyForest/week/7/flashlights.png";
 
 type CheckboxState = {
   [key: string]: boolean;
@@ -21,9 +22,11 @@ export default function Page1({
   onBack: () => void;
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
-    animal_cards: false,
-    empty_bowl: false,
-    scissors: false,
+    paper: false,
+    pen: false,
+    bowl: false,
+    music: false,
+    flashlights: false,
   });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -44,7 +47,7 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Move Like an Animal"
+        title="Family Dance Party!"
         subtitle="Physical Activity - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"
@@ -52,24 +55,41 @@ export default function Page1({
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="Physical activity is important for people of any age, but it is a great way to incorporate learning and creativity for children while also allowing them to move their body. Encouraging your child to move their body everyday establishes healthy habits for them to continue in the future. Exercising has many physical, emotional and mental benefits; therefore, it is vital to emphasize the importance of daily exercise to your child. In this activity we will focus on your child's expressive language and dramatic play as they practice howanimals move and sound. This activity allows your child to show their expressive side and allows them to interpret an animal movement and sound the way they like."
+        introductionText={`
+          An important part of keeping your body strong and healthy is finding a way to move and be physically active every day. Teaching your child about the importance of exercise from a young age is important for their physical and mental health. This activity is a fun way to get the whole family up and moving. This is a great activity for children of all ages, so siblings can get involved in the fun as well. Dance parties are a great way to move your body, get your heart rate up, and break a little sweat, all while having a lot of fun!
+          `}
         materialsTitle="Materials Needed"
         materials={[
-          { name: "Scissors", image: image1, alt: "Scissors", key: "scissors" },
           {
-            name: "Empty Bowl (for cards)",
+            name: "Small Pieces of Paper",
+            image: image1,
+            alt: "Small Pieces of Paper",
+            key: "paper",
+          },
+          {
+            name: "Pen",
             image: image2,
-            alt: "Empty Bowl (for cards)",
-            key: "empty_bowl",
+            alt: "Pen",
+            key: "pen",
           },
           {
-            name: "Provided 'Animal Cards'",
+            name: "Bowl",
             image: image3,
-            alt: "Provided 'Animal Cards'",
-            key: "animal_cards",
+            alt: "Bowl",
+            key: "bowl",
           },
-          { name: "", image: image1, alt: "Empty", key: "empty" },
-          { name: "", image: image1, alt: "Empty", key: "empty" },
+          {
+            name: "Music",
+            image: image4,
+            alt: "Music",
+            key: "music",
+          },
+          {
+            name: "Flashlights (Optional)",
+            image: image5,
+            alt: "Flashlights (Optional)",
+            key: "flashlights",
+          },
           { name: "", image: image1, alt: "Empty", key: "empty" },
           { name: "", image: image1, alt: "Empty", key: "empty" },
           { name: "", image: image1, alt: "Empty", key: "empty" },
@@ -79,13 +99,6 @@ export default function Page1({
         mainBackgroundColor="#B5F6D0"
         emptyCardBackgroundColor="#88DFAC"
         checkedCardColor="#35A663"
-        link={[
-          {
-            text: "Animal Cards",
-            img: downloadIcon,
-            url: "",
-          },
-        ]}
       />
       <Footer
         onNext={onNext}

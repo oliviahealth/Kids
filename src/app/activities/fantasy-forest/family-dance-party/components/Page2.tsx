@@ -15,23 +15,26 @@ export default function Page2({
   const activitySteps: ActivityStep[] = [
     {
       stepNumber: 1,
-      description:
-        '(Place the scissors and Animal Cards in front of your child.) "We are going to play a game called “Move Like an Animal”. We need to cut out our animal cards and place them into the empty bowl. We are going to take turns picking cards and moving like the animal we randomly pick from the bowl."',
+      description: "Gather the whole family for this activity. ",
     },
     {
       stepNumber: 2,
       description:
-        "(Cut the animal cards out for your child and have him/her place them into the bowl.)",
+        "Give everyone a small slip of paper or sticky note and have them write their favorite song on it.",
     },
     {
       stepNumber: 3,
       description:
-        '"Okay, now we need to mix the bowl and start the game." (Have your child shake the bowl with cards and ask them to go first.)',
+        "Have everyone fold their piece of paper and place it in a bowl to be mixed up. ",
     },
     {
       stepNumber: 4,
       description:
-        "(Play as many rounds as you want and help your child move and sound like the animal, he/she chose.)",
+        "Have your child draw out a piece of paper to choose which song you will start with. Use your phone to play that song and encourage everyone to start dancing! (You can also turn out the lights and dance around with flashlights to add more fun!)",
+    },
+    {
+      stepNumber: 5,
+      description: `Take turns pulling songs out the bowl until all songs have been played and everyone has danced until their heart is content!`,
     },
   ];
 
@@ -39,14 +42,14 @@ export default function Page2({
     <>
       <Header
         logoSrc={logo}
-        title="Move Like an Animal"
+        title="Family Dance Party!"
         subtitle="Physical Activity - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"
       />
 
       <Activity
-        title="Activity - Read the following sentences."
+        title="Activity"
         steps={activitySteps}
         stepNumberColor="#A7F2C5"
       />
