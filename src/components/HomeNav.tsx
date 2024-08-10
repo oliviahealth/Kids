@@ -130,7 +130,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMapChange }) => {
                             />
                         )}
                     </button>
-                    <div className={`absolute top-full left-0 bg-white border shadow-lg w-full h-full rounded-b-lg dropdown ${isOpen ? 'dropdown-open' : ''}`}>
+                        <div className={`absolute top-full left-0 bg-white border shadow-lg w-full rounded-b-lg dropdown ${isOpen ? 'dropdown-open' : ''}`}>
                         <div className="flex flex-col">
                             {mapNames.map((name, index) => (
                                 <button
