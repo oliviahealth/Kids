@@ -28,6 +28,52 @@ const mapImages = [
   "/images/activities/fantasy-forest/fantasy-forest-map.png",
 ];
 
+const mapMarkers1 = [
+  {
+    name: "Pregnancy Meditation",
+    markers: [
+      {
+        id: "1",
+
+        x: 25,
+        y: 20,
+
+        backgroundColor: "#EC407A",
+        borderColor: "#D81B60",
+
+        activitiesBorderColor: "#F797FF",
+        activitiesBackgroundColor: "#FEEDFF",
+
+        activities: [
+          { name: "Meditation", icon: "/images/activities/blossom-haven/canvas.svg" },
+          { name: "Walking Journal", icon: "/images/activities/blossom-haven/canvas.svg" },
+          { name: "Typing Hero", icon: "/images/activities/blossom-haven/canvas.svg" },
+          { name: "Tying Hero", icon: "/images/activities/blossom-haven/canvas.svg" },
+        ]
+      },
+      {
+        id: "1",
+
+        x: 35,
+        y: 20,
+
+        backgroundColor: "#EC407A",
+        borderColor: "#D81B60",
+
+        activitiesBorderColor: "#F797FF",
+        activitiesBackgroundColor: "#FEEDFF",
+
+        activities: [
+          { name: "Meditation", icon: "/images/activities/blossom-haven/canvas.svg" },
+          { name: "Walking Journal", icon: "/images/activities/blossom-haven/canvas.svg" },
+          { name: "Typing Heddddro", icon: "/images/activities/blossom-haven/canvas.svg" },
+          { name: "Tying Hero", icon: "/images/activities/blossom-haven/canvas.svg" },
+        ]
+      }
+    ]
+  }
+]
+
 const mapMarkers: MapMarkers[] = [
   {
     name: "Pregnancy Meditation",
@@ -855,7 +901,7 @@ const Dashboard: React.FC = () => {
   }, [containerRef.current]);
 
   const map = mapImages[currentMapIndex];
-  const markers = mapMarkers[currentMapIndex].markers;
+  const markers = mapMarkers1[currentMapIndex].markers;
 
   const handleMapChange = (index: number) => {
     setCurrentMapIndex(index);
