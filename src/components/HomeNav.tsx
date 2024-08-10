@@ -130,51 +130,49 @@ const Navbar: React.FC<NavbarProps> = ({ onMapChange }) => {
                             />
                         )}
                     </button>
-                    {isOpen && (
-                        <div className="absolute top-full left-0 bg-white border shadow-lg w-full rounded-b-lg">
-                            <div className="flex flex-col">
-                                {mapNames.map((name, index) => (
-                                    <button
-                                        key={index}
-                                        onClick={() => handleMapChange(index)}
-                                        className="flex items-center px-4 py-2 text-left text-black hover:bg-gray-200 whitespace-pre-wrap"
-                                        style={{ backgroundColor: mapColors[name] }}
-                                    >
-                                        <div className="flex items-center w-full">
-                                            {/* Display the icon to the left */}
-                                            <img src={iconPaths[name]} alt={name} className="w-8 h-8 mr-2" />
-                                            {/* Display the age text and map name underneath */}
-                                            <div className="flex flex-col items-start">
-                                                <span
-                                                    className={`font-bold ${
-                                                        name === 'Prenatal Paradise' ? 'text-[#EB80F5]':
-                                                        name === 'Blossom Haven' ? 'text-[#f1a533]' :
-                                                        name === 'Starlight Meadows' ? 'text-[#5a6edd]' :
-                                                        name === 'Rainbow Valley' ? 'text-[#ff7272]' :
-                                                        name === 'Adventure Bay' ? 'text-[#52c5c0]' :
-                                                        name === 'Fantasy Forest' ? 'text-[#3dab6a]' : ''
-                                                    }`}
-                                                >
-                                                    {mapDictionary[name].split('\n')[0]}
-                                                </span>
-                                                <span
-                                                    className={`font-bold ${
-                                                        name === 'Blossom Haven' ? 'text-[#f1a533]' :
-                                                        name === 'Starlight Meadows' ? 'text-[#5a6edd]' :
-                                                        name === 'Rainbow Valley' ? 'text-[#ff7272]' :
-                                                        name === 'Adventure Bay' ? 'text-[#52c5c0]' :
-                                                        name === 'Fantasy Forest' ? 'text-[#3dab6a]' : ''
-                                                    }`}
-                                                >
-                                                    {mapDictionary[name].split('\n')[1]}
-                                                </span>
-                                            </div>
+                    <div className={`absolute top-full left-0 bg-white border shadow-lg w-full h-full rounded-b-lg dropdown ${isOpen ? 'dropdown-open' : ''}`}>
+                        <div className="flex flex-col">
+                            {mapNames.map((name, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => handleMapChange(index)}
+                                    className="flex items-center px-4 py-2 text-left text-black hover:bg-gray-200 whitespace-pre-wrap"
+                                    style={{ backgroundColor: mapColors[name] }}
+                                >
+                                    <div className="flex items-center w-full">
+                                        {/* Display the icon to the left */}
+                                        <img src={iconPaths[name]} alt={name} className="w-8 h-8 mr-2" />
+                                        {/* Display the age text and map name underneath */}
+                                        <div className="flex flex-col items-start">
+                                            <span
+                                                className={`font-bold ${
+                                                    name === 'Prenatal Paradise' ? 'text-[#EB80F5]':
+                                                    name === 'Blossom Haven' ? 'text-[#f1a533]' :
+                                                    name === 'Starlight Meadows' ? 'text-[#5a6edd]' :
+                                                    name === 'Rainbow Valley' ? 'text-[#ff7272]' :
+                                                    name === 'Adventure Bay' ? 'text-[#52c5c0]' :
+                                                    name === 'Fantasy Forest' ? 'text-[#3dab6a]' : ''
+                                                }`}
+                                            >
+                                                {mapDictionary[name].split('\n')[0]}
+                                            </span>
+                                            <span
+                                                className={`font-bold ${
+                                                    name === 'Blossom Haven' ? 'text-[#f1a533]' :
+                                                    name === 'Starlight Meadows' ? 'text-[#5a6edd]' :
+                                                    name === 'Rainbow Valley' ? 'text-[#ff7272]' :
+                                                    name === 'Adventure Bay' ? 'text-[#52c5c0]' :
+                                                    name === 'Fantasy Forest' ? 'text-[#3dab6a]' : ''
+                                                }`}
+                                            >
+                                                {mapDictionary[name].split('\n')[1]}
+                                            </span>
                                         </div>
-                                    </button>
-                                ))}
-                            </div>
+                                    </div>
+                                </button>
+                            ))}
                         </div>
-                    )}
+                    </div>
                 </div>
             </div>
         </div>
