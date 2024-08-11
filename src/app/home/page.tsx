@@ -34,6 +34,7 @@ const mapMarkers1 = [
     markers: [
       {
         id: "1",
+        // Add names here for each point - Ex: Caregiver Wellness
         x: 24,
         y: 16,
         backgroundColor: "#F797FF",
@@ -41,10 +42,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Relaxation Yoga", icon: "", link: "" }, // put a required item from the activity
+          { name: "Building My Pregnancy Support System", icon: "", link: "" },
+          { name: "Baby Growth Journal", icon: "", link: "" },
         ]
       },
       {
@@ -56,10 +56,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Homemade Growth Chart", icon: "", link: "" },
+          { name: "Memory Box", icon: "", link: "" },
+          { name: "Maternity Photoshoot", icon: "", link: "" },
+          { name: "My Baby's Name Sign", icon: "", link: "" },
         ]
       },
       {
@@ -71,10 +71,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Breathing Techniques For Pregnant Women", icon: "", link: "" },
+          { name: "Birth Affirmations", icon: "", link: "" },
+          { name: "Reaching Out to Available Resources", icon: "", link: "" },
         ]
       },
       {
@@ -86,10 +85,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Narrating Your Daily Activities", icon: "", link: "" },
+          { name: "Reading Routine", icon: "", link: "" },
+          { name: "Books for your Baby!", icon: "", link: "" },
         ]
       },
       {
@@ -101,10 +99,8 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Your Baby's Size in Everyday Objects", icon: "", link: "" },
+          { name: "Financial Planning for Baby's First Year", icon: "", link: "" },
         ]
       },
       {
@@ -116,10 +112,8 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Weekly Meal Tracker", icon: "", link: "" },
+          { name: "Trying New Recipes", icon: "", link: "" },
         ]
       },
       {
@@ -131,57 +125,56 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Safe and Effective Strength Training for Expectant Mothers", icon: "", link: "" },
+          { name: "Walking With Your Baby", icon: "", link: "" },
+          { name: "Lets Go Swimming!", icon: "", link: "" },
         ]
       },
-      {
-        id: "8",
-        x: 62,
-        y: 50,
-        backgroundColor: "#F797FF",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "9",
-        x: 71,
-        y: 38,
-        backgroundColor: "#F797FF",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "10",
-        x: 69,
-        y: 20,
-        backgroundColor: "#F797FF",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      }
+      // {
+      //   id: "8",
+      //   x: 62,
+      //   y: 50,
+      //   backgroundColor: "#F797FF",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#F797FF",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "9",
+      //   x: 71,
+      //   y: 38,
+      //   backgroundColor: "#F797FF",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#F797FF",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "10",
+      //   x: 69,
+      //   y: 20,
+      //   backgroundColor: "#F797FF",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#F797FF",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // }
     ]
   },
   {
@@ -193,13 +186,12 @@ const mapMarkers1 = [
         y: 12,
         backgroundColor: "#F1A533",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#F1A533",
+        activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Meditation for Caregiver(s) of 0-1 Year Old(s)", icon: "", link: "" },
+          { name: "Walking Nature Journal", icon: "", link: "" },
+          { name: "At-Home Exercises", icon: "", link: "" },
         ]
       },
       {
@@ -208,13 +200,12 @@ const mapMarkers1 = [
         y: 33,
         backgroundColor: "#F1A533",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#F1A533",
+        activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Colored Ice Cube Melting Activity", icon: "", link: "" },
+          { name: "Your Very Own Sensory Bottle", icon: "", link: "" },
+          { name: "Baby's First Art Piece: A Safe Painting Activity", icon: "", link: "" },
         ]
       },
       {
@@ -223,13 +214,12 @@ const mapMarkers1 = [
         y: 46,
         backgroundColor: "#F1A533",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#F1A533",
+        activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Baby's Magic Mirror", icon: "", link: "" },
+          { name: "Baby's Puppet Playtime", icon: "", link: "" },
+          { name: "Baby's Day Out", icon: "", link: "" },
         ]
       },
       {
@@ -238,13 +228,12 @@ const mapMarkers1 = [
         y: 65,
         backgroundColor: "#F1A533",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#F1A533",
+        activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Extended Family Story Time", icon: "", link: "" },
+          { name: "Little Emotional Explorer!", icon: "", link: "" },
+          { name: "Animal Safari: Baby's Animal Adventure!", icon: "", link: "" },
         ]
       },
       {
@@ -253,13 +242,12 @@ const mapMarkers1 = [
         y: 68,
         backgroundColor: "#F1A533",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#F1A533",
+        activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Baby's Shape Play Mat", icon: "", link: "" },
+          { name: "Bubble Pop Party!", icon: "", link: "" },
+          { name: "Colorful Oil and Water Science Bag", icon: "", link: "" },
         ]
       },
       {
@@ -268,13 +256,12 @@ const mapMarkers1 = [
         y: 52,
         backgroundColor: "#F1A533",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#F1A533",
+        activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Breastfeeding Relief Stretches for Caregiver", icon: "", link: "" },
+          { name: "Baby's Yummy Snack Necklace", icon: "", link: "" },
+          { name: "The Many Textures of Foods", icon: "", link: "" },
         ]
       },
       {
@@ -283,60 +270,59 @@ const mapMarkers1 = [
         y: 55,
         backgroundColor: "#F1A533",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#F1A533",
+        activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Baby's Obstacle Course", icon: "", link: "" },
+          { name: "Happy Tummy Workout", icon: "", link: "" },
+          { name: "Baby Boot Camp", icon: "", link: "" },
         ]
       },
-      {
-        id: "8",
-        x: 72,
-        y: 57,
-        backgroundColor: "#F1A533",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "9",
-        x: 80,
-        y: 45,
-        backgroundColor: "#F1A533",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "10",
-        x: 75,
-        y: 25,
-        backgroundColor: "#F1A533",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      }
+      // {
+      //   id: "8",
+      //   x: 72,
+      //   y: 57,
+      //   backgroundColor: "#F1A533",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#F1A533",
+      //   activitiesBackgroundColor: "#E8F5E9",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "9",
+      //   x: 80,
+      //   y: 45,
+      //   backgroundColor: "#F1A533",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#F1A533",
+      //   activitiesBackgroundColor: "#E8F5E9",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "10",
+      //   x: 75,
+      //   y: 25,
+      //   backgroundColor: "#F1A533",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#F1A533",
+      //   activitiesBackgroundColor: "#E8F5E9",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // }
     ]
   },
   {
@@ -348,8 +334,8 @@ const mapMarkers1 = [
         y: 12,
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#5A6EDD",
+        activitiesBackgroundColor: "#FFFDE7",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -363,8 +349,8 @@ const mapMarkers1 = [
         y: 33,
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#5A6EDD",
+        activitiesBackgroundColor: "#FFFDE7",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -378,8 +364,8 @@ const mapMarkers1 = [
         y: 34,
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#5A6EDD",
+        activitiesBackgroundColor: "#FFFDE7",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -393,8 +379,8 @@ const mapMarkers1 = [
         y: 57,
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#5A6EDD",
+        activitiesBackgroundColor: "#FFFDE7",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -408,8 +394,8 @@ const mapMarkers1 = [
         y: 69,
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#5A6EDD",
+        activitiesBackgroundColor: "#FFFDE7",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -423,8 +409,8 @@ const mapMarkers1 = [
         y: 53,
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#5A6EDD",
+        activitiesBackgroundColor: "#FFFDE7",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -438,8 +424,8 @@ const mapMarkers1 = [
         y: 53,
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#5A6EDD",
+        activitiesBackgroundColor: "#FFFDE7",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -447,51 +433,51 @@ const mapMarkers1 = [
           { name: "Activity 4", icon: "", link: "" },
         ]
       },
-      {
-        id: "8",
-        x: 72,
-        y: 65,
-        backgroundColor: "#5A6EDD",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "9",
-        x: 86,
-        y: 54,
-        backgroundColor: "#5A6EDD",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "10",
-        x: 78,
-        y: 27,
-        backgroundColor: "#5A6EDD",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      }
+      // {
+      //   id: "8",
+      //   x: 72,
+      //   y: 65,
+      //   backgroundColor: "#5A6EDD",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#5A6EDD",
+      //   activitiesBackgroundColor: "#FFFDE7",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "9",
+      //   x: 86,
+      //   y: 54,
+      //   backgroundColor: "#5A6EDD",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#5A6EDD",
+      //   activitiesBackgroundColor: "#FFFDE7",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "10",
+      //   x: 78,
+      //   y: 27,
+      //   backgroundColor: "#5A6EDD",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#5A6EDD",
+      //   activitiesBackgroundColor: "#FFFDE7",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // }
     ]
   },
   {
@@ -503,7 +489,7 @@ const mapMarkers1 = [
         y: 29,
         backgroundColor: "#FF5B5B",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -518,7 +504,7 @@ const mapMarkers1 = [
         y: 36,
         backgroundColor: "#FF9255",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#FF9255",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -533,7 +519,7 @@ const mapMarkers1 = [
         y: 47,
         backgroundColor: "#FBFF44",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#FBFF44",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -548,7 +534,7 @@ const mapMarkers1 = [
         y: 71,
         backgroundColor: "#46FF58",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#46FF58",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -563,7 +549,7 @@ const mapMarkers1 = [
         y: 71,
         backgroundColor: "#57F5FF",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#57F5FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -578,7 +564,7 @@ const mapMarkers1 = [
         y: 55,
         backgroundColor: "#3858FF",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#3858FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -593,7 +579,7 @@ const mapMarkers1 = [
         y: 62,
         backgroundColor: "#B93CFF",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#B93CFF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -602,51 +588,51 @@ const mapMarkers1 = [
           { name: "Activity 4", icon: "", link: "" },
         ]
       },
-      {
-        id: "8",
-        x: 70,
-        y: 77,
-        backgroundColor: "#FF5B5B",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "9",
-        x: 85,
-        y: 60,
-        backgroundColor: "#FF9255",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "10",
-        x: 75,
-        y: 39,
-        backgroundColor: "#FBFF44",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      }
+      // {
+      //   id: "8",
+      //   x: 70,
+      //   y: 77,
+      //   backgroundColor: "#FF5B5B",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#FF5B5B",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "9",
+      //   x: 85,
+      //   y: 60,
+      //   backgroundColor: "#FF9255",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#FF9255",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "10",
+      //   x: 75,
+      //   y: 39,
+      //   backgroundColor: "#FBFF44",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#FBFF44",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // }
     ]
   },
   {
@@ -658,7 +644,7 @@ const mapMarkers1 = [
         y: 7,
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -673,7 +659,7 @@ const mapMarkers1 = [
         y: 17,
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -688,7 +674,7 @@ const mapMarkers1 = [
         y: 35,
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -703,7 +689,7 @@ const mapMarkers1 = [
         y: 65,
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -718,7 +704,7 @@ const mapMarkers1 = [
         y: 65,
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -733,7 +719,7 @@ const mapMarkers1 = [
         y: 46,
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -748,7 +734,7 @@ const mapMarkers1 = [
         y: 57,
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -757,51 +743,51 @@ const mapMarkers1 = [
           { name: "Activity 4", icon: "", link: "" },
         ]
       },
-      {
-        id: "8",
-        x: 70,
-        y: 70,
-        backgroundColor: "#52C5C0",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "9",
-        x: 83,
-        y: 53,
-        backgroundColor: "#52C5C0",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "10",
-        x: 77,
-        y: 33,
-        backgroundColor: "#52C5C0",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      }
+      // {
+      //   id: "8",
+      //   x: 70,
+      //   y: 70,
+      //   backgroundColor: "#52C5C0",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#52C5C0",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "9",
+      //   x: 83,
+      //   y: 53,
+      //   backgroundColor: "#52C5C0",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#52C5C0",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "10",
+      //   x: 77,
+      //   y: 33,
+      //   backgroundColor: "#52C5C0",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#52C5C0",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // }
     ]
   },
   {
@@ -813,7 +799,7 @@ const mapMarkers1 = [
         y: 11,
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -828,7 +814,7 @@ const mapMarkers1 = [
         y: 16,
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -843,7 +829,7 @@ const mapMarkers1 = [
         y: 42,
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -858,7 +844,7 @@ const mapMarkers1 = [
         y: 72,
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -873,7 +859,7 @@ const mapMarkers1 = [
         y: 74,
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -888,7 +874,7 @@ const mapMarkers1 = [
         y: 51,
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -903,7 +889,7 @@ const mapMarkers1 = [
         y: 61,
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
+        activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
@@ -912,51 +898,51 @@ const mapMarkers1 = [
           { name: "Activity 4", icon: "", link: "" },
         ]
       },
-      {
-        id: "8",
-        x: 68,
-        y: 76,
-        backgroundColor: "#35A663",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "9",
-        x: 78,
-        y: 52,
-        backgroundColor: "#35A663",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      },
-      {
-        id: "10",
-        x: 71,
-        y: 33,
-        backgroundColor: "#35A663",
-        borderColor: "#FFFFFF",
-        activitiesBorderColor: "#F797FF",
-        activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
-        ]
-      }
+      // {
+      //   id: "8",
+      //   x: 68,
+      //   y: 76,
+      //   backgroundColor: "#35A663",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#35A663",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "9",
+      //   x: 78,
+      //   y: 52,
+      //   backgroundColor: "#35A663",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#35A663",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // },
+      // {
+      //   id: "10",
+      //   x: 71,
+      //   y: 33,
+      //   backgroundColor: "#35A663",
+      //   borderColor: "#FFFFFF",
+      //   activitiesBorderColor: "#35A663",
+      //   activitiesBackgroundColor: "#FEEDFF",
+      //   activities: [
+      //     { name: "Activity 1", icon: "", link: "" },
+      //     { name: "Activity 2", icon: "", link: "" },
+      //     { name: "Activity 3", icon: "", link: "" },
+      //     { name: "Activity 4", icon: "", link: "" },
+      //   ]
+      // }
     ]
   }
 ];
