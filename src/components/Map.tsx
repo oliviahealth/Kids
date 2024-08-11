@@ -116,10 +116,10 @@ const Map: React.FC<MapProps> = ({ image, markers, height, width }) => {
             <p className="text-lg text-gray-600 mb-16">Earn stars upon completion!</p>
             <div className="grid grid-cols-4 gap-4">
               {selectedMarker.activities.map((activity, index) => (
-                <div key={index} style={{ backgroundColor: selectedMarker.activitiesBackgroundColor, borderColor: selectedMarker.activitiesBorderColor }} className="border-4 rounded-2xl flex flex-col items-center justify-center gap-16">
+                <a key={index} href={activity.link} style={{ backgroundColor: selectedMarker.activitiesBackgroundColor, borderColor: selectedMarker.activitiesBorderColor }} className="border-4 rounded-2xl flex flex-col items-center justify-center gap-16">
                   <span className="text-xl font-medium text-center mt-4 mb-16">{activity.name}</span>
                   <img src={activity.icon} alt={activity.name} className="w-32 h-32 mb-16" />
-                </div>
+                </a>
               ))}
             </div>
           </div>
