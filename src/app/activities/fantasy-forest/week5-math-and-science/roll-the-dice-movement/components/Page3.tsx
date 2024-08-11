@@ -23,7 +23,7 @@ export default function Page3({
       <Header
         logoSrc={logo}
         title="Roll The Dice Movement"
-        subtitle="Domain name - Fantasy Forest"
+        subtitle="Math and Science - Fantasy Forest"
         homeLink="/"
         subtitleColor="#35A663"
       />

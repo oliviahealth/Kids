@@ -43,7 +43,7 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title=" DIY Puzzle"
+        title="DIY Puzzle"
         subtitle="Creative Arts - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"

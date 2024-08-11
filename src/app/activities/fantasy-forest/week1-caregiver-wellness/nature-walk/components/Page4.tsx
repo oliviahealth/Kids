@@ -1,26 +1,24 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { PageContainer, AddPhotoButton } from "@/components/activity/white-page";
 import KeyTakeaways from "@/components/Template/KeyTakeaways";
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 
 import headerIcon from "/public/images/activities/fantasy-forest/header-icon.svg";
-import photo from "/public/images/dashboard/adventure-bay/Group 114.png";
+import photo from "/public/images/activities/fantasy-forest/addAPhoto.svg";
 
-export default function Page3({ onNext, onBack }: {
+export default function Page4({ onNext, onBack }: {
     onBack: () => void;
     onNext: () => void;
 }) {
-    const takeawayText = `Your family is one step closer to healthier eating and a week without the stress of planning what is for dinner! After you create a master meal list and one weekly meal plan, the activity sticker is yours. We hope you enjoy this activity with your kids!`;
+    const takeawayText = `Walking is a great way to reduce stress and increase physical activity. This activity specifically allows for more exploration of your senses and a greater understanding of your surroundings. Earn the sticker for this activity by going on one walk, but don't just stop there! Enjoy the fresh air!`;
 
     return (
         <>
             <Header
                 logoSrc={headerIcon}
-                title="Healthy Weekly Meal Planner"
+                title="Nature Walk"
                 subtitle="Caregiver Wellness - Fantasy Forest"
                 homeLink="/"
                 subtitleColor="#35A663"

@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import logo from "/public/images/activities/fantasy-forest/week4/world-icon.svg";
 
-import image1 from "../../../../../../public/images/dashboard/fantasyForest/week/6/paper.svg";
-import image2 from "../../../../../../public/images/dashboard/fantasyForest/week/6/pencil.svg";
+import image1 from "/public/images/dashboard/fantasyForest/week/6/paper.svg";
+import image2 from "/public/images/dashboard/fantasyForest/week/6/pencil.svg";
 
 import downloadIcon from "@/public/images/dashboard/rainbowValley/shared/download.png";
 import Header from "@/components/Template/Header";

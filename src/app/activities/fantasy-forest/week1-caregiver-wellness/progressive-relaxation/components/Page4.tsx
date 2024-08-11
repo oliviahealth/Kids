@@ -8,6 +8,8 @@ import Footer from '@/components/Template/Footer';
 
 import headerIcon from "/public/images/activities/fantasy-forest/header-icon.svg";
 import cameraIcon from "/public/images/activities/fantasy-forest/camera.svg";
+import photo from "/public/images/activities/fantasy-forest/addAPhoto.svg";
+
 
 export default function ProgressiveRelaxation({
   onBack,
@@ -30,8 +32,7 @@ export default function ProgressiveRelaxation({
         subtitleColor="#35A663"
       />
 
-      <KeyTakeaways text={takeawayText} />
-      <AddPhotoButton icon={cameraIcon} onClick={() => { }} />
+      <KeyTakeaways text={takeawayText} photoSrc={photo} photoAlt="Photo" />
 
       <Footer
         onBack={onBack}
