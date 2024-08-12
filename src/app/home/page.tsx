@@ -274,7 +274,7 @@ const mapMarkers1 = [
         activities: [
           { name: "Baby's Obstacle Course", icon: "/images/activities/blossom-haven/week7/playMat.svg", link: "/activities/blossom-haven/week7_activityA" },
           { name: "Happy Tummy Workout", icon: "/images/activities/blossom-haven/week7/secondPlayMat.svg", link: "/activities/blossom-haven/week7_activityB" },
-          { name: "Baby Boot Camp", icon: "images/activities/blossom-haven/week5/camera.svg", link: "/activities/blossom-haven/week7_activityC" },
+          { name: "Baby Boot Camp", icon: "images/activities/blossom-haven/week5/camera.svg", link: "/activities/blossom-haven/week7_activityC" }, 
         ]
       },
       // {
@@ -336,10 +336,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Walking Activity", icon: "", link: "" },
-          { name: "Box Breathing", icon: "", link: "" },
-          { name: "Creating a Nighttime Routine", icon: "", link: "" },
-          { name: "Stretching", icon: "", link: "" },
+          { name: "Walking Activity", icon: "/images/dashboard/StarlightMeadows/water.svg", link: "/activities/starlight-meadows/week1-caregiver-wellness/stress-management-walking" },
+          { name: "Box Breathing", icon: "/images/dashboard/StarlightMeadows/personIcon.svg", link: "/activities/starlight-meadows/week1-caregiver-wellness/stress-management-box-breathing" },
+          { name: "Creating a Nighttime Routine", icon: "/images/dashboard/StarlightMeadows/book.svg", link: "/activities/starlight-meadows/week1-caregiver-wellness/creating-a-nighttime-routine" },
+          { name: "Stretching", icon: "/images/dashboard/StarlightMeadows/yogaMat.svg", link: "/activities/starlight-meadows/week1-caregiver-wellness/stress-management-stretching" },
         ]
       },
       {
@@ -351,10 +351,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Playdough Activity", icon: "", link: "" },
-          { name: "Mess-Free Water Painting", icon: "", link: "" },
-          { name: "Handprint Painting", icon: "", link: "" },
-          { name: "Nature Collage", icon: "", link: "" },
+          { name: "Playdough Activity", icon: "images/dashboard/StarlightMeadows/week2/cream of tartar.svg", link: "/activities/starlight-meadows/week2-creative-arts/playdough-activity" },
+          { name: "Mess-Free Water Painting", icon: "/images/dashboard/StarlightMeadows/week2/paint brush.svg", link: "/activities/starlight-meadows/week2-creative-arts/mess-free-water-painting" },
+          { name: "Handprint Painting", icon: "/images/dashboard/StarlightMeadows/week2/acrylic paint.svg", link: "/activities/starlight-meadows/week2-creative-arts/handprint-painting" },
+          { name: "Nature Collage", icon: "images/dashboard/StarlightMeadows/week2/leaves.svg", link: "/activities/starlight-meadows/week2-creative-arts/nature-collage" },
         ]
       },
       {
@@ -366,10 +366,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Emotions Sensory Bin", icon: "", link: "" },
-          { name: "My Turn, Your Turn", icon: "", link: "" },
-          { name: "Rolling the Ball", icon: "", link: "" },
-          { name: "Get Ready With Me!", icon: "", link: "" },
+          { name: "Emotions Sensory Bin", icon: "/images/dashboard/StarlightMeadows/week3/container.svg", link: "/activities/starlight-meadows/week3-emotional-behavioral-social/emotions-sensory-bin" },
+          { name: "My Turn, Your Turn", icon: "/images/dashboard/StarlightMeadows/week3/childrenstoys.svg", link: "/activities/starlight-meadows/week3-emotional-behavioral-social/my-turn-your-turn" },
+          { name: "Rolling the Ball", icon: "/images/dashboard/StarlightMeadows/week3/ball.svg", link: "/activities/starlight-meadows/week3-emotional-behavioral-social/rolling-the-ball" },
+          { name: "Get Ready With Me!", icon: "images/dashboard/StarlightMeadows/week3/clothesoptions.svg", link: "/activities/starlight-meadows/week3-emotional-behavioral-social/get-ready-with-me" },
         ]
       },
       {
@@ -381,10 +381,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Walking Tour", icon: "", link: "" },
-          { name: "Unloading Groceries", icon: "", link: "" },
-          { name: "The Cow Says \"Moo!\"", icon: "", link: "" },
-          { name: "Blowing Bubbles!", icon: "", link: "" },
+          { name: "Walking Tour", icon: "/images/dashboard/StarlightMeadows/personIcon.svg", link: "/activities/starlight-meadows/week4-language-literacy-speech/walking-tour" },
+          { name: "Unloading Groceries", icon: "/images/dashboard/StarlightMeadows/apple.svg", link: "/activities/starlight-meadows/week4-language-literacy-speech/unloading-groceries" },
+          { name: "The Cow Says \"Moo!\"", icon: "/images/dashboard/StarlightMeadows/week4/animalpictures.svg", link: "/activities/starlight-meadows/week4-language-literacy-speech/the-cow-says-moo" },
+          { name: "Blowing Bubbles!", icon: "", link: "" }, // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
         ]
       },
       {
@@ -396,9 +396,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Sink and Float", icon: "", link: "" },
-          { name: "Colorful Ice Activity", icon: "", link: "" },
-          { name: "Blocks", icon: "", link: "" },
+          { name: "Sink and Float", icon: "/images/dashboard/StarlightMeadows/week5/floatobj.svg", link: "/activities/starlight-meadows/week5-math-and-science/sink-and-float" },
+          { name: "Colorful Ice Activity", icon: "/images/dashboard/StarlightMeadows/week5/icecubetray.svg", link: "/activities/starlight-meadows/week5-math-and-science/colorful-ice-activity" },
+          { name: "Blocks", icon: "images/dashboard/StarlightMeadows/week5/stackable.svg", link: "/activities/starlight-meadows/week5-math-and-science/blocks" },
         ]
       },
       {
