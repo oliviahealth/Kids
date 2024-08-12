@@ -648,10 +648,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Affirmations for 3-4 Year Olds and Their Caregivers", icon: "", link: "" },
-          { name: "The Power of Coloring for Caregivers of 3-4 Year Olds", icon: "", link: "" },
-          { name: "My Gratitude Jars", icon: "", link: "" },
-          { name: "Focusing on Feelings", icon: "", link: "" },
+          { name: "Affirmations for 3-4 Year Olds and Their Caregivers", icon: "/images/dashboard/adventure-bay/Vector.png", link: "/activities/adventure-bay/week1-caregiver-wellness/affirmations-for-children-and-caregivers" },
+          { name: "The Power of Coloring for Caregivers of 3-4 Year Olds", icon: "/images/dashboard/adventure-bay/fluent_pen-20-filled.png", link: "/activities/adventure-bay/week1-caregiver-wellness/the-power-of-coloring-for-caregivers" },
+          { name: "My Gratitude Jars", icon: "/images/dashboard/adventure-bay/marker.png", link: "/activities/adventure-bay/week1-caregiver-wellness/my-gratitude-jars" },
+          { name: "Focusing on Feelings", icon: "/images/dashboard/adventure-bay/mdi_paper.png", link: "/activities/adventure-bay/week1-caregiver-wellness/focusing-on-feelings" },
         ]
       },
       {
@@ -663,10 +663,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Popsicle Stick Puppets", icon: "", link: "" },
-          { name: "DIY Puzzles", icon: "", link: "" },
-          { name: "Handcrafted Picture Frames", icon: "", link: "" },
-          { name: "Tree Painting Activity", icon: "", link: "" },
+          { name: "Popsicle Stick Puppets", icon: "/images/dashboard/adventure-bay/Creative-Arts/popsicle.png", link: "/activities/adventure-bay/week2-creative-arts/popsicle-stick-puppets" },
+          { name: "DIY Puzzles", icon: "/images/dashboard/adventure-bay/Creative-Arts/cardboard.png", link: "/activities/adventure-bay/week2-creative-arts/DIY-puzzles" },
+          { name: "Handcrafted Picture Frames", icon: "/images/dashboard/adventure-bay/Creative-Arts/picture.png", link: "/activities/adventure-bay/week2-creative-arts/handcrafted-picture-frames" },
+          { name: "Tree Painting Activity", icon: "/images/dashboard/adventure-bay/Creative-Arts/template.png", link: "/activities/adventure-bay/week2-creative-arts/tree-painting-activity" },
         ]
       },
       {
@@ -678,10 +678,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Affirmation Friendship Bracelets", icon: "", link: "" },
-          { name: "My Friendship Flower", icon: "", link: "" },
-          { name: "The Friendship Recipe", icon: "", link: "" },
-          { name: "Worry Go Away", icon: "", link: "" },
+          { name: "Affirmation Friendship Bracelets", icon: "/images/dashboard/adventure-bay/week3/string.png", link: "/activities/adventure-bay/week3-emotional-behavioral-social/affirmation-friendship-bracelets" },
+          { name: "My Friendship Flower", icon: "images/dashboard/adventure-bay/week3/template.png", link: "/activities/adventure-bay/week3-emotional-behavioral-social/my-friendship-flower" },
+          { name: "The Friendship Recipe", icon: "", link: "" }, // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
+          { name: "Worry Go Away", icon: "", link: "" }, // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
         ]
       },
       {
@@ -692,8 +692,8 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
-        activities: [
-          { name: "Eric Carle Read-Along & Caterpillar Craft", icon: "", link: "" },
+        activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
+          { name: "Eric Carle Read-Along & Caterpillar Craft", icon: "/images/dashboard/adventure-bay/week4/paper.png", link: "/activities/adventure-bay/week4-language-literacy-speech/eric-carle-read-along-and-caterpillar-craft" }, 
           { name: "Magic Letters", icon: "", link: "" },
           { name: "DIY Alphabet Book", icon: "", link: "" },
           { name: "Shaving Cream Lettering", icon: "", link: "" },
