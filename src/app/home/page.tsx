@@ -797,9 +797,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Progressive Relaxation", icon: "", link: "" },
-          { name: "Healthy Plate Planner", icon: "", link: "" },
-          { name: "Nature Walk", icon: "", link: "" },
+          { name: "Progressive Relaxation", icon: "/images/activities/fantasy-forest/gratitude-jar.svg", link: "/activities/fantasy-forest/week1-caregiver-wellness/progressive-relaxation" },
+          { name: "Healthy Plate Planner", icon: "/images/activities/fantasy-forest/pen.svg", link: "/activities/fantasy-forest/week1-caregiver-wellness/healthy-weekly-meal-planner" },
+          { name: "Nature Walk", icon: "/images/activities/fantasy-forest/paper.svg", link: "activities/fantasy-forest/week1-caregiver-wellness/nature-walk" },
         ]
       },
       {
@@ -811,10 +811,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Rock Painting Activity", icon: "", link: "" },
-          { name: "DIY Puzzle Activity", icon: "", link: "" },
-          { name: "DIY Stress Ball", icon: "", link: "" },
-          { name: "My Rainbow", icon: "", link: "" },
+          { name: "Rock Painting Activity", icon: "/images/dashboard/fantasyForest/week/2/act1/paint_brushes.png", link: "/activities/fantasy-forest/week2-creative-arts/rock-painting" },
+          { name: "DIY Puzzle Activity", icon: "/images/dashboard/fantasyForest/week/2/act2/coloring_pages.png", link: "/activities/fantasy-forest/week2-creative-arts/DIY-puzzle" },
+          { name: "DIY Stress Ball", icon: "/images/dashboard/fantasyForest/week/2/act3/balloon.png", link: "/activities/fantasy-forest/week2-creative-arts/DIY-stress-ball" },
+          { name: "My Rainbow", icon: "/images/dashboard/fantasyForest/week/2/act4/crayons.png", link: "/activities/fantasy-forest/week2-creative-arts/my-rainbow" },
         ]
       },
       {
@@ -826,10 +826,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Emotion Matching", icon: "", link: "" },
-          { name: "The Rainbow Road", icon: "", link: "" },
-          { name: "Cardboard Emotions", icon: "", link: "" },
-          { name: "Worry Pyramid", icon: "", link: "" },
+          { name: "Emotion Matching", icon: "/images/activities/fantasy-forest/activity-sheet.svg", link: "/activities/fantasy-forest/week3-emotional-behavioral-social/emotion-matching" },
+          { name: "The Rainbow Road", icon: "/images/activities/fantasy-forest/dice.svg", link: "/activities/fantasy-forest/week3-emotional-behavioral-social/rainbow-road" },
+          { name: "Cardboard Emotions", icon: "/images/activities/fantasy-forest/toilet-paper.svg", link: "/activities/fantasy-forest/week3-emotional-behavioral-social/cardboard-emotions" },
+          { name: "Worry Pyramid", icon: "/images/activities/fantasy-forest/marker.svg", link: "/activities/fantasy-forest/week3-emotional-behavioral-social/worry-pyramid" },
         ]
       },
       {
@@ -841,10 +841,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "The Friendship Flower", icon: "", link: "" },
-          { name: "I Love Me!", icon: "", link: "" },
-          { name: "Spot Goes to the Swimming Pool", icon: "", link: "" },
-          { name: "Taste Test Challenge", icon: "", link: "" },
+          { name: "The Friendship Flower", icon: "images/activities/fantasy-forest/week4/crayons.svg", link: "/activities/fantasy-forest/week4-language-literacy-speech/the-friendship-flower" },
+          { name: "I Love Me!", icon: "", link: "" }, // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
+          { name: "Spot Goes to the Swimming Pool", icon: "images/activities/fantasy-forest/week4/book.svg", link: "/activities/fantasy-forest/week4-language-literacy-speech/spot-goes-to-the-swimming-pool" },
+          { name: "Taste Test Challenge", icon: "images/activities/fantasy-forest/week4/muffin-tin.svg", link: "/activities/fantasy-forest/week4-language-literacy-speech/taste-test-challenge" },
         ]
       },
       {
@@ -856,9 +856,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Roll The Dice Movement", icon: "", link: "" },
-          { name: "DIY Stress Ball", icon: "", link: "" },
-          { name: "Will it Sink or Float?", icon: "", link: "" },
+          { name: "Roll The Dice Movement", icon: "/images/activities/fantasy-forest/week5/dice.svg", link: "/activities/fantasy-forest/week5-math-and-science/roll-the-dice-movement" },
+          { name: "DIY Stress Ball", icon: "/images/activities/fantasy-forest/week5/balloon.svg", link: "/activities/fantasy-forest/week5-math-and-science/DIY-stress-ball" },
+          { name: "Will it Sink or Float?", icon: "/images/activities/fantasy-forest/week5/householdObjects.svg", link: "/activities/fantasy-forest/week5-math-and-science/will-it-sink-or-float" },
         ]
       },
       {
@@ -870,9 +870,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Healthy Heart Scavenger Hunt", icon: "", link: "" },
-          { name: "Fruit Memory Matching", icon: "", link: "" },
-          { name: "My Plate Coloring Page", icon: "", link: "" },
+          { name: "Healthy Heart Scavenger Hunt", icon: "images/dashboard/fantasyForest/week/6/tree.svg", link: "/activities/fantasy-forest/week6-nutrition/scavenger-hunt" },
+          { name: "Fruit Memory Matching", icon: "/images/dashboard/fantasyForest/week/6/paper.svg", link: "/activities/fantasy-forest/week6-nutrition/fruit-memory-matching" },
+          { name: "My Plate Coloring Page", icon: "/images/dashboard/fantasyForest/week/6/pencil.svg", link: "/activities/fantasy-forest/week6-nutrition/plate-coloring-page" },
         ]
       },
       {
