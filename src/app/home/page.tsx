@@ -337,10 +337,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Walking Activity", icon: "", link: "" },
+          { name: "Box Breathing", icon: "", link: "" },
+          { name: "Creating a Nighttime Routine", icon: "", link: "" },
+          { name: "Stretching", icon: "", link: "" },
         ]
       },
       {
@@ -352,10 +352,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Playdough Activity", icon: "", link: "" },
+          { name: "Mess-Free Water Painting", icon: "", link: "" },
+          { name: "Handprint Painting", icon: "", link: "" },
+          { name: "Nature Collage", icon: "", link: "" },
         ]
       },
       {
@@ -367,10 +367,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Emotions Sensory Bin", icon: "", link: "" },
+          { name: "My Turn, Your Turn", icon: "", link: "" },
+          { name: "Rolling the Ball", icon: "", link: "" },
+          { name: "Get Ready With Me!", icon: "", link: "" },
         ]
       },
       {
@@ -382,10 +382,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Walking Tour", icon: "", link: "" },
+          { name: "Unloading Groceries", icon: "", link: "" },
+          { name: "The Cow Says \"Moo!\"", icon: "", link: "" },
+          { name: "Blowing Bubbles!", icon: "", link: "" },
         ]
       },
       {
@@ -397,10 +397,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Sink and Float", icon: "", link: "" },
+          { name: "Colorful Ice Activity", icon: "", link: "" },
+          { name: "Blocks", icon: "", link: "" },
         ]
       },
       {
@@ -412,10 +411,8 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Grocery Store Adventure!", icon: "", link: "" },
+          { name: "Rainbow Plate!", icon: "", link: "" },
         ]
       },
       {
@@ -427,10 +424,8 @@ const mapMarkers1 = [
         activitiesBorderColor: "#5A6EDD",
         activitiesBackgroundColor: "#C5CEFF",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Crawl Like a Puppy, Hop Like a Bunny!", icon: "", link: "" },
+          { name: "Nature Walk", icon: "", link: "" },
         ]
       },
       // {
@@ -492,10 +487,13 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Journaling for the Caregivers of 2-3 Year Olds", icon: "", link: "" },
+          { name: "Self-Care BINGO", icon: "", link: "" },
+          { name: "Create Your Own Music Playlist", icon: "", link: "" },
+          { name: "Vision Board for Self-Care", icon: "", link: "" },
+          { name: "Mindful Driving", icon: "", link: "" },
+          { name: "Self Care Wheel", icon: "", link: "" },
+          { name: "Cleaning Schedule", icon: "", link: "" },
         ]
       },
       {
@@ -507,10 +505,12 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Foil Painting", icon: "", link: "" },
+          { name: "Nature Collage", icon: "", link: "" },
+          { name: "Salt Dough", icon: "", link: "" },
+          { name: "Toilet Paper Roll Stamps", icon: "", link: "" },
+          { name: "Ice Cube \"Paint\"", icon: "", link: "" },
+          { name: "Create Your Own Paper Plate Sun", icon: "", link: "" },
         ]
       },
       {
@@ -522,10 +522,13 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Create Your Own Stress Ball", icon: "", link: "" },
+          { name: "Sorting With Friends", icon: "", link: "" },
+          { name: "The Sharing Circle", icon: "", link: "" },
+          { name: "Toss With a Friend", icon: "", link: "" },
+          { name: "Creating Coping Skills", icon: "", link: "" },
+          { name: "Match the Faces", icon: "", link: "" },
+          { name: "Stop, Slow, and Go!", icon: "", link: "" },
         ]
       },
       {
@@ -537,10 +540,11 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Just Add a Sticky Note", icon: "", link: "" },
+          { name: "Trace that Letter", icon: "", link: "" },
+          { name: "The Animals on the Farm", icon: "", link: "" },
+          { name: "Name Train", icon: "", link: "" },
+          { name: "Playdough Fun!", icon: "", link: "" },
         ]
       },
       {
@@ -552,10 +556,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Cloud in a Jar", icon: "", link: "" },
+          { name: "Nature Bingo", icon: "", link: "" },
+          { name: "Traveling Water", icon: "", link: "" },
+          { name: "Create Your Own Lava Lamp", icon: "", link: "" },
         ]
       },
       {
@@ -567,10 +571,8 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Sort the Food Groups", icon: "", link: "" },
+          { name: "Funny Food Faces!", icon: "", link: "" },
         ]
       },
       {
@@ -582,10 +584,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Exercise BINGO", icon: "", link: "" },
+          { name: "Scavenger Hunt", icon: "", link: "" },
+          { name: "Freeze Dance", icon: "", link: "" },
+          { name: "Simon Says", icon: "", link: "" },
         ]
       },
       // {
@@ -647,10 +649,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Affirmations for 3-4 Year Olds and Their Caregivers", icon: "", link: "" },
+          { name: "The Power of Coloring for Caregivers of 3-4 Year Olds", icon: "", link: "" },
+          { name: "My Gratitude Jars", icon: "", link: "" },
+          { name: "Focusing on Feelings", icon: "", link: "" },
         ]
       },
       {
@@ -662,10 +664,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Popsicle Stick Puppets", icon: "", link: "" },
+          { name: "DIY Puzzles", icon: "", link: "" },
+          { name: "Handcrafted Picture Frames", icon: "", link: "" },
+          { name: "Tree Painting Activity", icon: "", link: "" },
         ]
       },
       {
@@ -677,10 +679,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Affirmation Friendship Bracelets", icon: "", link: "" },
+          { name: "My Friendship Flower", icon: "", link: "" },
+          { name: "The Friendship Recipe", icon: "", link: "" },
+          { name: "Worry Go Away", icon: "", link: "" },
         ]
       },
       {
@@ -692,10 +694,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Eric Carle Read-Along & Caterpillar Craft", icon: "", link: "" },
+          { name: "Magic Letters", icon: "", link: "" },
+          { name: "DIY Alphabet Book", icon: "", link: "" },
+          { name: "Shaving Cream Lettering", icon: "", link: "" },
         ]
       },
       {
@@ -707,10 +709,8 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "The Water Cycle", icon: "", link: "" },
+          { name: "Fruit and Vegetable Scavenger Hunt", icon: "", link: "" },
         ]
       },
       {
@@ -722,10 +722,8 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "A Rainbow of Flavors", icon: "", link: "" },
+          { name: "My Happy Healthy Plate", icon: "", link: "" },
         ]
       },
       {
@@ -737,10 +735,8 @@ const mapMarkers1 = [
         activitiesBorderColor: "#52C5C0",
         activitiesBackgroundColor: "#C5FFFC",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Superhero Power Pose & More", icon: "", link: "" },
+          { name: "Yoga Pose Exploration", icon: "", link: "" },
         ]
       },
       // {
@@ -802,10 +798,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Progressive Relaxation", icon: "", link: "" },
+          { name: "Healthy Plate Planner", icon: "", link: "" },
+          { name: "Nature Walk", icon: "", link: "" },
         ]
       },
       {
@@ -817,10 +812,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Rock Painting Activity", icon: "", link: "" },
+          { name: "DIY Puzzle Activity", icon: "", link: "" },
+          { name: "DIY Stress Ball", icon: "", link: "" },
+          { name: "My Rainbow", icon: "", link: "" },
         ]
       },
       {
@@ -832,10 +827,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Emotion Matching", icon: "", link: "" },
+          { name: "The Rainbow Road", icon: "", link: "" },
+          { name: "Cardboard Emotions", icon: "", link: "" },
+          { name: "Worry Pyramid", icon: "", link: "" },
         ]
       },
       {
@@ -847,10 +842,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "The Friendship Flower", icon: "", link: "" },
+          { name: "I Love Me!", icon: "", link: "" },
+          { name: "Spot Goes to the Swimming Pool", icon: "", link: "" },
+          { name: "Taste Test Challenge", icon: "", link: "" },
         ]
       },
       {
@@ -862,10 +857,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Roll The Dice Movement", icon: "", link: "" },
+          { name: "DIY Stress Ball", icon: "", link: "" },
+          { name: "Will it Sink or Float?", icon: "", link: "" },
         ]
       },
       {
@@ -877,10 +871,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Healthy Heart Scavenger Hunt", icon: "", link: "" },
+          { name: "Fruit Memory Matching", icon: "", link: "" },
+          { name: "My Plate Coloring Page", icon: "", link: "" },
         ]
       },
       {
@@ -892,10 +885,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#35A663",
         activitiesBackgroundColor: "#B5F6D0",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Move Like an Animal", icon: "", link: "" },
+          { name: "Family Dance Party!", icon: "", link: "" },
+          { name: "Tooth Fairy Balance", icon: "", link: "" },
         ]
       },
       // {
