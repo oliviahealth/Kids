@@ -335,7 +335,7 @@ const mapMarkers1 = [
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#5A6EDD",
-        activitiesBackgroundColor: "#FFFDE7",
+        activitiesBackgroundColor: "#C5CEFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -350,7 +350,7 @@ const mapMarkers1 = [
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#5A6EDD",
-        activitiesBackgroundColor: "#FFFDE7",
+        activitiesBackgroundColor: "#C5CEFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -365,7 +365,7 @@ const mapMarkers1 = [
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#5A6EDD",
-        activitiesBackgroundColor: "#FFFDE7",
+        activitiesBackgroundColor: "#C5CEFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -380,7 +380,7 @@ const mapMarkers1 = [
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#5A6EDD",
-        activitiesBackgroundColor: "#FFFDE7",
+        activitiesBackgroundColor: "#C5CEFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -395,7 +395,7 @@ const mapMarkers1 = [
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#5A6EDD",
-        activitiesBackgroundColor: "#FFFDE7",
+        activitiesBackgroundColor: "#C5CEFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -410,7 +410,7 @@ const mapMarkers1 = [
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#5A6EDD",
-        activitiesBackgroundColor: "#FFFDE7",
+        activitiesBackgroundColor: "#C5CEFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -425,7 +425,7 @@ const mapMarkers1 = [
         backgroundColor: "#5A6EDD",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#5A6EDD",
-        activitiesBackgroundColor: "#FFFDE7",
+        activitiesBackgroundColor: "#C5CEFF",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -490,7 +490,7 @@ const mapMarkers1 = [
         backgroundColor: "#FF5B5B",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#FF5B5B",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#FFD0D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -504,8 +504,8 @@ const mapMarkers1 = [
         y: 36,
         backgroundColor: "#FF9255",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#FF9255",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#FF5B5B",
+        activitiesBackgroundColor: "#FFD0D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -519,8 +519,8 @@ const mapMarkers1 = [
         y: 47,
         backgroundColor: "#FBFF44",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#FBFF44",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#FF5B5B",
+        activitiesBackgroundColor: "#FFD0D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -534,8 +534,8 @@ const mapMarkers1 = [
         y: 71,
         backgroundColor: "#46FF58",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#46FF58",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#FF5B5B",
+        activitiesBackgroundColor: "#FFD0D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -549,8 +549,8 @@ const mapMarkers1 = [
         y: 71,
         backgroundColor: "#57F5FF",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#57F5FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#FF5B5B",
+        activitiesBackgroundColor: "#FFD0D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -564,8 +564,8 @@ const mapMarkers1 = [
         y: 55,
         backgroundColor: "#3858FF",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#3858FF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#FF5B5B",
+        activitiesBackgroundColor: "#FFD0D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -579,8 +579,8 @@ const mapMarkers1 = [
         y: 62,
         backgroundColor: "#B93CFF",
         borderColor: "#FFFFFF",
-        activitiesBorderColor: "#B93CFF",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBorderColor: "#FF5B5B",
+        activitiesBackgroundColor: "#FFD0D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -645,7 +645,7 @@ const mapMarkers1 = [
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#52C5C0",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#C5FFFC",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -660,7 +660,7 @@ const mapMarkers1 = [
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#52C5C0",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#C5FFFC",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -675,7 +675,7 @@ const mapMarkers1 = [
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#52C5C0",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#C5FFFC",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -690,7 +690,7 @@ const mapMarkers1 = [
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#52C5C0",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#C5FFFC",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -705,7 +705,7 @@ const mapMarkers1 = [
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#52C5C0",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#C5FFFC",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -720,7 +720,7 @@ const mapMarkers1 = [
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#52C5C0",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#C5FFFC",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -735,7 +735,7 @@ const mapMarkers1 = [
         backgroundColor: "#52C5C0",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#52C5C0",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#C5FFFC",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -800,7 +800,7 @@ const mapMarkers1 = [
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#35A663",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#B5F6D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -815,7 +815,7 @@ const mapMarkers1 = [
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#35A663",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#B5F6D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -830,7 +830,7 @@ const mapMarkers1 = [
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#35A663",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#B5F6D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -845,7 +845,7 @@ const mapMarkers1 = [
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#35A663",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#B5F6D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -860,7 +860,7 @@ const mapMarkers1 = [
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#35A663",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#B5F6D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -875,7 +875,7 @@ const mapMarkers1 = [
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#35A663",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#B5F6D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
@@ -890,7 +890,7 @@ const mapMarkers1 = [
         backgroundColor: "#35A663",
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#35A663",
-        activitiesBackgroundColor: "#FEEDFF",
+        activitiesBackgroundColor: "#B5F6D0",
         activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
