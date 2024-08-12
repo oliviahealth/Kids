@@ -45,7 +45,7 @@ const [isChecked, setIsChecked] = useState<CheckboxState>({
     <>
       <Header
         logoSrc={logo}
-        title="Week 7 Activity B"
+        title="Happy Tummy Workout"
         subtitle="Physical Activity - Blossom Haven"
         homeLink="/home"
         subtitleColor="#F1A533"

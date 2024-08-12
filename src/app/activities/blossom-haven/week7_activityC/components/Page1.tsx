@@ -41,7 +41,7 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Week 7 Activity C"
+        title="Baby Boot Camp"
         subtitle="Physical Activity - Blossom Haven"
         homeLink="/home"
         subtitleColor="#F1A533"

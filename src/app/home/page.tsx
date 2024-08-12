@@ -34,7 +34,6 @@ const mapMarkers1 = [
     markers: [
       {
         id: "1",
-        // Add names here for each point - Ex: Caregiver Wellness
         x: 24,
         y: 16,
         backgroundColor: "#F797FF",
@@ -42,9 +41,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Relaxation Yoga", icon: "", link: "" }, // put a required item from the activity
-          { name: "Building My Pregnancy Support System", icon: "", link: "" },
-          { name: "Baby Growth Journal", icon: "", link: "" },
+          { name: "Relaxation Yoga", icon: "/images/dashboard/pregnancy/yoga-mat.svg", link: "/activities/parental-paradise/week1-caregiver-wellness/relaxation-yoga" },
+          { name: "Building My Pregnancy Support System", icon: "/images/dashboard/pregnancy/paper.svg", link: "/activities/parental-paradise/week1-caregiver-wellness/pregnancy-support-system" },
+          { name: "Baby Growth Journal", icon: "/images/dashboard/pregnancy/journal.svg", link: "/activities/parental-paradise/week1-caregiver-wellness/baby-growth-journal" },
         ]
       },
       {
@@ -56,10 +55,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Homemade Growth Chart", icon: "", link: "" },
-          { name: "Memory Box", icon: "", link: "" },
-          { name: "Maternity Photoshoot", icon: "", link: "" },
-          { name: "My Baby's Name Sign", icon: "", link: "" },
+          { name: "Homemade Growth Chart", icon: "/images/dashboard/pregnancy/plank.svg", link: "/activities/parental-paradise/week2-creative-arts/homemade-growth-chart" },
+          { name: "Memory Box", icon: "/images/dashboard/pregnancy/box.svg", link: "/activities/parental-paradise/week2-creative-arts/memory-box" },
+          { name: "Maternity Photoshoot", icon: "/images/dashboard/pregnancy/camera.svg", link: "/activities/parental-paradise/week2-creative-arts/maternity-photoshoot" },
+          { name: "My Baby's Name Sign", icon: "/images/dashboard/pregnancy/board.svg", link: "/activities/parental-paradise/week2-creative-arts/my-babys-name-sign" },
         ]
       },
       {
@@ -70,7 +69,7 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
-        activities: [
+        activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Breathing Techniques For Pregnant Women", icon: "", link: "" },
           { name: "Birth Affirmations", icon: "", link: "" },
           { name: "Reaching Out to Available Resources", icon: "", link: "" },
@@ -85,9 +84,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Narrating Your Daily Activities", icon: "", link: "" },
-          { name: "Reading Routine", icon: "", link: "" },
-          { name: "Books for your Baby!", icon: "", link: "" },
+          { name: "Narrating Your Daily Activities", icon: "/images/dashboard/pregnancy/journal.svg", link: "/activities/parental-paradise/week4-language-literacy-speech/narrating-daily-activities" },
+          { name: "Reading Routine", icon: "/images/dashboard/pregnancy/paper.svg", link: "/activities/parental-paradise/week4-language-literacy-speech/daily-reading-routine" },
+          { name: "Books for your Baby!", icon: "/images/dashboard/pregnancy/journal.svg", link: "/activities/parental-paradise/week4-language-literacy-speech/books-for-your-baby" },
         ]
       },
       {
@@ -98,7 +97,7 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
-        activities: [
+        activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Your Baby's Size in Everyday Objects", icon: "", link: "" },
           { name: "Financial Planning for Baby's First Year", icon: "", link: "" },
         ]
@@ -111,8 +110,8 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
-        activities: [
-          { name: "Weekly Meal Tracker", icon: "", link: "" },
+        activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
+          { name: "Weekly Meal Tracker", icon: "", link: "" }, 
           { name: "Trying New Recipes", icon: "", link: "" },
         ]
       },
@@ -124,7 +123,7 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
-        activities: [
+        activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Safe and Effective Strength Training for Expectant Mothers", icon: "", link: "" },
           { name: "Walking With Your Baby", icon: "", link: "" },
           { name: "Lets Go Swimming!", icon: "", link: "" },
@@ -189,9 +188,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F1A533",
         activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Meditation for Caregiver(s) of 0-1 Year Old(s)", icon: "", link: "" },
-          { name: "Walking Nature Journal", icon: "", link: "" },
-          { name: "At-Home Exercises", icon: "", link: "" },
+          { name: "Meditation for Caregiver(s) of 0-1 Year Old(s)", icon: "/images/gymclothes.svg", link: "/activities/blossom-haven/week1-caregiver-wellness/meditation" },
+          { name: "Walking Nature Journal", icon: "/images/journal.svg", link: "/activities/blossom-haven/week1-caregiver-wellness/walking-nature-journal" },
+          { name: "At-Home Exercises", icon: "/images/activities/blossom-haven/yogamat.svg", link: "/activities/blossom-haven/week1-caregiver-wellness/at-home-exercises" },
         ]
       },
       {
@@ -203,9 +202,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F1A533",
         activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Colored Ice Cube Melting Activity", icon: "", link: "" },
-          { name: "Your Very Own Sensory Bottle", icon: "", link: "" },
-          { name: "Baby's First Art Piece: A Safe Painting Activity", icon: "", link: "" },
+          { name: "Colored Ice Cube Melting Activity", icon: "/images/activities/blossom-haven/ice-cube-tray.svg", link: "/activities/blossom-haven/week2-creative-arts/colored-ice-cube-melting-activity" },
+          { name: "Your Very Own Sensory Bottle", icon: "/images/activities/blossom-haven/water-bottle.svg", link: "/activities/blossom-haven/week2-creative-arts/your-very-own-sensory-bottle" },
+          { name: "Baby's First Art Piece: A Safe Painting Activity", icon: "/images/activities/blossom-haven/canvas.svg", link: "/activities/blossom-haven/week2-creative-arts/babys-first-art-piece" },
         ]
       },
       {
@@ -217,9 +216,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F1A533",
         activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Baby's Magic Mirror", icon: "", link: "" },
-          { name: "Baby's Puppet Playtime", icon: "", link: "" },
-          { name: "Baby's Day Out", icon: "", link: "" },
+          { name: "Baby's Magic Mirror", icon: "/images/dashboard/blossomHaven/week/3/act1/camera_lens.png", link: "/activities/blossom-haven/week3-emotional-behavioral-social/babys-magic-mirror" },
+          { name: "Baby's Puppet Playtime", icon: "images/dashboard/blossomHaven/week/3/act2/buttons.png", link: "/activities/blossom-haven/week3-emotional-behavioral-social/babys-puppet-playtime" },
+          { name: "Baby's Day Out", icon: "/images/dashboard/blossomHaven/week/3/act3/child_stroller.png", link: "/activities/blossom-haven/week3-emotional-behavioral-social/babys-day-out" },
         ]
       },
       {
@@ -230,7 +229,7 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#F1A533",
         activitiesBackgroundColor: "#E8F5E9",
-        activities: [
+        activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Extended Family Story Time", icon: "", link: "" },
           { name: "Little Emotional Explorer!", icon: "", link: "" },
           { name: "Animal Safari: Baby's Animal Adventure!", icon: "", link: "" },
@@ -245,9 +244,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F1A533",
         activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Baby's Shape Play Mat", icon: "", link: "" },
-          { name: "Bubble Pop Party!", icon: "", link: "" },
-          { name: "Colorful Oil and Water Science Bag", icon: "", link: "" },
+          { name: "Baby's Shape Play Mat", icon: "/images/activities/blossom-haven/week5/household-items.svg", link: "/activities/blossom-haven/week5-math-and-science/babys-shape-play-mat" },
+          { name: "Bubble Pop Party!", icon: "/images/activities/blossom-haven/week5/bubbles.svg", link: "/activities/blossom-haven/week5-math-and-science/bubble-pop-party" },
+          { name: "Colorful Oil and Water Science Bag", icon: "/images/activities/blossom-haven/week5/oil.svg", link: "/activities/blossom-haven/week5-math-and-science/colorful-oil-and-water-science-bag" },
         ]
       },
       {
@@ -259,9 +258,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F1A533",
         activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Breastfeeding Relief Stretches for Caregiver", icon: "", link: "" },
-          { name: "Baby's Yummy Snack Necklace", icon: "", link: "" },
-          { name: "The Many Textures of Foods", icon: "", link: "" },
+          { name: "Breastfeeding Relief Stretches for Caregiver", icon: "/images/dashboard/blossomHaven/pillow.svg", link: "/activities/blossom-haven/week6-nutrition/breastfeeding-relief-tips" },
+          { name: "Baby's Yummy Snack Necklace", icon: "/images/dashboard/blossomHaven/string.svg", link: "/activities/blossom-haven/week6-nutrition/baby-yummy-snack-necklace" },
+          { name: "The Many Textures of Foods", icon: "/images/dashboard/blossomHaven/snacks.svg", link: "/activities/blossom-haven/week6-nutrition/many-textures-of-foods" },
         ]
       },
       {
@@ -273,9 +272,9 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F1A533",
         activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Baby's Obstacle Course", icon: "", link: "" },
-          { name: "Happy Tummy Workout", icon: "", link: "" },
-          { name: "Baby Boot Camp", icon: "", link: "" },
+          { name: "Baby's Obstacle Course", icon: "/images/activities/blossom-haven/week7/playMat.svg", link: "/activities/blossom-haven/week7_activityA" },
+          { name: "Happy Tummy Workout", icon: "/images/activities/blossom-haven/week7/secondPlayMat.svg", link: "/activities/blossom-haven/week7_activityB" },
+          { name: "Baby Boot Camp", icon: "images/activities/blossom-haven/week5/camera.svg", link: "/activities/blossom-haven/week7_activityC" },
         ]
       },
       // {
