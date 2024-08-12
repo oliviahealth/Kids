@@ -235,6 +235,33 @@ const mapMarkers: MapMarkers[] = [
         borderColor: "#FF8C00",
         name: "Your Very Own Sensory Bottle",
       },
+      {
+        id: "12",
+        x: 95,
+        y: 15,
+        link: "http://localhost:3000/activities/blossom-haven/week7_activityA",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Week 7 Activity A",
+      },
+      {
+        id: "13",
+        x: 75,
+        y: 15,
+        link: "/http://localhost:3000/activities/blossom-haven/week7_activityB",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Week 7 Activity B",
+      },
+      {
+        id: "14",
+        x: 58,
+        y: 15,
+        link: "http://localhost:3000/activities/blossom-haven/week7_activityC",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Week 7 Activity C",
+      }
     ],
   },
   {
