@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Candal&family=Inter:wght@100..900&display=swap');@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Inter:wght@100..900&display=swap');
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -97,281 +98,12 @@
     transform: scale(1.1);
   }
 
-  .pregnancy-button {
-    @apply bg-[#E0E0E0] relative px-4;
-  }
 
-  .pregnancy-button::before {
-    content: "Pregnancy";
-    padding: 0 10px;
-    color: #B8B8B8;
-    /* Set the content color */
-  }
 
-  .pregnancy-button:hover {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
 
-  .pregnancy-button:hover::before {
-    content: "Parental\A Paradise";
-    white-space: pre;
-    line-height: 1.2;
-    padding: 0 10px;
-    color: white;
-  }
 
-  .pregnancy-button:hover::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    /* Adjust as needed */
-    width: 25px;
-    /* Slightly larger circle */
-    height: 25px;
-    /* Slightly larger circle */
-    background-color: #E07FE9;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 
-  .hover-bg-pregnancy {
-    @apply transition-colors duration-300 ease-in-out hover:bg-[#F797FF];
-  }
 
-  /* Ages 0-1 navbar button effects*/
-  .age-one-button {
-    @apply bg-[#E0E0E0] relative px-4;
-  }
-
-  .age-one-button::before {
-    content: "Ages 0-1";
-    padding: 0 10px;
-    color: #B8B8B8;
-  }
-
-  .age-one-button:hover {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .age-one-button:hover::before {
-    content: "Blossom\A Haven";
-    white-space: pre;
-    line-height: 1.2;
-    padding: 0 10px;
-    color: white;
-  }
-
-  .age-one-button:hover::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    /* Adjust as needed */
-    width: 25px;
-    /* Slightly larger circle */
-    height: 25px;
-    /* Slightly larger circle */
-    background-color: #F1A533;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .hover-bg-age-one {
-    @apply transition-colors duration-300 ease-in-out hover:bg-[#FFB545];
-  }
-
-  /* Ages 1-2 navbar button effects*/
-  .age-two-button {
-    @apply bg-[#E0E0E0] relative px-4;
-  }
-
-  .age-two-button::before {
-    content: "Ages 1-2";
-    padding: 0 10px;
-    color: #B8B8B8;
-  }
-
-  .age-two-button:hover {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .age-two-button:hover::before {
-    content: "Starlight\A Meadows";
-    white-space: pre;
-    line-height: 1.2;
-    padding: 0 10px;
-    color: white;
-  }
-
-  .age-two-button:hover::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    /* Adjust as needed */
-    width: 25px;
-    /* Slightly larger circle */
-    height: 25px;
-    /* Slightly larger circle */
-    background-color: #5A6EDD;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .hover-bg-age-two {
-    @apply transition-colors duration-300 ease-in-out hover:bg-[#7288FF];
-  }
-
-  /* Ages 3-4 navbar button effects*/
-  .age-three-button {
-    @apply bg-[#E0E0E0] relative px-4;
-  }
-
-  .age-three-button::before {
-    content: "Ages 2-3";
-    padding: 0 10px;
-    color: #B8B8B8;
-  }
-
-  .age-three-button:hover {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .age-three-button:hover::before {
-    content: "Rainbow\A Valley";
-    white-space: pre;
-    line-height: 1.2;
-    padding: 0 10px;
-    color: white;
-  }
-
-  .age-three-button:hover::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    /* Adjust as needed */
-    width: 25px;
-    /* Slightly larger circle */
-    height: 25px;
-    /* Slightly larger circle */
-    background-color: #E75858;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .hover-bg-age-three {
-    @apply transition-colors duration-300 ease-in-out hover:bg-[#FF7272];
-  }
-
-  /* Ages 4-5 navbar button effects*/
-  .age-four-button {
-    @apply bg-[#E0E0E0] relative px-4;
-  }
-
-  .age-four-button::before {
-    content: "Ages 3-4";
-    padding: 0 10px;
-    color: #B8B8B8;
-  }
-
-  .age-four-button:hover {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .age-four-button:hover::before {
-    content: "Adventure\A Bay";
-    white-space: pre;
-    line-height: 1.2;
-    padding: 0 10px;
-    color: white;
-  }
-
-  .age-four-button:hover::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    /* Adjust as needed */
-    width: 25px;
-    /* Slightly larger circle */
-    height: 25px;
-    /* Slightly larger circle */
-    background-color: #6EE0DB;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .hover-bg-age-four {
-    @apply transition-colors duration-300 ease-in-out hover:bg-[#9AECE8];
-  }
-
-  /* Ages 5-6 navbar button effects*/
-
-  .age-five-button {
-    @apply bg-[#E0E0E0] relative px-4;
-  }
-
-  .age-five-button::before {
-    content: "Ages 5-6";
-    padding: 0 10px;
-    color: #B8B8B8;
-  }
-
-  .age-five-button:hover {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .age-five-button:hover::before {
-    content: "Fantasy\A Forest";
-    white-space: pre;
-    line-height: 1.2;
-    padding: 0 10px;
-    color: white;
-  }
-
-  .age-five-button:hover::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    /* Adjust as needed */
-    width: 25px;
-    /* Slightly larger circle */
-    height: 25px;
-    /* Slightly larger circle */
-    background-color: #5BE995;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .hover-bg-age-five {
-    @apply transition-colors duration-300 ease-in-out hover:bg-[#97EAB9];
-  }
-
-  .nav-text-container {
-    padding-left: 1rem;
-    text-align: center;
-  }
 
   .main-title {
     font-size: 2rem;
@@ -389,26 +121,7 @@
     /* Lighter red color */
   }
 
-  .meditation-activity-one-bg {
-    background-color: #FF8C38;
-  }
 
-
-  .meditation-activity-two-bg {
-    background-color: #FFED4D;
-  }
-
-  .meditation-activity-three-bg {
-    background-color: #61C5FE;
-  }
-
-  .meditation-activity-four-bg {
-    background-color: #FEEE61;
-  }
-
-  .meditation-activity-five-bg {
-    background-color: #FFA43A;
-  }
 
 
   .eye {
@@ -417,6 +130,20 @@
     background-color: black;
     border-radius: 50%;
   }
+
+  .dropdown {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .dropdown-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
 
 
 }

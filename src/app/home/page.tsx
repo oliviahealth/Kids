@@ -278,52 +278,71 @@ const mapMarkers1 = [
           { name: "Baby Boot Camp", icon: "", link: "" },
         ]
       },
-      // {
-      //   id: "8",
-      //   x: 72,
-      //   y: 57,
-      //   backgroundColor: "#F1A533",
-      //   borderColor: "#FFFFFF",
-      //   activitiesBorderColor: "#F1A533",
-      //   activitiesBackgroundColor: "#E8F5E9",
-      //   activities: [
-      //     { name: "Activity 1", icon: "", link: "" },
-      //     { name: "Activity 2", icon: "", link: "" },
-      //     { name: "Activity 3", icon: "", link: "" },
-      //     { name: "Activity 4", icon: "", link: "" },
-      //   ]
-      // },
-      // {
-      //   id: "9",
-      //   x: 80,
-      //   y: 45,
-      //   backgroundColor: "#F1A533",
-      //   borderColor: "#FFFFFF",
-      //   activitiesBorderColor: "#F1A533",
-      //   activitiesBackgroundColor: "#E8F5E9",
-      //   activities: [
-      //     { name: "Activity 1", icon: "", link: "" },
-      //     { name: "Activity 2", icon: "", link: "" },
-      //     { name: "Activity 3", icon: "", link: "" },
-      //     { name: "Activity 4", icon: "", link: "" },
-      //   ]
-      // },
-      // {
-      //   id: "10",
-      //   x: 75,
-      //   y: 25,
-      //   backgroundColor: "#F1A533",
-      //   borderColor: "#FFFFFF",
-      //   activitiesBorderColor: "#F1A533",
-      //   activitiesBackgroundColor: "#E8F5E9",
-      //   activities: [
-      //     { name: "Activity 1", icon: "", link: "" },
-      //     { name: "Activity 2", icon: "", link: "" },
-      //     { name: "Activity 3", icon: "", link: "" },
-      //     { name: "Activity 4", icon: "", link: "" },
-      //   ]
-      // }
-    ]
+
+      {
+        id: "8",
+        x: 60,
+        y: 65,
+        link: "/activities/blossom-haven/colorful-oil-and-water-science-bag",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Colorful Oil and Water Science Bag",
+      },
+      {
+        id: "9",
+        x: 70,
+        y: 75,
+        link: "/activities/blossom-haven/babys-first-art-piece",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Baby's First Art Piece: A Safe Painting Activity",
+      },
+      {
+        id: "10",
+        x: 80,
+        y: 55,
+        link: "/activities/blossom-haven/colored-ice-cube-melting-activity",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Colored Ice Cube Melting Activity",
+      },
+      {
+        id: "11",
+        x: 90,
+        y: 65,
+        link: "/activities/blossom-haven/your-very-own-sensory-bottle",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Your Very Own Sensory Bottle",
+      },
+      {
+        id: "12",
+        x: 95,
+        y: 15,
+        link: "http://localhost:3000/activities/blossom-haven/week7_activityA",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Week 7 Activity A",
+      },
+      {
+        id: "13",
+        x: 75,
+        y: 15,
+        link: "/http://localhost:3000/activities/blossom-haven/week7_activityB",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Week 7 Activity B",
+      },
+      {
+        id: "14",
+        x: 58,
+        y: 15,
+        link: "http://localhost:3000/activities/blossom-haven/week7_activityC",
+        backgroundColor: "#FFA500",
+        borderColor: "#FF8C00",
+        name: "Week 7 Activity C",
+      }
+    ],
   },
   {
     name: "Starlight Meadows",
@@ -971,19 +990,18 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="w-full h-screen flex flex-col">
-      <div className="w-full">
-        <HomeNav onMapChange={handleMapChange} />
-      </div>
-      <div className="flex flex-grow h-full overflow-hidden">
-        <SideNav />
-        <div ref={containerRef} className="flex flex-col flex-grow">
-          <div className="flex-grow relative">
+      <div className="relative flex-grow">
+        <div ref={containerRef} className="flex flex-col h-full">
+          <div className="relative flex-grow">
             <Map
               image={map}
               markers={markers}
               height={containerDimensions.height}
               width={containerDimensions.width}
             />
+            <div className="absolute top-0 right-0 mt-4 mr-4 z-20">
+              <HomeNav onMapChange={handleMapChange} />
+            </div>
           </div>
         </div>
       </div>
