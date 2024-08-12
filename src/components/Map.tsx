@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
+interface Activity {
+  name: string;
+  icon: string;
+  link: string;
+}
+
 interface Marker {
+  name: string;
   id: string;
+
   x: number;
   y: number;
-  link: string;
+
   backgroundColor: string;
   borderColor: string;
-  name: string;
+
+  activitiesBackgroundColor: string;
+  activitiesBorderColor: string;
+
+  activities: Activity[];
 }
 
 interface MapProps {
@@ -19,6 +31,16 @@ interface MapProps {
 }
 
 const Map: React.FC<MapProps> = ({ image, markers, height, width }) => {
+  const [selectedMarker, setSelectedMarker] = useState<Marker | null>(null);
+
+  const handleMarkerClick = (marker: Marker) => {
+    setSelectedMarker(marker);
+  };
+
+  const closeActivityFrame = () => {
+    setSelectedMarker(null);
+  };
+
   return (
     <div style={{ position: 'relative', width, height }}>
       <TransformWrapper>
@@ -70,9 +92,7 @@ const Map: React.FC<MapProps> = ({ image, markers, height, width }) => {
                   cursor: "pointer",
                   zIndex: 1,
                 }}
-                onClick={() => {
-                  window.location.href = marker.link;
-                }}
+                onClick={() => handleMarkerClick(marker)}
               >
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold">{marker.id}</span>
@@ -83,6 +103,28 @@ const Map: React.FC<MapProps> = ({ image, markers, height, width }) => {
           </div>
         </TransformComponent>
       </TransformWrapper>
+
+      {selectedMarker && (
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white rounded-2xl p-16 w-full m-32 ">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">Select Your Activity</h2>
+              <button onClick={closeActivityFrame} className="text-gray-500 hover:text-gray-700">
+                X
+              </button>
+            </div>
+            <p className="text-lg text-gray-600 mb-16">Earn stars upon completion!</p>
+            <div className="grid grid-cols-4 gap-4">
+              {selectedMarker.activities.map((activity, index) => (
+                <a key={index} href={activity.link} style={{ backgroundColor: selectedMarker.activitiesBackgroundColor, borderColor: selectedMarker.activitiesBorderColor }} className="border-4 rounded-2xl flex flex-col items-center justify-center gap-16">
+                  <span className="text-xl font-medium text-center mt-4 mb-16">{activity.name}</span>
+                  <img src={activity.icon} alt={activity.name} className="w-32 h-32 mb-16" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
