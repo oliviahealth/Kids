@@ -486,13 +486,13 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Journaling for the Caregivers of 2-3 Year Olds", icon: "", link: "" },
-          { name: "Self-Care BINGO", icon: "", link: "" },
-          { name: "Create Your Own Music Playlist", icon: "", link: "" },
-          { name: "Vision Board for Self-Care", icon: "", link: "" },
-          { name: "Mindful Driving", icon: "", link: "" },
-          { name: "Self Care Wheel", icon: "", link: "" },
-          { name: "Cleaning Schedule", icon: "", link: "" },
+          { name: "Journaling for the Caregivers of 2-3 Year Olds", icon: "/images/dashboard/rainbowValley/week/1/act2/act2_image3.png", link: "/activities/rainbow-valley/week1-caregiver-wellness/journaling" },
+          { name: "Self-Care BINGO", icon: "/images/dashboard/rainbowValley/week/1/act7/act7_image2.png", link: "/activities/rainbow-valley/week1-caregiver-wellness/self-care-bingo" },
+          { name: "Create Your Own Music Playlist", icon: "/images/dashboard/rainbowValley/week/1/act1/act1_image1.png", link: "/activities/rainbow-valley/week1-caregiver-wellness/create-your-own-music-playlist" },
+          { name: "Vision Board for Self-Care", icon: "/images/dashboard/rainbowValley/week/1/act3/act3_image1.png", link: "/activities/rainbow-valley/week1-caregiver-wellness/vision-board-for-self-care" },
+          { name: "Mindful Driving", icon: "/images/dashboard/rainbowValley/week/1/act4/act4_image1.png", link: "/activities/rainbow-valley/week1-caregiver-wellness/mindful-driving" },
+          { name: "Self Care Wheel", icon: "/images/dashboard/rainbowValley/week/1/act5/act5_image3.png", link: "/activities/rainbow-valley/week1-caregiver-wellness/self-care-wheel" },
+          { name: "Cleaning Schedule", icon: "/images/dashboard/rainbowValley/week/1/act6/act6_image2.png", link: "/activities/rainbow-valley/week1-caregiver-wellness/cleaning-schedule" },
         ]
       },
       {
@@ -504,12 +504,12 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Foil Painting", icon: "", link: "" },
-          { name: "Nature Collage", icon: "", link: "" },
-          { name: "Salt Dough", icon: "", link: "" },
-          { name: "Toilet Paper Roll Stamps", icon: "", link: "" },
-          { name: "Ice Cube \"Paint\"", icon: "", link: "" },
-          { name: "Create Your Own Paper Plate Sun", icon: "", link: "" },
+          { name: "Foil Painting", icon: "/images/dashboard/rainbowValley/week/2/act1/paint.png", link: "/activities/rainbow-valley/week2-creative-arts/foil-painting" },
+          { name: "Nature Collage", icon: "/images/dashboard/rainbowValley/week/2/act2/collected_items.png", link: "/activities/rainbow-valley/week2-creative-arts/nature-collage" },
+          { name: "Salt Dough", icon: "images/dashboard/rainbowValley/week/2/act3/salt.png", link: "/activities/rainbow-valley/week2-creative-arts/salt-dough" },
+          { name: "Toilet Paper Roll Stamps", icon: "/images/dashboard/rainbowValley/week/2/act4/toilet_paper.png", link: "/activities/rainbow-valley/week2-creative-arts/toilet-paper-roll-stamps" },
+          { name: "Ice Cube \"Paint\"", icon: "/images/dashboard/rainbowValley/week/2/act5/ice_cube_tray.png", link: "/activities/rainbow-valley/week2-creative-arts/ice-cube-paint" },
+          { name: "Create Your Own Paper Plate Sun", icon: "/images/dashboard/rainbowValley/week/2/act6/scissors.png", link: "/activities/rainbow-valley/week2-creative-arts/create-your-own-paper-plate-sun" },
         ]
       },
       {
@@ -521,13 +521,13 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Create Your Own Stress Ball", icon: "", link: "" },
-          { name: "Sorting With Friends", icon: "", link: "" },
-          { name: "The Sharing Circle", icon: "", link: "" },
-          { name: "Toss With a Friend", icon: "", link: "" },
-          { name: "Creating Coping Skills", icon: "", link: "" },
-          { name: "Match the Faces", icon: "", link: "" },
-          { name: "Stop, Slow, and Go!", icon: "", link: "" },
+          { name: "Create Your Own Stress Ball", icon: "/images/dashboard/rainbowValley/week/3/act1/balloon.png", link: "/activities/rainbow-valley/week3-emotional-behavioral-social/create-your-own-stress-ball" },
+          { name: "Sorting With Friends", icon: "/images/dashboard/rainbowValley/week/3/act2/children_toys.png", link: "/activities/rainbow-valley/week3-emotional-behavioral-social/sorting-with-friends" },
+          { name: "The Sharing Circle", icon: "/images/dashboard/rainbowValley/week/1/act3/act3_image1.png", link: "/activities/rainbow-valley/week3-emotional-behavioral-social/the-sharing-circle" },
+          { name: "Toss With a Friend", icon: "images/dashboard/rainbowValley/week/3/act4/ball.png", link: "/activities/rainbow-valley/week3-emotional-behavioral-social/toss-with-a-friend" },
+          { name: "Creating Coping Skills", icon: "images/dashboard/rainbowValley/week/3/act5/writing_utensils.png", link: "/activities/rainbow-valley/week3-emotional-behavioral-social/creating-coping-skills" },
+          { name: "Match the Faces", icon: "images/dashboard/rainbowValley/week/3/act6/scissors.png", link: "/activities/rainbow-valley/week3-emotional-behavioral-social/match-the-faces" },
+          { name: "Stop, Slow, and Go!", icon: "", link: "" }, // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
         ]
       },
       {
@@ -538,7 +538,7 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
-        activities: [
+        activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Just Add a Sticky Note", icon: "", link: "" },
           { name: "Trace that Letter", icon: "", link: "" },
           { name: "The Animals on the Farm", icon: "", link: "" },
@@ -555,10 +555,10 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Cloud in a Jar", icon: "", link: "" },
-          { name: "Nature Bingo", icon: "", link: "" },
-          { name: "Traveling Water", icon: "", link: "" },
-          { name: "Create Your Own Lava Lamp", icon: "", link: "" },
+          { name: "Cloud in a Jar", icon: "/images/activities/rainbow-valley/week5/foodColoring.svg", link: "/activities/rainbow-valley/week5-math-and-science/cloud-in-a-jar" },
+          { name: "Nature Bingo", icon: "/images/activities/rainbow-valley/week5/bingoCard.svg", link: "/activities/rainbow-valley/week5-math-and-science/nature-bingo" },
+          { name: "Traveling Water", icon: "/images/activities/rainbow-valley/week5/water.svg", link: "/activities/rainbow-valley/week5-math-and-science/traveling-water" },
+          { name: "Create Your Own Lava Lamp", icon: "/images/activities/rainbow-valley/week5/clearJar.svg", link: "/activities/rainbow-valley/week5-math-and-science/create-your-own-lava-lamp" },
         ]
       },
       {
@@ -570,8 +570,8 @@ const mapMarkers1 = [
         activitiesBorderColor: "#FF5B5B",
         activitiesBackgroundColor: "#FFD0D0",
         activities: [
-          { name: "Sort the Food Groups", icon: "", link: "" },
-          { name: "Funny Food Faces!", icon: "", link: "" },
+          { name: "Sort the Food Groups", icon: "images/dashboard/rainbowValley/week/3/act6/expressions_template.png", link: "/activities/rainbow-valley/week6-nutrition/sort-food-groups" },
+          { name: "Funny Food Faces!", icon: "/images/dashboard/rainbowValley/week/6/fruit.svg", link: "/activities/rainbow-valley/week6-nutrition/funny-food-faces" },
         ]
       },
       {
