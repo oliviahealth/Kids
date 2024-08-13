@@ -70,9 +70,21 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
-          { name: "Breathing Techniques For Pregnant Women", icon: "", link: "" },
-          { name: "Birth Affirmations", icon: "", link: "" },
-          { name: "Reaching Out to Available Resources", icon: "", link: "" },
+          {
+            name: "Breathing Techniques For Pregnant Women",
+            icon: "",
+            link: "/activities/parental-paradise/week3-emotional-behavioral-social/breathing-techniques-for-pregnant-women",
+          },
+          {
+            name: "Birth Affirmations",
+            icon: "",
+            link: "/activities/parental-paradise/week3-emotional-behavioral-social/birth-affirmations",
+          },
+          {
+            name: "Reaching Out to Available Resources",
+            icon: "",
+            link: "/activities/parental-paradise/week3-emotional-behavioral-social/reaching-out-to-available-resources",
+          },
         ]
       },
       {
@@ -98,8 +110,16 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
-          { name: "Your Baby's Size in Everyday Objects", icon: "", link: "" },
-          { name: "Financial Planning for Baby's First Year", icon: "", link: "" },
+          {
+            name: "Your Baby's Size in Everyday Objects",
+            icon: "",
+            link: "/activities/parental-paradise/week5-math-and-science/baby-size-in-everyday-objects",
+          },
+          {
+            name: "Financial Planning for Baby's First Year",
+            icon: "",
+            link: "/activities/parental-paradise/week5-math-and-science/financial-planning-for-baby-first-year",
+          },
         ]
       },
       {
@@ -113,7 +133,7 @@ const mapMarkers1 = [
         activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Weekly Meal Tracker", icon: "", link: "" }, 
           { name: "Trying New Recipes", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "7",
@@ -127,7 +147,7 @@ const mapMarkers1 = [
           { name: "Safe and Effective Strength Training for Expectant Mothers", icon: "", link: "" },
           { name: "Walking With Your Baby", icon: "", link: "" },
           { name: "Lets Go Swimming!", icon: "", link: "" },
-        ]
+        ],
       },
       // {
       //   id: "8",
@@ -174,7 +194,7 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
+    ],
   },
   {
     name: "Blossom Haven",
@@ -232,8 +252,12 @@ const mapMarkers1 = [
         activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Extended Family Story Time", icon: "", link: "" },
           { name: "Little Emotional Explorer!", icon: "", link: "" },
-          { name: "Animal Safari: Baby's Animal Adventure!", icon: "", link: "" },
-        ]
+          {
+            name: "Animal Safari: Baby's Animal Adventure!",
+            icon: "",
+            link: "",
+          },
+        ],
       },
       {
         id: "5",
@@ -472,7 +496,7 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
+    ],
   },
   {
     name: "Rainbow Valley",
@@ -634,7 +658,7 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
+    ],
   },
   {
     name: "Adventure Bay",
@@ -783,7 +807,7 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
+    ],
   },
   {
     name: "Fantasy Forest",
@@ -934,8 +958,8 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
-  }
+    ],
+  },
 ];
 
 const Dashboard: React.FC = () => {

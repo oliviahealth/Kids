@@ -92,8 +92,6 @@ export default function HealthyWeeklyMealPlanner({
       <Footer
         onBack={onBack}
         onNext={onContinue}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />
