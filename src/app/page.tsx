@@ -98,27 +98,27 @@ const mapCardData: MapCardModel[] = [
   },
   {
     mapImageSrc: map2,
-    ageCategory: "Ages 0-1",
+    ageCategory: "Ages 1-2",
     mapName: "Blossom Haven",
   },
   {
     mapImageSrc: map3,
-    ageCategory: "Ages 0-1",
+    ageCategory: "Ages 2-3",
     mapName: "Starlight Meadows",
   },
   {
     mapImageSrc: map4,
-    ageCategory: "Ages 0-1",
+    ageCategory: "Ages 3-4",
     mapName: "Rainbow Valley",
   },
   {
     mapImageSrc: map5,
-    ageCategory: "Ages 0-1",
+    ageCategory: "Ages 4-5",
     mapName: "Adventure Bay",
   },
   {
     mapImageSrc: map6,
-    ageCategory: "Ages 0-1",
+    ageCategory: "Ages 5-6",
     mapName: "Fantasy Forest",
   },
 ];
@@ -245,10 +245,9 @@ const LandingPage: React.FC = () => {
   <>
     <div className="landing-page relative">
       <Navbar />
-      <div className="mt-20"></div>
-      <div className="relative pt-80"> 
+      <div className="relative pt-20"> 
         {/* Background Image */}
-        <div className="absolute inset-0">
+        <div className="absolute">
           <Image
             className="h-full w-full object-cover rounded-t-[100px] rounded-b-[100px]"
             src={Background}
@@ -256,7 +255,7 @@ const LandingPage: React.FC = () => {
           />
         </div>
 
-        <div className="relative mt-[-10rem]">
+        <div className="relative mt-[7rem]">
                 <Image
                   height={200}
                   width={200}
@@ -266,7 +265,7 @@ const LandingPage: React.FC = () => {
                 />
               </div>
 
-        <div className="mt-[-10rem] max-w-md text-right relative z-10 ml-auto mr-40"> 
+        <div className="max-w-md text-right relative z-10 ml-auto mr-40 mt-20"> 
           <h3 className="text-2xl font-bold">
             Explore a world of education made for kids, and driven by you.
           </h3>
@@ -313,7 +312,7 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-        <section className="relative z-10 mt-[-15rem]">
+        <section className="relative z-10 mt-20">
           <div className="py-10">
             <div className="grid grid-rows-12 grid-cols-12">
               <div className="col-start-2 col-end-12 sm:col-start-2 sm:col-end-12 row-start-2 row-end-12 overflow-auto h-[40rem] xl:h-auto">
