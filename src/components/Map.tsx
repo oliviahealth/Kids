@@ -106,19 +106,19 @@ const Map: React.FC<MapProps> = ({ image, markers, height, width }) => {
 
       {selectedMarker && (
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-2xl p-16 w-full m-32 ">
+          <div className="bg-white rounded-2xl p-8 w-full mt-40 m-16">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-bold">Select Your Activity</h2>
               <button onClick={closeActivityFrame} className="text-gray-500 hover:text-gray-700">
                 X
               </button>
             </div>
-            <p className="text-lg text-gray-600 mb-16">Earn stars upon completion!</p>
+            <p className="text-lg text-gray-600 mb-8">Earn stars upon completion!</p>
             <div className="grid grid-cols-4 gap-4">
               {selectedMarker.activities.map((activity, index) => (
-                <a key={index} href={activity.link} style={{ backgroundColor: selectedMarker.activitiesBackgroundColor, borderColor: selectedMarker.activitiesBorderColor }} className="border-4 rounded-2xl flex flex-col items-center justify-center gap-16">
-                  <span className="text-xl font-medium text-center mt-4 mb-16">{activity.name}</span>
-                  <img src={activity.icon} alt={activity.name} className="w-32 h-32 mb-16" />
+                <a key={index} href={activity.link} style={{ backgroundColor: selectedMarker.activitiesBackgroundColor, borderColor: selectedMarker.activitiesBorderColor }} className="border-4 rounded-2xl flex flex-col items-center justify-center gap-8">
+                  <span className="text-xl font-medium text-center mt-4 mb-8">{activity.name}</span>
+                  <img src={activity.icon} alt={activity.name} className="w-32 h-32 mb-8" />
                 </a>
               ))}
             </div>

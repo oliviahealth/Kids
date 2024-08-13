@@ -74,13 +74,9 @@ export default function Page1({
           {
             name: "Writing Utensil",
             image: pencil,
-            alt: "Device",
-            key: "Device",
-          },
-          { name: "", image: logo, alt: "Item 5", key: "item5" },
-          { name: "", image: logo, alt: "Item 6", key: "item6" },
-          { name: "", image: logo, alt: "Item 7", key: "item7" },
-          { name: "", image: logo, alt: "Item 8", key: "item8" },
+            alt: "writing-utensil",
+            key: "writing-utensil",
+          }
         ]}
         isChecked={isChecked}
         handleCheckboxChange={handleCheckboxChange}
@@ -91,8 +87,6 @@ export default function Page1({
       <Footer
         onNext={onNext}
         onBack={onBack}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

@@ -79,8 +79,6 @@ In an article from InCharge Debt Solutions, Joey Johnston discusses what budgeti
       <Footer
         onNext={onNext}
         onBack={onBack}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

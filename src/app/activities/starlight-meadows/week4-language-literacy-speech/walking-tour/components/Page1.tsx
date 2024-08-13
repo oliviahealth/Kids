@@ -87,8 +87,6 @@ Note: when you are talking to your child, try to avoid using "baby talk". They a
       <Footer
         onNext={onNext}
         onBack={onBack}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

@@ -84,8 +84,6 @@ const MindfulMovementPage = ({ onBack, onNext }: { onBack: () => void, onNext: (
       <Footer
         onBack={onBack}
         onNext={onNext}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />
