@@ -45,7 +45,7 @@ const mapMarkers1 = [
           { name: "Relaxation Yoga", icon: "", link: "" }, // put a required item from the activity
           { name: "Building My Pregnancy Support System", icon: "", link: "" },
           { name: "Baby Growth Journal", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "2",
@@ -60,7 +60,7 @@ const mapMarkers1 = [
           { name: "Memory Box", icon: "", link: "" },
           { name: "Maternity Photoshoot", icon: "", link: "" },
           { name: "My Baby's Name Sign", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "3",
@@ -71,10 +71,22 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Breathing Techniques For Pregnant Women", icon: "", link: "" },
-          { name: "Birth Affirmations", icon: "", link: "" },
-          { name: "Reaching Out to Available Resources", icon: "", link: "" },
-        ]
+          {
+            name: "Breathing Techniques For Pregnant Women",
+            icon: "",
+            link: "/activities/parental-paradise/week3-emotional-behavioral-social/breathing-techniques-for-pregnant-women",
+          },
+          {
+            name: "Birth Affirmations",
+            icon: "",
+            link: "/activities/parental-paradise/week3-emotional-behavioral-social/birth-affirmations",
+          },
+          {
+            name: "Reaching Out to Available Resources",
+            icon: "",
+            link: "/activities/parental-paradise/week3-emotional-behavioral-social/reaching-out-to-available-resources",
+          },
+        ],
       },
       {
         id: "4",
@@ -88,7 +100,7 @@ const mapMarkers1 = [
           { name: "Narrating Your Daily Activities", icon: "", link: "" },
           { name: "Reading Routine", icon: "", link: "" },
           { name: "Books for your Baby!", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "5",
@@ -99,9 +111,17 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Your Baby's Size in Everyday Objects", icon: "", link: "" },
-          { name: "Financial Planning for Baby's First Year", icon: "", link: "" },
-        ]
+          {
+            name: "Your Baby's Size in Everyday Objects",
+            icon: "",
+            link: "/activities/parental-paradise/week5-math-and-science/baby-size-in-everyday-objects",
+          },
+          {
+            name: "Financial Planning for Baby's First Year",
+            icon: "",
+            link: "/activities/parental-paradise/week5-math-and-science/financial-planning-for-baby-first-year",
+          },
+        ],
       },
       {
         id: "6",
@@ -114,7 +134,7 @@ const mapMarkers1 = [
         activities: [
           { name: "Weekly Meal Tracker", icon: "", link: "" },
           { name: "Trying New Recipes", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "7",
@@ -125,10 +145,14 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
         activities: [
-          { name: "Safe and Effective Strength Training for Expectant Mothers", icon: "", link: "" },
+          {
+            name: "Safe and Effective Strength Training for Expectant Mothers",
+            icon: "",
+            link: "",
+          },
           { name: "Walking With Your Baby", icon: "", link: "" },
           { name: "Lets Go Swimming!", icon: "", link: "" },
-        ]
+        ],
       },
       // {
       //   id: "8",
@@ -175,7 +199,7 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
+    ],
   },
   {
     name: "Blossom Haven",
@@ -189,10 +213,14 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F1A533",
         activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Meditation for Caregiver(s) of 0-1 Year Old(s)", icon: "", link: "" },
+          {
+            name: "Meditation for Caregiver(s) of 0-1 Year Old(s)",
+            icon: "",
+            link: "",
+          },
           { name: "Walking Nature Journal", icon: "", link: "" },
           { name: "At-Home Exercises", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "2",
@@ -205,8 +233,12 @@ const mapMarkers1 = [
         activities: [
           { name: "Colored Ice Cube Melting Activity", icon: "", link: "" },
           { name: "Your Very Own Sensory Bottle", icon: "", link: "" },
-          { name: "Baby's First Art Piece: A Safe Painting Activity", icon: "", link: "" },
-        ]
+          {
+            name: "Baby's First Art Piece: A Safe Painting Activity",
+            icon: "",
+            link: "",
+          },
+        ],
       },
       {
         id: "3",
@@ -220,7 +252,7 @@ const mapMarkers1 = [
           { name: "Baby's Magic Mirror", icon: "", link: "" },
           { name: "Baby's Puppet Playtime", icon: "", link: "" },
           { name: "Baby's Day Out", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "4",
@@ -233,8 +265,12 @@ const mapMarkers1 = [
         activities: [
           { name: "Extended Family Story Time", icon: "", link: "" },
           { name: "Little Emotional Explorer!", icon: "", link: "" },
-          { name: "Animal Safari: Baby's Animal Adventure!", icon: "", link: "" },
-        ]
+          {
+            name: "Animal Safari: Baby's Animal Adventure!",
+            icon: "",
+            link: "",
+          },
+        ],
       },
       {
         id: "5",
@@ -248,7 +284,7 @@ const mapMarkers1 = [
           { name: "Baby's Shape Play Mat", icon: "", link: "" },
           { name: "Bubble Pop Party!", icon: "", link: "" },
           { name: "Colorful Oil and Water Science Bag", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "6",
@@ -259,10 +295,14 @@ const mapMarkers1 = [
         activitiesBorderColor: "#F1A533",
         activitiesBackgroundColor: "#E8F5E9",
         activities: [
-          { name: "Breastfeeding Relief Stretches for Caregiver", icon: "", link: "" },
+          {
+            name: "Breastfeeding Relief Stretches for Caregiver",
+            icon: "",
+            link: "",
+          },
           { name: "Baby's Yummy Snack Necklace", icon: "", link: "" },
           { name: "The Many Textures of Foods", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "7",
@@ -276,7 +316,7 @@ const mapMarkers1 = [
           { name: "Baby's Obstacle Course", icon: "", link: "" },
           { name: "Happy Tummy Workout", icon: "", link: "" },
           { name: "Baby Boot Camp", icon: "", link: "" },
-        ]
+        ],
       },
 
       {
@@ -341,7 +381,7 @@ const mapMarkers1 = [
         backgroundColor: "#FFA500",
         borderColor: "#FF8C00",
         name: "Week 7 Activity C",
-      }
+      },
     ],
   },
   {
@@ -360,7 +400,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "2",
@@ -375,7 +415,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "3",
@@ -390,7 +430,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "4",
@@ -405,7 +445,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "5",
@@ -420,7 +460,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "6",
@@ -435,7 +475,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "7",
@@ -450,7 +490,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       // {
       //   id: "8",
@@ -497,7 +537,7 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
+    ],
   },
   {
     name: "Rainbow Valley",
@@ -515,7 +555,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "2",
@@ -530,7 +570,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "3",
@@ -545,7 +585,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "4",
@@ -560,7 +600,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "5",
@@ -575,7 +615,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "6",
@@ -590,7 +630,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "7",
@@ -605,7 +645,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       // {
       //   id: "8",
@@ -652,7 +692,7 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
+    ],
   },
   {
     name: "Adventure Bay",
@@ -670,7 +710,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "2",
@@ -685,7 +725,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "3",
@@ -700,7 +740,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "4",
@@ -715,7 +755,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "5",
@@ -730,7 +770,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "6",
@@ -745,7 +785,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "7",
@@ -760,7 +800,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       // {
       //   id: "8",
@@ -807,7 +847,7 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
+    ],
   },
   {
     name: "Fantasy Forest",
@@ -825,7 +865,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "2",
@@ -840,7 +880,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "3",
@@ -855,7 +895,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "4",
@@ -870,7 +910,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "5",
@@ -885,7 +925,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "6",
@@ -900,7 +940,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "7",
@@ -915,7 +955,7 @@ const mapMarkers1 = [
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
           { name: "Activity 4", icon: "", link: "" },
-        ]
+        ],
       },
       // {
       //   id: "8",
@@ -962,8 +1002,8 @@ const mapMarkers1 = [
       //     { name: "Activity 4", icon: "", link: "" },
       //   ]
       // }
-    ]
-  }
+    ],
+  },
 ];
 
 const Dashboard: React.FC = () => {
