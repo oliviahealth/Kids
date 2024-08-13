@@ -8,7 +8,7 @@ interface Activity {
 }
 
 interface Marker {
-  name: string;
+  name?: string;
   id: string;
 
   x: number;
