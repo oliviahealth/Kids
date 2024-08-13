@@ -13,13 +13,11 @@ interface MaterialChecklistProps {
     imagePath: string;
     label: string;
   }[];
-  setButtonDisabled: (disabled: boolean) => void;
   colorScheme: ColorScheme;
 }
 
 export default function MaterialChecklist({ 
   materials, 
-  setButtonDisabled,
   colorScheme
 }: MaterialChecklistProps) {
   const [isChecked, setIsChecked] = useState<Record<string, boolean>>({});
@@ -32,15 +30,10 @@ export default function MaterialChecklist({
         return acc;
       }, {} as Record<string, boolean>);
       setIsChecked(initialCheckedState);
-      setButtonDisabled(true);
       initializedRef.current = true;
     }
-  }, [materials, setButtonDisabled]);
+  }, [materials]);
 
-  useEffect(() => {
-    const allChecked = Object.values(isChecked).every(value => value);
-    setButtonDisabled(!allChecked);
-  }, [isChecked, setButtonDisabled]);
 
   const handleCheckboxChange = (label: string) => {
     setIsChecked(prevState => {
@@ -49,7 +42,6 @@ export default function MaterialChecklist({
         [label]: !prevState[label],
       };
       const allChecked = Object.values(newState).every(value => value);
-      setButtonDisabled(!allChecked);
       return newState;
     });
   };
