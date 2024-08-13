@@ -3,12 +3,29 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import LandingPageFooter from "@/components/Footer";
 import Image, { StaticImageData } from "next/image";
-import island from "../../public/images/landingPage/island.jpeg";
-import map1 from "../../public/images/landingPage/map1.jpeg";
-import pinkBackground from "../../public/images/landingPage/pregnancy bg.png";
+import Background from "../../public/images/landingPage/landingpagebg.svg";
+import HalfSlice from "../../public/images/landingPage/halfslice.svg";
+import EllipseOne from "../../public/images/landingPage/Ellipse1.svg";
+import EllipseTwo from "../../public/images/landingPage/Ellipse2.svg";
+import Rectangle from "../../public/images/landingPage/Rectangle.svg";
+import HalfSliceTwo from "../../public/images/landingPage/halfslice2.svg";
+import Stickers from "../../public/images/landingPage/stickers.svg";
+import StickersTwo from "../../public/images/landingPage/stickers2.svg";
+import RectangleTwo from "../../public/images/landingPage/Rectangle2.svg";
+import HalfSliceThree from "../../public/images/landingPage/halfslice3.svg";
+import HalfSliceFour from "../../public/images/landingPage/halfslice4.svg";
+import Triangle from "../../public/images/landingPage/triangle.svg";
+import map1 from "../../public/images/landingPage/prenatalparadise.svg";
+import map2 from "../../public/images/landingPage/blossomhaven.svg";
+import map3 from "../../public/images/landingPage/starlightmeadows.svg";
+import map4 from "../../public/images/landingPage/rainbowvalley.svg";
+import map5 from "../../public/images/landingPage/adventurebay.svg";
+import map6 from "../../public/images/landingPage/fantasyforest.svg";
+
 import pinkBg2 from "../../public/images/landingPage/pinkBg2.png";
 import pregNews1 from "../../public/images/landingPage/pregnNews1.png";
 import authorImage1 from "../../public/images/landingPage/authorImage1.png";
+import Nerd from "../../public/images/landingPage/nerd.svg";
 
 interface AccordionModel {
   summaryHeader: string;
@@ -30,86 +47,46 @@ interface CarouselCardModel {
 const accordionLeftSideData: AccordionModel[] = [
   {
     summaryHeader: "Caregiver Wellness",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Caregiver Wellness: Promoting the physical and mental well-being of caregivers to ensure a nurturing and stimulating environment.`,
   },
   {
     summaryHeader: "Emotional, Behavioral and Social",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Emotional, Behavioral, and Social: Teaching life-long skills in emotional well-being, behavior, and social interactions. `,
   },
   {
     summaryHeader: "Math and Science",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Math and Science: Introducing basic mathematical concepts and scientific exploration. `,
   },
   {
     summaryHeader: "Physical Activity",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Physical Activity: Encouraging movement and physical development through play, exercise, and outdoor activities.`,
   },
   {
     summaryHeader: "Sound and Music",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Sound and Music: Incorporating auditory experiences, music, and sound exploration for sensory development. `,
   },
 ];
 
 const accordionRightSideData: AccordionModel[] = [
   {
     summaryHeader: "Creative Arts",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Creative Arts: Encompassing expressive activities that encourage imagination, self-expression, and skill development. `,
   },
   {
     summaryHeader: "Language, Literacy, and Speech",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Language, Literacy, and Speech: Enhancing language development, reading, writing, and communication skills.`,
   },
   {
     summaryHeader: "Nutrition",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Nutrition: Supporting healthy eating habits, balanced diets, and nourishment for growing bodies.  `,
   },
   {
     summaryHeader: "Safety",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Safety: Ensuring child safety in the home and surrounding environment. `,
   },
   {
     summaryHeader: "Touch",
-    detailText: `Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Explicabo, est corrupti voluptas,
-                 reprehenderit maiores sint quidem sit nostrum
-                 molestiae distinctio incidunt temporibus beatae,
-                 alias dicta soluta tenetur velit itaque placeat.`,
+    detailText: `Touch: Providing sensory experiences involving tactile activities such as feeling different textures or objects.`,
   },
 ];
 
@@ -117,32 +94,32 @@ const mapCardData: MapCardModel[] = [
   {
     mapImageSrc: map1,
     ageCategory: "Ages 0-1",
-    mapName: "Map 1",
+    mapName: "Prenatal Paradise",
   },
   {
-    mapImageSrc: map1,
+    mapImageSrc: map2,
     ageCategory: "Ages 0-1",
-    mapName: "Map 1",
+    mapName: "Blossom Haven",
   },
   {
-    mapImageSrc: map1,
+    mapImageSrc: map3,
     ageCategory: "Ages 0-1",
-    mapName: "Map 1",
+    mapName: "Starlight Meadows",
   },
   {
-    mapImageSrc: map1,
+    mapImageSrc: map4,
     ageCategory: "Ages 0-1",
-    mapName: "Map 1",
+    mapName: "Rainbow Valley",
   },
   {
-    mapImageSrc: map1,
+    mapImageSrc: map5,
     ageCategory: "Ages 0-1",
-    mapName: "Map 1",
+    mapName: "Adventure Bay",
   },
   {
-    mapImageSrc: map1,
+    mapImageSrc: map6,
     ageCategory: "Ages 0-1",
-    mapName: "Map 1",
+    mapName: "Fantasy Forest",
   },
 ];
 
@@ -265,67 +242,86 @@ function CarouselCard({
 
 const LandingPage: React.FC = () => {
   return (
-    <>
-      <div className="landing-page relative">
-        <Navbar />
+  <>
+    <div className="landing-page relative">
+      <Navbar />
+      <div className="mt-20"></div>
+      <div className="relative pt-80"> 
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            className="h-full w-full object-cover rounded-t-[100px] rounded-b-[100px]"
+            src={Background}
+            alt="Olivia Kids"
+          />
+        </div>
 
-        <section>
-          <div className="my-10">
-            <div className="container mx-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="container mx-auto p-4">
-                  <Image
-                    src="/images/landingPage/rocket.png"
-                    height={500}
-                    width={500}
-                    alt="Olivia Kids"
-                    className="mx-auto"
-                  ></Image>
-                </div>
-                <div className="container m-auto p-4 max-w-md">
-                  <h3 className="text-2xl font-bold">
-                    Explore a world of education made for kids, and driven by
-                    you.
-                  </h3>
-                  <p className="py-5">
-                    We believe in facilitating education that puts the
-                    relationship between the child and the guardian at the
-                    forefront, because a strong support system and intimate
-                    guidance empowers children to succeed.
-                  </p>
-                  <div className="flex justify-between my-5">
-                    <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
-                      Explore for free
-                    </button>
-                    <button className="text-rose-600 font-bold py-2 px-4 rounded">
-                      Learn More
-                    </button>
-                    <button className="text-rose-600 font-bold py-2 px-4 rounded">
-                      OliviaHealth
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div className="py-5">
-            <div className="grid grid-rows-12 grid-cols-12">
-              <div className="col-start-1 col-end-13 row-start-1 row-end-13">
+        <div className="relative mt-[-10rem]">
                 <Image
-                  className="h-full w-full opacity-30 rounded-t-[100px]"
-                  src={island}
+                  height={200}
+                  width={200}
+                  src={Nerd}
                   alt="Olivia Kids"
-                ></Image>
+                  className="absolute left-40"
+                />
               </div>
-              <div className="col-start-2 col-end-12 sm:col-start-2 sm:col-end-12 row-start-2 row-end-12 z-10 overflow-auto h-[40rem] xl:h-auto">
+
+        <div className="mt-[-10rem] max-w-md text-right relative z-10 ml-auto mr-40"> 
+          <h3 className="text-2xl font-bold">
+            Explore a world of education made for kids, and driven by you.
+          </h3>
+          <p className="py-5">
+            We believe in facilitating education that puts the
+            relationship between the child and the guardian at the
+            forefront, because a strong support system and intimate
+            guidance empowers children to succeed.
+          </p>
+          <div className="flex justify-between my-5">
+            <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
+              Explore for free
+            </button>
+            <button className="text-rose-600 font-bold py-2 px-4 rounded">
+              Learn More
+            </button>
+            <button className="text-rose-600 font-bold py-2 px-4 rounded">
+              OliviaHealth
+            </button>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 transform translate-y-1/2">
+          <Image
+            className="h-auto w-auto"
+            src={HalfSlice}
+            alt="Half Slice"
+          />
+        </div>
+
+        <div className="absolute bottom-0 right-0 transform translate-y-1/3" style={{ right: '16rem' }}>
+          <Image
+            className="h-auto w-auto"
+            src={EllipseOne}
+            alt="Ellipse One"
+          />
+        </div>
+        
+        <section className="relative z-10">
+        <div className="py-80">
+          <div className="container mx-auto">
+            
+          </div>
+        </div>
+      </section>
+
+        <section className="relative z-10 mt-[-15rem]">
+          <div className="py-10">
+            <div className="grid grid-rows-12 grid-cols-12">
+              <div className="col-start-2 col-end-12 sm:col-start-2 sm:col-end-12 row-start-2 row-end-12 overflow-auto h-[40rem] xl:h-auto">
                 <div className="bg-white py-10 rounded-3xl shadow-md px-[8%]">
                   <section>
-                    <h3 className="text-2xl font-bold mb-4">Learn by domain</h3>
+                    <h3 className="text-2xl font-bold mb-2">Learn by domain</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
-                      <div className="">
+                      <div>
                         {accordionLeftSideData.map(
                           ({ summaryHeader, detailText }, index) => {
                             return (
@@ -338,7 +334,7 @@ const LandingPage: React.FC = () => {
                           }
                         )}
                       </div>
-                      <div className="">
+                      <div>
                         {accordionRightSideData.map(
                           ({ summaryHeader, detailText }, index) => {
                             return (
@@ -353,13 +349,12 @@ const LandingPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="grid text-right mt-5">
-                      <Link href={""}>
+                      <Link href="">
                         <span className="text-rose-600 font-semibold">
                           Why these topics?
                         </span>
                       </Link>
                     </div>
-
                   </section>
 
                   <section>
@@ -376,13 +371,13 @@ const LandingPage: React.FC = () => {
                               mapImageSrc={mapImageSrc}
                               ageCategory={ageCategory}
                               mapName={mapName}
-                            ></MapCard>
+                            />
                           );
                         }
                       )}
                     </div>
                     <div className="grid text-right mt-10 mb-2">
-                      <Link href={""}>
+                      <Link href="">
                         <span className="text-rose-600 font-semibold">
                           Explore entire map
                         </span>
@@ -394,129 +389,126 @@ const LandingPage: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
 
-        <section>
-          <div className="my-3">
-            <div className="container mx-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 m-auto text-center sm:text-left max-w-md space-y-2">
-                  <p>Build your collection while building skills</p>
-                  <h3 className="text-2xl font-bold">Collect as you go!</h3>
-                  <p className="py-5">
-                    {`As you and your child gain useful tools and essential
-                    knowledge, you'll also collect a series of well-earned
-                    badges. Earn stickers through activities tailored to your
-                    child's developmental stage, progressively uncovering badges
-                    as you go! Click on each to learn more!`}
-                  </p>
-                  <div className="my-5">
-                    <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
-                      Start your journey
-                    </button>
-                  </div>
-                </div>
-                <div className="p-4 m-auto hidden sm:grid">
-                  <Image
-                    src="/images/landingPage/rocket.png"
-                    height={400}
-                    width={300}
-                    alt="Olivia Kids"
-                  ></Image>
+      <section className="relative py-20">
+        <div className="my-3">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-4 m-auto text-center sm:text-left max-w-md space-y-2">
+                <p>Build your collection while building skills</p>
+                <h3 className="text-2xl font-bold">Collect as you go!</h3>
+                <p className="py-5">
+                  {`As you and your child gain useful tools and essential
+                  knowledge, you'll also collect a series of well-earned
+                  badges. Earn stickers through activities tailored to your
+                  child's developmental stage, progressively uncovering badges
+                  as you go! Click on each to learn more!`}
+                </p>
+                <div className="my-5">
+                  <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
+                    Start your journey
+                  </button>
                 </div>
               </div>
-            </div>
-            <div className="container mx-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 m-auto hidden sm:grid">
-                  <Image
-                    src="/images/landingPage/rocket.png"
-                    height={400}
-                    width={300}
-                    alt="Olivia Kids"
-                  ></Image>
-                </div>
-                <div className="p-4 m-auto text-center sm:text-right max-w-md space-y-2">
-                  <p>Entering new areas and new opportunities</p>
-                  <h3 className="text-2xl font-bold">Adapt to new locations</h3>
-                  <p className="py-5">
-                    Once you enter the map, you will be thrust into a variety of
-                    locations, all of which require different skills to conquer.
-                    Opportunities for growth span the entirety of the map, and
-                    welcome brave explorers!
-                  </p>
-                  <div className="my-5">
-                    <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
-                      View world map
-                    </button>
-                  </div>
-                </div>
+              <div className="p-4 m-auto hidden sm:grid">
+                <Image
+                  src={Stickers}
+                  height={400}
+                  width={300}
+                  alt="Olivia Kids"
+                />
               </div>
             </div>
           </div>
-        </section>
 
-        <section>
-          <div className="grid grid-cols-12 grid-rows-12">
-            <div className="col-start-1 col-end-13 row-start-1 row-end-13">
+          <div className="relative py-10 mt-20">
+            <div className="absolute left-0" style={{ left: '12rem', top: '50%', transform: 'translateY(-50%)' }}>
               <Image
-                className="h-full sm:max-h-44"
-                src={pinkBackground}
-                alt="Olivia Kids"
-              ></Image>
+                src={Rectangle}
+                height={50}
+                width={50}
+                alt="Rectangle"
+                className="h-auto w-auto"
+              />
             </div>
-            <div className="col-start-1 col-end-13 row-start-1 row-end-13 p-10 sm:p-6 max-w-3xl m-auto space-y-2">
-              <h3 className="text-2xl font-bold text-center">Pregnancy</h3>
-              <p className="text-center">
-                {`Wanting the best for your child can be stressful, so we've
-                compiled a list of resources to make your journey easier and
-                more informed. Dive into our catalog of research-based articles
-                by clicking the "Explore Pregnancy" button below.`}
-              </p>
-            </div>
-          </div>
-          <div className="container px-10 m-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 m-4">
-              {carouselCardData.map(
-                (
-                  {
-                    bgImage,
-                    articleImage,
-                    articleCategory,
-                    articleHeader,
-                    authorImage,
-                    authorName,
-                  },
-                  index
-                ) => {
-                  return (
-                    <CarouselCard
-                      key={"carouselCardData_" + index}
-                      bgImage={bgImage}
-                      articleImage={articleImage}
-                      articleCategory={articleCategory}
-                      articleHeader={articleHeader}
-                      authorImage={authorImage}
-                      authorName={authorName}
-                    ></CarouselCard>
-                  );
-                }
-              )}
-            </div>
-            <div className="w-full flex justify-end">
-              <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
-                Explore Pregnancy
-              </button>
+            <div className="absolute right-0" style={{ top: '50%', transform: 'translateY(-50%)' }}>
+              <Image
+                src={EllipseTwo}
+                alt="Ellipse Two"
+                className="h-auto w-auto"
+              />
             </div>
           </div>
-          <hr className="border-gray-300 my-6" />
-        </section>
+
+            
+
+          <div className="container mx-auto mt-60">
+            <div className="absolute left-0 transform">
+              <Image
+                src={HalfSliceTwo}
+                alt="Half Slice Two"
+                className="h-auto w-auto"
+              />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-4 m-auto hidden sm:grid">
+                <Image
+                  src={StickersTwo}
+                  height={400}
+                  width={300}
+                  alt="Olivia Kids"
+                />
+              </div>
+              <div className="p-4 m-auto text-center sm:text-right max-w-md space-y-2">
+                <p>Entering new areas and new opportunities</p>
+                <h3 className="text-2xl font-bold">Adapt to new locations</h3>
+                <p className="py-5">
+                  Once you enter the map, you will be thrust into a variety of
+                  locations, all of which require different skills to conquer.
+                  Opportunities for growth span the entirety of the map, and
+                  welcome brave explorers!
+                </p>
+                <div className="my-5">
+                  <button className="bg-rose-600 text-white font-bold py-2 px-4 rounded">
+                    View world map
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+          
+          
+        <hr className="border-gray-300 my-6" />
+
+        <div className="absolute right-0 transform translate-y-2">
+          <Image
+            src={RectangleTwo}
+            alt="Rectangle Two"
+            className="h-auto w-auto"
+          />
+        </div>
+
+        
+        
 
         <section>
-          <div className="container m-auto px-20">
+          <div className="container m-auto px-20 mt-40 mb-40">
             <div className="grid grid-cols-1">
               <div className="grid grid-cols-1">
                 <h3 className="text-2xl font-bold text-violet-400">About Us</h3>
+                  <div className="absolute left-0 transform -translate-y-1/2 mt-10">
+                    <Image
+                      src={HalfSliceThree}
+                      alt="Half Slice Three"
+                      className="h-auto w-auto"
+                    />
+                  </div>
                 <div className="mt-5">
+                  
                   <p>
                     The{" "}
                     <span className="font-bold">
@@ -564,12 +556,28 @@ const LandingPage: React.FC = () => {
                 <button className="bg-violet-400 text-white hover:bg-violet-600 border-solid border-2 border-violet-800 font-bold py-2 px-4 rounded">
                   Nurse Family Partnership at Texas A&M
                 </button>
-              </div>
+              </div>  
             </div>
+            
           </div>
+          
         </section>
 
-        <LandingPageFooter />
+        
+        <section className="relative">
+    {/* Triangle Positioned on the Right Above the Footer */}
+    <div className="absolute right-0 top-0 transform -translate-y-full" style={{ paddingRight: '2rem' }}>
+      <Image
+        src={Triangle}
+        alt="Triangle"
+        height={100}
+        width={100}
+      />
+    </div>
+    
+    {/* Footer */}
+    <LandingPageFooter />
+  </section>
       </div>
     </>
   );
