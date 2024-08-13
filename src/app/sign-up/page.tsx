@@ -4,6 +4,7 @@ import React, { experimental_taintObjectReference, useState } from 'react';
 import AuthPageLayout from '@/components/AuthPageLayout';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import continueButton from "../../../public/images/continueButton.svg"
 
 interface SignUpFormPageOneProps {
     onSignUp: (formData: any) => void;
@@ -56,68 +57,51 @@ const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onSignUp }) => {
     return (
         <div className="w-full max-w-md">
             <form className="px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
-                <h2 className="font-bold text-2xl mb-4">Sign Up</h2>
+                <h2 className="font-extrabold text-3xl mb-4">Sign Up</h2>
                 <p className="mb-2">Become an explorer today as a</p>
                 <div className="mb-4">
-                    <div className="flex">
-                        <label className="flex-1 mr-1">
-                            <input
-                                type="radio"
-                                name="explorerType"
-                                value="parent"
-                                checked={formData.explorerType === 'parent'}
-                                onChange={handleInputChange}
-                                className="hidden"
-                            />
-                            <button
-                                type="button"
-                                onClick={() => handleInputChange({ target: { name: 'explorerType', value: 'parent' } })}
-                                className={`w-full flex-1 py-2 rounded-md ${formData.explorerType === 'parent' ? 'bg-[#23176D] text-white' : 'border border-[#23176D] text-[#23176D]'}`}
-                            >
-                                Parent
-                            </button>
-                        </label>
-                        <label className="flex-1 ml-1">
-                            <input
-                                type="radio"
-                                name="explorerType"
-                                value="child"
-                                checked={formData.explorerType === 'child'}
-                                onChange={handleInputChange}
-                                className="hidden"
-                            />
-                            <button
-                                type="button"
-                                onClick={() => handleInputChange({ target: { name: 'explorerType', value: 'child' } })}
-                                className={`w-full flex-1 py-2 rounded-md ${formData.explorerType === 'child' ? 'bg-[#23176D] text-white' : 'border border-[#23176D] text-[#23176D]'}`}
-                            >
-                                Child
-                            </button>
-                        </label>
+                    <div className="flex bg-gray-200 rounded-lg overflow-hidden p-1.5">
+                        <button
+                            type="button"
+                            onClick={() => handleInputChange({ target: { name: 'explorerType', value: 'parent' } })}
+                            className={`flex-1 text-center ${formData.explorerType === 'parent' ? 'bg-white text-[#23176D] font-bold transform scale-90 rounded-lg py-2' : 'text-gray-600 py-2'}`}
+                        >
+                            Parent
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => handleInputChange({ target: { name: 'explorerType', value: 'child' } })}
+                            className={`flex-1 text-center ${formData.explorerType === 'child' ? 'bg-white text-[#23176D] font-bold transform scale-90 rounded-lg py-2' : 'text-gray-600 py-2'}`}
+                        >
+                            Child
+                        </button>
                     </div>
                     {errors.explorerType && <p className="text-red-500 text-xs mt-1">{errors.explorerType}</p>}
                 </div>
+
+
+
                 <div className="mb-4">
-                    <p className="font-bold mb-1">Which descriptor fits you best?</p>
-                    <label className="block mb-1">
+                    <p className="font-bold mb-1">Which description fits you best?</p>
+                    <label className="block cursor-pointer">
                         <input
                             type="radio"
                             name="parentType"
                             value="expecting"
                             checked={formData.parentType === 'expecting'}
                             onChange={handleInputChange}
-                            className="mr-2"
+                            className="mr-2 accent-[#FF5B5B]"
                         />
                         I am a future parent expecting a child in the coming months
                     </label>
-                    <label className="block">
+                    <label className="block cursor-pointer">
                         <input
                             type="radio"
                             name="parentType"
                             value="current"
                             checked={formData.parentType === 'current'}
                             onChange={handleInputChange}
-                            className="mr-2"
+                            className="mr-2 accent-[#FF5B5B]"
                         />
                         I currently have a young child
                     </label>
@@ -126,7 +110,7 @@ const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onSignUp }) => {
                 <div className="mb-4">
                     <label className="font-bold block mb-2">What is your child&apos;s birth date?</label>
                     <input
-                        className="rounded-md border border-[#23176D] p-2"
+                        className="rounded-md border border-[#23176D] p-2 cursor-pointerhover:bg-[#E14B4B]"
                         type="date"
                         id="birthDate"
                         name="birthDate"
@@ -135,13 +119,15 @@ const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onSignUp }) => {
                     />
                     {errors.birthDate && <p className="text-red-500 text-xs mt-1">{errors.birthDate}</p>}
                 </div>
+
+
                 <div className="mb-8">
                     <label className="block font-bold mb-2">How did you hear about us?</label>
                     <select
                         name="heardAboutUs"
                         value={formData.heardAboutUs}
                         onChange={handleInputChange}
-                        className="block text-md appearance-none w-full bg-white border border-[#23176D] text-gray-700 py-3 px-3 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        className="block cursor-pointer text-md appearance-none w-full bg-white border border-[#23176D] text-gray-700 py-3 px-3 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     >
                         <option value="">Select</option>
                         <option value="social_media">Social Media</option>
@@ -155,7 +141,7 @@ const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onSignUp }) => {
                     <label className="block font-bold mb-2">Let&apos;s get started!</label>
                     <button
                         type="submit"
-                        className="border border-[#23176D] text-[#23176D] py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        className="bg-[#FF5B5B] text-white font-bold py-2 px-4 rounded-md w-full focus:outline-none focus:shadow-outline hover:bg-[#E14B4B]"
                     >
                         Sign up by creating a username
                     </button>
@@ -216,14 +202,12 @@ const SignUpFormPageTwo: React.FC<SignUpFormPageTwoProps> = ({ onBack, onSignUp 
         <div className="flex justify-center items-center h-screen">
             <div className="w-full max-w-md">
                 <form className="bg-white rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
-                    <h2 className="font-bold text-2xl mb-4">Sign Up</h2>
+                    <h2 className="font-extrabold text-3xl mb-4">Sign Up</h2>
                     <div className="mb-8">
                         <label className="block font-bold mb-2" htmlFor="email">
                             Your preferred email
                         </label>
-                        <p className="text-s mb-2">
-                            Stay up to date on the latest news from the Olivia Family by receiving exclusive updates!
-                        </p>
+                        
                         <input
                             type="email"
                             name="email"
@@ -233,16 +217,16 @@ const SignUpFormPageTwo: React.FC<SignUpFormPageTwoProps> = ({ onBack, onSignUp 
                             placeholder="example@email.com"
                         />
                         {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-                        <label className="inline-flex items-center mt-2">
-                            <input
-                                type="checkbox"
-                                name="receiveNewsletter"
-                                checked={formData.receiveNewsletter}
-                                onChange={handleInputChange}
-                                className="form-checkbox"
-                            />
-                            <span className="ml-2">Receive updates from the Olivia Kids newsletter</span>
-                        </label>
+                        <label className="inline-flex items-center mt-2 cursor-pointer">
+    <input
+        type="checkbox"
+        name="receiveNewsletter"
+        checked={formData.receiveNewsletter}
+        onChange={handleInputChange}
+        className="form-checkbox h-5 w-5 text-[#FF5B5B] rounded-full cursor-pointer"
+    />
+    <span className="ml-2">Receive updates from the Olivia Kids newsletter</span>
+</label>
                     </div>
                     <div className="mb-8">
                         <label className="block font-bold mb-2" htmlFor="username">
@@ -282,16 +266,20 @@ const SignUpFormPageTwo: React.FC<SignUpFormPageTwoProps> = ({ onBack, onSignUp 
                         <button
                             type="button"
                             onClick={onBack}
-                            className="text-[#23176D] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="text-[#FF5B5B] font-bold py-1 px-4 rounded-full border border-[#FF5B5B] focus:outline-none focus:shadow-outline hover:bg-[#FF5B5B] hover:text-white transition-colors duration-300"
                         >
                             Back
                         </button>
                         <button
                             type="submit"
-                            className="bg-[#23176D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="flex items-center justify-between text-white font-bold py-1 px-4 rounded-full bg-[#FF5B5B] hover:bg-[#FF2C2C] transition-colors duration-300"
                         >
-                            Sign Up
+                            <span className="flex-grow text-left">Continue</span>
+                            <img src="/images/nextIcon.svg" alt="next Icon" className="ml-2" style={{ width: '1em', height: '1em' }} />
                         </button>
+
+
+
                     </div>
                 </form>
             </div>
