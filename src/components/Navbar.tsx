@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
-
-import Link from "next/link";
+import Link from 'next/link'
 
 const Navbar: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
@@ -12,116 +10,67 @@ const Navbar: React.FC = () => {
     setOpen(!isOpen);
   };
 
+  const signout = () => {
+    window.location.href = '/sign-in';
+  }
+
   return (
-    <div className="flex min-h-[6rem] w-full items-center text-black border-b z-10 shadow-sm">
+    <div className="flex min-h-[4.5rem] w-full items-center text-black border-b z-10 shadow-sm">
       <div className="xl:container xl:px-2 flex w-full px-5 mx-auto items-center justify-between">
         <div>
-          <Link href={"/"}>
-            <Image
-              height={80}
-              width={240}
-              priority
-              src="/images/logo+Company.svg"
-              alt="Olivia Health Plan of Safecare logo"
+          <a href={'/'}>
+            <img
+              className="h-[3rem]"
+              alt="Olivia Health Kids logo"
+              src="/images/logo.png"
             />
-          </Link>
+          </a>
         </div>
 
-        <div className="flex-1 flex justify-center">
-          <div className="hidden md:flex space-x-4 h-[3.5rem]">
-            <Link
-              href={"/home"}
-              className="w-32 flex items-center justify-center text-white font-bold rounded-xl px-6 py-2"
-              style={{
-                backgroundColor: "#ec9bfc",
-                border: "5px solid #e466fc",
-              }}
-            >
-              Home
-            </Link>
-
-            <Link
-              href={"/lessons"}
-              className="w-32 flex items-center justify-center text-white font-bold rounded-xl px-6 py-2"
-              style={{
-                backgroundColor: "#8be9b0",
-                border: "5px solid #4ce49c",
-              }}
-            >
-              Lessons
-            </Link>
-
-            <Link
-              href={"/activities"}
-              className="w-32 flex items-center justify-center text-white font-bold rounded-xl px-6 py-2"
-              style={{
-                backgroundColor: "#94ece2",
-                border: "5px solid #51e5d5",
-              }}
-            >
-              Activities
-            </Link>
-
-            <Link
-              href={"/worlds"}
-              className="w-32 flex items-center justify-center text-white font-bold rounded-xl px-6 py-2"
-              style={{
-                backgroundColor: "#fbb355",
-                border: "5px solid #f4946c",
-              }}
-            >
-              Worlds
-            </Link>
-          </div>
-        </div>
-
-        <div className="flex items-center">
-          <Link
-            href={"/sign-in"}
-            className="block md:flex button font-bold"
-            style={{ color: "red", textDecoration: "none" }}
-          >
-            Sign In
-          </Link>
-
+        <div>
           <div className="md:hidden selectable group" onClick={menuToggle}>
             <div className="space-y-2">
               <span
-                className={`block h-1 w-8 bg-black rounded-full transition-opacity ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
+                className={`block h-1 w-8 bg-black rounded-full transition-opacity ${isOpen ? 'opacity-0' : 'opacity-100'}`}
               ></span>
               <div className="relative">
                 <span
-                  className={`block absolute h-1 w-8 bg-black rounded-full transition-transform duration-200 ease-in-out origin-center ${
-                    isOpen ? "rotate-45" : ""
-                  }`}
+                  className={`block absolute h-1 w-8 bg-black rounded-full transition-transform duration-200 ease-in-out origin-center ${isOpen ? 'rotate-45' : ''}`}
                 ></span>
                 <span
-                  className={`block h-1 w-8 bg-black transition-transform duration-200 ease-in-out rounded-full origin-center ${
-                    isOpen ? "-rotate-45" : ""
-                  }`}
+                  className={`block h-1 w-8 bg-black transition-transform duration-200 ease-in-out rounded-full origin-center ${isOpen ? '-rotate-45' : ''}`}
                 ></span>
               </div>
               <span
-                className={`block h-1 w-8 bg-black rounded-full transition-opacity ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
+                className={`block h-1 w-8 bg-black rounded-full transition-opacity ${isOpen ? 'opacity-0' : 'opacity-100'}`}
               ></span>
             </div>
           </div>
+          <div
+            className={`${isOpen ? 'block bg-white border shadow mt-4 mr-1' : 'hidden'} absolute rounded-xl md:shadow-none md:bg-none md:border-0 md:relative right-0 md:mt-0 p-4 md:p-0 md:flex space-y-6 md:space-y-0 md:space-x-4 text-sm md:text-base`}
+          >
+            <a href={'/home'} className="block md:flex button">
+              Map
+            </a>
+
+            {/* <button
+              className="block md:flex button md:button-filled md:rounded-full gap-x-2"
+              onClick={signout}
+            >
+              Sign Out
+            </button> */}
+
+            <Link
+              href={'/sign-in'}
+              className="block md:flex button md:button-filled md:rounded-full"
+            >
+              Sign In
+            </Link>
+          </div>
         </div>
       </div>
-
-      <Link href={"/"}>
-        <img
-          className="h-[1.5rem] pr-10"
-          alt="Olivia Health Plan of Safecare logo"
-          src="/images/For Parents.svg"
-        />
-      </Link>
     </div>
-  );
-};
+  )
+}
 
 export default Navbar;
