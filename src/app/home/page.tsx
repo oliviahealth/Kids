@@ -130,9 +130,9 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
-        activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
-          { name: "Weekly Meal Tracker", icon: "", link: "" }, 
-          { name: "Trying New Recipes", icon: "", link: "" },
+        activities: [
+          { name: "Weekly Meal Tracker", icon: "/images/dashboard/pregnancy/paper.svg", link: "/activities/parental-paradise/week6-nutrition/weekly-meal-tracker" }, 
+          { name: "Trying New Recipes", icon: "/images/dashboard/pregnancy/pencil.svg", link: "/activities/parental-paradise/week6-nutrition/trying-new-recipes" },
         ],
       },
       {
