@@ -82,22 +82,42 @@ const Map: React.FC<MapProps> = ({ image, markers, height, width }) => {
                   top: `${marker.y}%`,
                   left: `${marker.x}%`,
                   transform: "translate(-50%, -50%)",
-                  backgroundColor: marker.backgroundColor,
-                  borderColor: marker.borderColor,
-                  borderWidth: 2,
-                  borderStyle: "solid",
-                  borderRadius: "50%",
-                  width: 40,
-                  height: 40,
-                  cursor: "pointer",
                   zIndex: 1,
                 }}
                 onClick={() => handleMarkerClick(marker)}
               >
-                <div className="flex items-center justify-center h-full w-full">
-                  <span className="text-white font-bold">{marker.id}</span>
+                {/* Marker Circle */}
+                <div
+                  style={{
+                    backgroundColor: marker.backgroundColor,
+                    borderColor: marker.borderColor,
+                    borderWidth: 2,
+                    borderStyle: "solid",
+                    borderRadius: "50%",
+                    width: 40,
+                    height: 40,
+                    cursor: "pointer",
+                  }}
+                >
+                  <div className="flex items-center justify-center h-full w-full">
+                    <span className="text-white font-bold">{marker.id}</span>
+                  </div>
                 </div>
-                <span className="text-white font-extrabold drop-shadow-xl">{marker.name}</span>
+
+                {/* Marker Label */}
+                <span
+                  className="text-white font-extrabold drop-shadow-xl"
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, calc(100% + 10px))',
+                    textAlign: 'center',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {marker.name}
+                </span>
               </div>
             ))}
           </div>
