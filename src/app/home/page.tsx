@@ -336,10 +336,9 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#E8F5E9",
         name: "Touch",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Baby’s Sensory Bin", icon: "/images/activities/blossom-haven/week10/camera.svg", link: "/activities/blossom-haven/week10-touch/babys-sensory-bin" },
+          { name: "Activity 2", icon: "images/activities/blossom-haven/week10/shape.svg", link: "/activities/blossom-haven/week10-touch/activity-2" },
+          { name: "Activity 3", icon: "/images/activities/blossom-haven/week10/ribbon.svg", link: "/activities/blossom-haven/week10-touch/activity-3" },
         ]
       }
     ],
