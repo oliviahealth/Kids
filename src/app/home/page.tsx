@@ -954,10 +954,10 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#B5F6D0",
         name: "Safety",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Will it Sink or Float?", icon: "images/dashboard/fantasyForest/week/8/bear.svg", link: "/activities/fantasy-forest/week8-safety/will-it-sink-or-float" },
+          { name: "Let’s Swim!", icon: "/images/dashboard/fantasyForest/week/8/picture.svg", link: "/activities/fantasy-forest/week8-safety/lets-swim" },
+          { name: "Red Light, Yellow Light, Green Light", icon: "/images/dashboard/fantasyForest/week/8/sun.svg", link: "/activities/fantasy-forest/week8-safety/red-light-yellow-light-green-light" },
+          { name: "Safety Scavenger Hunt", icon: "/images/dashboard/fantasyForest/week/8/pencil.svg", link: "/activities/fantasy-forest/week8-safety/safety-scavenger-hunt" },
         ]
       },
       {
