@@ -16,14 +16,14 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `We hope this taught you about items that can sink or float. Do you think you would sink or float if you went swimming in a pool? Feel free to try this activity with more items to continue the fun! We also hope you practiced writing skills, critical thinking, and verbal expression. You learned so much and we think you deserve a sticker!`;
+  const takeawayText = `Congratulations on completing the Safety Scavenger Hunt! You learned so much about your home and the safety items within it. Some of the things you learned are how to stay aware, use safety tools, follow safety rules, and think ahead. Keep using the safety items you found so you can stay as safe as possible! Here is a sticker for your good work!`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Will it Sink or Float?"
-        subtitle="Math and Science - Fantasy Forest"
+        title="Safety Scavenger Hunt"
+        subtitle="Safety - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"
       />

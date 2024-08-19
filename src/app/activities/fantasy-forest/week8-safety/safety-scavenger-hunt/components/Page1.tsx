@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import logo from "/public/images/activities/fantasy-forest/week4/world-icon.svg";
-import dice from "/public/images/activities/fantasy-forest/week5/dice.svg";
-import worksheet from "/public/images/activities/fantasy-forest/week5/worksheet.svg";
+import image1 from "/public/images/dashboard/fantasyForest/week/8/paper.svg";
+import image2 from "/public/images/dashboard/fantasyForest/week/8/pencil.svg";
+
 import Header from "@/components/Template/Header";
 import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
@@ -20,8 +21,8 @@ export default function Page1({
   onBack: () => void;
 }) {
   const [isChecked, setIsChecked] = useState<CheckboxState>({
-    dice: false,
-    worksheet: false,
+    image1: false,
+    image2: false,
 });
 
   const handleCheckboxChange = (type: keyof typeof isChecked) => {
@@ -42,28 +43,28 @@ export default function Page1({
     <>
       <Header
         logoSrc={logo}
-        title="Roll The Dice Movement"
-        subtitle="Domain name - Fantasy Forest"
+        title="Safety Scavenger Hunt"
+        subtitle="Safety - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"
       />
 
       <IntroductionAndMaterials
         introductionTitle="Introduction"
-        introductionText="An important developmental skill of children this age is learning how to count. Playing with dice is a good way for children to practice counting the dots to determine what number the die is showing. This activity incorporates counting and participating in physical exercise. In this activity, children practice various exercise techniques that can be done indoors or outdoors. The activity will further develop your child’s creative expression and gross motor control as well. This can be a family activity that everyone can complete together or something a child can complete on their own once they get the hang of it. "
+        introductionText="Before your child heads to kindergarten or as a current kindergartner, teaching safety to your child is important! This safety scavenger hunt will help your child explore their home to discover ways to stay safe. They will look for places to make smart choices to keep themselves and others protected. They will learn how to avoid accidents, recognize dangerous situations, and use safety tools the right way. Some other skills they will practice are paying attention to their surroundings, following rules, and thinking ahead to prevent accidents. After your adventure through the safety scavenger hunt, you and your child will be safety experts!"
         materialsTitle="Materials Needed"
         materials={[
           {
-              name: "Dice",
-              image: dice,
+              name: "Worksheet",
+              image: image1,
               alt: "Dice",
               key: "dice",
           },
           {
-              name: "Provided Worksheet",
-              image: worksheet,
-              alt: "Worksheet",
-              key: "worksheet",
+              name: "Writing Utensil",
+              image: image2,
+              alt: "Item 2",
+              key: "item2",
           },
           { name: "", image: "empty", alt: "Item 3", key: "item3" },
           { name: "", image: "empty", alt: "Item 4", key: "item4" },

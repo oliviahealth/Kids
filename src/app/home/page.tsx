@@ -194,7 +194,7 @@ const mapMarkers1 = [
           { name: "Safe and Effective Strength Training for Expectant Mothers", icon: "", link: "" },
           { name: "Walking With Your Baby", icon: "", link: "" },
           { name: "Lets Go Swimming!", icon: "", link: "" },
-        ],
+        ]
       },
       {
         id: "8",
@@ -342,12 +342,8 @@ const mapMarkers1 = [
         activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Extended Family Story Time", icon: "", link: "" },
           { name: "Little Emotional Explorer!", icon: "", link: "" },
-          {
-            name: "Animal Safari: Baby's Animal Adventure!",
-            icon: "",
-            link: "",
-          },
-        ],
+          { name: "Animal Safari: Baby's Animal Adventure!", icon: "", link: "" },
+        ]
       },
       {
         id: "5",
@@ -941,7 +937,7 @@ const mapMarkers1 = [
           { name: "Scavenger Hunt", icon: "", link: "" },
           { name: "Freeze Dance", icon: "", link: "" },
           { name: "Simon Says", icon: "", link: "" },
-        ],
+        ]
       },
       {
         id: "8",
@@ -953,10 +949,8 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#FFD0D0",
         name: "Safety",
         activities: [
-          { name: "Exercise BINGO", icon: "", link: "" },
-          { name: "Scavenger Hunt", icon: "", link: "" },
-          { name: "Freeze Dance", icon: "", link: "" },
-          { name: "Simon Says", icon: "", link: "" },
+          { name: "Practice a Fire Drill", icon: "/images/dashboard/rainbowValley/week/3/act5/writing_utensils.png", link: "/activities/rainbow-valley/week8-safety/practice-a-fire-drill" },
+          { name: "Safety BINGO", icon: "/images/dashboard/rainbowValley/week/3/act6/paper.png", link: "/activities/rainbow-valley/week8-safety/safety-bingo" },
         ]
       },
       {
@@ -1403,9 +1397,10 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#B5F6D0",
         name: "Safety",
         activities: [
-          { name: "Move Like an Animal", icon: "", link: "" },
-          { name: "Family Dance Party!", icon: "", link: "" },
-          { name: "Tooth Fairy Balance", icon: "", link: "" },
+          { name: "Will it Sink or Float?", icon: "images/dashboard/fantasyForest/week/8/bear.svg", link: "/activities/fantasy-forest/week8-safety/will-it-sink-or-float" },
+          { name: "Let’s Swim!", icon: "/images/dashboard/fantasyForest/week/8/picture.svg", link: "/activities/fantasy-forest/week8-safety/lets-swim" },
+          { name: "Red Light, Yellow Light, Green Light", icon: "/images/dashboard/fantasyForest/week/8/sun.svg", link: "/activities/fantasy-forest/week8-safety/red-light-yellow-light-green-light" },
+          { name: "Safety Scavenger Hunt", icon: "/images/dashboard/fantasyForest/week/8/pencil.svg", link: "/activities/fantasy-forest/week8-safety/safety-scavenger-hunt" },
         ]
       },
       {

@@ -16,14 +16,14 @@ export default function Page3({
   onNext: () => void;
   onBack: () => void;
 }) {
-  const takeawayText = `We hope this taught you about items that can sink or float. Do you think you would sink or float if you went swimming in a pool? Feel free to try this activity with more items to continue the fun! We also hope you practiced writing skills, critical thinking, and verbal expression. You learned so much and we think you deserve a sticker!`;
+  const takeawayText = `Great job! You were such a good listener and rule follower. Make sure to remember that red lights mean stop and green lights mean go. This will help you stay safe! We hope this was a fun way to practice a new safety skill while moving your body. Congrats on earning another sticker!`;
 
   return (
     <>
       <Header
         logoSrc={logo}
-        title="Will it Sink or Float?"
-        subtitle="Math and Science - Fantasy Forest"
+        title="Red Light, Yellow Light, Green Light"
+        subtitle="Safety - Fantasy Forest"
         homeLink="/home"
         subtitleColor="#35A663"
       />
