@@ -94,8 +94,6 @@ Note: Try to limit choices to 2-3 simple options to avoid overwhelming your todd
       <Footer
         onNext={onNext}
         onBack={onBack}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

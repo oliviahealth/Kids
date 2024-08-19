@@ -8,7 +8,6 @@ const RelaxationYogaPage1: React.FC<{
   onNext: () => void;
   onBack: () => void;
 }> = ({ onNext, onBack }) => {
-  const [buttonDisabled, setButtonDisabled] = useState(true);
 
   const materials = [
     { imagePath: "/images/dashboard/pregnancy/yoga-mat.svg", label: "Yoga Mat" },
@@ -65,7 +64,6 @@ const RelaxationYogaPage1: React.FC<{
         <div className={`${styles.imageWrapper}`}>
           <MaterialChecklist
             materials={materials}
-            setButtonDisabled={setButtonDisabled}
             colorScheme={{
               borderColor: "F797FF", // the border of the items in the material neeeded section
               emptySlotColor: "FCD3FF", // the background color of the empty slots in the material needed section
@@ -79,11 +77,8 @@ const RelaxationYogaPage1: React.FC<{
           <img src="/images/learnmorebutton.svg" alt="Learn more" />
         </button>
         <button
-          className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center ${
-            buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
-          }`}
+          className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center`}
           onClick={onNext}
-          disabled={buttonDisabled}
         >
           Continue
           <Image

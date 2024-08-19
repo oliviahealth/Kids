@@ -87,8 +87,6 @@ export default function NatureWalk({
       <Footer
         onBack={onBack}
         onNext={onContinue}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

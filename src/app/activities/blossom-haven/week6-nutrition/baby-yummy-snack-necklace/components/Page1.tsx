@@ -77,8 +77,6 @@ export default function Page1({
       <Footer
         onNext={onNext}
         onBack={onBack}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

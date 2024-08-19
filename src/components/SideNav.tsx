@@ -11,8 +11,6 @@ import ellipse from "../../public//images/Ellipse 44.png";
 import expandArrow from "../../public/images/expand_arrow.png";
 import collapseArrow from "../../public/images/collapse_arrow.png";
 
-import Dropdown from "./Dropdown";
-
 const SideNav: React.FC = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("");
 

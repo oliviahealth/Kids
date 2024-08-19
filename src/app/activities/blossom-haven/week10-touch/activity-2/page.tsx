@@ -2,7 +2,6 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import backgroundMap from "@/public/images/background.png";
-import tempBackground from "@/public/images/dashboard/adventure-bay/temp_background.png";
 import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
@@ -14,7 +13,8 @@ import ActivityPage5 from "./components/ActivityPage5";
 import ActivityPage6 from "./components/ActivityPage6";
 import ActivityStar from "./components/ActivityPageStar";
 
-const AdventureBayActivity: React.FC = () => {
+
+const BlossomHavenActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handleBack = () => {
@@ -79,56 +79,7 @@ const AdventureBayActivity: React.FC = () => {
           <Page2 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
-    },
-    // {
-    //   content: (
-    //     <ActivityContainer>
-    //       <ActivityPage1 onNext={handleNext} onBack={handleBack} />
-    //     </ActivityContainer>
-    //   ),
-    // },
-    // {
-    //   content: (
-    //     <ActivityContainer>
-    //       <ActivityPage2 onNext={handleNext} onBack={handleBack} />
-    //     </ActivityContainer>
-    //   ),
-    // },
-    // {
-    //   content: (
-    //     <ActivityContainer>
-    //       <ActivityPage3 onNext={handleNext} onBack={handleBack} />
-    //     </ActivityContainer>
-    //   ),
-    // },
-    // {
-    //   content: (
-    //     <ActivityContainer>
-    //       <ActivityPage4 onNext={handleNext} onBack={handleBack} />
-    //     </ActivityContainer>
-    //   ),
-    // },
-    // {
-    //   content: (
-    //     <ActivityContainer>
-    //       <ActivityPage5 onNext={handleNext} onBack={handleBack} />
-    //     </ActivityContainer>
-    //   ),
-    // },
-    // {
-    //   content: (
-    //     <ActivityContainer>
-    //       <ActivityPage6 onNext={handleNext} onBack={handleBack} />
-    //     </ActivityContainer>
-    //   ),
-    // },
-    // {
-    //   content: (
-    //     <ActivityContainer>
-    //       <ActivityStar onNext={handleNext} onBack={handleBack} />
-    //     </ActivityContainer>
-    //   ),
-    // },
+    },    
     {
       content: (
         <MapContainer>
@@ -140,4 +91,4 @@ const AdventureBayActivity: React.FC = () => {
   return <>{pagesData[currentPage].content}</>;
 };
 
-export default AdventureBayActivity;
+export default BlossomHavenActivity;
