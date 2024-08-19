@@ -24,7 +24,7 @@ export default function Page3({
         logoSrc={logo}
         title="Will it Sink or Float?"
         subtitle="Math and Science - Fantasy Forest"
-        homeLink="/"
+        homeLink="/home"
         subtitleColor="#35A663"
       />
 

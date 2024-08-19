@@ -45,7 +45,7 @@ export default function Page1({
         logoSrc={logo}
         title="Safety Scavenger Hunt"
         subtitle="Safety - Fantasy Forest"
-        homeLink="/"
+        homeLink="/home"
         subtitleColor="#35A663"
       />
 

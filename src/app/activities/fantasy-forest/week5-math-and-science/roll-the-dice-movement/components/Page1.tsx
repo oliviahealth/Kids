@@ -44,7 +44,7 @@ export default function Page1({
         logoSrc={logo}
         title="Roll The Dice Movement"
         subtitle="Domain name - Fantasy Forest"
-        homeLink="/"
+        homeLink="/home"
         subtitleColor="#35A663"
       />
 

@@ -46,7 +46,7 @@ export default function Page2({
         logoSrc={logo}
         title="Will it Sink or Float?"
         subtitle="Safety - Fantasy Forest"
-        homeLink="/"
+        homeLink="/home"
         subtitleColor="#35A663"
       />
 

@@ -24,7 +24,7 @@ export default function Page3({
         logoSrc={logo}
         title="Red Light, Yellow Light, Green Light"
         subtitle="Safety - Fantasy Forest"
-        homeLink="/"
+        homeLink="/home"
         subtitleColor="#35A663"
       />
 
