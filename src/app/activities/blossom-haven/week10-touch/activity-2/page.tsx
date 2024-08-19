@@ -5,8 +5,16 @@ import backgroundMap from "@/public/images/background.png";
 import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
+import ActivityPage1 from "./components/ActivityPage1";
+import ActivityPage2 from "./components/ActivityPage2";
+import ActivityPage3 from "./components/ActivityPage3";
+import ActivityPage4 from "./components/ActivityPage4";
+import ActivityPage5 from "./components/ActivityPage5";
+import ActivityPage6 from "./components/ActivityPage6";
+import ActivityStar from "./components/ActivityPageStar";
 
-const FantasyForestActivity: React.FC = () => {
+
+const BlossomHavenActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handleBack = () => {
@@ -71,8 +79,7 @@ const FantasyForestActivity: React.FC = () => {
           <Page2 onNext={handleNext} onBack={handleBack} />
         </MapContainer>
       ),
-    },
-    
+    },    
     {
       content: (
         <MapContainer>
@@ -84,4 +91,4 @@ const FantasyForestActivity: React.FC = () => {
   return <>{pagesData[currentPage].content}</>;
 };
 
-export default FantasyForestActivity;
+export default BlossomHavenActivity;

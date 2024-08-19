@@ -2,11 +2,19 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import backgroundMap from "@/public/images/background.png";
+import tempBackground from "@/public/images/dashboard/adventure-bay/temp_background.png";
 import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
+import ActivityPage1 from "./components/ActivityPage1";
+import ActivityPage2 from "./components/ActivityPage2";
+import ActivityPage3 from "./components/ActivityPage3";
+import ActivityPage4 from "./components/ActivityPage4";
+import ActivityPage5 from "./components/ActivityPage5";
+import ActivityPage6 from "./components/ActivityPage6";
+import ActivityStar from "./components/ActivityPageStar";
 
-const FantasyForestActivity: React.FC = () => {
+const AdventureBayActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handleBack = () => {
@@ -72,7 +80,55 @@ const FantasyForestActivity: React.FC = () => {
         </MapContainer>
       ),
     },
-    
+    // {
+    //   content: (
+    //     <ActivityContainer>
+    //       <ActivityPage1 onNext={handleNext} onBack={handleBack} />
+    //     </ActivityContainer>
+    //   ),
+    // },
+    // {
+    //   content: (
+    //     <ActivityContainer>
+    //       <ActivityPage2 onNext={handleNext} onBack={handleBack} />
+    //     </ActivityContainer>
+    //   ),
+    // },
+    // {
+    //   content: (
+    //     <ActivityContainer>
+    //       <ActivityPage3 onNext={handleNext} onBack={handleBack} />
+    //     </ActivityContainer>
+    //   ),
+    // },
+    // {
+    //   content: (
+    //     <ActivityContainer>
+    //       <ActivityPage4 onNext={handleNext} onBack={handleBack} />
+    //     </ActivityContainer>
+    //   ),
+    // },
+    // {
+    //   content: (
+    //     <ActivityContainer>
+    //       <ActivityPage5 onNext={handleNext} onBack={handleBack} />
+    //     </ActivityContainer>
+    //   ),
+    // },
+    // {
+    //   content: (
+    //     <ActivityContainer>
+    //       <ActivityPage6 onNext={handleNext} onBack={handleBack} />
+    //     </ActivityContainer>
+    //   ),
+    // },
+    // {
+    //   content: (
+    //     <ActivityContainer>
+    //       <ActivityStar onNext={handleNext} onBack={handleBack} />
+    //     </ActivityContainer>
+    //   ),
+    // },
     {
       content: (
         <MapContainer>
@@ -84,4 +140,4 @@ const FantasyForestActivity: React.FC = () => {
   return <>{pagesData[currentPage].content}</>;
 };
 
-export default FantasyForestActivity;
+export default AdventureBayActivity;

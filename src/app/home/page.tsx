@@ -479,10 +479,9 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#E8F5E9",
         name: "Touch",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Baby’s Sensory Bin", icon: "/images/activities/blossom-haven/week10/camera.svg", link: "/activities/blossom-haven/week10-touch/babys-sensory-bin" },
+          { name: "Activity 2", icon: "images/activities/blossom-haven/week10/shape.svg", link: "/activities/blossom-haven/week10-touch/activity-2" },
+          { name: "Activity 3", icon: "/images/activities/blossom-haven/week10/ribbon.svg", link: "/activities/blossom-haven/week10-touch/activity-3" },
         ]
       }
     ],
@@ -963,6 +962,52 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#FFD0D0",
         name: "Sound and Music",
         activities: [
+          { name: "Sort the Food Groups", icon: "images/dashboard/rainbowValley/week/3/act6/expressions_template.png", link: "/activities/rainbow-valley/week6-nutrition/sort-food-groups" },
+          { name: "Funny Food Faces!", icon: "/images/dashboard/rainbowValley/week/6/fruit.svg", link: "/activities/rainbow-valley/week6-nutrition/funny-food-faces" },
+        ]
+      },
+      {
+        id: "10",
+        x: 75,
+        y: 39,
+        backgroundColor: "#FBFF44",
+        borderColor: "#FFFFFF",
+        activitiesBorderColor: "#FF5B5B",
+        activitiesBackgroundColor: "#FFD0D0",
+        name: "Physical Activity",
+        activities: [
+          { name: "Exercise BINGO", icon: "", link: "" },
+          { name: "Scavenger Hunt", icon: "", link: "" },
+          { name: "Freeze Dance", icon: "", link: "" },
+          { name: "Simon Says", icon: "", link: "" },
+        ]
+      },
+      {
+        id: "8",
+        x: 70,
+        y: 77,
+        backgroundColor: "#FF5B5B",
+        borderColor: "#FFFFFF",
+        activitiesBorderColor: "#FF5B5B",
+        activitiesBackgroundColor: "#FFD0D0",
+        name: "Safety",
+        activities: [
+          { name: "Activity 1", icon: "", link: "" },
+          { name: "Activity 2", icon: "", link: "" },
+          { name: "Activity 3", icon: "", link: "" },
+          { name: "Activity 4", icon: "", link: "" },
+        ]
+      },
+      {
+        id: "9",
+        x: 85,
+        y: 60,
+        backgroundColor: "#FF9255",
+        borderColor: "#FFFFFF",
+        activitiesBorderColor: "#FF5B5B",
+        activitiesBackgroundColor: "#FFD0D0",
+        name: "Sound and Music",
+        activities: [
           { name: "Activity 1", icon: "", link: "" },
           { name: "Activity 2", icon: "", link: "" },
           { name: "Activity 3", icon: "", link: "" },
@@ -1401,6 +1446,22 @@ const mapMarkers1 = [
           { name: "Let’s Swim!", icon: "/images/dashboard/fantasyForest/week/8/picture.svg", link: "/activities/fantasy-forest/week8-safety/lets-swim" },
           { name: "Red Light, Yellow Light, Green Light", icon: "/images/dashboard/fantasyForest/week/8/sun.svg", link: "/activities/fantasy-forest/week8-safety/red-light-yellow-light-green-light" },
           { name: "Safety Scavenger Hunt", icon: "/images/dashboard/fantasyForest/week/8/pencil.svg", link: "/activities/fantasy-forest/week8-safety/safety-scavenger-hunt" },
+        ]
+      },
+      {
+        id: "9",
+        x: 78,
+        y: 52,
+        backgroundColor: "#35A663",
+        borderColor: "#FFFFFF",
+        activitiesBorderColor: "#35A663",
+        activitiesBackgroundColor: "#B5F6D0",
+        name: "Sound and Music",
+        activities: [
+          { name: "Activity 1", icon: "", link: "" },
+          { name: "Activity 2", icon: "", link: "" },
+          { name: "Activity 3", icon: "", link: "" },
+          { name: "Activity 4", icon: "", link: "" },
         ]
       },
       {
