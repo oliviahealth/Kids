@@ -89,8 +89,6 @@ In this activity, you will be using playtime with blocks as an opportunity to pr
       <Footer
         onNext={onNext}
         onBack={onBack}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

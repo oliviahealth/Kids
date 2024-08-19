@@ -113,8 +113,6 @@ In this activity, we are going to be reading  “The Very Hungry Caterpillar” 
       <Footer
         onNext={onNext}
         onBack={onBack}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

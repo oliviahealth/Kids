@@ -106,8 +106,6 @@ const WalkingNatureJournalPage = ({ onBack, onNext }: { onBack: () => void, onNe
       <Footer
         onBack={onBack}
         onNext={onNext}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

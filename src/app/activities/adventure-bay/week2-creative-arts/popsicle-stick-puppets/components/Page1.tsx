@@ -92,8 +92,6 @@ There is an infinite amount of activities you can use to implement imaginative p
       <Footer
         onNext={onNext}
         onBack={onBack}
-        rightButtonDisabledAllowed={true}
-        rightButtonDisabled={buttonDisabled}
         leftButtonText="Learn More"
         rightButtonText="Continue"
       />

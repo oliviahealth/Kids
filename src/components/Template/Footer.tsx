@@ -6,8 +6,6 @@ import Link from "next/link";
 export interface FooterProps {
   onNext: () => void;
   onBack: () => void;
-  rightButtonDisabledAllowed?: boolean;
-  rightButtonDisabled?: boolean;
   rightButtonText: string;
   rightHasLink?: boolean;
   rightLinkHref?: string;
@@ -30,16 +28,8 @@ const Footer: React.FC<FooterProps> = (footerData: FooterProps) => {
         {footerData.rightLinkHref && footerData.rightHasLink ? (
           <Link href={footerData.rightLinkHref}>
             <button
-              className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center ${
-                footerData.rightButtonDisabled
-                  ? "opacity-50 cursor-not-allowed"
-                  : ""
-              }`}
+              className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center`}
               onClick={footerData.onNext}
-              disabled={
-                footerData.rightButtonDisabledAllowed &&
-                footerData.rightButtonDisabled
-              }
             >
               {footerData.rightButtonText}
               <Image src={arrow} alt="arrow" width={30} height={30} />
@@ -47,16 +37,8 @@ const Footer: React.FC<FooterProps> = (footerData: FooterProps) => {
           </Link>
         ) : (
           <button
-            className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center ${
-              footerData.rightButtonDisabled
-                ? "opacity-50 cursor-not-allowed"
-                : ""
-            }`}
+            className={`bg-red-600 text-white font-bold py-2 px-4 rounded-3xl flex justify-center items-center`}
             onClick={footerData.onNext}
-            disabled={
-              footerData.rightButtonDisabledAllowed &&
-              footerData.rightButtonDisabled
-            }
           >
             {footerData.rightButtonText}
             <Image src={arrow} alt="arrow" width={30} height={30} />

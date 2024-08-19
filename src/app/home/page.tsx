@@ -71,11 +71,22 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
-        name: "Emotional, Social, Behavioral",
         activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
-          { name: "Breathing Techniques For Pregnant Women", icon: "", link: "" },
-          { name: "Birth Affirmations", icon: "", link: "" },
-          { name: "Reaching Out to Available Resources", icon: "", link: "" },
+          {
+            name: "Breathing Techniques For Pregnant Women",
+            icon: "",
+            link: "/activities/parental-paradise/week3-emotional-behavioral-social/breathing-techniques-for-pregnant-women",
+          },
+          {
+            name: "Birth Affirmations",
+            icon: "",
+            link: "/activities/parental-paradise/week3-emotional-behavioral-social/birth-affirmations",
+          },
+          {
+            name: "Reaching Out to Available Resources",
+            icon: "",
+            link: "/activities/parental-paradise/week3-emotional-behavioral-social/reaching-out-to-available-resources",
+          },
         ]
       },
       {
@@ -101,10 +112,17 @@ const mapMarkers1 = [
         borderColor: "#FFFFFF",
         activitiesBorderColor: "#F797FF",
         activitiesBackgroundColor: "#FEEDFF",
-        name: "Math and Science",
         activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
-          { name: "Your Baby's Size in Everyday Objects", icon: "", link: "" },
-          { name: "Financial Planning for Baby's First Year", icon: "", link: "" },
+          {
+            name: "Your Baby's Size in Everyday Objects",
+            icon: "",
+            link: "/activities/parental-paradise/week5-math-and-science/baby-size-in-everyday-objects",
+          },
+          {
+            name: "Financial Planning for Baby's First Year",
+            icon: "",
+            link: "/activities/parental-paradise/week5-math-and-science/financial-planning-for-baby-first-year",
+          },
         ]
       },
       {
@@ -119,7 +137,7 @@ const mapMarkers1 = [
         activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Weekly Meal Tracker", icon: "", link: "" }, 
           { name: "Trying New Recipes", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "7",
@@ -134,7 +152,7 @@ const mapMarkers1 = [
           { name: "Safe and Effective Strength Training for Expectant Mothers", icon: "", link: "" },
           { name: "Walking With Your Baby", icon: "", link: "" },
           { name: "Lets Go Swimming!", icon: "", link: "" },
-        ]
+        ],
       },
       {
         id: "8",
@@ -246,8 +264,12 @@ const mapMarkers1 = [
         activities: [ // *** ADD LINKS AND ICONS ONCE ACTIVITIES ARE IN THE DIRECTORY ***
           { name: "Extended Family Story Time", icon: "", link: "" },
           { name: "Little Emotional Explorer!", icon: "", link: "" },
-          { name: "Animal Safari: Baby's Animal Adventure!", icon: "", link: "" },
-        ]
+          {
+            name: "Animal Safari: Baby's Animal Adventure!",
+            icon: "",
+            link: "",
+          },
+        ],
       },
       {
         id: "5",
@@ -464,10 +486,8 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#C5CEFF",
         name: "Safety",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Crawl Like a Puppy, Hop Like a Bunny!", icon: "", link: "" },
+          { name: "Nature Walk", icon: "", link: "" },
         ]
       },
       {
@@ -636,10 +656,10 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#FFD0D0",
         name: "Safety",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Exercise BINGO", icon: "", link: "" },
+          { name: "Scavenger Hunt", icon: "", link: "" },
+          { name: "Freeze Dance", icon: "", link: "" },
+          { name: "Simon Says", icon: "", link: "" },
         ]
       },
       {
@@ -795,10 +815,8 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#C5FFFC",
         name: "Safety",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Superhero Power Pose & More", icon: "", link: "" },
+          { name: "Yoga Pose Exploration", icon: "", link: "" },
         ]
       },
       {
@@ -956,10 +974,9 @@ const mapMarkers1 = [
         activitiesBackgroundColor: "#B5F6D0",
         name: "Safety",
         activities: [
-          { name: "Activity 1", icon: "", link: "" },
-          { name: "Activity 2", icon: "", link: "" },
-          { name: "Activity 3", icon: "", link: "" },
-          { name: "Activity 4", icon: "", link: "" },
+          { name: "Move Like an Animal", icon: "", link: "" },
+          { name: "Family Dance Party!", icon: "", link: "" },
+          { name: "Tooth Fairy Balance", icon: "", link: "" },
         ]
       },
       {

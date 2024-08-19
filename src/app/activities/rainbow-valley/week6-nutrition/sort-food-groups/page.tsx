@@ -7,7 +7,7 @@ import Page1 from "./components/Page1";
 import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
 
-const rainbowValleyActivity: React.FC = () => {
+const RainbowValleyActivity: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handleBack = () => {
@@ -66,4 +66,4 @@ const rainbowValleyActivity: React.FC = () => {
   return <>{pagesData[currentPage].content}</>;
 };
 
-export default rainbowValleyActivity;
+export default RainbowValleyActivity;
