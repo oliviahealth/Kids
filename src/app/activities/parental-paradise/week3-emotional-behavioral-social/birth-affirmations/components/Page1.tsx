@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import logo from "/public/images/dashboard/pregnancy/prenatal-icon.svg";
 import pencil from "/public/images/dashboard/pregnancy/pencil.svg";
 import template from "/public/images/dashboard/pregnancy/template.png";
-import phone from "/public/images/dashboard/pregnancy/phone.png";
+import phone from "/public/images/dashboard/pregnancy/Phone.png";
 import poster from "/public/images/dashboard/pregnancy/box-items.svg";
 
 import paper from "/public/images/dashboard/pregnancy/paper.svg";
