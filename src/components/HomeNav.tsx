@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import '../app/globals.css';
 
-// Define the static paths directly
 const iconPaths: { [key: string]: string } = {
     "Prenatal Paradise": "/images/navbar/prenatalparadiseicon.svg",
     "Blossom Haven": "/images/navbar/blossomhavenicon.svg",
@@ -11,7 +10,6 @@ const iconPaths: { [key: string]: string } = {
     "Fantasy Forest": "/images/navbar/fantasyforesticon.svg"
 };
 
-// Define static paths for the pinkClosed and pinkOpened icons
 const pinkClosedPath = "/images/navbar/pinkclosed.svg";
 const pinkOpenedPath = "/images/navbar/pinkopened.svg";
 const orangeClosedPath = "/images/navbar/orangeclosed.svg";
@@ -54,7 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMapChange }) => {
     const [selectedMap, setSelectedMap] = useState(mapNames[0]);
 
     const menuToggle = () => {
-        setOpen(!isOpen);
+        setOpen((prevState) => !prevState);
     };
 
     const handleMapChange = (index: number) => {
@@ -77,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMapChange }) => {
                             selectedMap === 'Rainbow Valley' ? 'text-[#ff7272]' :
                             selectedMap === 'Adventure Bay' ? 'text-[#52c5c0]' :
                             selectedMap === 'Fantasy Forest' ? 'text-[#3dab6a]' : 'text-white'
-                        } ${isOpen ? 'rounded-t-lg' : 'rounded-lg'}`}
+                        } ${isOpen ? 'rounded-t-lg rounded-b-none' : 'rounded-lg'}`}
                         style={{ boxShadow: '0 10px 20px rgba(0, 0, 0, 0.4)' }}
                     >
                         {/* Display the selected map icon */}
@@ -130,7 +128,11 @@ const Navbar: React.FC<NavbarProps> = ({ onMapChange }) => {
                             />
                         )}
                     </button>
-                        <div className={`absolute top-full left-0 bg-white border shadow-lg w-full rounded-b-lg dropdown ${isOpen ? 'dropdown-open' : ''}`}>
+                    <div
+                        className={`absolute top-full left-0 bg-white border shadow-lg w-full ${
+                            isOpen ? 'rounded-b-none' : 'rounded-b-lg'
+                        } ${isOpen ? '' : 'hidden'}`}
+                    >
                         <div className="flex flex-col">
                             {mapNames.map((name, index) => (
                                 <button
@@ -173,6 +175,37 @@ const Navbar: React.FC<NavbarProps> = ({ onMapChange }) => {
                             ))}
                         </div>
                     </div>
+                    {/* Conditionally render the small rectangle under the navbar when "Prenatal Paradise" is selected */}
+                    {selectedMap === "Prenatal Paradise" && !isOpen && (
+                        <div className="absolute left-0 transform -translate-x-0 -mt-1 bg-[#F797FF] text-white font-bold py-2 px-3 rounded-b-lg z-[-1]">
+                            Pregnancy
+                        </div>
+                    )}
+                    {selectedMap === "Blossom Haven" && !isOpen && (
+                        <div className="absolute left-0 transform -translate-x-0 -mt-1 bg-[#F1A533] text-white font-bold py-2 px-3 rounded-b-lg z-[-1]">
+                            Ages 0-1
+                        </div>
+                    )}
+                    {selectedMap === "Starlight Meadows" && !isOpen && (
+                        <div className="absolute left-0 transform -translate-x-0 -mt-1 bg-[#5a6edd] text-white font-bold py-2 px-3 rounded-b-lg z-[-1]">
+                            Ages 1-2
+                        </div>
+                    )}
+                    {selectedMap === "Rainbow Valley" && !isOpen && (
+                        <div className="absolute left-0 transform -translate-x-0 -mt-1 bg-[#ff7272] text-white font-bold py-2 px-3 rounded-b-lg z-[-1]">
+                            Ages 2-3
+                        </div>
+                    )}
+                    {selectedMap === "Adventure Bay" && !isOpen && (
+                        <div className="absolute left-0 transform -translate-x-0 -mt-1 bg-[#52c5c0] text-white font-bold py-2 px-3 rounded-b-lg z-[-1]">
+                            Ages 3-4
+                        </div>
+                    )}
+                    {selectedMap === "Fantasy Forest" && !isOpen && (
+                        <div className="absolute left-0 transform -translate-x-0 -mt-1 bg-[#3dab6a] text-white font-bold py-2 px-3 rounded-b-lg z-[-1]">
+                            Ages 4-5
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
