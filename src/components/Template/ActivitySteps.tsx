@@ -6,7 +6,7 @@ export interface ActivitySubStep {
 
 export interface ActivityStep {
   stepNumber: number;
-  description: string;
+  description: any;
   subSteps?: ActivitySubStep[];
 }
 
