@@ -5,7 +5,7 @@ import Footer from "@/components/Template/Footer";
 import IntroductionAndMaterials from "@/components/Template/IntroductionAndMaterials";
 import logo from "@/public/images/dashboard/fantasyForest/shared/logo.png";
 import image1 from "@/public/images/dashboard/fantasyForest/week/7/paper.png";
-import image2 from "@/public/images/dashboard/fantasyForest/week/7/pen.png";
+import image2 from "@/public/images/dashboard/fantasyForest/week/7/Pen.png";
 import image3 from "@/public/images/dashboard/fantasyForest/week/7/bowl.png";
 import image4 from "@/public/images/dashboard/fantasyForest/week/7/music.png";
 import image5 from "@/public/images/dashboard/fantasyForest/week/7/flashlights.png";

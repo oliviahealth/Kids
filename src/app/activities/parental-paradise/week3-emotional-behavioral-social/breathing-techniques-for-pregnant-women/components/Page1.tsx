@@ -4,7 +4,7 @@ import logo from "/public/images/dashboard/pregnancy/prenatal-icon.svg";
 import camera from "/public/images/dashboard/pregnancy/camera.svg";
 import towel from "/public/images/dashboard/pregnancy/yoga-mat.svg";
 import template from "/public/images/dashboard/pregnancy/template.png";
-import pen from "/public/images/dashboard/pregnancy/pen.png";
+import pen from "/public/images/dashboard/pregnancy/Pen.png";
 import bino from "/public/images/dashboard/pregnancy/Bino.png";
 import cake from "/public/images/dashboard/pregnancy/cake.png";
 
