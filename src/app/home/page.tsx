@@ -5,6 +5,9 @@ import React, { useState, useEffect, useRef } from "react";
 import HomeNav from "@/components/HomeNav";
 import Map from "@/components/Map";
 
+import useAppStore from "@/lib/useAppStore";
+import { redirect } from "next/navigation";
+
 interface MapMarkers {
   name: string;
   markers: {
@@ -1501,6 +1504,11 @@ const mapMarkers1 = [
 ];
 
 const Dashboard: React.FC = () => {
+  const user = useAppStore(state => state.user);
+  if(!user) {
+    redirect('/sign-in')
+  }
+  
   const [currentMapIndex, setCurrentMapIndex] = useState(0);
   const [containerDimensions, setContainerDimensions] = useState({
     width: 0,

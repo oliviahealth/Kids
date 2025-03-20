@@ -1,335 +1,218 @@
-"use client"
+"use client";
 
-import React, { experimental_taintObjectReference, useState } from 'react';
-import AuthPageLayout from '@/components/AuthPageLayout';
+import React, { useState } from "react";
+import { useRouter } from 'next/navigation'
+import AuthPageLayout from "@/components/AuthPageLayout";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import continueButton from "../../../public/images/continueButton.svg"
+import useAppStore from "@/lib/useAppStore";
 
+import { ISignupFormData } from "./definitions";
+import { createUser } from "./actions";
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Page One (Collect `name`)
+// ─────────────────────────────────────────────────────────────────────────────
 interface SignUpFormPageOneProps {
-    onSignUp: (formData: any) => void;
+  onNext: (formData: { name: string }) => void;
 }
 
-const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onSignUp }) => {
-    const [formData, setFormData] = useState({
-        explorerType: '',
-        parentType: '',
-        birthDate: '',
-        heardAboutUs: ''
-    });
+const SignUpFormPageOne: React.FC<SignUpFormPageOneProps> = ({ onNext }) => {    
+const [name, setName] = useState("");
+  const [error, setError] = useState("");
 
-    const [errors, setErrors] = useState({
-        explorerType: '',
-        parentType: '',
-        birthDate: '',
-        heardAboutUs: ''
-    });
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim()) {
+      setError("Name is required");
+      return;
+    }
+    onNext({ name });
+  };
 
-    const handleInputChange = (e: any) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-        setErrors({
-            ...errors,
-            [name]: ''
-        });
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        const newErrors = {
-            explorerType: formData.explorerType ? '' : 'This field is required',
-            parentType: formData.parentType ? '' : 'This field is required',
-            birthDate: formData.birthDate ? '' : 'This field is required',
-            heardAboutUs: formData.heardAboutUs ? '' : 'This field is required'
-        };
-        setErrors(newErrors);
-
-        const hasErrors = Object.values(newErrors).some(error => error !== '');
-
-        if (!hasErrors) {
-            onSignUp(formData);
-        }
-    };
-
-    return (
-        <div className="w-full max-w-md">
-            <form className="px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
-                <h2 className="font-extrabold text-3xl mb-4">Sign Up</h2>
-                <p className="mb-2">Become an explorer today as a</p>
-                <div className="mb-4">
-                    <div className="flex bg-gray-200 rounded-lg overflow-hidden p-1.5">
-                        <button
-                            type="button"
-                            onClick={() => handleInputChange({ target: { name: 'explorerType', value: 'parent' } })}
-                            className={`flex-1 text-center ${formData.explorerType === 'parent' ? 'bg-white text-[#23176D] font-bold transform scale-90 rounded-lg py-2' : 'text-gray-600 py-2'}`}
-                        >
-                            Parent
-                        </button>
-                        <button
-                            type="button"
-                            onClick={() => handleInputChange({ target: { name: 'explorerType', value: 'child' } })}
-                            className={`flex-1 text-center ${formData.explorerType === 'child' ? 'bg-white text-[#23176D] font-bold transform scale-90 rounded-lg py-2' : 'text-gray-600 py-2'}`}
-                        >
-                            Child
-                        </button>
-                    </div>
-                    {errors.explorerType && <p className="text-red-500 text-xs mt-1">{errors.explorerType}</p>}
-                </div>
-
-
-
-                <div className="mb-4">
-                    <p className="font-bold mb-1">Which description fits you best?</p>
-                    <label className="block cursor-pointer">
-                        <input
-                            type="radio"
-                            name="parentType"
-                            value="expecting"
-                            checked={formData.parentType === 'expecting'}
-                            onChange={handleInputChange}
-                            className="mr-2 accent-[#FF5B5B]"
-                        />
-                        I am a future parent expecting a child in the coming months
-                    </label>
-                    <label className="block cursor-pointer">
-                        <input
-                            type="radio"
-                            name="parentType"
-                            value="current"
-                            checked={formData.parentType === 'current'}
-                            onChange={handleInputChange}
-                            className="mr-2 accent-[#FF5B5B]"
-                        />
-                        I currently have a young child
-                    </label>
-                    {errors.parentType && <p className="text-red-500 text-xs mt-1">{errors.parentType}</p>}
-                </div>
-                <div className="mb-4">
-                    <label className="font-bold block mb-2">What is your child&apos;s birth date?</label>
-                    <input
-                        className="rounded-md border border-[#23176D] p-2 cursor-pointerhover:bg-[#E14B4B]"
-                        type="date"
-                        id="birthDate"
-                        name="birthDate"
-                        value={formData.birthDate}
-                        onChange={handleInputChange}
-                    />
-                    {errors.birthDate && <p className="text-red-500 text-xs mt-1">{errors.birthDate}</p>}
-                </div>
-
-
-                <div className="mb-8">
-                    <label className="block font-bold mb-2">How did you hear about us?</label>
-                    <select
-                        name="heardAboutUs"
-                        value={formData.heardAboutUs}
-                        onChange={handleInputChange}
-                        className="block cursor-pointer text-md appearance-none w-full bg-white border border-[#23176D] text-gray-700 py-3 px-3 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    >
-                        <option value="">Select</option>
-                        <option value="social_media">Social Media</option>
-                        <option value="friend">Friend</option>
-                        <option value="search_engine">Search Engine</option>
-                        <option value="advertisement">Advertisement</option>
-                    </select>
-                    {errors.heardAboutUs && <p className="text-red-500 text-xs mt-1">{errors.heardAboutUs}</p>}
-                </div>
-                <div>
-                    <label className="block font-bold mb-2">Let&apos;s get started!</label>
-                    <button
-                        type="submit"
-                        className="bg-[#FF5B5B] text-white font-bold py-2 px-4 rounded-md w-full focus:outline-none focus:shadow-outline hover:bg-[#E14B4B]"
-                    >
-                        Sign up by creating a username
-                    </button>
-                </div>
-            </form>
-        </div>
-    );
+  return (
+    <form className="w-full max-w-md" onSubmit={handleSubmit}>
+      <h2 className="font-extrabold text-3xl mb-6">Sign Up</h2>
+      {/* Name Field */}
+      <div className="mb-6">
+        <label className="block font-bold mb-2" htmlFor="name">
+          What is your name?
+        </label>
+        <input
+          className="rounded-md border border-[#23176D] p-2 w-full"
+          type="text"
+          id="name"
+          name="name"
+          value={name}
+          placeholder="John Doe"
+          onChange={(e) => {
+            setName(e.target.value);
+            setError("");
+          }}
+        />
+        {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+      </div>
+      {/* Continue Button */}
+      <button
+        type="submit"
+        className="bg-[#FF5B5B] text-white font-bold py-2 px-4 rounded-md w-full hover:bg-[#E14B4B]"
+      >
+        Continue
+      </button>
+    </form>
+  );
 };
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Page Two (Collect `email` & `password`)
+// ─────────────────────────────────────────────────────────────────────────────
 interface SignUpFormPageTwoProps {
-    onBack: () => void;
-    onSignUp: (formData: any) => void; // Assuming there's an onSignUp prop to handle the form submission
+  onBack: () => void;
+  onComplete: (formData: ISignupFormData) => void;
 }
 
-const SignUpFormPageTwo: React.FC<SignUpFormPageTwoProps> = ({ onBack, onSignUp }) => {
-    const [formData, setFormData] = useState({
-        email: '',
-        receiveNewsletter: false,
-        username: '',
-        password: ''
-    });
+const SignUpFormPageTwo: React.FC<SignUpFormPageTwoProps> = ({ onBack, onComplete }) => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: "",
+  });
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+  });
 
-    const [errors, setErrors] = useState({
-        email: '',
-        username: '',
-        password: ''
-    });
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value, type, checked } = e.target;
-        setFormData({
-            ...formData,
-            [name]: type === 'checkbox' ? checked : value
-        });
-        setErrors({
-            ...errors,
-            [name]: ''
-        });
+    const newErrors = {
+      email: formData.email ? "" : "Email is required",
+      password: formData.password ? "" : "Password is required",
+      name: formData.name ? "" : "Name is required"
     };
+    setErrors(newErrors);
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        const newErrors = {
-            email: formData.email ? '' : 'Email is required',
-            username: formData.username ? '' : 'Username is required',
-            password: formData.password ? '' : 'Password is required'
-        };
-        setErrors(newErrors);
+    if (!newErrors.email && !newErrors.password) {
+      onComplete(formData);
+    }
+  };
 
-        const hasErrors = Object.values(newErrors).some(error => error !== '');
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
 
-        if (!hasErrors) {
-            onSignUp(formData);
-        }
-    };
+    setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: "" });
+  };
 
-    return (
-        <div className="flex justify-center items-center h-screen">
-            <div className="w-full max-w-md">
-                <form className="bg-white rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
-                    <h2 className="font-extrabold text-3xl mb-4">Sign Up</h2>
-                    <div className="mb-8">
-                        <label className="block font-bold mb-2" htmlFor="email">
-                            Your preferred email
-                        </label>
-                        
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            className="shadow appearance-none rounded-md border border-[#23176D] w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline mb-2"
-                            placeholder="example@email.com"
-                        />
-                        {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-                        <label className="inline-flex items-center mt-2 cursor-pointer">
-    <input
-        type="checkbox"
-        name="receiveNewsletter"
-        checked={formData.receiveNewsletter}
-        onChange={handleInputChange}
-        className="form-checkbox h-5 w-5 text-[#FF5B5B] rounded-full cursor-pointer"
-    />
-    <span className="ml-2">Receive updates from the Olivia Kids newsletter</span>
-</label>
-                    </div>
-                    <div className="mb-8">
-                        <label className="block font-bold mb-2" htmlFor="username">
-                            Create your username
-                        </label>
-                        <p className="text-s mb-2">
-                            Use letters and numbers exclusively.
-                        </p>
-                        <input
-                            type="text"
-                            name="username"
-                            value={formData.username}
-                            onChange={handleInputChange}
-                            className="shadow appearance-none rounded-md border border-[#23176D] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Your username"
-                        />
-                        {errors.username && <p className="text-red-500 text-xs mt-1">{errors.username}</p>}
-                    </div>
-                    <div className="mb-8">
-                        <label className="block font-bold mb-2" htmlFor="password">
-                            Create your password
-                        </label>
-                        <p className="text-s mb-2">
-                            Must be 8 characters long, and include letters, numbers and other characters.
-                        </p>
-                        <input
-                            type="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleInputChange}
-                            className="shadow appearance-none rounded-md border border-[#23176D] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="Your password"
-                        />
-                        {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <button
-                            type="button"
-                            onClick={onBack}
-                            className="text-[#FF5B5B] font-bold py-1 px-4 rounded-full border border-[#FF5B5B] focus:outline-none focus:shadow-outline hover:bg-[#FF5B5B] hover:text-white transition-colors duration-300"
-                        >
-                            Back
-                        </button>
-                        <button
-                            type="submit"
-                            className="flex items-center justify-between text-white font-bold py-1 px-4 rounded-full bg-[#FF5B5B] hover:bg-[#FF2C2C] transition-colors duration-300"
-                        >
-                            <span className="flex-grow text-left">Continue</span>
-                            <img src="/images/nextIcon.svg" alt="next Icon" className="ml-2" style={{ width: '1em', height: '1em' }} />
-                        </button>
+  return (
+    <form className="w-full max-w-md" onSubmit={handleSubmit}>
+      <h2 className="font-extrabold text-3xl mb-6">Sign Up</h2>
 
+      {/* Email Field */}
+      <div className="mb-6">
+        <label className="block font-bold mb-2" htmlFor="email">
+          Your Email
+        </label>
+        <input
+          className="rounded-md border border-[#23176D] p-2 w-full"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="example@email.com"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+      </div>
 
+      {/* Password Field */}
+      <div className="mb-6">
+        <label className="block font-bold mb-2" htmlFor="password">
+          Create a Password
+        </label>
+        <p className="text-sm mb-2">
+          Must be 8 characters or more, and include letters &amp; numbers.
+        </p>
+        <input
+          className="rounded-md border border-[#23176D] p-2 w-full"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Your password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+        {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
+      </div>
 
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
-}
+      {/* Buttons */}
+      <div className="flex items-center justify-between">
+        <button
+          type="button"
+          onClick={onBack}
+          className="text-[#FF5B5B] font-bold py-2 px-4 rounded-md border border-[#FF5B5B] hover:bg-[#FF5B5B] hover:text-white"
+        >
+          Back
+        </button>
+        <button
+          type="submit"
+          className="bg-[#FF5B5B] text-white font-bold py-2 px-4 rounded-md hover:bg-[#E14B4B]"
+        >
+          Continue
+        </button>
+      </div>
+    </form>
+  );
+};
 
-
+// ─────────────────────────────────────────────────────────────────────────────
+// Main SignUp Page
+// ─────────────────────────────────────────────────────────────────────────────
 const SignUpPage: React.FC = () => {
-    const [currentPage, setCurrentPage] = useState<'pageOne' | 'pageTwo'>('pageOne');
-    const [formData, setFormData] = useState({
-        explorerType: '',
-        parentType: '',
-        birthDate: '',
-        heardAboutUs: '',
+    const setUser = useAppStore(state => state.setUser);
+  
+    const [currentPage, setCurrentPage] = useState<"pageOne" | "pageTwo">("pageOne");
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-        email: '',
-        receiveNewsletter: false,
-        username: '',
-        password: ''
-    });
+  const router = useRouter()
 
-    const handleSignUpFromPageOne = (data: {
-        explorerType: string;
-        parentType: string;
-        birthDate: string;
-        heardAboutUs: string;
-    }) => {
-        setFormData({ ...formData, ...data });
-        setCurrentPage('pageTwo');
-    };
+  const handleNextFromPageOne = (data: { name: string }) => {
+    setUserData({ ...userData, ...data });
+    setCurrentPage("pageTwo");
+  };
 
-    const handleBackFromPageTwo = () => {
-        setCurrentPage('pageOne');
-    };
+  const handleCompleteFromPageTwo = async (data: ISignupFormData) => {
+    const res = await createUser(data);
 
-    return (
-        <div>
-            <Navbar />
-            <AuthPageLayout>
-                {currentPage === 'pageOne' && (
-                    <SignUpFormPageOne onSignUp={handleSignUpFromPageOne} />
-                )}
-                {currentPage === 'pageTwo' && (
-                    <SignUpFormPageTwo onBack={handleBackFromPageTwo} onSignUp={() => { }} />
-                )}
-            </AuthPageLayout>
-            <Footer />
-        </div>
-    );
+    if(res) {
+        setUser(true);
+        router.push('/home');
+    } else {
+        alert("Something went wrong. Please try again later");
+    }
+  };
+
+  const handleBack = () => {
+    setCurrentPage("pageOne");
+  };
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <AuthPageLayout>
+        {currentPage === "pageOne" ? (
+          <SignUpFormPageOne onNext={handleNextFromPageOne} />
+        ) : (
+          <SignUpFormPageTwo onBack={handleBack} onComplete={handleCompleteFromPageTwo} />
+        )}
+      </AuthPageLayout>
+      <Footer />
+    </div>
+  );
 };
 
 export default SignUpPage;

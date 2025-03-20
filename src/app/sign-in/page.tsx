@@ -1,64 +1,123 @@
-import React from "react";
-import Link from "next/link";
+"use client";
+
+import React, { useState } from "react";
+import { z } from "zod";
+import { useRouter } from 'next/navigation'
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AuthPageLayout from "@/components/AuthPageLayout";
+import useAppStore from "@/lib/useAppStore";
 
-const SignInForm: React.FC = () => {
-    return (
-        <AuthPageLayout>
-            <div className="max-w-md">
-                <div className="text-sm flex flex-col space-y-3 font-bold">
-                    <span className="text-3xl font-extrabold pb-4">Log in</span>
-                    <button className="flex items-center px-4 py-3 border border-[#23176D] rounded-lg shadow hover:bg-gray-100">
-                        <img src="/images/googleicon.svg" alt="Google Icon" className="h-6 w-6 mr-2" />
-                        <span className="flex-1 text-center">Continue with Google</span>
-                    </button>
-                    <button className="flex items-center px-4 py-3 border border-[#23176D] rounded-lg shadow hover:bg-gray-100">
-                        <img src="/images/facebookicon.svg" alt="Facebook Icon" className="h-6 w-6 mr-2" />
-                        <span className="flex-1 text-center">Continue with Facebook</span>
-                    </button>
-                    <button className="flex items-center px-4 py-3 border border-[#23176D] rounded-lg shadow hover:bg-gray-100">
-                        <img src="/images/appleicon.svg" alt="Apple Icon" className="h-6 w-6 mr-2" />
-                        <span className="flex-1 text-center">Continue with Apple</span>
-                    </button>
-                </div>
-                <form className="mt-6">
-                    <span className="text-red-500 pr-2 pb-2 inline-block">*</span>
-                    <span>Indicates a required field</span>
-                    <div className="mb-4">
-                        <div className="flex items-center">
-                            <label className="block mb-1 mr-2" htmlFor="email">Email / Username</label>
-                            <span className="text-red-500">*</span>
-                        </div>
-                        <input className="w-full px-4 py-2 border rounded-lg" type="text" id="email" required />
-                    </div>
-                    <div className="mb-2">
-                        <div className="flex items-center">
-                            <label className="block mb-1 mr-2" htmlFor="password">Password</label>
-                            <span className="text-red-500">*</span>
-                        </div>
-                        <input className="w-full px-4 py-2 border rounded-lg" type="password" id="password" required />
-                    </div>
-                    <div className="flex justify-between items-center mb-4">
-                        <a href="#" className="text-sm" style={{ color: '#FF5B5B' }}>Forgot Password?</a>
-                    </div>
-                    <button
-                        className="w-full bg-[#FF5B5B] px-4 py-2 text-white rounded-lg shadow hover:bg-[#E14B4B]">
-                        Log in
-                    </button>
-                </form>
-                <p className="text-center mt-4">Don&apos;t have an Olivia Kids account? <a href="/sign-up" style={{ color: '#FF5B5B' }}>Create an account</a></p>
-            </div>
-        </AuthPageLayout>
-    );
-}
+import { signInUser } from "./actions";
+
+// Import your SigninSchema and its type
+import { SigninSchema, ISigninFormData } from "./definitions";
+// ^ Adjust the path above to where your schema actually lives
 
 const SignInPage: React.FC = () => {
+    const router = useRouter()
+    const setUser = useAppStore(state => state.setUser);
+
+    // Keep local state for form inputs
+    const [formData, setFormData] = useState<ISigninFormData>({
+        email: "",
+        password: "",
+    });
+
+    // Keep local state for any validation errors
+    const [errors, setErrors] = useState<Partial<ISigninFormData>>({});
+
+    // Update local state as user types
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+        setErrors((prev) => ({ ...prev, [name]: undefined })); // clear error for that field
+    };
+
+    // On form submit, validate with Zod and handle errors
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        try {
+            // Attempt to parse/validate formData with Zod
+            const validatedData = SigninSchema.parse(formData);
+            const res = await signInUser(validatedData);
+            
+            if(res) {
+                setUser(true);
+                router.push("/home")
+            } else {
+                alert("Something went wrong. Please try again later");
+            }
+
+        } catch (err) {
+            if (err instanceof z.ZodError) {
+                // Collect errors from Zod
+                const fieldErrors: Partial<ISigninFormData> = {};
+                err.issues.forEach((issue) => {
+                    // Each issue has a `path` array; typically path[0] is the field name
+                    const fieldName = issue.path[0] as keyof ISigninFormData;
+                    fieldErrors[fieldName] = issue.message;
+                });
+                setErrors(fieldErrors);
+            }
+        }
+    };
+
     return (
-        <div>
+        <div className="flex flex-col min-h-screen">
             <Navbar />
-            <SignInForm />
+            <AuthPageLayout>
+                <form onSubmit={handleSubmit} className="w-full max-w-md">
+                    <h2 className="font-extrabold text-3xl mb-6">Sign In</h2>
+
+                    {/* Email Field */}
+                    <div className="mb-6">
+                        <label className="block font-bold mb-2" htmlFor="email">
+                            Your Email
+                        </label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            className="rounded-md border border-[#23176D] p-2 w-full"
+                            placeholder="example@email.com"
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
+                        {errors.email && (
+                            <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                        )}
+                    </div>
+
+                    {/* Password Field */}
+                    <div className="mb-6">
+                        <label className="block font-bold mb-2" htmlFor="password">
+                            Your Password
+                        </label>
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            className="rounded-md border border-[#23176D] p-2 w-full"
+                            placeholder="Your password"
+                            value={formData.password}
+                            onChange={handleChange}
+                        />
+                        {errors.password && (
+                            <p className="text-red-500 text-xs mt-1">{errors.password}</p>
+                        )}
+                    </div>
+
+                    <button
+                        type="submit"
+                        className="bg-[#FF5B5B] text-white font-bold py-2 px-4 rounded-md w-full hover:bg-[#E14B4B]"
+                    >
+                        Sign In
+                    </button>
+                </form>
+            </AuthPageLayout>
             <Footer />
         </div>
     );
