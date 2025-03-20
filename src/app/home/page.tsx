@@ -1504,10 +1504,11 @@ const mapMarkers1 = [
 ];
 
 const Dashboard: React.FC = () => {
-  const user = useAppStore(state => state.user);
-  if(!user) {
-    redirect('/sign-in')
-  }
+  // const user = useAppStore(state => state.user);
+
+  // if(!user) {
+  //   redirect('/sign-in')
+  // }
   
   const [currentMapIndex, setCurrentMapIndex] = useState(0);
   const [containerDimensions, setContainerDimensions] = useState({

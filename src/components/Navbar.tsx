@@ -49,9 +49,7 @@ const Navbar: React.FC = () => {
           <div
             className={`${isOpen ? 'block bg-white border shadow mt-4 mr-1' : 'hidden'} absolute rounded-xl md:shadow-none md:bg-none md:border-0 md:relative right-0 md:mt-0 p-4 md:p-0 md:flex space-y-6 md:space-y-0 md:space-x-4 text-sm md:text-base`}
           >
-            <a href={'/home'} className="block md:flex button">
-              Map
-            </a>
+            
 
             {/* <button
               className="block md:flex button md:button-filled md:rounded-full gap-x-2"

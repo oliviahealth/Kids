@@ -9,7 +9,11 @@ interface AppState {
 
 const useAppStore = create<AppState>()((set) => ({
     user: false,
-    setUser: (user) => set(() => ({ user }))
+    setUser: (user) => set(() => {
+        console.log(user);
+        
+        return { user }
+    })
 }));
 
 export default useAppStore

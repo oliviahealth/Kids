@@ -190,7 +190,7 @@ const SignUpPage: React.FC = () => {
 
     if(res) {
         setUser(true);
-        router.push('/home');
+        router.replace('/home');
     } else {
         alert("Something went wrong. Please try again later");
     }
