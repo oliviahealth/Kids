@@ -3,8 +3,8 @@
 import { create } from "zustand";
 
 interface AppState {
-    user: boolean;
-    setUser: (user: boolean) => void;
+    user: any;
+    setUser: (user: any) => void;
 }
 
 const useAppStore = create<AppState>()((set) => ({
