@@ -22,6 +22,8 @@ const SignupPage: React.FC = () => {
   } = useForm<ISignupFormData>({ resolver: zodResolver(SignupSchema) });
 
   const signupUser = async (data: ISignupFormData) => {
+    console.log(data);
+    
     try {
       if (data.password !== data.confirmPassword) {
         throw new Error('Password and ConfirmPassword do not match');
@@ -117,6 +119,24 @@ const SignupPage: React.FC = () => {
           {errors.confirmPassword && (
             <span className="label-text-alt text-red-500">
               {errors.confirmPassword.message}
+            </span>
+          )}
+        </div>
+
+        <div className="my-1">
+          <label className="label">
+            <span className="label-text text-black font-medium">
+              Access Token
+            </span>
+          </label>
+          <input
+            {...register('accessToken')}
+            type="password"
+            className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
+          />
+          {errors.accessToken && (
+            <span className="label-text-alt text-red-500">
+              {errors.accessToken.message}
             </span>
           )}
         </div>
