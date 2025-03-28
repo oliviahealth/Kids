@@ -23,7 +23,8 @@ model User {
 }
 
 model AccessToken {
-  id           String   @id @default(uuid())
+  id                 String @id @default(uuid())
+  verification_token String
 
-  dateCreated  DateTime @default(now())
+  dateCreated DateTime @default(now())
 }

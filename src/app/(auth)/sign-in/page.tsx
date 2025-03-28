@@ -94,7 +94,7 @@ const SignInPage: React.FC = () => {
       </form>
 
       <p className="text-sm mt-8">  
-        Don`&apos;`t have an account?{' '}
+        Don&apos;t have an account?{' '}
         <span className="button-colored p-0">
           <Link href={'/sign-up'}>Create one now!</Link>
         </span>

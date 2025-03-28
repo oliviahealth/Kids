@@ -22,8 +22,7 @@ const SignupPage: React.FC = () => {
   } = useForm<ISignupFormData>({ resolver: zodResolver(SignupSchema) });
 
   const signupUser = async (data: ISignupFormData) => {
-    console.log(data);
-    
+
     try {
       if (data.password !== data.confirmPassword) {
         throw new Error('Password and ConfirmPassword do not match');
@@ -45,12 +44,6 @@ const SignupPage: React.FC = () => {
       <div>
         <p className="font-semibold text-2xl">Get Started</p>
         <p className="text-sm">Create your account now</p>
-      </div>
-
-      <div className="flex items-center mt-5">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <span className="mx-4 text-gray-500">or</span>
-        <div className="flex-grow border-t border-gray-300"></div>
       </div>
 
       <form
@@ -148,6 +141,12 @@ const SignupPage: React.FC = () => {
           Sign Up
         </button>
       </form>
+
+      <p className="text-sm mt-8">
+        <span className="button-colored p-0">
+          <Link href={'/sign-in'}>Request Access Token</Link>
+        </span>
+      </p>
 
       <p className="text-sm mt-8">
         Have an account?{' '}
