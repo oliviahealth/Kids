@@ -1,8 +1,8 @@
 "use client"
 
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
@@ -12,8 +12,8 @@ import { ISignupFormData, SignupSchema } from "./definitions";
 import useAppStore from "@/lib/useAppStore";
 
 const SignupPage: React.FC = () => {
-  const router = useRouter()
-
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const setUser = useAppStore((state) => state.setUser);
 
   const {
@@ -21,42 +21,49 @@ const SignupPage: React.FC = () => {
     handleSubmit: handleSignup,
     formState: { errors, isSubmitting },
     getValues,
-    setError
+    setError,
+    setValue,
   } = useForm<ISignupFormData>({ resolver: zodResolver(SignupSchema) });
+
+  // If a "token" query parameter exists, prefill the accessToken field
+  useEffect(() => {
+    const token = searchParams.get("token");
+    if (token) {
+      setValue("accessToken", token);
+    }
+  }, [searchParams, setValue]);
 
   const signupUser = async (data: ISignupFormData) => {
     try {
       if (data.password !== data.confirmPassword) {
-        throw new Error('Password and ConfirmPassword do not match');
+        throw new Error("Password and ConfirmPassword do not match");
       }
 
       const { user } = await createUser(data);
-
       setUser(user);
     } catch (error) {
       console.error(error);
       return;
     }
+    router.push("/home");
+  };
 
-    router.push('/home');
-  }
-
-  const requestAccessToken = async() => {    
+  const requestAccessToken = async () => {
     const { name, email } = getValues();
 
-    if(!name || name == '') {
-      setError("name", { type: "custom", message: "Name is required" })
+    if (!name || name.trim() === "") {
+      setError("name", { type: "custom", message: "Name is required" });
     }
-    if(!email || email == '') {
-      setError("email", { type: "custom", message: "Email is required" })
+    if (!email || email.trim() === "") {
+      setError("email", { type: "custom", message: "Email is required" });
     }
 
-    if(!email || email == '' || !name || name == '') {
+    if (!name || name.trim() === "" || !email || email.trim() === "") {
       return;
     }
 
     await axios.post("http://localhost:3000/requestauthtoken/api", { name, email });
-  }
+  };
 
   return (
     <>
@@ -65,24 +72,17 @@ const SignupPage: React.FC = () => {
         <p className="text-sm">Create your account now</p>
       </div>
 
-      <form
-        onSubmit={handleSignup((data) => signupUser(data))}
-        className="form-control w-full"
-      >
+      <form onSubmit={handleSignup((data) => signupUser(data))} className="form-control w-full">
         <div>
           <label className="label">
             <span className="label-text text-black font-medium">Name</span>
           </label>
           <input
-            {...register('name')}
+            {...register("name")}
             type="text"
             className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
           />
-          {errors.name && (
-            <span className="label-text-alt text-red-500">
-              {errors.name.message}
-            </span>
-          )}
+          {errors.name && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
         </div>
 
         <div className="my-1">
@@ -90,15 +90,11 @@ const SignupPage: React.FC = () => {
             <span className="label-text text-black font-medium">Email</span>
           </label>
           <input
-            {...register('email')}
+            {...register("email")}
             type="email"
             className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
           />
-          {errors.email && (
-            <span className="label-text-alt text-red-500">
-              {errors.email.message}
-            </span>
-          )}
+          {errors.email && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
         </div>
 
         <div className="my-1">
@@ -106,57 +102,43 @@ const SignupPage: React.FC = () => {
             <span className="label-text text-black font-medium">Password</span>
           </label>
           <input
-            {...register('password')}
+            {...register("password")}
             type="password"
             className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
           />
-          {errors.password && (
-            <span className="label-text-alt text-red-500">
-              {errors.password.message}
-            </span>
-          )}
+          {errors.password && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
         </div>
 
         <div className="my-1">
           <label className="label">
-            <span className="label-text text-black font-medium">
-              Confirm Password
-            </span>
+            <span className="label-text text-black font-medium">Confirm Password</span>
           </label>
           <input
-            {...register('confirmPassword')}
+            {...register("confirmPassword")}
             type="password"
             className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
           />
           {errors.confirmPassword && (
-            <span className="label-text-alt text-red-500">
-              {errors.confirmPassword.message}
-            </span>
+            <span className="label-text-alt text-red-500">{errors.confirmPassword.message}</span>
           )}
         </div>
 
         <div className="my-1">
           <label className="label">
-            <span className="label-text text-black font-medium">
-              Access Token
-            </span>
+            <span className="label-text text-black font-medium">Access Token</span>
           </label>
           <input
-            {...register('accessToken')}
+            {...register("accessToken")}
             type="password"
             className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
           />
           {errors.accessToken && (
-            <span className="label-text-alt text-red-500">
-              {errors.accessToken.message}
-            </span>
+            <span className="label-text-alt text-red-500">{errors.accessToken.message}</span>
           )}
         </div>
 
         <button className="btn button-filled w-full mt-6">
-          {isSubmitting && (
-            <span className="loading loading-spinner loading-sm"></span>
-          )}
+          {isSubmitting && <span className="loading loading-spinner loading-sm"></span>}
           Sign Up
         </button>
       </form>
@@ -168,13 +150,13 @@ const SignupPage: React.FC = () => {
       </p>
 
       <p className="text-sm mt-8">
-        Have an account?{' '}
+        Have an account?{" "}
         <span className="button-colored p-0">
-          <Link href={'/sign-in'}>Sign In</Link>
+          <Link href={"/sign-in"}>Sign In</Link>
         </span>
       </p>
     </>
-  )
-}
+  );
+};
 
 export default SignupPage;

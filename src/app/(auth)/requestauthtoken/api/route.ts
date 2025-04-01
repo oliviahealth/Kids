@@ -1,22 +1,11 @@
-import { v4 as uuid } from "uuid";
-import { PrismaClient } from "@prisma/client";
 import { Resend } from "resend";
 
-const prisma = new PrismaClient();
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   const { name, email } = await req.json();
 
-  const accessToken = uuid();
-
-  const accessTokenEntry = await prisma.accessToken.create({
-    data: {
-      id: accessToken,
-    },
-  });
-
-  const data = await resend.emails.send({
+  await resend.emails.send({
     from: "onboarding@resend.dev",
     to: "oliviahealth@tamu.edu",
     subject: "Olivia Kids Access Requested",
@@ -25,12 +14,10 @@ export async function POST(req: Request) {
       <p>Someone is requesting access to Olivia Kids</p>
       <p>Name: ${name}</p>
       <p>Email: ${email}</p>
-      <a href="http://localhost:3000/">Click here to approve</a>
+      <a href="http://localhost:3000/approveauthtoken/api?name=${name}&email=${email}">Click here to approve.</a>
     </div>
     `,
   });
-
-  console.log(data)
 
   return Response.json({ data: "success" });
 }
