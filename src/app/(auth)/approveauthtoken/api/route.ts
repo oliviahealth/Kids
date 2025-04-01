@@ -30,7 +30,7 @@ export async function GET(req: NextRequest) {
     });
 
     const data = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "onboarding@sumitnalavade.com",
       to: email,
       subject: "Olivia Kids Access Approved",
       html: `
@@ -41,6 +41,8 @@ export async function GET(req: NextRequest) {
       </div>
     `,
     });
+
+    console.log(data);
 
     return new Response(JSON.stringify({ data: "success" }), {
       status: 200,

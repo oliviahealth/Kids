@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -15,6 +15,8 @@ const SignupPage: React.FC = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const setUser = useAppStore((state) => state.setUser);
+
+  const [requestAccessTokenStatus, setRequestAccessTokenStatus] = useState<null | string>(null);
 
   const {
     register,
@@ -62,12 +64,32 @@ const SignupPage: React.FC = () => {
       return;
     }
 
-    await axios.post("http://localhost:3000/requestauthtoken/api", { name, email });
+    const { data } = (await axios.post("http://localhost:3000/requestauthtoken/api", { name, email })).data;
+
+    if (data === 'success') {
+      setRequestAccessTokenStatus('success');
+    } else {
+      setRequestAccessTokenStatus('failure')
+    }
   };
 
   return (
     <>
-      <div>
+      {requestAccessTokenStatus == 'success' && (<div role="alert" className="alert alert-success my-4">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Access Token Requested. You&apos;ll get an email soon if you&apos;re approved!</span>
+      </div>)}
+
+      {requestAccessTokenStatus == 'failure' && (<div role="alert" className="alert alert-error my-4">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Error! Something went wrong, please try again later.</span>
+      </div>)}
+
+      <div className="my-4">
         <p className="font-semibold text-2xl">Get Started</p>
         <p className="text-sm">Create your account now</p>
       </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -13,8 +13,8 @@ import useAppStore from "@/lib/useAppStore";
 const SignInPage: React.FC = () => {
   const router = useRouter();
 
-
   const setUser = useAppStore(state => state.setUser);
+  const [signinStatus, setSigninStatus] = useState<string | null>(null);
 
   const {
     register,
@@ -27,8 +27,13 @@ const SignInPage: React.FC = () => {
     try {
       const { user } = await signin(data);
 
+      if (!user) {
+        setSigninStatus('failure')
+      }
+
       setUser(user);
     } catch (error) {
+      setSigninStatus('failure')
       console.error(error);
       return;
     }
@@ -38,6 +43,13 @@ const SignInPage: React.FC = () => {
 
   return (
     <>
+      {signinStatus === 'failure' && (<div role="alert" className="alert alert-error my-4">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Error! Something went wrong, please try again later.</span>
+      </div>)}
+
       <div>
         <p className="font-semibold text-2xl">Welcome Back!</p>
         <p className="text-sm">Sign in to your account</p>
@@ -93,7 +105,7 @@ const SignInPage: React.FC = () => {
         </button>
       </form>
 
-      <p className="text-sm mt-8">  
+      <p className="text-sm mt-8">
         Don&apos;t have an account?{' '}
         <span className="button-colored p-0">
           <Link href={'/sign-up'}>Create one now!</Link>
