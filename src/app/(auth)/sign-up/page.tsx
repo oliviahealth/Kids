@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
 
 import { createUser } from "./actions";
 import { ISignupFormData, SignupSchema } from "./definitions";
@@ -19,10 +20,11 @@ const SignupPage: React.FC = () => {
     register,
     handleSubmit: handleSignup,
     formState: { errors, isSubmitting },
+    getValues,
+    setError
   } = useForm<ISignupFormData>({ resolver: zodResolver(SignupSchema) });
 
   const signupUser = async (data: ISignupFormData) => {
-
     try {
       if (data.password !== data.confirmPassword) {
         throw new Error('Password and ConfirmPassword do not match');
@@ -37,6 +39,23 @@ const SignupPage: React.FC = () => {
     }
 
     router.push('/home');
+  }
+
+  const requestAccessToken = async() => {    
+    const { name, email } = getValues();
+
+    if(!name || name == '') {
+      setError("name", { type: "custom", message: "Name is required" })
+    }
+    if(!email || email == '') {
+      setError("email", { type: "custom", message: "Email is required" })
+    }
+
+    if(!email || email == '' || !name || name == '') {
+      return;
+    }
+
+    await axios.post("http://localhost:3000/requestauthtoken/api", { name, email });
   }
 
   return (
@@ -144,7 +163,7 @@ const SignupPage: React.FC = () => {
 
       <p className="text-sm mt-8">
         <span className="button-colored p-0">
-          <Link href={'/sign-in'}>Request Access Token</Link>
+          <button onClick={() => requestAccessToken()}>Request Access Token</button>
         </span>
       </p>
 

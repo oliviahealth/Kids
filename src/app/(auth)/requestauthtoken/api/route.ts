@@ -9,12 +9,10 @@ export async function POST(req: Request) {
   const { name, email } = await req.json();
 
   const accessToken = uuid();
-  const verificationToken = uuid();
 
   const accessTokenEntry = await prisma.accessToken.create({
     data: {
       id: accessToken,
-      verification_token: verificationToken,
     },
   });
 
@@ -31,6 +29,8 @@ export async function POST(req: Request) {
     </div>
     `,
   });
+
+  console.log(data)
 
   return Response.json({ data: "success" });
 }
