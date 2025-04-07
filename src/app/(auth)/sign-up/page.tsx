@@ -22,18 +22,18 @@ const SignupPage: React.FC = () => {
   } = useForm<ISignupFormData>({ resolver: zodResolver(SignupSchema) });
 
   const signupUser = async (data: ISignupFormData) => {
-    try {
-      if (data.password !== data.confirmPassword) {
-        throw new Error('Password and ConfirmPassword do not match');
-      }
+    // try {
+    //   if (data.password !== data.confirmPassword) {
+    //     throw new Error('Password and ConfirmPassword do not match');
+    //   }
 
-      const { user } = await createUser(data);
+    //   const { user } = await createUser(data);
 
-      setUser(user);
-    } catch (error) {
-      console.error(error);
-      return;
-    }
+    //   setUser(user);
+    // } catch (error) {
+    //   console.error(error);
+    //   return;
+    // }
 
     router.push('/home');
   }

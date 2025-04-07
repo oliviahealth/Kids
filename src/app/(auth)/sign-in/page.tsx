@@ -24,14 +24,14 @@ const SignInPage: React.FC = () => {
 
 
   const signinUser = async (data: ISigninFormData) => {
-    try {
-      const { user } = await signin(data);
+    // try {
+    //   const { user } = await signin(data);
 
-      setUser(user);
-    } catch (error) {
-      console.error(error);
-      return;
-    }
+    //   setUser(user);
+    // } catch (error) {
+    //   console.error(error);
+    //   return;
+    // }
 
     router.push('/home');
   }
