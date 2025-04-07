@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
   const { name, email } = await req.json();
 
-  const siteUrl = process.env.SITE_URL;
+  const siteUrl = "http://oliviakids.org"
 
   const data = await resend.emails.send({
     from: "onboarding@sumitnalavade.com",
