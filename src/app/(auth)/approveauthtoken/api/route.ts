@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"; // ⬅ Ensures dynamic rendering for access to searchParams
+
 import { NextRequest } from "next/server";
 import { v4 as uuid } from "uuid";
 import { PrismaClient } from "@prisma/client";
@@ -34,12 +36,12 @@ export async function GET(req: NextRequest) {
       to: email,
       subject: "Olivia Kids Access Approved",
       html: `
-      <div>
-        <p>Hi ${sanitize(name)}, you're approved for Olivia Kids!</p>
-        <p><strong>Access Token:</strong> ${accessToken}</p>
-        <a href="http://localhost:3000/sign-up?token=${accessToken}">Click here to sign up automatically!</a>
-      </div>
-    `,
+        <div>
+          <p>Hi ${sanitize(name)}, you're approved for Olivia Kids!</p>
+          <p><strong>Access Token:</strong> ${accessToken}</p>
+          <a href="http://localhost:3000/sign-up?token=${accessToken}">Click here to sign up automatically!</a>
+        </div>
+      `,
     });
 
     console.log(data);
@@ -55,7 +57,7 @@ export async function GET(req: NextRequest) {
   }
 }
 
-// Very basic sanitization (you could use a library like DOMPurify if needed)
+// Very basic HTML sanitization
 function sanitize(str: string) {
   return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
