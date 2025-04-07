@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Suspense } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
@@ -14,7 +14,7 @@ import useAppStore from "@/lib/useAppStore";
 
 const SignupPage: React.FC = () => {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   const setUser = useAppStore((state) => state.setUser);
 
   const [requestAccessTokenStatus, setRequestAccessTokenStatus] = useState<null | string>(null);
@@ -28,13 +28,13 @@ const SignupPage: React.FC = () => {
     setValue,
   } = useForm<ISignupFormData>({ resolver: zodResolver(SignupSchema) });
 
-  // If a "token" query parameter exists, prefill the accessToken field
-  useEffect(() => {
-    const token = searchParams.get("token");
-    if (token) {
-      setValue("accessToken", token);
-    }
-  }, [searchParams, setValue]);
+  // // If a "token" query parameter exists, prefill the accessToken field
+  // useEffect(() => {
+  //   const token = searchParams.get("token");
+  //   if (token) {
+  //     setValue("accessToken", token);
+  //   }
+  // }, [searchParams, setValue]);
 
   const signupUser = async (data: ISignupFormData) => {
     try {
