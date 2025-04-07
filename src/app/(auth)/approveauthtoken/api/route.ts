@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
     const name = rawName?.trim().replace(/^"|"$/g, "");
     const email = rawEmail?.trim().replace(/^"|"$/g, "");
 
-    const siteUrl = process.env.SITE_URL;
+    const siteUrl = "http://oliviakids.org"
 
     if (!name || !email) {
       return new Response(JSON.stringify({ error: "Missing name or email" }), {
