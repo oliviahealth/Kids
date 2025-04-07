@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import logo from "/public/images/dashboard/adventure-bay/title-image.png";
 import list from "/public/images/dashboard/adventure-bay/Vector.png";

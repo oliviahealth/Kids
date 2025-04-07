@@ -1,12 +1,22 @@
-// import type { Metadata } from "next";
-import { ErrorBoundary } from "react-error-boundary";
+import type { Metadata } from "next";
+
+import localFont from 'next/font/local';
+import { Candal } from 'next/font/google'
 
 import "./globals.css";
 
-// export const metadata: Metadata = {
-//   title: "OliviaHealth - Kids",
-//   description: "Web-based learning model of HIPPY summer curriculum",
-// };
+import Footer from "@/components/Footer";
+
+const candal = Candal({
+  weight: "400",
+  variable: '--font-candal',
+  subsets: ["latin"]
+})
+
+export const metadata: Metadata = {
+  title: "OliviaHealth - Kids",
+  description: "Web-based learning model of HIPPY summer curriculum",
+};
 
 export default function RootLayout({
   children,
@@ -18,9 +28,7 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className="w-full h-full flex flex-col justify-between font-OpenSans">
         <main className="flex-grow">
-          <ErrorBoundary fallback={<div className="w-full h-full flex justify-center items-center">Something went wrong</div>}>
-            {children}
-          </ErrorBoundary>
+          {children}
         </main>
       </body>
     </html>

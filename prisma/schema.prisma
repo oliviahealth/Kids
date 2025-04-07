@@ -21,9 +21,3 @@ model User {
   dateCreated  DateTime @default(now())
   dateModified DateTime @updatedAt
 }
-
-model AccessToken {
-  id                 String @id @default(uuid())
-
-  dateCreated DateTime @default(now())
-}
