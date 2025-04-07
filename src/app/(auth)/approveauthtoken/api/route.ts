@@ -17,6 +17,8 @@ export async function GET(req: NextRequest) {
     const name = rawName?.trim().replace(/^"|"$/g, "");
     const email = rawEmail?.trim().replace(/^"|"$/g, "");
 
+    const siteUrl = process.env.SITE_URL;
+
     if (!name || !email) {
       return new Response(JSON.stringify({ error: "Missing name or email" }), {
         status: 400,
@@ -39,7 +41,7 @@ export async function GET(req: NextRequest) {
         <div>
           <p>Hi ${sanitize(name)}, you're approved for Olivia Kids!</p>
           <p><strong>Access Token:</strong> ${accessToken}</p>
-          <a href="http://localhost:3000/sign-up?token=${accessToken}">Click here to sign up automatically!</a>
+          <a href="${siteUrl}/sign-up?token=${accessToken}">Click here to sign up automatically!</a>
         </div>
       `,
     });

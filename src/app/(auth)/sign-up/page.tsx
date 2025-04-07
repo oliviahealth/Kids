@@ -53,24 +53,30 @@ const SignupPage: React.FC = () => {
 
   const requestAccessToken = async () => {
     const { name, email } = getValues();
-
+  
     if (!name || name.trim() === "") {
       setError("name", { type: "custom", message: "Name is required" });
     }
     if (!email || email.trim() === "") {
       setError("email", { type: "custom", message: "Email is required" });
     }
-
+  
     if (!name || name.trim() === "" || !email || email.trim() === "") {
       return;
     }
-
-    const { data } = (await axios.post("http://localhost:3000/requestauthtoken/api", { name, email })).data;
-
-    if (data === 'success') {
-      setRequestAccessTokenStatus('success');
-    } else {
-      setRequestAccessTokenStatus('failure')
+  
+    try {
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+      const response = await axios.post(`${siteUrl}/requestauthtoken/api`, { name, email });
+  
+      if (response.data === 'success') {
+        setRequestAccessTokenStatus('success');
+      } else {
+        setRequestAccessTokenStatus('failure');
+      }
+    } catch (error) {
+      console.error(error);
+      setRequestAccessTokenStatus('failure');
     }
   };
 

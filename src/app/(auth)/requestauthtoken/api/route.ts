@@ -5,6 +5,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
   const { name, email } = await req.json();
 
+  const siteUrl = process.env.SITE_URL;
+
   const data = await resend.emails.send({
     from: "onboarding@sumitnalavade.com",
     to: "oliviahealth@tamu.edu",
@@ -14,7 +16,7 @@ export async function POST(req: Request) {
       <p>Someone is requesting access to Olivia Kids</p>
       <p>Name: ${name}</p>
       <p>Email: ${email}</p>
-      <a href="http://localhost:3000/approveauthtoken/api?name=${name}&email=${email}">Click here to approve.</a>
+      <a href="${siteUrl}/approveauthtoken/api?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}">Click here to approve.</a>
     </div>
     `,
   });
