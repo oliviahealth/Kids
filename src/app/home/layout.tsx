@@ -7,32 +7,32 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-// const prisma = new PrismaClient();
+const prisma = new PrismaClient();
 
-// const verifyJwt = () => {
-//   const jwt = cookies().get("jwt")?.value;
+const verifyJwt = () => {
+  const jwt = cookies().get("jwt")?.value;
 
-//   if (!jwt) {
-//     throw new Error("Unauthorized");
-//   }
+  if (!jwt) {
+    throw new Error("Unauthorized");
+  }
 
-//   const decodedToken = verify(jwt, process.env.JWT_SECRET!) as {
-//     userId: string;
-//   };
+  const decodedToken = verify(jwt, process.env.JWT_SECRET!) as {
+    userId: string;
+  };
 
-//   return decodedToken.userId;
-// };
+  return decodedToken.userId;
+};
 
 const Layout = async ({ children }: LayoutProps) => {
-  // const userId = verifyJwt();
+  const userId = verifyJwt();
 
-  // const user = await prisma.user.findUnique({
-  //   where: { id: userId },
-  // });
+  const user = await prisma.user.findUnique({
+    where: { id: userId },
+  });
 
-  // if (!user) {
-  //   throw new Error("Unauthorized");
-  // }
+  if (!user) {
+    throw new Error("Unauthorized");
+  }
 
   return <>{children}</>;
 };

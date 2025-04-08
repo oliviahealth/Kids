@@ -10,7 +10,16 @@ import { ISignupFormData } from "./definitions";
 const prisma = new PrismaClient();
 
 export const createUser = async (signupFormData: ISignupFormData) => {
-    const { name, email, password } = signupFormData;
+    const { name, email, password, accessToken } = signupFormData;
+
+    const token = await prisma.accessToken.findFirst({
+        where: {
+          id: accessToken
+        }
+    });
+    if(!token) {
+        throw new Error("Access token invalid")
+    }
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -22,15 +31,15 @@ export const createUser = async (signupFormData: ISignupFormData) => {
         }
     });
 
-    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET as string, { expiresIn: '1h' });
+    const jwt_token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET as string, { expiresIn: '1h' });
 
     cookies().set({
         name: "jwt",
         secure: process.env.NODE_ENV === 'production', // Ensure this is set to true in production
-        value: token,
+        value: jwt_token,
         httpOnly: true,
         path: "/",
     });
 
-    return { user, token }
+    return { user, token: jwt_token }
 };
