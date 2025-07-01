@@ -19,6 +19,7 @@ const SignInPage: React.FC = () => {
   const {
     register,
     handleSubmit: handleSignin,
+    setValue,
     formState: { errors, isSubmitting }
   } = useForm<ISigninFormData>({ resolver: zodResolver(SigninSchema) });
 
