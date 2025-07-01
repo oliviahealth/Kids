@@ -142,6 +142,10 @@ const SignupContent = () => {
           <input
             {...register("email")}
             type="email"
+            onChange={(e) => {
+              const lower = e.target.value.toLowerCase();
+              setValue("email", lower);
+            }}
             className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
           />
           {errors.email && <span className="label-text-alt text-red-500">{errors.email.message}</span>}

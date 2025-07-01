@@ -72,6 +72,10 @@ const SignInPage: React.FC = () => {
           <input
             {...register('email')}
             type="email"
+            onChange={(e) => {
+              const lower = e.target.value.toLowerCase();
+              setValue("email", lower);
+            }}
             className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
           />
           {errors.email && (
