@@ -9,12 +9,15 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { signin } from "./actions";
 import { SigninSchema, ISigninFormData } from "./definitions";
 import useAppStore from "@/lib/useAppStore";
+import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri'
 
 const SignInPage: React.FC = () => {
   const router = useRouter();
 
   const setUser = useAppStore(state => state.setUser);
   const [signinStatus, setSigninStatus] = useState<string | null>(null);
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -66,19 +69,18 @@ const SignInPage: React.FC = () => {
         onSubmit={handleSignin((data) => signinUser(data))}
         className="form-control w-full"
       >
-        <div>
+        <div className="my-1">
           <label className="label">
             <span className="label-text text-black font-medium">Email</span>
           </label>
-          <input
-            {...register('email')}
-            type="email"
-            onChange={(e) => {
-              const lower = e.target.value.toLowerCase();
-              setValue("email", lower);
-            }}
-            className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
-          />
+          <div className="flex w-full items-center border border-gray-200 rounded-xl p-1">
+            <input
+              {...register('email')}
+              type="email"
+              className="input flex-1 border-0 focus:border-transparent focus:ring-0 focus:outline-none"
+              placeholder="you@example.com"
+            />
+          </div>
           {errors.email && (
             <span className="label-text-alt text-red-500">
               {errors.email.message}
@@ -90,11 +92,23 @@ const SignInPage: React.FC = () => {
           <label className="label">
             <span className="label-text text-black font-medium">Password</span>
           </label>
-          <input
-            {...register('password')}
-            type="password"
-            className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
-          />
+          <div className="flex w-full items-center gap-2 border border-gray-200 rounded-xl p-1">
+            <input
+              {...register('password')}
+              type={showPassword ? 'text' : 'password'}
+              className="input flex-1 border-0 focus:border-transparent focus:ring-0 focus:outline-none"
+              placeholder="Password"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="text-gray-500 text-sm px-2"
+              aria-label="Toggle password visibility"
+            >
+              {showPassword ? <RiEyeFill /> : <RiEyeOffFill />}
+            </button>
+          </div>
+
           {errors.password && (
             <span className="label-text-alt text-red-500">
               {errors.password.message}
