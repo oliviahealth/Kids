@@ -10,6 +10,7 @@ import axios from "axios";
 import { createUser } from "./actions";
 import { ISignupFormData, SignupSchema } from "./definitions";
 import useAppStore from "@/lib/useAppStore";
+import { RiEyeFill, RiEyeOffFill } from "react-icons/ri";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
@@ -19,6 +20,9 @@ const SignupContent = () => {
   const setUser = useAppStore((state) => state.setUser);
 
   const [requestAccessTokenStatus, setRequestAccessTokenStatus] = useState<null | string>(null);
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const {
     register,
@@ -123,57 +127,97 @@ const SignupContent = () => {
       </div>
 
       <form onSubmit={handleSignup((data) => signupUser(data))} className="form-control w-full">
-        <div>
+        <div className="my-1">
           <label className="label">
             <span className="label-text text-black font-medium">Name</span>
           </label>
-          <input
-            {...register("name")}
-            type="text"
-            className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
-          />
-          {errors.name && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+          <div className="flex w-full items-center border border-gray-200 rounded-xl p-1">
+            <input
+              {...register('name')}
+              type="text"
+              className="input flex-1 border-0 focus:border-transparent focus:ring-0 focus:outline-none"
+              placeholder="Your name"
+            />
+          </div>
+          {errors.name && (
+            <span className="label-text-alt text-red-500">
+              {errors.name.message}
+            </span>
+          )}
         </div>
 
         <div className="my-1">
           <label className="label">
             <span className="label-text text-black font-medium">Email</span>
           </label>
-          <input
-            {...register("email")}
-            type="email"
-            onChange={(e) => {
-              const lower = e.target.value.toLowerCase();
-              setValue("email", lower);
-            }}
-            className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
-          />
-          {errors.email && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+          <div className="flex w-full items-center border border-gray-200 rounded-xl p-1">
+            <input
+              {...register('email')}
+              type="email"
+              className="input flex-1 border-0 focus:border-transparent focus:ring-0 focus:outline-none"
+              placeholder="you@example.com"
+            />
+          </div>
+          {errors.email && (
+            <span className="label-text-alt text-red-500">
+              {errors.email.message}
+            </span>
+          )}
         </div>
 
         <div className="my-1">
           <label className="label">
             <span className="label-text text-black font-medium">Password</span>
           </label>
-          <input
-            {...register("password")}
-            type="password"
-            className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
-          />
-          {errors.password && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+          <div className="flex w-full items-center gap-2 border border-gray-200 rounded-xl p-1">
+            <input
+              {...register('password')}
+              type={showPassword ? 'text' : 'password'}
+              className="input flex-1 border-0 focus:border-transparent focus:ring-0 focus:outline-none"
+              placeholder="Password"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="text-gray-500 text-sm px-2"
+              aria-label="Toggle password visibility"
+            >
+              {showPassword ? <RiEyeFill /> : <RiEyeOffFill />}
+            </button>
+          </div>
+
+          {errors.password && (
+            <span className="label-text-alt text-red-500">
+              {errors.password.message}
+            </span>
+          )}
         </div>
 
         <div className="my-1">
           <label className="label">
             <span className="label-text text-black font-medium">Confirm Password</span>
           </label>
-          <input
-            {...register("confirmPassword")}
-            type="password"
-            className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
-          />
+          <div className="flex w-full items-center gap-2 border border-gray-200 rounded-xl p-1">
+            <input
+              {...register('confirmPassword')}
+              type={showConfirmPassword ? 'text' : 'password'}
+              className="input flex-1 border-0 focus:border-transparent focus:ring-0 focus:outline-none"
+              placeholder="Confirm password"
+            />
+            <button
+              type="button"
+              onClick={() => setShowConfirmPassword((prev) => !prev)}
+              className="text-gray-500 text-sm px-2"
+              aria-label="Toggle password visibility"
+            >
+              {showConfirmPassword ? <RiEyeFill /> : <RiEyeOffFill />}
+            </button>
+          </div>
+
           {errors.confirmPassword && (
-            <span className="label-text-alt text-red-500">{errors.confirmPassword.message}</span>
+            <span className="label-text-alt text-red-500">
+              {errors.confirmPassword.message}
+            </span>
           )}
         </div>
 
@@ -181,13 +225,18 @@ const SignupContent = () => {
           <label className="label">
             <span className="label-text text-black font-medium">Access Token</span>
           </label>
-          <input
-            {...register("accessToken")}
-            type="password"
-            className="input w-full border-gray-200 focus:border-maroon focus:outline-none"
-          />
+          <div className="flex w-full items-center border border-gray-200 rounded-xl p-1">
+            <input
+              {...register('accessToken')}
+              type="text"
+              className="input flex-1 border-0 focus:border-transparent focus:ring-0 focus:outline-none"
+              placeholder="Access Token"
+            />
+          </div>
           {errors.accessToken && (
-            <span className="label-text-alt text-red-500">{errors.accessToken.message}</span>
+            <span className="label-text-alt text-red-500">
+              {errors.accessToken.message}
+            </span>
           )}
         </div>
 
