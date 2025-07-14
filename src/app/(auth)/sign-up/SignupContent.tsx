@@ -48,7 +48,7 @@ const SignupContent = () => {
       if (data.password !== data.confirmPassword) {
         throw new Error("Password and ConfirmPassword do not match");
       }
-      const { user } = await createUser(data);
+      const { user } = await createUser({ ...data, email: data.email.toLowerCase() });
       setUser(user);
     } catch (error) {
       console.error(error);

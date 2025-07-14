@@ -29,7 +29,7 @@ const SignInPage: React.FC = () => {
 
   const signinUser = async (data: ISigninFormData) => {
     try {
-      const { user } = await signin(data);
+      const { user } = await signin({ ...data, email: data.email.toLowerCase() });
 
       if (!user) {
         setSigninStatus('failure')
