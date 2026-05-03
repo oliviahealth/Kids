@@ -1,7 +1,14 @@
+"use client";
+
 // import type { Metadata } from "next";
 import { ErrorBoundary } from "react-error-boundary";
 
 import "./globals.css";
+import axios from "axios";
+import { signin } from "./(auth)/sign-in/actions";
+import useAppStore from "@/lib/useAppStore";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 // export const metadata: Metadata = {
 //   title: "OliviaHealth - Kids",
@@ -13,6 +20,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const router = useRouter();
+  const setUser = useAppStore(state => state.setUser);
+
+  const autoDemoSignin = async () => {
+    const email = process.env.NEXT_PUBLIC_DEMO_EMAIL!;
+    const password = process.env.NEXT_PUBLIC_DEMO_PASSWORD!;
+
+    const { user } = await signin({ email, password });
+
+    if (user) {
+      setUser(user);
+    }
+
+    router.push("/home")
+  }
+
+  useEffect(() => {
+    autoDemoSignin();
+  }, [])
 
   return (
     <html lang="en" className="h-full">

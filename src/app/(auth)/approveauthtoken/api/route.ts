@@ -45,8 +45,6 @@ export async function GET(req: NextRequest) {
     `,
     });
 
-    console.log(data);
-
     return new Response(JSON.stringify({ data: "success" }), {
       status: 200,
     });
